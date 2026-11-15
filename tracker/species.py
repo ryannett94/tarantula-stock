@@ -40,7 +40,7 @@ EPITHET_FIX = {
     "albopilosum": "albopilosus", "albopilosom": "albopilosus", "atrichromatus": "atrichomatus", "bohemi": "boehmei",
     "boehmi": "boehmei", "versilcolor": "versicolor", "blondii": "blondi", "seemani": "seemanni",
     "victorii": "victori", "sazmai": "sazimai", "lividum": "lividus", "hati": "hatihati",
-    "smithi": "hamorii", "cyaneopubescens": "cyaneopubescens", "vagan": "vagans",
+"cyaneopubescens": "cyaneopubescens", "vagan": "vagans",
 }
 SPECIES_FIX = {
     "brachypelma albopilosus": "tliltocatl albopilosus",
@@ -49,7 +49,7 @@ SPECIES_FIX = {
     "avicularia versicolor": "caribena versicolor",
     "nhandu chromatus": "vitalius chromatus",
     "pterinopelma sazimai": "lasiocyano sazimai",
-    "brachypelma emilia": "brachypelma emilia",
+    "brachypelma smithi": "brachypelma hamorii",
 }
 
 DESCRIPTOR = re.compile(r"^(blue|green|red|black|tiger|small|large|giant|dwarf|purple|gold|golden|orange|"

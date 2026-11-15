@@ -147,18 +147,19 @@ def try_woo(base: str) -> list[dict] | None:
 
 # --------------------------------------------------- Browser (any website)
 EXTRACT_JS = r"""
-() => {
+(topOrigin) => {
+  const okOrigin = o => o === location.origin || o === topOrigin;
   const priceRe = /[£$]\s?\d[\d,]*(?:\.\d{1,2})?/;
   const skip = /add-to-cart|\/cart|\/basket|\/account|\/login|\/checkout|wishlist|mailto:|tel:/i;
   const notProduct = /\/(shipping|delivery|terms|about|contact|faq|blog|care|guide|policy|privacy|returns|info|pages?)\b/i;
   const inStockRe = /\b\d+\s+(left|in stock|available)\b|\bin stock\b|add to (cart|basket)/i;
   const outRe = /out of stock|sold out|currently unavailable/i;
-  const productPath = h => { try { const u = new URL(h); return u.origin === location.origin ? u.pathname.replace(/\/$/, '') : null; } catch { return null; } };
+  const productPath = h => { try { const u = new URL(h); return okOrigin(u.origin) ? u.pathname.replace(/\/$/, '') : null; } catch { return null; } };
   const cards = new Map();
   for (const a of document.querySelectorAll('a[href]')) {
     let href;
     try { href = new URL(a.href); } catch { continue; }
-    if (href.origin !== location.origin || skip.test(a.href) || notProduct.test(href.pathname)) continue;
+    if (!okOrigin(href.origin) || skip.test(a.href) || notProduct.test(href.pathname)) continue;
     if (a.rel === 'next' || a.rel === 'prev' || /^(next|prev|previous|\d+|›|»|←|→)$/i.test((a.innerText || '').trim())) continue;
     if (href.pathname === location.pathname || href.pathname === '/') continue;
     let el = a, card = null;
@@ -256,7 +257,7 @@ def _load(page, url):
     merged = None
     for frame in page.frames:
         try:
-            r = frame.evaluate(EXTRACT_JS)
+            r = frame.evaluate(EXTRACT_JS, urlparse(page.url).scheme + "://" + urlparse(page.url).netloc)
         except Exception:  # noqa: BLE001
             continue
         if merged is None:
