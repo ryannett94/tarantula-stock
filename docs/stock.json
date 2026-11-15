@@ -9125,7 +9125,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 5,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 1,
    "method": "browser",
    "status": "ok"
@@ -9134,7 +9134,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 9,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 9,
    "method": "browser",
    "status": "ok"
@@ -9149,7 +9149,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 31,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 31,
    "method": "browser",
    "status": "ok"
@@ -9158,7 +9158,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 9,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 6,
    "method": "browser",
    "status": "ok"
@@ -9167,7 +9167,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 1,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 1,
    "method": "browser",
    "status": "ok"
@@ -9182,7 +9182,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 51,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 31,
    "method": "shopify",
    "status": "ok"
@@ -9191,7 +9191,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 87,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 87,
    "method": "browser",
    "status": "ok"
@@ -9200,7 +9200,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 13,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 13,
    "method": "woocommerce",
    "status": "ok"
@@ -9209,7 +9209,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 166,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 79,
    "method": "browser",
    "status": "ok"
@@ -9224,7 +9224,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 91,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 52,
    "method": "woocommerce",
    "status": "ok"
@@ -9233,7 +9233,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 12,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 12,
    "method": "browser",
    "status": "ok"
@@ -9242,7 +9242,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 4,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 4,
    "method": "woocommerce",
    "status": "ok"
@@ -9251,7 +9251,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 153,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 153,
    "method": "woocommerce",
    "status": "ok"
@@ -9260,7 +9260,7 @@
    "checked": "2026-11-15T21:16:03+00:00",
    "count": 18,
    "error": "",
-   "first_ok": "2026-11-15T21:16:03+00:00",
+   "first_ok": null,
    "in_stock": 12,
    "method": "woocommerce",
    "status": "ok"

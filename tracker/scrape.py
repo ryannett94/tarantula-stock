@@ -46,7 +46,8 @@ GENUS_RE = re.compile(r"\b(" + "|".join(GENERA) + r")\b", re.I)
 NOT_LIVESTOCK = re.compile(
     r"\b(enclosure|substrate|tub|hide|cork|bowl|heat ?mat|thermostat|book|poster|"
     r"t-shirt|tshirt|mug|tongs|tweezers|gift card|voucher|feeder|crickets|locusts|"
-    r"roaches|mealworms|dubia|faunarium|kit only|just kit|exo terra|decor)\b", re.I)
+    r"roaches|mealworms|dubia|faunarium|kit only|just kit|exo terra|decor|set ?ups?|"
+    r"complete setups?|minimum order|postage|delivery|gift)\b", re.I)
 
 
 def now_iso() -> str:
@@ -142,12 +143,16 @@ def try_woo(base: str) -> list[dict] | None:
 EXTRACT_JS = r"""
 () => {
   const priceRe = /[£$]\s?\d[\d,]*(?:\.\d{1,2})?/;
-  const skip = /add-to-cart|\/cart|\/basket|\/account|\/login|\/checkout|wishlist|#|mailto:|tel:/i;
+  const skip = /add-to-cart|\/cart|\/basket|\/account|\/login|\/checkout|wishlist|mailto:|tel:/i;
+  const notProduct = /\/(shipping|delivery|terms|about|contact|faq|blog|care|guide|policy|privacy|returns|info|pages?)\b/i;
+  const inStockRe = /\b\d+\s+(left|in stock|available)\b|\bin stock\b|add to (cart|basket)/i;
+  const outRe = /out of stock|sold out|currently unavailable/i;
+  const productPath = h => { try { const u = new URL(h); return u.origin === location.origin ? u.pathname.replace(/\/$/, '') : null; } catch { return null; } };
   const cards = new Map();
   for (const a of document.querySelectorAll('a[href]')) {
     let href;
     try { href = new URL(a.href); } catch { continue; }
-    if (href.origin !== location.origin || skip.test(a.href)) continue;
+    if (href.origin !== location.origin || skip.test(a.href) || notProduct.test(href.pathname)) continue;
     if (a.rel === 'next' || a.rel === 'prev' || /^(next|prev|previous|\d+|›|»|←|→)$/i.test((a.innerText || '').trim())) continue;
     if (href.pathname === location.pathname || href.pathname === '/') continue;
     let el = a, card = null;
@@ -161,6 +166,9 @@ EXTRACT_JS = r"""
     if (!card) continue;
     // A container holding several products is not a single product card.
     if (card.querySelectorAll('h1,h2,h3,h4,h5').length > 1) continue;
+    const paths = new Set([...card.querySelectorAll('a[href]')].map(x => productPath(x.href))
+      .filter(p => p && !skip.test(p) && p !== location.pathname.replace(/\/$/, '')));
+    if (paths.size > 1) continue;
     const prices = (card.innerText.match(new RegExp(priceRe.source, 'g')) || []);
     if (new Set(prices).size > 3) continue;
     const head = card.querySelector('h1,h2,h3,h4,h5,[class*="title" i],[class*="name" i],[data-hook*="name"]');
@@ -171,17 +179,14 @@ EXTRACT_JS = r"""
     const url = href.origin + href.pathname;
     const prev = cards.get(card);
     if (prev && prev.name.length >= name.length) continue;
-    cards.set(card, {
-      name, url,
-      price: (text.match(priceRe) || [null])[0],
-      out: /out of stock|sold out|unavailable|currently unavailable|notify me/i.test(text),
-    });
+    cards.set(card, { name, url, price: (text.match(priceRe) || [null])[0],
+                      out: outRe.test(text) && !inStockRe.test(text) });
   }
   let items = [...cards.values()].filter(i => i.name && i.name.length > 2);
-  // Fallback for plain stock-list pages (tables or lists of "Species ... £price").
-  if (items.length === 0) {
-    const seen = new Set();
-    for (const el of document.querySelectorAll('tr, li, p, div')) {
+  // Plain stock-list pages (tables or lists of "Species ... £price").
+  if (items.length < 3) {
+    const seen = new Set(items.map(i => i.name));
+    for (const el of document.querySelectorAll('tr, li, p, div, td')) {
       if (el.querySelector('tr, li, p, div')) continue;  // innermost blocks only
       const t = (el.innerText || '').replace(/\s+/g, ' ').trim();
       if (t.length < 4 || t.length > 220 || !priceRe.test(t)) continue;
@@ -189,54 +194,90 @@ EXTRACT_JS = r"""
       if (name.length < 3 || seen.has(name)) continue;
       seen.add(name);
       const a = el.querySelector('a[href]');
-      items.push({ name, url: a ? a.href : location.href + '#' + encodeURIComponent(name),
+      items.push({ name, url: a ? a.href : location.href.split('#')[0] + '#' + encodeURIComponent(name),
                    price: (t.match(priceRe) || [null])[0],
-                   out: /out of stock|sold out|unavailable/i.test(t) });
+                   out: outRe.test(t) && !inStockRe.test(t) });
     }
   }
   const next = document.querySelector('a[rel="next"], a.next, .pagination a.next, a[aria-label*="next" i]');
-  return { items, next: next ? next.href : null };
+  const links = [...document.querySelectorAll('a[href]')].map(a => a.href)
+    .filter(h => productPath(h) !== null && /tarantula|sling|spider|shop|store|categor|collection|emporium|invertebrate|arachnid/i.test(h)
+                 && !skip.test(h) && !notProduct.test(h));
+  return { items, next: next ? next.href : null, links: [...new Set(links)],
+           title: document.title, snippet: (document.body.innerText || '').slice(0, 600) };
 }
 """
 
+DEBUG: dict[str, list] = {}
 
-def try_browser(listings: list[str], vendor_slug: str, filter_names: bool) -> list[dict] | None:
-    if not listings:
-        return None
+
+def clean_name(name: str) -> str:
+    name = re.split(r"\s*(?:Sale Price:|Regular Price|Original Price|Price\s*[£$]|[£$]\s?\d)", name)[0]
+    name = re.sub(r"\s*\b(sold out|out of stock|add to (cart|basket))\b.*$", "", name, flags=re.I)
+    return name.strip(" -–|:")
+
+
+def _load(page, url):
+    page.goto(url, wait_until="domcontentloaded", timeout=45000)
+    page.wait_for_timeout(3500)
+    for _ in range(12):  # lazy loading + "load more" buttons
+        page.mouse.wheel(0, 20000)
+        page.wait_for_timeout(700)
+        btn = page.locator("button:has-text('Load More'), button:has-text('Show more'), a:has-text('Load more')")
+        if btn.count() and btn.first.is_visible():
+            btn.first.click()
+            page.wait_for_timeout(1500)
+    return page.evaluate(EXTRACT_JS)
+
+
+def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str) -> list[dict] | None:
     from playwright.sync_api import sync_playwright
 
     found: dict[str, dict] = {}
+    log = DEBUG.setdefault(vendor, [])
+
+    def harvest(result, force_filter):
+        n = 0
+        for it in result["items"]:
+            it["name"] = clean_name(it["name"])
+            if len(it["name"]) < 3:
+                continue
+            if (filter_names or force_filter) and not is_tarantula(it["name"] + " " + it["url"]):
+                continue
+            if not looks_like_livestock(it["name"]):
+                continue
+            if it["url"] not in found:
+                found[it["url"]] = it
+                n += 1
+        return n
+
+    def crawl(start, force_filter=False):
+        url, hops, total, result = start, 0, 0, None
+        while url and hops < 15:
+            try:
+                result = _load(page, url)
+            except Exception as e:  # noqa: BLE001
+                log.append({"url": url, "error": str(e)[:200]})
+                break
+            got = harvest(result, force_filter)
+            total += got
+            log.append({"url": page.url, "title": result["title"], "found": got,
+                        "snippet": result["snippet"] if got == 0 else ""})
+            nxt = result.get("next")
+            url = nxt if nxt and nxt != url else None
+            hops += 1
+        return result
+
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
         page = browser.new_page(user_agent=UA, locale="en-GB")
         for start in listings:
-            url, hops = start, 0
-            while url and hops < 15:
-                try:
-                    page.goto(url, wait_until="domcontentloaded", timeout=45000)
-                    page.wait_for_timeout(3500)
-                    for _ in range(12):  # lazy loading + "load more" buttons
-                        page.mouse.wheel(0, 20000)
-                        page.wait_for_timeout(700)
-                        btn = page.locator("button:has-text('Load More'), button:has-text('Show more'), a:has-text('Load more')")
-                        if btn.count() and btn.first.is_visible():
-                            btn.first.click()
-                            page.wait_for_timeout(1500)
-                    result = page.evaluate(EXTRACT_JS)
-                except Exception as e:  # noqa: BLE001
-                    print(f"    browser error on {url}: {e}")
-                    break
-                for it in result["items"]:
-                    if filter_names and not is_tarantula(it["name"] + " " + it["url"]):
-                        continue
-                    if not looks_like_livestock(it["name"]):
-                        continue
-                    found.setdefault(it["url"], it)
-                nxt = result.get("next")
-                url = nxt if nxt and nxt != url else None
-                hops += 1
-            if found:
-                break  # first listing that works is enough
+            crawl(start)
+        if not found:
+            # Discover tarantula pages from the home page and try those.
+            home = crawl(base + "/", force_filter=True)
+            for link in (home or {}).get("links", [])[:8]:
+                crawl(link, force_filter=True)
         browser.close()
     if not found:
         return None
@@ -245,12 +286,12 @@ def try_browser(listings: list[str], vendor_slug: str, filter_names: bool) -> li
         price = None
         if it["price"]:
             try:
-                price = float(re.sub(r"[£$,\s]", "", it["price"]))
+                price = float(re.sub(r"[£$,\s]", "", it["price"])) or None
             except ValueError:
                 pass
+        pu = urlparse(it["url"])
         out.append({
-            "id": "web:" + urlparse(it["url"]).path.rstrip("/")
-                  + ("#" + urlparse(it["url"]).fragment if urlparse(it["url"]).fragment else ""),
+            "id": "web:" + pu.path.rstrip("/") + ("#" + pu.fragment if pu.fragment else ""),
             "name": it["name"][:160],
             "price": price,
             "in_stock": not it["out"],
@@ -281,10 +322,10 @@ def scrape_vendor(v: dict) -> tuple[list[dict] | None, str, str]:
         except Exception as e:  # noqa: BLE001
             errors.append(f"{method}: {e}")
     try:
-        items = try_browser(listings, v["name"], v.get("filter", False))
+        items = try_browser(listings, v["name"], v.get("filter", False), base)
         if items:
             return items, "browser", ""
-        errors.append("browser: no products found on listing pages")
+        errors.append("browser: no products found (see docs/debug.json)")
     except Exception as e:  # noqa: BLE001
         errors.append(f"browser: {e}")
     return None, "", "; ".join(errors)[:400]
@@ -346,7 +387,9 @@ def main():
             print(f"    FAILED {vs['error']}")
             continue
 
-        seeding = vs.get("first_ok") is None
+        # First run for a shop, or a big jump after its links were fixed: record quietly.
+        seeding = vs.get("first_ok") is None or (
+            len(found) - len(prev_ids) > max(10, len(prev_ids)))
         vs.update(status="ok", method=method, error="", checked=stamp,
                   count=len(found), in_stock=sum(1 for f in found if f["in_stock"]))
         if seeding:
@@ -383,6 +426,7 @@ def main():
     state["checked"] = stamp
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
     STATE_FILE.write_text(json.dumps(state, indent=1, sort_keys=True))
+    (STATE_FILE.parent / "debug.json").write_text(json.dumps(DEBUG, indent=1))
     print(f"{len(alerts)} alerts")
     notify(alerts)
 

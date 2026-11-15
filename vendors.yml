@@ -19,9 +19,10 @@ vendors:
   - name: Eight Legged Emporium
     base: https://eightleggedemporium.co.uk
     listings:
-      - https://eightleggedemporium.co.uk/shop
-      - https://eightleggedemporium.co.uk/
-
+      - https://eightleggedemporium.co.uk/emporium/slings/
+      - https://eightleggedemporium.co.uk/emporium/juveniles/
+      - https://eightleggedemporium.co.uk/emporium/adults/
+      - https://eightleggedemporium.co.uk/emporium/
   - name: Spider Farm
     base: https://spiderfarm.co.uk
     listings:
@@ -34,10 +35,9 @@ vendors:
       - https://www.somanylegs.co.uk/shop
 
   - name: Portsmouth Tarantulas
-    base: https://www.portsmouthtarantulas.co.uk
+    base: https://www.portsmouthtarantulas.com
     listings:
-      - https://www.portsmouthtarantulas.co.uk/shop
-
+      - https://www.portsmouthtarantulas.com/shop
   - name: Spa Spiders
     base: https://spaspiders.co.uk
     listings:
@@ -70,7 +70,8 @@ vendors:
     listings:
       - https://www.elyexotics.co.uk/invertebrates/arachnids/terrestrial-spiders
       - https://www.elyexotics.co.uk/invertebrates/arachnids/arboreal-spiders
-
+      - https://ely-exotics.netlify.app/invertebrates/arachnids/terrestrial-spiders
+      - https://ely-exotics.netlify.app/invertebrates/arachnids/arboreal-spiders
   - name: Spoodoire
     base: https://spoodoire.uk
     listings:
@@ -85,9 +86,9 @@ vendors:
 
   - name: MARPC
     base: https://www.marpc.co.uk
+    filter: true
     listings:
       - https://www.marpc.co.uk/html/spiderlings.html
-
   - name: Riverview Reptiles
     base: https://www.riverviewreptiles.co.uk
     listings:
@@ -95,14 +96,15 @@ vendors:
 
   - name: BugzUK
     base: https://bugzuk.com
+    filter: true
     listings:
       - https://bugzuk.com/store/tarantulas
-
   - name: Bugpets
     base: https://bugpets.co.uk
     listings:
-      - https://bugpets.co.uk/tarantulas
-
+      - https://bugpets.co.uk/spiderling-tarantulas
+      - https://bugpets.co.uk/juvenile-tarantulas
+      - https://bugpets.co.uk/adult-tarantulas
   - name: Bitey Things
     base: https://www.biteythings.co.uk
     listings:
