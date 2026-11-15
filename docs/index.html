@@ -35,7 +35,11 @@
   .count { color: var(--muted); font-size: 13px; margin: 6px 0 10px; }
   .sp { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r);
     margin-bottom: 10px; overflow: hidden; }
-  .sp-head { padding: 12px 14px 8px; }
+  .sp-head { padding: 12px 14px 10px; display: flex; gap: 12px; align-items: center; }
+  .sp-head .txt { flex: 1; min-width: 0; }
+  .thumb { width: 72px; height: 72px; flex: 0 0 72px; border-radius: 10px; object-fit: cover;
+    background: var(--panel2); border: 1px solid var(--line); }
+  .thumb.none { display: grid; place-items: center; color: var(--muted); font-size: 26px; }
   .sp-top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
   .sp-name { font-weight: 700; font-size: 17px; }
   .sp-name i { font-style: italic; }
@@ -191,11 +195,14 @@ function render() {
     }).join("");
     const more = g.offers.length > SHOW
       ? `<button class="more" data-key="${esc(g.key)}">${open ? "Show fewer" : `Show all ${g.offers.length}`}</button>` : "";
-    return `<section class="sp"><div class="sp-head"><div class="sp-top">
+    const pic = (g.offers.find(o => o.in_stock && o.image) || g.offers.find(o => o.image) || {}).image;
+    const thumb = pic ? `<img class="thumb" src="${esc(pic)}" alt="" loading="lazy" referrerpolicy="no-referrer"
+        onerror="this.outerHTML='<div class=&quot;thumb none&quot;>🕷</div>'">` : `<div class="thumb none">🕷</div>`;
+    return `<section class="sp"><div class="sp-head">${thumb}<div class="txt"><div class="sp-top">
         <span class="sp-name">${g.key.startsWith("x:") ? esc(g.name) : speciesTitle(g.name)}</span>
         ${g.min ? `<span class="from">from <b>£${Number(g.min).toFixed(2).replace(/\.00$/, "")}</b></span>` : ""}</div>
         <div class="common">${esc(g.common)}${g.common && g.shops ? " · " : ""}${g.shops ? g.shops + (g.shops === 1 ? " shop" : " shops") : ""}</div>
-      </div>${rows}${more}</section>`;
+      </div></div>${rows}${more}</section>`;
   }).join("") : `<div class="empty">${view === "new" ? "Nothing new this week for these filters." : "No matches."}</div>`;
 }
 

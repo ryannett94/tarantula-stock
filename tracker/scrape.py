@@ -47,11 +47,13 @@ pseudhapalopus kochiana orphnaecus encyocratella dolichothele sericopelma cotzte
 vitalius proshapalopus magulla holothele cyclosternum pelinobius haploclastus lampropelma
 annandaliella thrigmopoeus cyrtopholis citharacanthus""".split()
 GENUS_RE = re.compile(r"\b(" + "|".join(GENERA) + r")\b", re.I)
+BULK = re.compile(r"\(\s*(bulk|bundle|x\s*\d+)|\b\d+\s*x\s+(sling|spiderling)|\bx\s*([2-9]|[1-5]\d)\b|"
+                  r"\b([2-9]|[1-5]\d)\s*(slings|spiderlings)\b", re.I)
 NOT_LIVESTOCK = re.compile(
     r"\b(enclosure|substrate|tub|hide|cork|bowl|heat ?mat|thermostat|book|poster|"
     r"t-shirt|tshirt|mug|tongs|tweezers|gift card|voucher|feeder|crickets|locusts|"
     r"roaches|mealworms|dubia|faunarium|kit only|just kit|exo terra|decor|set ?ups?|"
-    r"complete setups?|minimum order|postage|delivery|gift|donation|review|video|competition|raffle|win the|spiderling box)\b", re.I)
+    r"complete setups?|minimum order|postage|delivery|gift|donation|review|video|competition|raffle|win the|spiderling box|bulk|bundle|pack of|lot of|multi ?buy)\b", re.I)
 
 
 def now_iso() -> str:
@@ -63,11 +65,18 @@ def is_tarantula(text: str) -> bool:
 
 
 def looks_like_livestock(name: str) -> bool:
-    return not NOT_LIVESTOCK.search(name)
+    return not NOT_LIVESTOCK.search(name) and not BULK.search(name)
 
 
 def clean(s) -> str:
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", str(s or "")))).strip()
+
+
+def _sized(src):
+    if not src:
+        return None
+    src = "https:" + src if src.startswith("//") else src
+    return src + ("&" if "?" in src else "?") + "width=240"
 
 
 # ---------------------------------------------------------------- Shopify
@@ -92,6 +101,8 @@ def try_shopify(base: str, collection: str | None = None) -> list[dict] | None:
             variants = p.get("variants", [])
             hint = clean(" ".join([p.get("product_type", ""), " ".join(map(str, p.get("tags", []) or []))]))[:200]
             url = f"{base}/products/{p.get('handle')}"
+            imgs = p.get("images") or []
+            image = _sized(imgs[0].get("src")) if imgs else None
             real = [v for v in variants if (v.get("title") or "").lower() != "default title"]
             if len(real) >= 1 and len(variants) > 1 or (real and len(variants) == 1):
                 # One row per size/option, each with its own price and stock.
@@ -102,6 +113,7 @@ def try_shopify(base: str, collection: str | None = None) -> list[dict] | None:
                         "price": float(v["price"]) if v.get("price") else None,
                         "in_stock": bool(v.get("available")),
                         "url": f"{url}?variant={v['id']}",
+                        "image": _sized((v.get("featured_image") or {}).get("src")) or image,
                         "hint": hint,
                         "listed": p.get("published_at") or p.get("created_at"),
                     })
@@ -113,6 +125,7 @@ def try_shopify(base: str, collection: str | None = None) -> list[dict] | None:
                 "price": min(prices) if prices else None,
                 "in_stock": any(v.get("available") for v in variants),
                 "url": url,
+                "image": image,
                 "hint": hint,
                 "listed": p.get("published_at") or p.get("created_at"),
             })
@@ -158,6 +171,8 @@ def try_woo(base: str) -> list[dict] | None:
             if not is_tarantula(name + " " + cats) or not looks_like_livestock(name):
                 continue
             hint = clean(cats + " " + clean(p.get("short_description")))[:240]
+            pimgs = p.get("images") or []
+            image = (pimgs[0].get("thumbnail") or pimgs[0].get("src")) if pimgs else None
             variations = p.get("variations") or []
             done = False
             if p.get("type") == "variable" and variations and fetched < MAX_VARIATIONS:
@@ -183,6 +198,7 @@ def try_woo(base: str) -> list[dict] | None:
                         "price": _woo_price(v),
                         "in_stock": bool(v.get("is_in_stock")),
                         "url": v.get("permalink") or p.get("permalink"),
+                        "image": ((v.get("images") or [{}])[0].get("thumbnail") or image),
                         "hint": hint,
                         "listed": None,
                     })
@@ -196,6 +212,7 @@ def try_woo(base: str) -> list[dict] | None:
                     "price": _woo_price(p),
                     "in_stock": bool(p.get("is_in_stock")),
                     "url": p.get("permalink"),
+                    "image": image,
                     "hint": hint,
                     "listed": None,
                 })
@@ -247,7 +264,10 @@ EXTRACT_JS = r"""
     const url = href.origin + href.pathname;
     const prev = cards.get(card);
     if (prev && prev.name.length >= name.length) continue;
-    cards.set(card, { name, url, hint: text.replace(/\s+/g, ' ').slice(0, 240), price: (text.match(priceRe) || [null])[0],
+    const img = card.querySelector('img');
+    let image = img ? (img.currentSrc || img.src || img.getAttribute('data-src') || '') : '';
+    if (image.startsWith('data:')) image = img.getAttribute('data-src') || '';
+    cards.set(card, { name, url, image, hint: text.replace(/\s+/g, ' ').slice(0, 240), price: (text.match(priceRe) || [null])[0],
                       out: outRe.test(text) && !inStockRe.test(text) });
   }
   let items = [...cards.values()].filter(i => i.name && i.name.length > 2);
@@ -413,6 +433,7 @@ def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str,
             "in_stock": not it["out"],
             "url": it["url"],
             "hint": it.get("hint", ""),
+            "image": it.get("image") or None,
             "listed": None,
         })
     return out
@@ -496,6 +517,8 @@ def main():
         name = v["name"]
         print(f"- {name}")
         found, method, err = scrape_vendor(v)
+        if found:
+            found = [f for f in found if looks_like_livestock(f["name"])]
         vs = vendors.setdefault(name, {"first_ok": None})
         prev_ids = {k for k, it in items.items() if it["vendor"] == name and not it.get("gone")}
 
