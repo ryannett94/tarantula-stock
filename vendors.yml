@@ -35,6 +35,7 @@ vendors:
 
   - name: Portsmouth Tarantulas
     base: https://www.portsmouthtarantulas.co.uk
+    filter: true
     follow: '/shop-1/[^/]+-c\d+$'
     listings:
       - https://www.portsmouthtarantulas.co.uk/shop-1/Slings-c27598628
