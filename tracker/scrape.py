@@ -232,10 +232,19 @@ def _load(page, url):
         page.wait_for_timeout(3000)
         page.goto(url, wait_until="domcontentloaded", timeout=45000)
     page.wait_for_timeout(3500)
-    try:  # script-built shops: wait until prices appear
-        page.wait_for_function("() => /[£$]\\s?\\d/.test(document.body.innerText)", timeout=12000)
-    except Exception:  # noqa: BLE001
-        pass
+    # Script-built shops (incl. store widgets in iframes): wait until a price shows anywhere.
+    for _ in range(15):
+        hit = False
+        for frame in page.frames:
+            try:
+                if frame.evaluate("() => /[£$]\\s?\\d/.test(document.body ? document.body.innerText : '')"):
+                    hit = True
+                    break
+            except Exception:  # noqa: BLE001
+                pass
+        if hit:
+            break
+        page.wait_for_timeout(1000)
     for _ in range(12):  # lazy loading + "load more" buttons
         page.mouse.wheel(0, 20000)
         page.wait_for_timeout(700)
@@ -259,6 +268,7 @@ def _load(page, url):
             merged["next"] = merged["next"] or r.get("next")
     body = page.evaluate("() => document.body.innerText")
     i = body.find("£")
+    merged["frame_urls"] = [f.url[:80] for f in page.frames][:6]
     merged["snippet"] = (body[max(0, i - 300):i + 300] if i >= 0 else body[:600])
     merged["pounds"] = body.count("£")
     return merged
@@ -297,7 +307,7 @@ def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str,
             got = harvest(result, force_filter)
             total += got
             log.append({"url": page.url, "title": result["title"], "found": got,
-                        "frames": result.get("frames"), "pounds": result.get("pounds"),
+                        "frames": result.get("frame_urls"), "pounds": result.get("pounds"),
                         "snippet": result["snippet"] if got == 0 else ""})
             nxt = result.get("next")
             url = nxt if nxt and nxt != url else None
@@ -464,6 +474,9 @@ def main():
             if items[key]["vendor"] == name and key not in seen and not items[key].get("gone"):
                 items[key].update(gone=True, in_stock=False)
 
+    # Drop anything that is clearly not a spider (old junk rows included).
+    for key in [k for k, it in items.items() if not looks_like_livestock(it["name"])]:
+        del items[key]
     # Forget shops that have been removed from vendors.yml.
     active = {v["name"] for v in cfg["vendors"] if v.get("enabled", True) is not False}
     for name in [n for n in vendors if n not in active]:
