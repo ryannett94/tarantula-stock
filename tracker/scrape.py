@@ -149,77 +149,109 @@ def _pretty_option(value: str) -> str:
     return value
 
 
-MAX_VARIATIONS = 2500
+MAX_VARIATIONS = 3000
+
+
+def _woo_variations(api: str, ids: list[int]) -> dict[int, dict]:
+    """Price/stock for many variation ids: batched where the shop allows, else in parallel."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    out: dict[int, dict] = {}
+    for i in range(0, len(ids), 100):
+        chunk = ids[i:i + 100]
+        try:
+            r = requests.get(api, params={"include": ",".join(map(str, chunk)), "per_page": 100,
+                                          "type": "variation"}, headers=HEADERS, timeout=TIMEOUT)
+            if r.status_code == 200 and isinstance(r.json(), list):
+                for v in r.json():
+                    out[v["id"]] = v
+        except Exception:  # noqa: BLE001
+            pass
+    missing = [i for i in ids if i not in out]
+
+    def one(vid):
+        try:
+            r = requests.get(f"{api}/{vid}", headers=HEADERS, timeout=20)
+            return vid, (r.json() if r.status_code == 200 else None)
+        except Exception:  # noqa: BLE001
+            return vid, None
+
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for vid, v in pool.map(one, missing):
+            if v:
+                out[vid] = v
+    return out
 
 
 def try_woo(base: str) -> list[dict] | None:
     api = f"{base}/wp-json/wc/store/v1/products"
-    items, page, fetched = [], 1, 0
+    products_all, page = [], 1
     while page <= 30:
         r = requests.get(api, params={"per_page": 100, "page": page}, headers=HEADERS, timeout=TIMEOUT)
         if r.status_code != 200 or "json" not in r.headers.get("content-type", ""):
-            return None if page == 1 else items
+            if page == 1:
+                return None
+            break
         products = r.json()
         if not isinstance(products, list):
-            return None if page == 1 else items
-        if not products:
+            if page == 1:
+                return None
             break
-        for p in products:
-            cats = " ".join(c.get("name", "") + " " + c.get("slug", "")
-                            for c in p.get("categories", []))
-            name = clean(p.get("name"))
-            if not is_tarantula(name + " " + cats) or not looks_like_livestock(name):
-                continue
-            hint = clean(cats + " " + clean(p.get("short_description")))[:240]
-            pimgs = p.get("images") or []
-            image = (pimgs[0].get("thumbnail") or pimgs[0].get("src")) if pimgs else None
-            variations = p.get("variations") or []
-            done = False
-            if p.get("type") == "variable" and variations and fetched < MAX_VARIATIONS:
-                # Sizes chosen on the product page: read each option's own price and stock.
-                rows = []
-                for var in variations:
-                    option = " / ".join(_pretty_option(a.get("value", "")) for a in var.get("attributes", [])
-                                        if a.get("value"))
-                    try:
-                        vr = requests.get(f"{api}/{var['id']}", headers=HEADERS, timeout=TIMEOUT)
-                        fetched += 1
-                        time.sleep(0.15)
-                        if vr.status_code != 200:
-                            rows = []
-                            break
-                        v = vr.json()
-                    except Exception:  # noqa: BLE001
-                        rows = []
-                        break
-                    rows.append({
-                        "id": f"woo:{var['id']}",
-                        "name": f"{name} – {option}" if option else name,
-                        "price": _woo_price(v),
-                        "in_stock": bool(v.get("is_in_stock")),
-                        "url": v.get("permalink") or p.get("permalink"),
-                        "image": ((v.get("images") or [{}])[0].get("thumbnail") or image),
-                        "hint": hint,
-                        "listed": None,
-                    })
-                if rows:
-                    items.extend(rows)
-                    done = True
-            if not done:
-                items.append({
-                    "id": f"woo:{p['id']}",
-                    "name": name,
-                    "price": _woo_price(p),
-                    "in_stock": bool(p.get("is_in_stock")),
-                    "url": p.get("permalink"),
-                    "image": image,
-                    "hint": hint,
-                    "listed": None,
-                })
+        products_all += products
         if len(products) < 100:
             break
         page += 1
         time.sleep(1)
+
+    keep = []
+    for p in products_all:
+        cats = " ".join(c.get("name", "") + " " + c.get("slug", "") for c in p.get("categories", []))
+        name = clean(p.get("name"))
+        if is_tarantula(name + " " + cats) and looks_like_livestock(name):
+            keep.append((p, name, cats))
+
+    # Sizes chosen on the product page: read each option's own price and stock.
+    var_ids = [v["id"] for p, _, _ in keep if p.get("type") == "variable"
+               for v in (p.get("variations") or [])][:MAX_VARIATIONS]
+    var_data = _woo_variations(api, var_ids) if var_ids else {}
+
+    items = []
+    for p, name, cats in keep:
+        hint = clean(cats + " " + clean(p.get("short_description")))[:240]
+        pimgs = p.get("images") or []
+        image = (pimgs[0].get("thumbnail") or pimgs[0].get("src")) if pimgs else None
+        rows = []
+        if p.get("type") == "variable":
+            for var in p.get("variations") or []:
+                v = var_data.get(var["id"])
+                if not v:
+                    rows = []
+                    break
+                option = " / ".join(_pretty_option(a.get("value", "")) for a in var.get("attributes", [])
+                                    if a.get("value"))
+                rows.append({
+                    "id": f"woo:{var['id']}",
+                    "name": f"{name} – {option}" if option else name,
+                    "price": _woo_price(v),
+                    "in_stock": bool(v.get("is_in_stock")),
+                    "url": v.get("permalink") or p.get("permalink"),
+                    "image": ((v.get("images") or [{}])[0].get("thumbnail") or image),
+                    "hint": hint,
+                    "listed": None,
+                })
+        if rows:
+            items.extend(rows)
+        else:
+            items.append({
+                "id": f"woo:{p['id']}",
+                "name": name,
+                "price": _woo_price(p),
+                "in_stock": bool(p.get("is_in_stock")),
+                "url": p.get("permalink"),
+                "image": image,
+                "hint": hint,
+                "listed": None,
+            })
     return items
 
 
