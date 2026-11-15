@@ -34,10 +34,10 @@ vendors:
 
   - name: Portsmouth Tarantulas
     base: https://www.portsmouthtarantulas.co.uk
+    filter: true
     listings:
-      - https://www.portsmouthtarantulas.co.uk/category/all-products
-      - https://www.portsmouthtarantulas.co.uk/tarantulas
-      - https://www.portsmouthtarantulas.co.uk/
+      - https://www.portsmouthtarantulas.co.uk/shop-1/Slings-c27598628
+      - https://www.portsmouthtarantulas.co.uk/shop-1
   - name: Spa Spiders
     base: https://spaspiders.co.uk
     listings:
@@ -66,11 +66,10 @@ vendors:
       - https://www.bugnut.co.uk/
 
   - name: Ely Exotics
-    base: https://www.elyexotics.co.uk
+    base: https://shop.elyexotics.co.uk
     filter: true
     listings:
-      - https://www.elyexotics.co.uk/stocklist/
-      - https://www.elyexotics.co.uk/shop/
+      - https://shop.elyexotics.co.uk/product-category/livestock/
   - name: Spoodoire
     base: https://spoodoire.uk
     listings:
