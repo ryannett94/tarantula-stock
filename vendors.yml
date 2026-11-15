@@ -6,6 +6,7 @@
 # Listing pages are used only if 1 and 2 fail. If a shop shows "failed" on the
 # stock page, open the shop on your phone, copy the URL of its tarantula page and
 # paste it under that shop's "listings".
+# follow: regex   = also open links matching this from the listing pages (sibling categories)
 # filter: true    = the listing page mixes tarantulas with other things, so keep
 #                   only tarantulas (matched by name or genus)
 # enabled: false  = pause a shop without deleting it
@@ -34,7 +35,7 @@ vendors:
 
   - name: Portsmouth Tarantulas
     base: https://www.portsmouthtarantulas.co.uk
-    filter: true
+    follow: '/shop-1/[^/]+-c\d+$'
     listings:
       - https://www.portsmouthtarantulas.co.uk/shop-1/Slings-c27598628
       - https://www.portsmouthtarantulas.co.uk/shop-1

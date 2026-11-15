@@ -7,41 +7,56 @@
 <meta name="theme-color" content="#14110f">
 <style>
   :root {
-    --bg: #14110f; --panel: #1e1a17; --line: #2e2824; --text: #f1ebe4; --muted: #a39a90;
-    --accent: #e8833a; --new: #e8833a; --back: #5fb38a; --out: #6b625a;
-    --r: 14px;
+    --bg: #14110f; --panel: #1e1a17; --panel2: #262019; --line: #2e2824; --text: #f1ebe4; --muted: #a39a90;
+    --accent: #e8833a; --back: #5fb38a; --r: 14px;
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--text);
     font: 16px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     padding: env(safe-area-inset-top) 0 40px; }
-  header { padding: 20px 16px 8px; }
+  header { padding: 20px 16px 6px; }
   h1 { margin: 0; font-size: 26px; letter-spacing: -0.02em; }
   .sub { color: var(--muted); font-size: 14px; margin-top: 4px; }
-  .bar { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 10px 16px;
+  .bar { background: var(--bg); padding: 10px 16px 8px;
     border-bottom: 1px solid var(--line); }
-  .tabs { display: flex; gap: 6px; margin-bottom: 10px; }
+  .tabs { display: flex; gap: 6px; margin-bottom: 8px; }
   .tab { flex: 1; border: 1px solid var(--line); background: var(--panel); color: var(--muted);
     border-radius: 999px; padding: 9px 6px; font-size: 14px; font-weight: 600; }
   .tab[aria-pressed="true"] { background: var(--accent); color: #1a120b; border-color: var(--accent); }
-  .row { display: flex; gap: 8px; }
+  .row { display: flex; gap: 8px; margin-bottom: 8px; }
   input, select { flex: 1; min-width: 0; background: var(--panel); color: var(--text);
-    border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 16px; }
-  select { flex: 0 0 auto; max-width: 45%; }
+    border: 1px solid var(--line); border-radius: 10px; padding: 9px 11px; font-size: 16px; }
+  .chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { flex: 0 0 auto; border: 1px solid var(--line); background: var(--panel); color: var(--muted);
+    border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 600; }
+  .chip[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
   main { padding: 8px 16px; }
   .count { color: var(--muted); font-size: 13px; margin: 6px 0 10px; }
-  .item { display: block; text-decoration: none; color: inherit; background: var(--panel);
-    border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; margin-bottom: 8px; }
-  .item:active { border-color: var(--accent); }
-  .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
-  .name { font-weight: 600; }
-  .price { font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 700; }
-  .meta { display: flex; gap: 8px; align-items: center; margin-top: 6px; color: var(--muted); font-size: 13px; flex-wrap: wrap; }
-  .badge { font-size: 11px; font-weight: 800; letter-spacing: .05em; padding: 2px 7px; border-radius: 6px; }
-  .b-new { background: var(--new); color: #1a120b; }
+  .sp { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r);
+    margin-bottom: 10px; overflow: hidden; }
+  .sp-head { padding: 12px 14px 8px; }
+  .sp-top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+  .sp-name { font-weight: 700; font-size: 17px; }
+  .sp-name i { font-style: italic; }
+  .from { white-space: nowrap; color: var(--muted); font-size: 13px; }
+  .from b { color: var(--text); font-size: 16px; }
+  .common { color: var(--muted); font-size: 14px; margin-top: 2px; }
+  .offer { display: grid; grid-template-columns: 1fr auto auto; gap: 10px; align-items: center;
+    padding: 10px 14px; border-top: 1px solid var(--line); text-decoration: none; color: inherit; }
+  .offer:active { background: var(--panel2); }
+  .shop { font-weight: 600; font-size: 14px; }
+  .desc { color: var(--muted); font-size: 13px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: 1px; }
+  .price { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+  .buy { background: var(--accent); color: #1a120b; font-weight: 700; font-size: 13px;
+    padding: 6px 10px; border-radius: 8px; white-space: nowrap; }
+  .offer.out { opacity: .5; }
+  .offer.out .buy { background: var(--line); color: var(--muted); }
+  .badge { font-size: 10px; font-weight: 800; letter-spacing: .05em; padding: 2px 6px; border-radius: 5px; }
+  .b-new { background: var(--accent); color: #1a120b; }
   .b-back { background: var(--back); color: #0d1f16; }
-  .b-out { background: var(--line); color: var(--muted); }
-  .item.out { opacity: .55; }
+  .more { display: block; width: 100%; border: 0; border-top: 1px solid var(--line); background: none;
+    color: var(--accent); font-weight: 600; font-size: 14px; padding: 10px; }
   details { margin: 24px 16px 0; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; }
   summary { font-weight: 600; cursor: pointer; }
   .v { display: flex; justify-content: space-between; gap: 8px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 14px; }
@@ -58,14 +73,25 @@
 </header>
 
 <div class="bar">
-  <div class="tabs" role="group">
+  <div class="tabs" id="tabs">
     <button class="tab" data-view="new" aria-pressed="true">New</button>
     <button class="tab" data-view="in" aria-pressed="false">In stock</button>
     <button class="tab" data-view="all" aria-pressed="false">All</button>
   </div>
+  <div class="row"><input id="q" type="search" placeholder="Search species or common name" autocomplete="off"></div>
   <div class="row">
-    <input id="q" type="search" placeholder="Search species" autocomplete="off">
     <select id="vendor"><option value="">All shops</option></select>
+    <select id="sex">
+      <option value="">Any sex</option><option value="female">Females</option>
+      <option value="male">Males</option><option value="pair">Pairs</option><option value="unsexed">Unsexed</option>
+    </select>
+  </div>
+  <div class="chips" id="stages">
+    <button class="chip" data-stage="" aria-pressed="true">All sizes</button>
+    <button class="chip" data-stage="sling" aria-pressed="false">Slings</button>
+    <button class="chip" data-stage="juvenile" aria-pressed="false">Juveniles</button>
+    <button class="chip" data-stage="subadult" aria-pressed="false">Sub-adults</button>
+    <button class="chip" data-stage="adult" aria-pressed="false">Adults</button>
   </div>
 </div>
 
@@ -77,9 +103,13 @@
 <details id="status"><summary>Shops checked</summary><div id="vendors"></div></details>
 
 <script>
-const NEW_DAYS = 7;
-let data = null, view = "new";
+const NEW_DAYS = 7, SHOW = 4;
+const STAGE = { sling: "Sling", juvenile: "Juvenile", subadult: "Sub-adult", adult: "Adult" };
+const SEX = { female: "Female", male: "Male", pair: "Pair" };
+let data = null, view = "new", stage = "";
+const expanded = new Set();
 const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
 function ago(iso) {
   if (!iso) return "";
@@ -89,36 +119,84 @@ function ago(iso) {
   if (h < 48) return h + " h ago";
   return Math.round(h / 24) + " days ago";
 }
-const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 function freshAt(it) {
   const t = [it.new_at, it.restocked_at].filter(Boolean).sort().pop();
-  return t && (Date.now() - new Date(t)) < NEW_DAYS * 864e5 ? t : null;
+  return t && it.in_stock && (Date.now() - new Date(t)) < NEW_DAYS * 864e5 ? t : null;
+}
+function money(it) {
+  return it.price ? (it.currency === "USD" ? "$" : "£") + Number(it.price).toFixed(2).replace(/\.00$/, "") : "";
+}
+function sizeOf(it) {
+  const m = (it.name + " " + (it.hint || "")).match(/\d+(?:\.\d+)?\s*(?:-|–|to)?\s*(?:\d+(?:\.\d+)?)?\s*cm/i);
+  return m ? m[0].replace(/\s+/g, "").replace(/CM/, "cm") : "";
+}
+function speciesTitle(name) {
+  // Italicise "Genus species", leave a quoted locality upright.
+  const m = name.match(/^([A-Z][a-z]+)\s+(sp\.)?\s*(.*)$/);
+  if (!m) return esc(name);
+  return m[2] ? `<i>${esc(m[1])}</i> sp. ${esc(m[3])}` : `<i>${esc(m[1])} ${esc(m[3])}</i>`;
+}
+
+function offerPasses(it) {
+  if (it.gone) return false;
+  if (view === "in" && !it.in_stock) return false;
+  if (view === "new" && !freshAt(it)) return false;
+  if ($("#vendor").value && it.vendor !== $("#vendor").value) return false;
+  if (stage && it.stage !== stage) return false;
+  const sx = $("#sex").value;
+  if (sx && (sx === "unsexed" ? it.sex : it.sex !== sx)) return false;
+  return true;
 }
 
 function render() {
   if (!data) return;
   const q = $("#q").value.trim().toLowerCase();
-  const vend = $("#vendor").value;
-  let items = Object.values(data.items).filter(it => !it.gone || view === "all");
-  if (view === "in") items = items.filter(it => it.in_stock);
-  if (view === "new") items = items.filter(it => it.in_stock && freshAt(it));
-  if (vend) items = items.filter(it => it.vendor === vend);
-  if (q) items = items.filter(it => (it.name + " " + it.vendor).toLowerCase().includes(q));
-  items.sort((a, b) => (freshAt(b) || "").localeCompare(freshAt(a) || "") ||
-    (b.in_stock - a.in_stock) || a.name.localeCompare(b.name));
+  const groups = new Map();
+  for (const it of Object.values(data.items)) {
+    if (!offerPasses(it)) continue;
+    const key = it.species || ("x:" + it.vendor + ":" + it.name);
+    if (!groups.has(key)) groups.set(key, { key, name: it.species_name || it.name, common: it.common || "", offers: [] });
+    const g = groups.get(key);
+    if (!g.common && it.common) g.common = it.common;
+    g.offers.push(it);
+  }
+  let list = [...groups.values()];
+  if (q) list = list.filter(g => (g.name + " " + g.common + " " + g.offers.map(o => o.name + " " + o.vendor).join(" ")).toLowerCase().includes(q));
+  for (const g of list) {
+    g.offers.sort((a, b) => (b.in_stock - a.in_stock) || ((a.price || 1e9) - (b.price || 1e9)));
+    g.fresh = g.offers.map(freshAt).filter(Boolean).sort().pop() || "";
+    g.shops = new Set(g.offers.filter(o => o.in_stock).map(o => o.vendor)).size;
+    const prices = g.offers.filter(o => o.in_stock && o.price && o.currency !== "USD").map(o => o.price);
+    g.min = prices.length ? Math.min(...prices) : null;
+  }
+  list.sort((a, b) => view === "new" ? (b.fresh.localeCompare(a.fresh) || a.name.localeCompare(b.name))
+                                     : a.name.localeCompare(b.name));
 
-  $("#count").textContent = items.length + (items.length === 1 ? " listing" : " listings") +
+  const offers = list.reduce((n, g) => n + g.offers.length, 0);
+  $("#count").textContent = `${list.length} species · ${offers} listing${offers === 1 ? "" : "s"}` +
     (view === "new" ? ` new or back in the last ${NEW_DAYS} days` : "");
-  $("#list").innerHTML = items.length ? items.map(it => {
-    const f = freshAt(it);
-    const badge = !it.in_stock ? '<span class="badge b-out">SOLD OUT</span>'
-      : f && f === it.restocked_at ? '<span class="badge b-back">BACK</span>'
-      : f ? '<span class="badge b-new">NEW</span>' : "";
-    return `<a class="item ${it.in_stock ? "" : "out"}" href="${esc(it.url)}" target="_blank" rel="noopener">
-      <div class="top"><span class="name">${esc(it.name)}</span>
-      <span class="price">${it.price ? (it.currency === "USD" ? "$" : "£") + Number(it.price).toFixed(2) : ""}</span></div>
-      <div class="meta">${badge}<span>${esc(it.vendor)}</span>${f ? `<span>· ${ago(f)}</span>` : ""}</div></a>`;
-  }).join("") : `<div class="empty">${view === "new" ? "Nothing new this week yet." : "No matches."}</div>`;
+
+  $("#list").innerHTML = list.length ? list.map(g => {
+    const open = expanded.has(g.key);
+    const shown = open ? g.offers : g.offers.slice(0, SHOW);
+    const rows = shown.map(it => {
+      const f = freshAt(it);
+      const badge = f ? (f === it.restocked_at ? '<span class="badge b-back">BACK</span>' : '<span class="badge b-new">NEW</span>') : "";
+      const bits = [STAGE[it.stage], SEX[it.sex], sizeOf(it)].filter(Boolean).join(" · ");
+      return `<a class="offer ${it.in_stock ? "" : "out"}" href="${esc(it.url)}" target="_blank" rel="noopener">
+        <div><div class="shop">${esc(it.vendor)}</div>
+          <div class="desc">${badge}<span>${esc(bits || it.name)}</span></div></div>
+        <span class="price">${money(it)}</span>
+        <span class="buy">${it.in_stock ? "Buy ›" : "Sold out"}</span></a>`;
+    }).join("");
+    const more = g.offers.length > SHOW
+      ? `<button class="more" data-key="${esc(g.key)}">${open ? "Show fewer" : `Show all ${g.offers.length}`}</button>` : "";
+    return `<section class="sp"><div class="sp-head"><div class="sp-top">
+        <span class="sp-name">${g.key.startsWith("x:") ? esc(g.name) : speciesTitle(g.name)}</span>
+        ${g.min ? `<span class="from">from <b>£${Number(g.min).toFixed(2).replace(/\.00$/, "")}</b></span>` : ""}</div>
+        <div class="common">${esc(g.common)}${g.common && g.shops ? " · " : ""}${g.shops ? g.shops + (g.shops === 1 ? " shop" : " shops") : ""}</div>
+      </div>${rows}${more}</section>`;
+  }).join("") : `<div class="empty">${view === "new" ? "Nothing new this week for these filters." : "No matches."}</div>`;
 }
 
 function renderVendors() {
@@ -132,17 +210,30 @@ function renderVendors() {
   vs.forEach(([name]) => { const o = document.createElement("option"); o.value = o.textContent = name; sel.appendChild(o); });
 }
 
-document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
+$("#tabs").onclick = e => {
+  const b = e.target.closest(".tab"); if (!b) return;
   view = b.dataset.view;
   document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-pressed", x === b));
   render();
-});
+};
+$("#stages").onclick = e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  stage = b.dataset.stage;
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+};
+$("#list").onclick = e => {
+  const b = e.target.closest(".more"); if (!b) return;
+  expanded.has(b.dataset.key) ? expanded.delete(b.dataset.key) : expanded.add(b.dataset.key);
+  render();
+};
 $("#q").oninput = render;
 $("#vendor").onchange = render;
+$("#sex").onchange = render;
 
 fetch("stock.json?t=" + Date.now()).then(r => r.json()).then(j => {
   data = j;
-  $("#checked").textContent = j.checked ? "Last checked " + ago(j.checked) : "Not checked yet — the first run fills this in.";
+  $("#checked").textContent = j.checked ? "Last checked " + ago(j.checked) : "Not checked yet.";
   renderVendors(); render();
 }).catch(() => { $("#checked").textContent = "Couldn't load stock list."; });
 </script>

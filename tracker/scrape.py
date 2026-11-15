@@ -22,6 +22,8 @@ from urllib.parse import urljoin, urlparse
 import requests
 import yaml
 
+import species
+
 ROOT = Path(__file__).resolve().parent.parent
 STATE_FILE = ROOT / "docs" / "stock.json"
 VENDORS_FILE = ROOT / "vendors.yml"
@@ -48,7 +50,7 @@ NOT_LIVESTOCK = re.compile(
     r"\b(enclosure|substrate|tub|hide|cork|bowl|heat ?mat|thermostat|book|poster|"
     r"t-shirt|tshirt|mug|tongs|tweezers|gift card|voucher|feeder|crickets|locusts|"
     r"roaches|mealworms|dubia|faunarium|kit only|just kit|exo terra|decor|set ?ups?|"
-    r"complete setups?|minimum order|postage|delivery|gift|donation)\b", re.I)
+    r"complete setups?|minimum order|postage|delivery|gift|donation|review|video|competition|raffle|win the|spiderling box)\b", re.I)
 
 
 def now_iso() -> str:
@@ -94,6 +96,8 @@ def try_shopify(base: str, collection: str | None = None) -> list[dict] | None:
                 "price": min(prices) if prices else None,
                 "in_stock": any(v.get("available") for v in variants),
                 "url": f"{base}/products/{p.get('handle')}",
+                "hint": clean(" ".join([p.get("product_type", ""), " ".join(map(str, p.get("tags", []) or [])),
+                                         " ".join(v.get("title", "") for v in variants)]))[:240],
                 "listed": p.get("published_at") or p.get("created_at"),
             })
         page += 1
@@ -131,6 +135,7 @@ def try_woo(base: str) -> list[dict] | None:
                 "price": price,
                 "in_stock": bool(p.get("is_in_stock")),
                 "url": p.get("permalink"),
+                "hint": clean(cats + " " + clean(p.get("short_description")))[:240],
                 "listed": None,
             })
         if len(products) < 100:
@@ -180,7 +185,7 @@ EXTRACT_JS = r"""
     const url = href.origin + href.pathname;
     const prev = cards.get(card);
     if (prev && prev.name.length >= name.length) continue;
-    cards.set(card, { name, url, price: (text.match(priceRe) || [null])[0],
+    cards.set(card, { name, url, hint: text.replace(/\s+/g, ' ').slice(0, 240), price: (text.match(priceRe) || [null])[0],
                       out: outRe.test(text) && !inStockRe.test(text) });
   }
   let items = [...cards.values()].filter(i => i.name && i.name.length > 2);
@@ -204,7 +209,9 @@ EXTRACT_JS = r"""
   const links = [...document.querySelectorAll('a[href]')].map(a => a.href)
     .filter(h => productPath(h) !== null && /tarantula|sling|spider|shop|store|categor|collection|emporium|invertebrate|arachnid/i.test(h)
                  && !skip.test(h) && !notProduct.test(h));
-  return { items, next: next ? next.href : null, links: [...new Set(links)],
+  const allLinks = [...new Set([...document.querySelectorAll('a[href]')].map(a => a.href.split('#')[0])
+    .filter(h => productPath(h) !== null))].slice(0, 400);
+  return { items, next: next ? next.href : null, links: [...new Set(links)], allLinks,
            title: document.title, snippet: (document.body.innerText || '').slice(0, 600) };
 }
 """
@@ -239,7 +246,8 @@ def _load(page, url):
     return page.evaluate(EXTRACT_JS)
 
 
-def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str) -> list[dict] | None:
+def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str,
+                follow: str | None = None) -> list[dict] | None:
     from playwright.sync_api import sync_playwright
 
     found: dict[str, dict] = {}
@@ -280,8 +288,16 @@ def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str)
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
         page = browser.new_page(user_agent=UA, locale="en-GB")
+        visited = set()
         for start in listings:
-            crawl(start)
+            res = crawl(start)
+            visited.add(start)
+            # Optional: also walk sibling category pages (e.g. Slings -> Juveniles -> Adults).
+            if follow and res:
+                for link in [l for l in res.get("allLinks", []) if re.search(follow, l)][:10]:
+                    if link not in visited:
+                        visited.add(link)
+                        crawl(link)
         if not found:
             # Discover tarantula pages from the home page and try those.
             home = crawl(base + "/", force_filter=True)
@@ -305,6 +321,7 @@ def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str)
             "price": price,
             "in_stock": not it["out"],
             "url": it["url"],
+            "hint": it.get("hint", ""),
             "listed": None,
         })
     return out
@@ -331,7 +348,7 @@ def scrape_vendor(v: dict) -> tuple[list[dict] | None, str, str]:
         except Exception as e:  # noqa: BLE001
             errors.append(f"{method}: {e}")
     try:
-        items = try_browser(listings, v["name"], v.get("filter", False), base)
+        items = try_browser(listings, v["name"], v.get("filter", False), base, v.get("follow"))
         if items:
             return items, "browser", ""
         errors.append("browser: no products found (see docs/debug.json)")
@@ -439,6 +456,7 @@ def main():
     for key in [k for k, it in items.items() if it.get("gone") and it["last_seen"] < cutoff]:
         del items[key]
 
+    species.annotate(items)
     state["checked"] = stamp
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
     STATE_FILE.write_text(json.dumps(state, indent=1, sort_keys=True))
