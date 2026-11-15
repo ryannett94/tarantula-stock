@@ -9,6 +9,7 @@ Env vars:
 """
 from __future__ import annotations
 
+import html
 import json
 import os
 import re
@@ -63,7 +64,7 @@ def looks_like_livestock(name: str) -> bool:
 
 
 def clean(s) -> str:
-    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", str(s or ""))).strip()
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", str(s or "")))).strip()
 
 
 # ---------------------------------------------------------------- Shopify
