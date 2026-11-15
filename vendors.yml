@@ -1,0 +1,127 @@
+# Tarantula vendors to check.
+# For each shop the tracker tries, in order:
+#   1. Shopify product feed   (the collection in "listings" if there is one, else the whole shop)
+#   2. WooCommerce store feed (base/wp-json/wc/store/v1/products)
+#   3. Reading the listing pages below in a real browser
+# Listing pages are used only if 1 and 2 fail. If a shop shows "failed" on the
+# stock page, open the shop on your phone, copy the URL of its tarantula page and
+# paste it under that shop's "listings".
+# filter: true    = the listing page mixes tarantulas with other things, so keep
+#                   only tarantulas (matched by name or genus)
+# enabled: false  = pause a shop without deleting it
+
+vendors:
+  - name: The Spider Shop
+    base: https://thespidershop.co.uk
+    listings:
+      - https://thespidershop.co.uk/product-category/tarantulas/
+
+  - name: Eight Legged Emporium
+    base: https://eightleggedemporium.co.uk
+    listings:
+      - https://eightleggedemporium.co.uk/shop
+      - https://eightleggedemporium.co.uk/
+
+  - name: Spider Farm
+    base: https://spiderfarm.co.uk
+    listings:
+      - https://spiderfarm.co.uk/shop
+
+  - name: So Many Legs
+    base: https://www.somanylegs.co.uk
+    listings:
+      - https://www.somanylegs.co.uk/tarantulas
+      - https://www.somanylegs.co.uk/shop
+
+  - name: Portsmouth Tarantulas
+    base: https://www.portsmouthtarantulas.co.uk
+    listings:
+      - https://www.portsmouthtarantulas.co.uk/shop
+
+  - name: Spa Spiders
+    base: https://spaspiders.co.uk
+    listings:
+      - https://spaspiders.co.uk/shop/
+      - https://spaspiders.co.uk/
+
+  - name: Up in the Trees
+    base: https://upinthetrees.co.uk
+    filter: true
+    listings:
+      - https://upinthetrees.co.uk/shop/
+      - https://upinthetrees.co.uk/product-tag/tarantulas/
+
+  - name: Just One More
+    base: https://www.justonemore.uk
+    filter: true
+    listings:
+      - https://www.justonemore.uk/shop
+      - https://www.justonemore.uk/
+
+  - name: Bugnut
+    base: https://www.bugnut.co.uk
+    filter: true
+    listings:
+      - https://www.bugnut.co.uk/shop
+      - https://www.bugnut.co.uk/
+
+  - name: Ely Exotics
+    base: https://www.elyexotics.co.uk
+    listings:
+      - https://www.elyexotics.co.uk/invertebrates/arachnids/terrestrial-spiders
+      - https://www.elyexotics.co.uk/invertebrates/arachnids/arboreal-spiders
+
+  - name: Spoodoire
+    base: https://spoodoire.uk
+    listings:
+      - https://spoodoire.uk/shop/
+      - https://spoodoire.uk/
+
+  - name: Swansea Spiders
+    base: https://swanseaspiders.co.uk
+    listings:
+      - https://swanseaspiders.co.uk/shop
+      - https://swanseaspiders.co.uk/
+
+  - name: MARPC
+    base: https://www.marpc.co.uk
+    listings:
+      - https://www.marpc.co.uk/html/spiderlings.html
+
+  - name: Riverview Reptiles
+    base: https://www.riverviewreptiles.co.uk
+    listings:
+      - https://www.riverviewreptiles.co.uk/collections/tarantulas
+
+  - name: BugzUK
+    base: https://bugzuk.com
+    listings:
+      - https://bugzuk.com/store/tarantulas
+
+  - name: Bugpets
+    base: https://bugpets.co.uk
+    listings:
+      - https://bugpets.co.uk/tarantulas
+
+  - name: Bitey Things
+    base: https://www.biteythings.co.uk
+    listings:
+      - https://www.biteythings.co.uk/tarantulas
+
+  - name: The Praying Mantis Shop
+    base: https://theprayingmantis.co.uk
+    listings:
+      - https://theprayingmantis.co.uk/product-category/tarantulas/
+
+  - name: Spider Planet
+    base: https://www.spiderplanet.co.uk
+    listings:
+      - https://www.spiderplanet.co.uk/shop
+
+  - name: Exotics@Heart
+    base: https://www.exoticsatheart.com
+    filter: true
+    listings:
+      - https://www.exoticsatheart.com/tarantulas
+      - https://www.exoticsatheart.com/invertebrates
+      - https://www.exoticsatheart.com/

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UK Tarantula Stock</title>
+<meta name="theme-color" content="#14110f">
+<style>
+  :root {
+    --bg: #14110f; --panel: #1e1a17; --line: #2e2824; --text: #f1ebe4; --muted: #a39a90;
+    --accent: #e8833a; --new: #e8833a; --back: #5fb38a; --out: #6b625a;
+    --r: 14px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: env(safe-area-inset-top) 0 40px; }
+  header { padding: 20px 16px 8px; }
+  h1 { margin: 0; font-size: 26px; letter-spacing: -0.02em; }
+  .sub { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 10px 16px;
+    border-bottom: 1px solid var(--line); }
+  .tabs { display: flex; gap: 6px; margin-bottom: 10px; }
+  .tab { flex: 1; border: 1px solid var(--line); background: var(--panel); color: var(--muted);
+    border-radius: 999px; padding: 9px 6px; font-size: 14px; font-weight: 600; }
+  .tab[aria-pressed="true"] { background: var(--accent); color: #1a120b; border-color: var(--accent); }
+  .row { display: flex; gap: 8px; }
+  input, select { flex: 1; min-width: 0; background: var(--panel); color: var(--text);
+    border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 16px; }
+  select { flex: 0 0 auto; max-width: 45%; }
+  main { padding: 8px 16px; }
+  .count { color: var(--muted); font-size: 13px; margin: 6px 0 10px; }
+  .item { display: block; text-decoration: none; color: inherit; background: var(--panel);
+    border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; margin-bottom: 8px; }
+  .item:active { border-color: var(--accent); }
+  .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+  .name { font-weight: 600; }
+  .price { font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 700; }
+  .meta { display: flex; gap: 8px; align-items: center; margin-top: 6px; color: var(--muted); font-size: 13px; flex-wrap: wrap; }
+  .badge { font-size: 11px; font-weight: 800; letter-spacing: .05em; padding: 2px 7px; border-radius: 6px; }
+  .b-new { background: var(--new); color: #1a120b; }
+  .b-back { background: var(--back); color: #0d1f16; }
+  .b-out { background: var(--line); color: var(--muted); }
+  .item.out { opacity: .55; }
+  details { margin: 24px 16px 0; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; }
+  summary { font-weight: 600; cursor: pointer; }
+  .v { display: flex; justify-content: space-between; gap: 8px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 14px; }
+  .v:first-of-type { border-top: 0; }
+  .ok { color: var(--back); } .fail { color: #e06c5a; }
+  .err { color: var(--muted); font-size: 12px; margin-top: 2px; word-break: break-word; }
+  .empty { color: var(--muted); text-align: center; padding: 40px 10px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>UK Tarantula Stock</h1>
+  <div class="sub" id="checked">Loading…</div>
+</header>
+
+<div class="bar">
+  <div class="tabs" role="group">
+    <button class="tab" data-view="new" aria-pressed="true">New</button>
+    <button class="tab" data-view="in" aria-pressed="false">In stock</button>
+    <button class="tab" data-view="all" aria-pressed="false">All</button>
+  </div>
+  <div class="row">
+    <input id="q" type="search" placeholder="Search species" autocomplete="off">
+    <select id="vendor"><option value="">All shops</option></select>
+  </div>
+</div>
+
+<main>
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+</main>
+
+<details id="status"><summary>Shops checked</summary><div id="vendors"></div></details>
+
+<script>
+const NEW_DAYS = 7;
+let data = null, view = "new";
+const $ = s => document.querySelector(s);
+
+function ago(iso) {
+  if (!iso) return "";
+  const m = Math.round((Date.now() - new Date(iso)) / 60000);
+  if (m < 60) return m + " min ago";
+  const h = Math.round(m / 60);
+  if (h < 48) return h + " h ago";
+  return Math.round(h / 24) + " days ago";
+}
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+function freshAt(it) {
+  const t = [it.new_at, it.restocked_at].filter(Boolean).sort().pop();
+  return t && (Date.now() - new Date(t)) < NEW_DAYS * 864e5 ? t : null;
+}
+
+function render() {
+  if (!data) return;
+  const q = $("#q").value.trim().toLowerCase();
+  const vend = $("#vendor").value;
+  let items = Object.values(data.items).filter(it => !it.gone || view === "all");
+  if (view === "in") items = items.filter(it => it.in_stock);
+  if (view === "new") items = items.filter(it => it.in_stock && freshAt(it));
+  if (vend) items = items.filter(it => it.vendor === vend);
+  if (q) items = items.filter(it => (it.name + " " + it.vendor).toLowerCase().includes(q));
+  items.sort((a, b) => (freshAt(b) || "").localeCompare(freshAt(a) || "") ||
+    (b.in_stock - a.in_stock) || a.name.localeCompare(b.name));
+
+  $("#count").textContent = items.length + (items.length === 1 ? " listing" : " listings") +
+    (view === "new" ? ` new or back in the last ${NEW_DAYS} days` : "");
+  $("#list").innerHTML = items.length ? items.map(it => {
+    const f = freshAt(it);
+    const badge = !it.in_stock ? '<span class="badge b-out">SOLD OUT</span>'
+      : f && f === it.restocked_at ? '<span class="badge b-back">BACK</span>'
+      : f ? '<span class="badge b-new">NEW</span>' : "";
+    return `<a class="item ${it.in_stock ? "" : "out"}" href="${esc(it.url)}" target="_blank" rel="noopener">
+      <div class="top"><span class="name">${esc(it.name)}</span>
+      <span class="price">${it.price ? (it.currency === "USD" ? "$" : "£") + Number(it.price).toFixed(2) : ""}</span></div>
+      <div class="meta">${badge}<span>${esc(it.vendor)}</span>${f ? `<span>· ${ago(f)}</span>` : ""}</div></a>`;
+  }).join("") : `<div class="empty">${view === "new" ? "Nothing new this week yet." : "No matches."}</div>`;
+}
+
+function renderVendors() {
+  const vs = Object.entries(data.vendors).sort((a, b) => a[0].localeCompare(b[0]));
+  const ok = vs.filter(([, v]) => v.status === "ok").length;
+  $("#status summary").textContent = `Shops checked (${ok} of ${vs.length} working)`;
+  $("#vendors").innerHTML = vs.map(([name, v]) => `<div class="v"><div>${esc(name)}
+      ${v.status !== "ok" ? `<div class="err">${esc(v.error)}</div>` : ""}</div>
+      <div class="${v.status === "ok" ? "ok" : "fail"}">${v.status === "ok" ? `${v.in_stock}/${v.count} in stock` : "failed"}</div></div>`).join("");
+  const sel = $("#vendor");
+  vs.forEach(([name]) => { const o = document.createElement("option"); o.value = o.textContent = name; sel.appendChild(o); });
+}
+
+document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
+  view = b.dataset.view;
+  document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+});
+$("#q").oninput = render;
+$("#vendor").onchange = render;
+
+fetch("stock.json?t=" + Date.now()).then(r => r.json()).then(j => {
+  data = j;
+  $("#checked").textContent = j.checked ? "Last checked " + ago(j.checked) : "Not checked yet — the first run fills this in.";
+  renderVendors(); render();
+}).catch(() => { $("#checked").textContent = "Couldn't load stock list."; });
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+name: Check tarantula stock
+
+on:
+  schedule:
+    # 07:40 and 18:40 UK winter time (GitHub uses UTC; runs an hour later in summer)
+    - cron: "40 7 * * *"
+    - cron: "40 18 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stock
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Check vendors
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          PAGE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: python tracker/scrape.py
+
+      - name: Save results
+        run: |
+          git config user.name "stock-bot"
+          git config user.email "stock-bot@users.noreply.github.com"
+          git add docs/stock.json
+          git diff --cached --quiet || git commit -m "Stock update $(date -u +%F' '%H:%M)"
+          git push
