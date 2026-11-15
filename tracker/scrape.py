@@ -33,6 +33,7 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 HEADERS = {"User-Agent": UA, "Accept": "application/json,text/html;q=0.9,*/*;q=0.8"}
 TIMEOUT = 30
 GONE_RETENTION_DAYS = 60
+SHAPE = "options-1"
 
 # Genera so listings without the word "tarantula" are still picked up.
 GENERA = """acanthoscurria aphonopelma avicularia brachypelma bumba caribena ceratogyrus
@@ -89,15 +90,30 @@ def try_shopify(base: str, collection: str | None = None) -> list[dict] | None:
             if (not collection and not is_tarantula(meta)) or not looks_like_livestock(p.get("title", "")):
                 continue
             variants = p.get("variants", [])
+            hint = clean(" ".join([p.get("product_type", ""), " ".join(map(str, p.get("tags", []) or []))]))[:200]
+            url = f"{base}/products/{p.get('handle')}"
+            real = [v for v in variants if (v.get("title") or "").lower() != "default title"]
+            if len(real) >= 1 and len(variants) > 1 or (real and len(variants) == 1):
+                # One row per size/option, each with its own price and stock.
+                for v in variants:
+                    items.append({
+                        "id": f"shopify:{v['id']}",
+                        "name": f"{clean(p.get('title'))} – {clean(v.get('title'))}",
+                        "price": float(v["price"]) if v.get("price") else None,
+                        "in_stock": bool(v.get("available")),
+                        "url": f"{url}?variant={v['id']}",
+                        "hint": hint,
+                        "listed": p.get("published_at") or p.get("created_at"),
+                    })
+                continue
             prices = [float(v["price"]) for v in variants if v.get("price")]
             items.append({
                 "id": f"shopify:{p['id']}",
                 "name": clean(p.get("title")),
                 "price": min(prices) if prices else None,
                 "in_stock": any(v.get("available") for v in variants),
-                "url": f"{base}/products/{p.get('handle')}",
-                "hint": clean(" ".join([p.get("product_type", ""), " ".join(map(str, p.get("tags", []) or [])),
-                                         " ".join(v.get("title", "") for v in variants)]))[:240],
+                "url": url,
+                "hint": hint,
                 "listed": p.get("published_at") or p.get("created_at"),
             })
         page += 1
@@ -106,12 +122,28 @@ def try_shopify(base: str, collection: str | None = None) -> list[dict] | None:
 
 
 # ------------------------------------------------------------ WooCommerce
+def _woo_price(p: dict) -> float | None:
+    pr = p.get("prices") or {}
+    if pr.get("price"):
+        return int(pr["price"]) / (10 ** int(pr.get("currency_minor_unit", 2)))
+    return None
+
+
+def _pretty_option(value: str) -> str:
+    value = clean(value)
+    if " " not in value and re.search(r"[a-z]-|-[a-z]", value, re.I):
+        value = re.sub(r"(?<=[A-Za-z])-|-(?=[A-Za-z])", " ", value)
+    return value
+
+
+MAX_VARIATIONS = 2500
+
+
 def try_woo(base: str) -> list[dict] | None:
-    items, page = [], 1
+    api = f"{base}/wp-json/wc/store/v1/products"
+    items, page, fetched = [], 1, 0
     while page <= 30:
-        r = requests.get(f"{base}/wp-json/wc/store/v1/products",
-                         params={"per_page": 100, "page": page},
-                         headers=HEADERS, timeout=TIMEOUT)
+        r = requests.get(api, params={"per_page": 100, "page": page}, headers=HEADERS, timeout=TIMEOUT)
         if r.status_code != 200 or "json" not in r.headers.get("content-type", ""):
             return None if page == 1 else items
         products = r.json()
@@ -125,19 +157,48 @@ def try_woo(base: str) -> list[dict] | None:
             name = clean(p.get("name"))
             if not is_tarantula(name + " " + cats) or not looks_like_livestock(name):
                 continue
-            pr = p.get("prices") or {}
-            price = None
-            if pr.get("price"):
-                price = int(pr["price"]) / (10 ** int(pr.get("currency_minor_unit", 2)))
-            items.append({
-                "id": f"woo:{p['id']}",
-                "name": name,
-                "price": price,
-                "in_stock": bool(p.get("is_in_stock")),
-                "url": p.get("permalink"),
-                "hint": clean(cats + " " + clean(p.get("short_description")))[:240],
-                "listed": None,
-            })
+            hint = clean(cats + " " + clean(p.get("short_description")))[:240]
+            variations = p.get("variations") or []
+            done = False
+            if p.get("type") == "variable" and variations and fetched < MAX_VARIATIONS:
+                # Sizes chosen on the product page: read each option's own price and stock.
+                rows = []
+                for var in variations:
+                    option = " / ".join(_pretty_option(a.get("value", "")) for a in var.get("attributes", [])
+                                        if a.get("value"))
+                    try:
+                        vr = requests.get(f"{api}/{var['id']}", headers=HEADERS, timeout=TIMEOUT)
+                        fetched += 1
+                        time.sleep(0.15)
+                        if vr.status_code != 200:
+                            rows = []
+                            break
+                        v = vr.json()
+                    except Exception:  # noqa: BLE001
+                        rows = []
+                        break
+                    rows.append({
+                        "id": f"woo:{var['id']}",
+                        "name": f"{name} – {option}" if option else name,
+                        "price": _woo_price(v),
+                        "in_stock": bool(v.get("is_in_stock")),
+                        "url": v.get("permalink") or p.get("permalink"),
+                        "hint": hint,
+                        "listed": None,
+                    })
+                if rows:
+                    items.extend(rows)
+                    done = True
+            if not done:
+                items.append({
+                    "id": f"woo:{p['id']}",
+                    "name": name,
+                    "price": _woo_price(p),
+                    "in_stock": bool(p.get("is_in_stock")),
+                    "url": p.get("permalink"),
+                    "hint": hint,
+                    "listed": None,
+                })
         if len(products) < 100:
             break
         page += 1
@@ -444,10 +505,13 @@ def main():
             continue
 
         # First run for a shop, or a big jump after its links were fixed: record quietly.
-        seeding = vs.get("first_ok") is None or (
+        # SHAPE changes when listings are split differently (e.g. per size option);
+        # the first run after that records quietly instead of alerting on everything.
+        seeding = vs.get("shape") != SHAPE or vs.get("first_ok") is None or (
             len(found) - len(prev_ids) > max(10, len(prev_ids)))
         vs.update(status="ok", method=method, error="", checked=stamp,
                   count=len(found), in_stock=sum(1 for f in found if f["in_stock"]))
+        vs["shape"] = SHAPE
         if seeding:
             vs["first_ok"] = stamp
         print(f"    ok via {method}: {len(found)} tarantulas ({vs['in_stock']} in stock)"
