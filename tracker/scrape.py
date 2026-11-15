@@ -243,7 +243,25 @@ def _load(page, url):
         if btn.count() and btn.first.is_visible():
             btn.first.click()
             page.wait_for_timeout(1500)
-    return page.evaluate(EXTRACT_JS)
+    # Some shops (e.g. embedded store widgets) render products inside iframes.
+    merged = None
+    for frame in page.frames:
+        try:
+            r = frame.evaluate(EXTRACT_JS)
+        except Exception:  # noqa: BLE001
+            continue
+        if merged is None:
+            merged = r
+            merged["frames"] = len(page.frames)
+        else:
+            merged["items"] += r["items"]
+            merged["allLinks"] += r.get("allLinks", [])
+            merged["next"] = merged["next"] or r.get("next")
+    body = page.evaluate("() => document.body.innerText")
+    i = body.find("£")
+    merged["snippet"] = (body[max(0, i - 300):i + 300] if i >= 0 else body[:600])
+    merged["pounds"] = body.count("£")
+    return merged
 
 
 def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str,
@@ -279,6 +297,7 @@ def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str,
             got = harvest(result, force_filter)
             total += got
             log.append({"url": page.url, "title": result["title"], "found": got,
+                        "frames": result.get("frames"), "pounds": result.get("pounds"),
                         "snippet": result["snippet"] if got == 0 else ""})
             nxt = result.get("next")
             url = nxt if nxt and nxt != url else None
