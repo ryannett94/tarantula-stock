@@ -6,6 +6,13 @@ on:
     - cron: "40 7 * * *"
     - cron: "40 18 * * *"
   workflow_dispatch: {}
+  # Also run straight away whenever the shop list or tracker changes.
+  push:
+    branches: [main]
+    paths:
+      - vendors.yml
+      - tracker/**
+      - .github/workflows/check-stock.yml
 
 permissions:
   contents: write
@@ -33,7 +40,7 @@ jobs:
 
       - name: Check vendors
         env:
-          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC || 'ryan-tstock-458e621b' }}
           PAGE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: python tracker/scrape.py
 
