@@ -218,8 +218,16 @@ def clean_name(name: str) -> str:
 
 
 def _load(page, url):
-    page.goto(url, wait_until="domcontentloaded", timeout=45000)
+    try:
+        page.goto(url, wait_until="domcontentloaded", timeout=45000)
+    except Exception:  # noqa: BLE001  one retry for flaky redirects
+        page.wait_for_timeout(3000)
+        page.goto(url, wait_until="domcontentloaded", timeout=45000)
     page.wait_for_timeout(3500)
+    try:  # script-built shops: wait until prices appear
+        page.wait_for_function("() => /[£$]\\s?\\d/.test(document.body.innerText)", timeout=12000)
+    except Exception:  # noqa: BLE001
+        pass
     for _ in range(12):  # lazy loading + "load more" buttons
         page.mouse.wheel(0, 20000)
         page.wait_for_timeout(700)
@@ -418,6 +426,13 @@ def main():
         for key in list(items):
             if items[key]["vendor"] == name and key not in seen and not items[key].get("gone"):
                 items[key].update(gone=True, in_stock=False)
+
+    # Forget shops that have been removed from vendors.yml.
+    active = {v["name"] for v in cfg["vendors"] if v.get("enabled", True) is not False}
+    for name in [n for n in vendors if n not in active]:
+        del vendors[name]
+    for key in [k for k, it in items.items() if it["vendor"] not in active]:
+        del items[key]
 
     cutoff = (datetime.now(timezone.utc) - timedelta(days=GONE_RETENTION_DAYS)).isoformat()
     for key in [k for k, it in items.items() if it.get("gone") and it["last_seen"] < cutoff]:

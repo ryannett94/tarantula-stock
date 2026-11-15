@@ -19,10 +19,8 @@ vendors:
   - name: Eight Legged Emporium
     base: https://eightleggedemporium.co.uk
     listings:
-      - https://eightleggedemporium.co.uk/emporium/slings/
-      - https://eightleggedemporium.co.uk/emporium/juveniles/
-      - https://eightleggedemporium.co.uk/emporium/adults/
-      - https://eightleggedemporium.co.uk/emporium/
+      - https://eightleggedemporium.co.uk/emporium
+      - https://eightleggedemporium.co.uk/
   - name: Spider Farm
     base: https://spiderfarm.co.uk
     listings:
@@ -37,9 +35,9 @@ vendors:
   - name: Portsmouth Tarantulas
     base: https://www.portsmouthtarantulas.co.uk
     listings:
-      - https://www.portsmouthtarantulas.co.uk/shop
+      - https://www.portsmouthtarantulas.co.uk/category/all-products
+      - https://www.portsmouthtarantulas.co.uk/tarantulas
       - https://www.portsmouthtarantulas.co.uk/
-      - https://www.portsmouthtarantulas.com/
   - name: Spa Spiders
     base: https://spaspiders.co.uk
     listings:
@@ -69,11 +67,10 @@ vendors:
 
   - name: Ely Exotics
     base: https://www.elyexotics.co.uk
+    filter: true
     listings:
-      - https://www.elyexotics.co.uk/invertebrates/arachnids/terrestrial-spiders
-      - https://www.elyexotics.co.uk/invertebrates/arachnids/arboreal-spiders
-      - https://ely-exotics.netlify.app/invertebrates/arachnids/terrestrial-spiders
-      - https://ely-exotics.netlify.app/invertebrates/arachnids/arboreal-spiders
+      - https://www.elyexotics.co.uk/stocklist/
+      - https://www.elyexotics.co.uk/shop/
   - name: Spoodoire
     base: https://spoodoire.uk
     listings:
@@ -107,20 +104,10 @@ vendors:
       - https://bugpets.co.uk/spiderling-tarantulas
       - https://bugpets.co.uk/juvenile-tarantulas
       - https://bugpets.co.uk/adult-tarantulas
-  - name: Bitey Things
-    base: https://www.biteythings.co.uk
-    listings:
-      - https://www.biteythings.co.uk/tarantulas
-
   - name: The Praying Mantis Shop
     base: https://theprayingmantis.co.uk
     listings:
       - https://theprayingmantis.co.uk/product-category/tarantulas/
-
-  - name: Spider Planet
-    base: https://www.spiderplanet.co.uk
-    listings:
-      - https://www.spiderplanet.co.uk/shop
 
   - name: Exotics@Heart
     base: https://www.exoticsatheart.com
