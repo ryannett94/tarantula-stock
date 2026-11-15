@@ -48,6 +48,6 @@ jobs:
         run: |
           git config user.name "stock-bot"
           git config user.email "stock-bot@users.noreply.github.com"
-          git add docs/stock.json
+          git add docs/stock.json docs/debug.json
           git diff --cached --quiet || git commit -m "Stock update $(date -u +%F' '%H:%M)"
           git pull --rebase origin main && git push

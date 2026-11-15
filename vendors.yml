@@ -35,9 +35,11 @@ vendors:
       - https://www.somanylegs.co.uk/shop
 
   - name: Portsmouth Tarantulas
-    base: https://www.portsmouthtarantulas.com
+    base: https://www.portsmouthtarantulas.co.uk
     listings:
-      - https://www.portsmouthtarantulas.com/shop
+      - https://www.portsmouthtarantulas.co.uk/shop
+      - https://www.portsmouthtarantulas.co.uk/
+      - https://www.portsmouthtarantulas.com/
   - name: Spa Spiders
     base: https://spaspiders.co.uk
     listings:
