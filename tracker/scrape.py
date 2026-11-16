@@ -33,6 +33,7 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 HEADERS = {"User-Agent": UA, "Accept": "application/json,text/html;q=0.9,*/*;q=0.8"}
 TIMEOUT = 30
 GONE_RETENTION_DAYS = 60
+APPAREL = re.compile(r"^(xxs|xs|s|m|l|xl|xxl|[2-5]xl|small|medium|large|x-large)$", re.I)
 SHAPE = "options-1"
 
 # Genera so listings without the word "tarantula" are still picked up.
@@ -53,7 +54,7 @@ NOT_LIVESTOCK = re.compile(
     r"\b(enclosure|substrate|tub|hide|cork|bowl|heat ?mat|thermostat|book|poster|"
     r"t-shirt|tshirt|mug|tongs|tweezers|gift card|voucher|feeder|crickets|locusts|"
     r"roaches|mealworms|dubia|faunarium|kit only|just kit|exo terra|decor|set ?ups?|"
-    r"complete setups?|minimum order|postage|delivery|gift|donation|review|video|competition|raffle|win the|spiderling box|bulk|bundle|pack of|lot of|multi ?buy)\b", re.I)
+    r"complete setups?|minimum order|postage|delivery|gift|donation|review|video|competition|raffle|win the|spiderling box|t-?shirt|tee|hoodie|sweatshirt|sticker|keyring|mug|print|poster|plush|bulk|bundle|pack of|lot of|multi ?buy)\b", re.I)
 
 
 def now_iso() -> str:
@@ -104,6 +105,8 @@ def try_shopify(base: str, collection: str | None = None) -> list[dict] | None:
             imgs = p.get("images") or []
             image = _sized(imgs[0].get("src")) if imgs else None
             real = [v for v in variants if (v.get("title") or "").lower() != "default title"]
+            if any(APPAREL.match(o.strip()) for v in variants for o in (v.get("title") or "").split("/")):
+                continue  # clothing
             if len(real) >= 1 and len(variants) > 1 or (real and len(variants) == 1):
                 # One row per size/option, each with its own price and stock.
                 for v in variants:
@@ -223,6 +226,9 @@ def try_woo(base: str) -> list[dict] | None:
         pimgs = p.get("images") or []
         image = (pimgs[0].get("thumbnail") or pimgs[0].get("src")) if pimgs else None
         rows = []
+        opts = [a.get("value", "") for var in (p.get("variations") or []) for a in var.get("attributes", [])]
+        if any(APPAREL.match(o.strip()) for o in opts):
+            continue  # clothing (T-shirt sizes), not a spider
         if p.get("type") == "variable":
             for var in p.get("variations") or []:
                 v = var_data.get(var["id"])
