@@ -217,7 +217,9 @@ def try_woo(base: str) -> list[dict] | None:
 
     items = []
     for p, name, cats in keep:
-        hint = clean(cats + " " + clean(p.get("short_description")))[:240]
+        sku = re.sub(r"-\d+$", "", str(p.get("sku") or ""))
+        hint = clean(" ".join([cats, sku, clean(p.get("short_description")),
+                               clean(p.get("description"))[:160]]))[:300]
         pimgs = p.get("images") or []
         image = (pimgs[0].get("thumbnail") or pimgs[0].get("src")) if pimgs else None
         rows = []
