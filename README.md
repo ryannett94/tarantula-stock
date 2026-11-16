@@ -1,4 +1,4 @@
-# UK Tarantula Stock Tracker
+# UK Spider Stock Tracker
 
 Checks UK tarantula shops twice a day (about 07:40 and 18:40). It keeps one combined stock page and sends your phone an alert when a new tarantula is listed or one comes back in stock.
 

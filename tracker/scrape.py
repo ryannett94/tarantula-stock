@@ -34,7 +34,7 @@ HEADERS = {"User-Agent": UA, "Accept": "application/json,text/html;q=0.9,*/*;q=0
 TIMEOUT = 30
 GONE_RETENTION_DAYS = 60
 APPAREL = re.compile(r"^(xxs|xs|s|m|l|xl|xxl|[2-5]xl|small|medium|large|x-large)$", re.I)
-SHAPE = "options-1"
+SHAPE = "spiders-1"
 
 # Genera so listings without the word "tarantula" are still picked up.
 GENERA = """acanthoscurria aphonopelma avicularia brachypelma bumba caribena ceratogyrus
@@ -48,6 +48,17 @@ pseudhapalopus kochiana orphnaecus encyocratella dolichothele sericopelma cotzte
 vitalius proshapalopus magulla holothele cyclosternum pelinobius haploclastus lampropelma
 annandaliella thrigmopoeus cyrtopholis citharacanthus""".split()
 GENUS_RE = re.compile(r"\b(" + "|".join(GENERA) + r")\b", re.I)
+SPIDER_GENUS_RE = re.compile(r"\b(" + "|".join(sorted(species.JUMPING_GENERA | species.OTHER_SPIDER_GENERA)) + r")\b", re.I)
+SPIDER_WORDS = re.compile(r"\b(spiders?|spiderlings?|slings?|salticid\w*|jumpers?|widows?|huntsman|orb ?weavers?)\b", re.I)
+SUPPLY_CAT = re.compile(r"suppl|setup|set-up|enclosure|equipment|food|feeder|accessor|decor|substrate|"
+                        r"hardware|lighting|heating|book|merch|apparel|clothing|gift|plant|hygrom|tools?", re.I)
+# Not spiders: other inverts, reptiles, mixed boxes, and non-spider arachnids.
+NOT_SPIDER = re.compile(
+    r"\b(mantis|mantids?|isopods?|scorpions?|whip ?(spider|scorpion)s?|amblypyg\w*|vinegaroons?|"
+    r"solifug\w*|camel spiders?|centipedes?|millipedes?|roach(es)?|beetles?|snails?|geckos?|frogs?|toads?|"
+    r"snakes?|lizards?|skinks?|dragons?|mystery|assassin|stick insects?|leaf insects?|tarantula hawk|"
+    r"crickets?|locusts?|mealworms?|springtails?|ticks?|mites?|crabs?(?!\s*spider)|shrimps?|moths?|butterfl\w+|"
+    r"scarab|ants?(?![- ]?(mimic|like))|ant colony|termites?|axolotl|chameleon|tortoise|pede)\b", re.I)
 BULK = re.compile(r"\(\s*(bulk|bundle|x\s*\d+)|\b\d+\s*x\s+(sling|spiderling)|\bx\s*([2-9]|[1-5]\d)\b|"
                   r"\b([2-9]|[1-5]\d)\s*(slings|spiderlings)\b", re.I)
 NOT_LIVESTOCK = re.compile(
@@ -65,8 +76,13 @@ def is_tarantula(text: str) -> bool:
     return bool(re.search(r"tarantula", text, re.I) or GENUS_RE.search(text))
 
 
+def is_spider(text: str) -> bool:
+    """Tarantulas, jumping spiders and other spiders; nothing else."""
+    return bool(is_tarantula(text) or SPIDER_GENUS_RE.search(text) or SPIDER_WORDS.search(text))
+
+
 def looks_like_livestock(name: str) -> bool:
-    return not NOT_LIVESTOCK.search(name) and not BULK.search(name)
+    return not NOT_LIVESTOCK.search(name) and not BULK.search(name) and not NOT_SPIDER.search(name)
 
 
 def clean(s) -> str:
@@ -97,7 +113,7 @@ def try_shopify(base: str, collection: str | None = None) -> list[dict] | None:
                              " ".join(p.get("tags", []) if isinstance(p.get("tags"), list)
                                       else [str(p.get("tags", ""))])])
             # A tarantula collection is trusted as-is; the whole shop feed is filtered.
-            if (not collection and not is_tarantula(meta)) or not looks_like_livestock(p.get("title", "")):
+            if (not collection and not is_spider(meta)) or not looks_like_livestock(p.get("title", "")):
                 continue
             variants = p.get("variants", [])
             hint = clean(" ".join([p.get("product_type", ""), " ".join(map(str, p.get("tags", []) or []))]))[:200]
@@ -210,7 +226,10 @@ def try_woo(base: str) -> list[dict] | None:
     for p in products_all:
         cats = " ".join(c.get("name", "") + " " + c.get("slug", "") for c in p.get("categories", []))
         name = clean(p.get("name"))
-        if is_tarantula(name + " " + cats) and looks_like_livestock(name):
+        named = bool(GENUS_RE.search(name) or SPIDER_GENUS_RE.search(name))
+        if SUPPLY_CAT.search(cats) and not named:
+            continue  # e.g. "Jumping Spider Supplies": moss, heaters, pots
+        if is_spider(name + " " + cats) and looks_like_livestock(name):
             keep.append((p, name, cats))
 
     # Sizes chosen on the product page: read each option's own price and stock.
@@ -409,7 +428,7 @@ def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str,
             it["name"] = clean_name(it["name"])
             if len(it["name"]) < 3:
                 continue
-            if (filter_names or force_filter) and not is_tarantula(it["name"] + " " + it["url"]):
+            if (filter_names or force_filter) and not is_spider(it["name"] + " " + it["url"]):
                 continue
             if not looks_like_livestock(it["name"]):
                 continue
@@ -484,25 +503,35 @@ def scrape_vendor(v: dict) -> tuple[list[dict] | None, str, str]:
     base = v["base"].rstrip("/")
     # Drop tracking junk like ?srsltid=... from pasted links.
     listings = [u.split("?")[0] for u in v.get("listings", [])]
-    collection = next((urlparse(u).path.rstrip("/") for u in listings
-                       if "/collections/" in u), None)
+    collections = [urlparse(u).path.rstrip("/") for u in listings if "/collections/" in u]
     errors = []
     attempts = []
-    if collection:
-        attempts.append(("shopify", lambda: try_shopify(base, collection)))
+    if collections:
+        def all_collections():
+            merged = {}
+            for c in collections:
+                for it in try_shopify(base, c) or []:
+                    merged[it["id"]] = it
+            return list(merged.values()) or None
+        attempts.append(("shopify", all_collections))
     attempts += [("shopify", lambda: try_shopify(base)),
                  ("woocommerce", lambda: try_woo(base))]
+    feed_ok = ""
     for method, fn in attempts:
         try:
             items = fn()
             if items is not None and len(items) > 0:
                 return items, method, ""
+            if items is not None:
+                feed_ok = method
         except Exception as e:  # noqa: BLE001
             errors.append(f"{method}: {e}")
     try:
         items = try_browser(listings, v["name"], v.get("filter", False), base, v.get("follow"))
         if items:
             return items, "browser", ""
+        if feed_ok:
+            return [], feed_ok, ""  # shop feed works, it just has no spiders listed right now
         errors.append("browser: no products found (see docs/debug.json)")
     except Exception as e:  # noqa: BLE001
         errors.append(f"browser: {e}")
@@ -534,7 +563,7 @@ def notify(alerts: list[dict]):
         lines.append(f"{tag} {a['name']}{price} ({a['vendor']})")
     if len(alerts) > 20:
         lines.append(f"…and {len(alerts) - 20} more")
-    headers = {"Title": "Tarantula stock: " + ", ".join(title), "Tags": "spider"}
+    headers = {"Title": "Spider stock: " + ", ".join(title), "Tags": "spider"}
     if os.environ.get("PAGE_URL"):
         headers["Click"] = os.environ["PAGE_URL"]
     try:
@@ -577,7 +606,7 @@ def main():
         vs["shape"] = SHAPE
         if seeding:
             vs["first_ok"] = stamp
-        print(f"    ok via {method}: {len(found)} tarantulas ({vs['in_stock']} in stock)"
+        print(f"    ok via {method}: {len(found)} spiders ({vs['in_stock']} in stock)"
               + (" [first run, no alerts]" if seeding else ""))
 
         seen = set()

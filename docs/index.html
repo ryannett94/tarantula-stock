@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>UK Tarantula Stock</title>
+<title>UK Spider Stock</title>
 <meta name="theme-color" content="#14110f">
 <style>
   :root {
@@ -72,7 +72,7 @@
 </head>
 <body>
 <header>
-  <h1>UK Tarantula Stock</h1>
+  <h1>UK Spider Stock</h1>
   <div class="sub" id="checked">Loading…</div>
 </header>
 
@@ -89,6 +89,12 @@
       <option value="">Any sex</option><option value="female">Females</option>
       <option value="male">Males</option><option value="pair">Pairs</option><option value="unsexed">Unsexed</option>
     </select>
+  </div>
+  <div class="chips" id="groups" style="margin-bottom:8px">
+    <button class="chip" data-group="" aria-pressed="true">All spiders</button>
+    <button class="chip" data-group="tarantula" aria-pressed="false">Tarantulas</button>
+    <button class="chip" data-group="jumping" aria-pressed="false">Jumping spiders</button>
+    <button class="chip" data-group="other" aria-pressed="false">True &amp; other spiders</button>
   </div>
   <div class="chips" id="stages">
     <button class="chip" data-stage="" aria-pressed="true">All sizes</button>
@@ -110,7 +116,7 @@
 const NEW_DAYS = 7, SHOW = 4;
 const STAGE = { sling: "Sling", juvenile: "Juvenile", subadult: "Sub-adult", adult: "Adult" };
 const SEX = { female: "Female", male: "Male", pair: "Pair" };
-let data = null, view = "new", stage = "";
+let data = null, view = "new", stage = "", group = "";
 const expanded = new Set();
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -147,6 +153,7 @@ function offerPasses(it) {
   if (view === "new" && !freshAt(it)) return false;
   if ($("#vendor").value && it.vendor !== $("#vendor").value) return false;
   if (stage && it.stage !== stage) return false;
+  if (group && (it.group || "tarantula") !== group) return false;
   const sx = $("#sex").value;
   if (sx && (sx === "unsexed" ? it.sex : it.sex !== sx)) return false;
   return true;
@@ -226,7 +233,13 @@ $("#tabs").onclick = e => {
 $("#stages").onclick = e => {
   const b = e.target.closest(".chip"); if (!b) return;
   stage = b.dataset.stage;
-  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+  document.querySelectorAll("#stages .chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+};
+$("#groups").onclick = e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  group = b.dataset.group;
+  document.querySelectorAll("#groups .chip").forEach(x => x.setAttribute("aria-pressed", x === b));
   render();
 };
 $("#list").onclick = e => {

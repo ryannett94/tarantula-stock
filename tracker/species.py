@@ -30,6 +30,24 @@ thrixopelma tliltocatl tmesiphantes typhochlaena umbyquyra vitalius xenesthis yb
 yanomamius
 """.split())
 
+JUMPING_GENERA = set("""
+anasaitis asemonea attulus bianor carrhotus chrysilla colonus cosmophasis cytaea epeus eris euophrys
+evarcha habronattus harmochirus hasarius heliophanus hentzia holoplatys hyllus hypoblemum irura
+lyssomanes maevia maratus marpissa menemerus mopsus myrmarachne ocrisiona opisthoncus paraphidippus
+pelegrina pellenes phidippus philaeus platycryptus plexippus portia ptocasius rhene saitis salticus
+sassacus servaea siler simaetha sitticus tauala telamonia thiania thyene zygoballus
+""".split())
+
+OTHER_SPIDER_GENERA = set("""
+agelena ancylometes aphantochilus araneus argiope atypus caerostris cteniza cupiennius cyclosa
+cyrtophora deinopis diguetia dolomedes dresserus eratigena eresus euagrus eusparassus filistata
+gandanameno gasteracantha geolycosa hersilia heteropoda hexophthalma hippasa hogna holocnemus
+ischnothele kukulcania latrodectus linothele liphistius loxosceles lycosa macrothele micrommata
+misumena nemesia nephila nephilingis oxyopes pandercetes pardosa parasteatoda peucetia pholcus
+phoneutria phrynarachne poltys psechrus rabidosa scytodes sicarius sosippus sphodros steatoda
+stegodyphus tegenaria tengella thomisus tibellus tigrosa trichonephila ummidia olios
+""".split())
+
 # Misspellings and old names -> current hobby names.
 GENUS_FIX = {
     "tlitocatl": "tliltocatl", "theraposa": "theraphosa", "lasiodera": "lasiodora",
@@ -165,6 +183,28 @@ def common_part(name: str, key: str) -> str | None:
     return None
 
 
+def group_of(it: dict) -> str:
+    """tarantula / jumping / other (true spiders and non-tarantula mygalomorphs)."""
+    g = (it.get("species") or "").split(" ")[0]
+    if g in JUMPING_GENERA:
+        return "jumping"
+    if g in OTHER_SPIDER_GENERA:
+        return "other"
+    if g in KNOWN_GENERA:
+        return "tarantula"
+    text = f"{it.get('name', '')} {it.get('hint', '')}".lower()
+    if re.search(r"jumping|salticid|\bjumper", text):
+        return "jumping"
+    if re.search(r"tarantula|theraphosid|bird ?eat", text):
+        return "tarantula"
+    if re.search(r"widow|huntsman|orb ?weaver|wolf spider|fishing spider|true spider|trapdoor|"
+                 r"funnel|crab spider|lynx|net[- ]?casting|velvet spider|wandering|purse ?web|hourglass", text):
+        return "other"
+    if re.search(r"\bspider", it.get("name", ""), re.I):
+        return "other"  # unknown genus called a "spider" rather than a tarantula
+    return "tarantula"
+
+
 def stage_of(text: str) -> str:
     t = text.lower()
     if re.search(r"sub[\s-]?adult|semi[\s-]?adult|\bs/a\b|\(sa\)", t):
@@ -206,7 +246,7 @@ def sex_of(text: str) -> str:
 def annotate(items: dict) -> None:
     """Add species, species_name, common, stage and sex to every item in place."""
     live = list(items.values())
-    genera = set(KNOWN_GENERA)
+    genera = set(KNOWN_GENERA) | JUMPING_GENERA | OTHER_SPIDER_GENERA
 
     # Pass 1: species from the listing name, then from the URL slug.
     for it in live:
@@ -264,6 +304,8 @@ def annotate(items: dict) -> None:
         if plain in by_common:
             it["species"] = by_common[plain].most_common(1)[0][0]
 
+    for it in live:
+        it["group"] = group_of(it)
     for it in live:
         key = it["species"]
         it["species_name"] = display_name(key) if key else it["name"]

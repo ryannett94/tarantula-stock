@@ -1,4 +1,4 @@
-# Tarantula vendors to check.
+# Spider vendors to check (tarantulas, jumping spiders, true spiders).
 # For each shop the tracker tries, in order:
 #   1. Shopify product feed   (the collection in "listings" if there is one, else the whole shop)
 #   2. WooCommerce store feed (base/wp-json/wc/store/v1/products)
@@ -43,6 +43,7 @@ vendors:
   - name: Spa Spiders
     base: https://spaspiders.co.uk
     listings:
+      - https://spaspiders.co.uk/mygalomorphae-true-spiders/
       - https://spaspiders.co.uk/shop/
       - https://spaspiders.co.uk/
 
@@ -57,6 +58,8 @@ vendors:
     base: https://www.justonemore.uk
     filter: true
     listings:
+      - https://www.justonemore.uk/shop/Jumping-spiders-c167146093/
+      - https://www.justonemore.uk/shop/True-spiders-c203842271/
       - https://www.justonemore.uk/shop
       - https://www.justonemore.uk/
 
@@ -81,6 +84,7 @@ vendors:
   - name: Swansea Spiders
     base: https://swanseaspiders.co.uk
     listings:
+      - https://www.swanseaspiders.co.uk/shop/True-Spiders-c198521145/
       - https://swanseaspiders.co.uk/shop
       - https://swanseaspiders.co.uk/
 
@@ -92,12 +96,14 @@ vendors:
   - name: Riverview Reptiles
     base: https://www.riverviewreptiles.co.uk
     listings:
+      - https://www.riverviewreptiles.co.uk/collections/jumping-spiders-and-other-spiders
       - https://www.riverviewreptiles.co.uk/collections/tarantulas
 
   - name: BugzUK
     base: https://bugzuk.com
     filter: true
     listings:
+      - https://www.bugzuk.com/store/true-spiders
       - https://bugzuk.com/store/tarantulas
   - name: Bugpets
     base: https://bugpets.co.uk
@@ -114,6 +120,7 @@ vendors:
     base: https://www.exoticsatheart.com
     filter: true
     listings:
+      - https://www.exoticsatheart.com/shop/other-spiders/10
       - https://www.exoticsatheart.com/tarantulas
       - https://www.exoticsatheart.com/invertebrates
       - https://www.exoticsatheart.com/
