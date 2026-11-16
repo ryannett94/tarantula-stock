@@ -25,7 +25,7 @@
   {
    "url": "https://spiderfarm.co.uk/shop",
    "title": "Tarantulas for Sale in the UK \u2014 Spider Farm",
-   "found": 166,
+   "found": 151,
    "frames": [
     "https://spiderfarm.co.uk/shop",
     "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LdDFQwjAAAAAPigEvvPgE",
@@ -97,7 +97,6 @@
    "found": 2,
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Sub-Adults-c200038256",
-    "about:blank",
     "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
     "https://wix.ecwid.com/wix/app/store/Sub-Adults-c200038256?lang=en&dateNumberForm",
     "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
@@ -128,10 +127,10 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Males-c31298501",
     "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
-    "https://wix.ecwid.com/wix/app/store/Males-c31298501?lang=en&dateNumberFormat=en-",
-    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
+    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
+    "https://wix.ecwid.com/wix/app/store/Males-c31298501?pageId=u3qgp&compId=TPASecti",
+    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
    ],
    "pounds": 0,
    "snippet": ""
@@ -203,10 +202,10 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Starter-kits-&-equipment-c13516931",
     "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Starter-kits-&-equipment-c135169315?pageId=u",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Starter-kits-&-equipment-c135169315?lang=en&",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
    ],
    "pounds": 0,
    "snippet": ""
@@ -214,10 +213,9 @@
   {
    "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Reptile-Supplies-c164576516",
    "title": "Shop | Portsmouth Tarantulas",
-   "found": 24,
+   "found": 21,
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Reptile-Supplies-c164576516",
-    "about:blank",
     "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
     "https://wix.ecwid.com/wix/app/store/Reptile-Supplies-c164576516?lang=en&dateNumb",
     "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
