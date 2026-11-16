@@ -63,7 +63,7 @@ NOT_SPIDER = re.compile(
 BULK = re.compile(r"\(\s*(bulk|bundle|x\s*\d+)|\b\d+\s*x\s+(sling|spiderling)|\bx\s*([2-9]|[1-5]\d)\b|"
                   r"\b([2-9]|[1-5]\d)\s*(slings|spiderlings)\b", re.I)
 NOT_LIVESTOCK = re.compile(
-    r"\b(enclosure|substrate|tub|hide|cork|bowl|heat ?mat|thermostat|book|poster|"
+    r"\b(enclosure|substrate|tub|hide|cork|bowls?|wood|heat ?mat|thermostat|book|poster|"
     r"t-shirt|tshirt|mug|tongs|tweezers|gift card|voucher|feeder|crickets|locusts|"
     r"roaches|mealworms|dubia|faunarium|kit only|just kit|exo terra|decor|set ?ups?|"
     r"complete setups?|minimum order|postage|delivery|gift|donation|review|video|competition|raffle|win the|spiderling box|pots?|caves?|burrow|nest|vouchers?|lamps?|bulbs?|heat\w*|cables?|thermo\w*|hygro\w*|terrarium|invertarium|moss|misting|spray|supplements?|grub|gel|coir|nutrobal|projector|kits?|fittings?|bedding|backing|t-?shirt|tee|hoodie|sweatshirt|sticker|keyring|mug|print|poster|plush|bulk|bundle|pack of|lot of|multi ?buy)\b", re.I)
