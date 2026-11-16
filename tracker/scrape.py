@@ -50,6 +50,7 @@ annandaliella thrigmopoeus cyrtopholis citharacanthus""".split()
 GENUS_RE = re.compile(r"\b(" + "|".join(GENERA) + r")\b", re.I)
 SPIDER_GENUS_RE = re.compile(r"\b(" + "|".join(sorted(species.JUMPING_GENERA | species.OTHER_SPIDER_GENERA)) + r")\b", re.I)
 SPIDER_WORDS = re.compile(r"\b(spiders?|spiderlings?|slings?|salticid\w*|jumpers?|widows?|huntsman|orb ?weavers?)\b", re.I)
+ANIMAL_WORDS = re.compile(r"tarantula|spider|\bslings?\b|jumper|widow|huntsman|\bT\.|\bsp\.", re.I)
 SUPPLY_CAT = re.compile(r"suppl|setup|set-up|enclosure|equipment|food|feeder|accessor|decor|substrate|"
                         r"hardware|lighting|heating|book|merch|apparel|clothing|gift|plant|hygrom|tools?", re.I)
 # Not spiders: other inverts, reptiles, mixed boxes, and non-spider arachnids.
@@ -65,7 +66,7 @@ NOT_LIVESTOCK = re.compile(
     r"\b(enclosure|substrate|tub|hide|cork|bowl|heat ?mat|thermostat|book|poster|"
     r"t-shirt|tshirt|mug|tongs|tweezers|gift card|voucher|feeder|crickets|locusts|"
     r"roaches|mealworms|dubia|faunarium|kit only|just kit|exo terra|decor|set ?ups?|"
-    r"complete setups?|minimum order|postage|delivery|gift|donation|review|video|competition|raffle|win the|spiderling box|t-?shirt|tee|hoodie|sweatshirt|sticker|keyring|mug|print|poster|plush|bulk|bundle|pack of|lot of|multi ?buy)\b", re.I)
+    r"complete setups?|minimum order|postage|delivery|gift|donation|review|video|competition|raffle|win the|spiderling box|pots?|caves?|burrow|nest|vouchers?|lamps?|bulbs?|heat\w*|cables?|thermo\w*|hygro\w*|terrarium|invertarium|moss|misting|spray|supplements?|grub|gel|coir|nutrobal|projector|kits?|fittings?|bedding|backing|t-?shirt|tee|hoodie|sweatshirt|sticker|keyring|mug|print|poster|plush|bulk|bundle|pack of|lot of|multi ?buy)\b", re.I)
 
 
 def now_iso() -> str:
@@ -428,7 +429,8 @@ def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str,
             it["name"] = clean_name(it["name"])
             if len(it["name"]) < 3:
                 continue
-            if (filter_names or force_filter) and not is_spider(it["name"] + " " + it["url"]):
+            # Only the URL path counts: a shop called "...tarantulas.co.uk" says nothing about the item.
+            if (filter_names or force_filter) and not is_spider(it["name"] + " " + urlparse(it["url"]).path):
                 continue
             if not looks_like_livestock(it["name"]):
                 continue
@@ -646,6 +648,9 @@ def main():
         del items[key]
 
     species.annotate(items)
+    # Without a recognisable species name, keep it only if the name says it's a spider.
+    for key in [k for k, it in items.items() if not it.get("species") and not ANIMAL_WORDS.search(it["name"])]:
+        del items[key]
     state["checked"] = stamp
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
     STATE_FILE.write_text(json.dumps(state, indent=1, sort_keys=True))
