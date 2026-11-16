@@ -51,7 +51,11 @@ GENUS_RE = re.compile(r"\b(" + "|".join(GENERA) + r")\b", re.I)
 SPIDER_GENUS_RE = re.compile(r"\b(" + "|".join(sorted(species.JUMPING_GENERA | species.OTHER_SPIDER_GENERA)) + r")\b", re.I)
 SPIDER_WORDS = re.compile(r"\b(spiders?|spiderlings?|slings?|salticid\w*|jumpers?|widows?|huntsman|orb ?weavers?)\b", re.I)
 ANIMAL_WORDS = re.compile(r"tarantula|spider|\bslings?\b|jumper|widow|huntsman|\bT\.|\bsp\.", re.I)
-SUPPLY_CAT = re.compile(r"suppl|setup|set-up|enclosure|equipment|food|feeder|accessor|decor|substrate|"
+LIVE_CAT = re.compile(r"tarantula|spiderling|spiders|livestock|live inverts|invertebrates", re.I)
+# Care-sheet text like "ADULT SIZE 18-20cm" describes the species, not the spider for sale.
+ADULT_SIZE = re.compile(r"(adult|max(imum)?|full[- ]grown)\s*(size|leg ?span)\s*:?\s*(around|approx\.?|about|up to|c\.)?\s*"
+                        r"[\d.\s\-–to]+(cm|\")?(\s*leg ?span)?", re.I)
+SUPPLY_CAT = re.compile(r"starter|kits?\b|books?|media|suppl|setup|set-up|enclosure|equipment|food|feeder|accessor|decor|substrate|"
                         r"hardware|lighting|heating|book|merch|apparel|clothing|gift|plant|hygrom|tools?", re.I)
 # Not spiders: other inverts, reptiles, mixed boxes, and non-spider arachnids.
 NOT_SPIDER = re.compile(
@@ -228,8 +232,8 @@ def try_woo(base: str) -> list[dict] | None:
         cats = " ".join(c.get("name", "") + " " + c.get("slug", "") for c in p.get("categories", []))
         name = clean(p.get("name"))
         named = bool(GENUS_RE.search(name) or SPIDER_GENUS_RE.search(name))
-        if SUPPLY_CAT.search(cats) and not named:
-            continue  # e.g. "Jumping Spider Supplies": moss, heaters, pots
+        if SUPPLY_CAT.search(cats) and not (named and LIVE_CAT.search(cats)):
+            continue  # supplies, kits, books (even ones named after a spider)
         if is_spider(name + " " + cats) and looks_like_livestock(name):
             keep.append((p, name, cats))
 
@@ -300,13 +304,13 @@ EXTRACT_JS = r"""
     if (!okOrigin(href.origin) || skip.test(a.href) || notProduct.test(href.pathname)) continue;
     if (a.rel === 'next' || a.rel === 'prev' || /^(next|prev|previous|\d+|›|»|←|→)$/i.test((a.innerText || '').trim())) continue;
     if (href.pathname === location.pathname || href.pathname === '/') continue;
+    // The card is the link itself or one of its ancestors (whichever first contains a price).
     let el = a, card = null;
-    for (let i = 0; i < 7 && el; i++) {
-      el = el.parentElement;
-      if (!el || el === document.body) break;
+    for (let i = 0; i < 8 && el && el !== document.body; i++) {
       const t = el.innerText || '';
       if (t.length > 700) break;
       if (priceRe.test(t)) { card = el; break; }
+      el = el.parentElement;
     }
     if (!card) continue;
     // A container holding several products is not a single product card.
@@ -327,7 +331,7 @@ EXTRACT_JS = r"""
     const img = card.querySelector('img');
     let image = img ? (img.currentSrc || img.src || img.getAttribute('data-src') || '') : '';
     if (image.startsWith('data:')) image = img.getAttribute('data-src') || '';
-    cards.set(card, { name, url, image, hint: text.replace(/\s+/g, ' ').slice(0, 240), price: (text.match(priceRe) || [null])[0],
+    cards.set(card, { name, url, image, hint: text.replace(/\s+/g, ' ').slice(0, 700), price: (text.match(priceRe) || [null])[0],
                       out: outRe.test(text) && !inStockRe.test(text) });
   }
   let items = [...cards.values()].filter(i => i.name && i.name.length > 2);
@@ -493,7 +497,7 @@ def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str,
             "price": price,
             "in_stock": not it["out"],
             "url": it["url"],
-            "hint": it.get("hint", ""),
+            "hint": re.sub(r"\s+", " ", ADULT_SIZE.sub(" ", it.get("hint", "")))[:400],
             "image": it.get("image") or None,
             "listed": None,
         })
@@ -649,7 +653,8 @@ def main():
 
     species.annotate(items)
     # Without a recognisable species name, keep it only if the name says it's a spider.
-    for key in [k for k, it in items.items() if not it.get("species") and not ANIMAL_WORDS.search(it["name"])]:
+    for key in [k for k, it in items.items()
+                if not it.get("species") and not ANIMAL_WORDS.search(it["name"] + " " + (it.get("hint") or ""))]:
         del items[key]
     state["checked"] = stamp
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)

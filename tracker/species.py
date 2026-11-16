@@ -27,7 +27,7 @@ phrixotrichus plesiopelma poecilotheria proshapalopus psalmopoeus pseudhapalopus
 pseudoclamoris pterinochilus pterinopelma reversopelma selenocosmia selenotholus
 selenotypus sericopelma sickius stromatopelma tapinauchenius theraphosa thrigmopoeus
 thrixopelma tliltocatl tmesiphantes typhochlaena umbyquyra vitalius xenesthis ybyrapora
-yanomamius
+yanomamius amazonius viridasius spinosatibiapalpus euthycaelus
 """.split())
 
 JUMPING_GENERA = set("""
@@ -46,11 +46,15 @@ ischnothele kukulcania latrodectus linothele liphistius loxosceles lycosa macrot
 misumena nemesia nephila nephilingis oxyopes pandercetes pardosa parasteatoda peucetia pholcus
 phoneutria phrynarachne poltys psechrus rabidosa scytodes sicarius sosippus sphodros steatoda
 stegodyphus tegenaria tengella thomisus tibellus tigrosa trichonephila ummidia olios
+cyclocosmia luthela calommata barylestis holconia africactenus piloctenus ctenus sason idiops
+gorgyrella heligmomerus bothriocyrtum aptostichus antrodiaetus conothele latouchia porrhothele
+segestria dysdera zoropsis trechona isopeda neosparassus delena pisaura thalassius nilus
+orientothele bolostromus barychelidae
 """.split())
 
 # Misspellings and old names -> current hobby names.
 GENUS_FIX = {
-    "tlitocatl": "tliltocatl", "theraposa": "theraphosa", "lasiodera": "lasiodora",
+    "tlitocatl": "tliltocatl", "amazonicus": "amazonius", "theraposa": "theraphosa", "lasiodera": "lasiodora",
     "psalmopeus": "psalmopoeus", "pseudohapalopus": "pseudhapalopus", "pseudohaplopus": "pseudhapalopus", "thrixoplema": "thrixopelma", "cyriopagopoeus": "cyriopagopus", "pterinochillus": "pterinochilus",
     "phormingochillus": "phormingochilus", "chilobrachis": "chilobrachys",
 }
@@ -127,6 +131,8 @@ def find_binomial(text: str, genera: set[str]) -> str | None:
         if not re.match(r"^[A-Z][a-z]{4,}$", tok):
             continue
         nxt = tokens[i + 1].strip(".,")
+        if nxt.lower() in ("cf", "aff") and i + 2 < len(tokens) and re.match(r"^[a-z]{4,}$", tokens[i + 2].strip(".,")):
+            return normalise(f"{tok.lower()} {tokens[i + 2].strip('.,').lower()}")
         if nxt.lower() == "sp" or (re.match(r"^[a-z]{4,}$", nxt) and LATIN_END.search(nxt)
                                    and not STOP.match(nxt)):
             ep = _epithet_after(tokens, i + 1)
@@ -195,11 +201,13 @@ def group_of(it: dict) -> str:
     text = f"{it.get('name', '')} {it.get('hint', '')}".lower()
     if re.search(r"jumping|salticid|\bjumper", text):
         return "jumping"
-    if re.search(r"tarantula|theraphosid|bird ?eat", text):
-        return "tarantula"
-    if re.search(r"widow|huntsman|orb ?weaver|wolf spider|fishing spider|true spider|trapdoor|"
+    if re.search(r"other spiders|true spiders|araneomorph|widow|huntsman|orb ?weaver|wolf spider|fishing spider|true spider|trapdoor|"
                  r"funnel|crab spider|lynx|net[- ]?casting|velvet spider|wandering|purse ?web|hourglass", text):
         return "other"
+    if re.search(r"tarantula|theraphosid|bird ?eat", text):
+        return "tarantula"
+    if re.search(r"tree spider|earth ?tiger|baboon|pink ?toe|starburst|bird ?eater|tree tiger", text):
+        return "tarantula"  # hobby names that only ever mean tarantulas
     if re.search(r"\bspider", it.get("name", ""), re.I):
         return "other"  # unknown genus called a "spider" rather than a tarantula
     return "tarantula"
@@ -215,6 +223,9 @@ def stage_of(text: str) -> str:
         return "juvenile"
     if re.search(r"\badult\b|\bmature\b|\b(af|am|mm)\b", t):
         return "adult"
+    m = re.search(r"size\s*:\s*(\d+(?:\.\d+)?)\s*(?:[-–=]|to)?\s*(\d+(?:\.\d+)?)?\s*cm", t)
+    if m:  # an explicit "Size: 2-3cm" wins over any other numbers
+        t = m.group(0)
     sizes = []
     for a, b, unit in re.findall(r"(\d+(?:\.\d+)?)\s*(?:-|to|–)?\s*(\d+(?:\.\d+)?)?\s*(cm|\"|inch|in\b)", t):
         v = float(b or a)

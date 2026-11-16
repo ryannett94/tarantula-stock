@@ -78,8 +78,8 @@
 
 <div class="bar">
   <div class="tabs" id="tabs">
-    <button class="tab" data-view="new" aria-pressed="true">New</button>
-    <button class="tab" data-view="in" aria-pressed="false">In stock</button>
+    <button class="tab" data-view="in" aria-pressed="true">In stock</button>
+    <button class="tab" data-view="new" aria-pressed="false">New</button>
     <button class="tab" data-view="all" aria-pressed="false">All</button>
   </div>
   <div class="row"><input id="q" type="search" placeholder="Search species or common name" autocomplete="off"></div>
@@ -116,7 +116,7 @@
 const NEW_DAYS = 7, SHOW = 4;
 const STAGE = { sling: "Sling", juvenile: "Juvenile", subadult: "Sub-adult", adult: "Adult" };
 const SEX = { female: "Female", male: "Male", pair: "Pair" };
-let data = null, view = "new", stage = "", group = "";
+let data = null, view = "in", stage = "", group = "";
 const expanded = new Set();
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -137,6 +137,8 @@ function money(it) {
   return it.price ? (it.currency === "USD" ? "$" : "£") + Number(it.price).toFixed(2).replace(/\.00$/, "") : "";
 }
 function sizeOf(it) {
+  const exp = (it.hint || "").match(/size\s*:\s*(\d+(?:\.\d+)?\s*(?:-|–|=|to)?\s*(?:\d+(?:\.\d+)?)?\s*cm)/i);
+  if (exp && !/\dcm/i.test(it.name)) return exp[1].replace(/\s+/g, "").replace("=", "-").replace(/CM/, "cm");
   const m = (it.name + " " + (it.hint || "")).match(/\d+(?:\.\d+)?\s*(?:-|–|to)?\s*(?:\d+(?:\.\d+)?)?\s*cm/i);
   return m ? m[0].replace(/\s+/g, "").replace(/CM/, "cm") : "";
 }
