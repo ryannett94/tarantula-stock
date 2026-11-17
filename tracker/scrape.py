@@ -606,6 +606,8 @@ def scrape_vendor(v: dict) -> tuple[list[dict] | None, str, str]:
                 feed_ok = method
         except Exception as e:  # noqa: BLE001
             errors.append(f"{method}: {e}")
+    if errors:  # keep a record of why the shop's own feed didn't work this time
+        DEBUG.setdefault(v["name"], []).append({"feed_errors": [e[:300] for e in errors]})
     try:
         items = try_browser(listings, v["name"], v.get("filter", False), base, v.get("follow"), stages)
         if items:
@@ -729,7 +731,13 @@ def main():
         vs = vendors.setdefault(name, {"first_ok": None})
         prev_ids = {k for k, it in items.items() if it["vendor"] == name and not it.get("gone")}
 
-        if found is None or (len(found) < 3 and len(prev_ids) > 15):
+        # A shop whose own feed normally works fell back to reading pages and got fewer
+        # listings: that's a bad read, not stock selling out. Keep the last results.
+        degraded = (found is not None and method == "browser" and vs.get("method") in ("shopify", "woocommerce")
+                    and len(found) < 0.9 * len(prev_ids))
+        if degraded:
+            err = f"shop feed unavailable this run ({len(found)} of {len(prev_ids)} read from pages); kept last results"
+        if found is None or degraded or (len(found) < 3 and len(prev_ids) > 15):
             vs.update(status="failed", error=err or "suspiciously few items", checked=stamp)
             print(f"    FAILED {vs['error']}")
             continue
