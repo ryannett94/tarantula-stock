@@ -9132,6 +9132,98 @@
    "Brazil"
   ]
  },
+ "dolichothele mineirum": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-17",
+  "inat_id": 774813,
+  "inat_name": "Dolichothele mineirum",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/175680747/large.jpeg",
+    "credit": "(c) Guilherme A. Fischer, some rights reserved (CC BY-NC), uploaded by Guilherme A. Fischer",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/175680747/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/175680754/large.jpeg",
+    "credit": "(c) Guilherme A. Fischer, some rights reserved (CC BY-NC), uploaded by Guilherme A. Fischer",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/175680754/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/175680733/large.jpeg",
+    "credit": "(c) Guilherme A. Fischer, some rights reserved (CC BY-NC), uploaded by Guilherme A. Fischer",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/175680733/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/175680753/large.jpeg",
+    "credit": "(c) Guilherme A. Fischer, some rights reserved (CC BY-NC), uploaded by Guilherme A. Fischer",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/175680753/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/478602771/large.jpg",
+    "credit": "(c) Celso Henrique Varela Rios, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 266376655,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/478602771/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/544543697/large.jpg",
+    "credit": "(c) Frederico Acaz Sonntag, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 302162073,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/544543697/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/479441567/large.jpeg",
+    "credit": "(c) Lucas Kaminski, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 266829990,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/479441567/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/286014305/large.jpeg",
+    "credit": "(c) Paulo Gonçalves Carvalho, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 165240664,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/286014305/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/603212827/large.jpg",
+    "credit": "(c) João Victor Cardinali, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "obs": 332390826,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/603212827/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/299805898/large.jpg",
+    "credit": "(c) Célio Moura Neto, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 172704674,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/299805898/medium.jpg"
+   }
+  ],
+  "subfamily": "Ischnocolinae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": [
+   "Brazil"
+  ]
+ },
  "dolichothele minerium": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -29800,6 +29892,97 @@
   ]
  },
  "thyene jumping": {
+  "common_en": null,
+  "family": "Salticidae",
+  "fetched": "2026-11-17",
+  "inat_id": 420635,
+  "inat_name": "Thyene",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102375446/large.jpg",
+    "credit": "(c) Nick Hobgood, some rights reserved (CC BY-NC-ND), uploaded by Nick Hobgood",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102375446/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/15821265/large.jpg",
+    "credit": "(c) Wynand Uys, some rights reserved (CC BY), uploaded by Wynand Uys",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/15821265/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/12550902/large.jpg",
+    "credit": "(c) Wynand Uys, some rights reserved (CC BY), uploaded by Wynand Uys",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/12550902/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/60897417/large.jpeg",
+    "credit": "(c) Alexandre S. Michelotto, some rights reserved (CC BY-SA), uploaded by Alexandre S. Michelotto",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/60897417/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/10242172/large.jpg",
+    "credit": "(c) portioid, some rights reserved (CC BY), uploaded by portioid",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/10242172/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/18067809/large.jpg",
+    "credit": "(c) Wynand Uys, some rights reserved (CC BY), uploaded by Wynand Uys",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/18067809/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/60897423/large.jpeg",
+    "credit": "(c) Alexandre S. Michelotto, some rights reserved (CC BY-SA), uploaded by Alexandre S. Michelotto",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/60897423/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/31996566/large.jpg",
+    "credit": "(c) azazahmad, some rights reserved (CC BY-NC), uploaded by azazahmad",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/31996566/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/5354248/large.jpg",
+    "credit": "(c) Martin Grimm, some rights reserved (CC BY-NC), uploaded by Martin Grimm",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/5354248/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/19037839/large.jpg",
+    "credit": "(c) Judy Gallagher, some rights reserved (CC BY-SA)",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "obs": 13071558,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/19037839/medium.jpg"
+   }
+  ],
+  "subfamily": "Salticinae",
+  "summary": "Thyene is a spider genus of the Salticidae family (jumping spiders).",
+  "wiki": "http://en.wikipedia.org/wiki/Thyene",
+  "wild_in": [
+   "South Africa",
+   "Brazil",
+   "Türkiye",
+   "Portugal",
+   "Spain"
+  ]
+ },
+ "thyene sp.": {
   "common_en": null,
   "family": "Salticidae",
   "fetched": "2026-11-17",
