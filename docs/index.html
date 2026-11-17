@@ -449,9 +449,11 @@ const SUBFAMILY_OF = Object.fromEntries([
 ]);
 function factsFor(key, sp, life) {
   const genus = key.split(" ")[0];
-  const sub = SUBFAMILY_OF[genus] || sp.subfamily;
-  const f = { ...(FAMILY[sp.family] || {}), ...(SUBFAMILY[sub] || {}), ...(GENUS[genus] || {}) };
-  if (sp.family === "Theraphosidae") f.kind = "Tarantula";
+  // When the record is the subfamily or family itself (hobby forms like "Ornithoctoninae sp."), use its own name.
+  const sub = SUBFAMILY_OF[genus] || sp.subfamily || (sp.level === "subfamily" ? sp.inat_name : null);
+  const fam = sp.family || (sp.level === "family" ? sp.inat_name : null);
+  const f = { ...(FAMILY[fam] || {}), ...(SUBFAMILY[sub] || {}), ...(GENUS[genus] || {}) };
+  if (fam === "Theraphosidae") f.kind = "Tarantula";
   f.keep = [...life.map(l => KEEP[l]), f.keep].filter(Boolean);
   return f;
 }
