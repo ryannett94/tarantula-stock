@@ -51,6 +51,8 @@
   .offer:active { background: var(--panel2); }
   .shop { font-weight: 600; font-size: 14px; }
   .desc { color: var(--muted); font-size: 13px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: 1px; }
+  .lname { color: var(--muted); font-size: 12px; opacity: .8; margin-top: 2px; overflow: hidden;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
   .price { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
   .buy { background: var(--accent); color: #1a120b; font-weight: 700; font-size: 13px;
     padding: 6px 10px; border-radius: 8px; white-space: nowrap; }
@@ -96,6 +98,13 @@
     <button class="chip" data-group="jumping" aria-pressed="false">Jumping spiders</button>
     <button class="chip" data-group="other" aria-pressed="false">True &amp; other spiders</button>
   </div>
+  <div class="chips" id="lifestyles" style="margin-bottom:8px">
+    <button class="chip" data-life="" aria-pressed="true">Any lifestyle</button>
+    <button class="chip" data-life="arboreal" aria-pressed="false">Arboreal</button>
+    <button class="chip" data-life="terrestrial" aria-pressed="false">Terrestrial</button>
+    <button class="chip" data-life="fossorial" aria-pressed="false">Fossorial / burrowing</button>
+    <button class="chip" data-life="trapdoor" aria-pressed="false">Trapdoor</button>
+  </div>
   <div class="chips" id="stages">
     <button class="chip" data-stage="" aria-pressed="true">All sizes</button>
     <button class="chip" data-stage="sling" aria-pressed="false">Slings</button>
@@ -116,7 +125,8 @@
 const NEW_DAYS = 7, SHOW = 4;
 const STAGE = { sling: "Sling", juvenile: "Juvenile", subadult: "Sub-adult", adult: "Adult" };
 const SEX = { female: "Female", male: "Male", pair: "Pair" };
-let data = null, view = "in", stage = "", group = "";
+let data = null, view = "in", stage = "", group = "", life = "";
+const LIFE = { arboreal: "Arboreal", terrestrial: "Terrestrial", fossorial: "Fossorial", trapdoor: "Trapdoor" };
 const expanded = new Set();
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -156,6 +166,7 @@ function offerPasses(it) {
   if ($("#vendor").value && it.vendor !== $("#vendor").value) return false;
   if (stage && it.stage !== stage) return false;
   if (group && (it.group || "tarantula") !== group) return false;
+  if (life && !(it.lifestyle || []).includes(life)) return false;
   const sx = $("#sex").value;
   if (sx && (sx === "unsexed" ? it.sex : it.sex !== sx)) return false;
   return true;
@@ -168,7 +179,8 @@ function render() {
   for (const it of Object.values(data.items)) {
     if (!offerPasses(it)) continue;
     const key = it.species || ("x:" + it.vendor + ":" + it.name);
-    if (!groups.has(key)) groups.set(key, { key, name: it.species_name || it.name, common: it.common || "", offers: [] });
+    if (!groups.has(key)) groups.set(key, { key, name: it.species_name || it.name, common: it.common || "",
+                                            life: it.lifestyle || [], offers: [] });
     const g = groups.get(key);
     if (!g.common && it.common) g.common = it.common;
     g.offers.push(it);
@@ -198,7 +210,8 @@ function render() {
       const bits = [STAGE[it.stage], SEX[it.sex], sizeOf(it)].filter(Boolean).join(" · ");
       return `<a class="offer ${it.in_stock ? "" : "out"}" href="${esc(it.url)}" target="_blank" rel="noopener">
         <div><div class="shop">${esc(it.vendor)}</div>
-          <div class="desc">${badge}<span>${esc(bits || it.name)}</span></div></div>
+          <div class="desc">${badge}<span>${esc(bits)}</span></div>
+          <div class="lname">${esc(it.name)}</div></div>
         <span class="price">${money(it)}</span>
         <span class="buy">${it.in_stock ? "Buy ›" : "Sold out"}</span></a>`;
     }).join("");
@@ -210,7 +223,8 @@ function render() {
     return `<section class="sp"><div class="sp-head">${thumb}<div class="txt"><div class="sp-top">
         <span class="sp-name">${g.key.startsWith("x:") ? esc(g.name) : speciesTitle(g.name)}</span>
         ${g.min ? `<span class="from">from <b>£${Number(g.min).toFixed(2).replace(/\.00$/, "")}</b></span>` : ""}</div>
-        <div class="common">${esc(g.common)}${g.common && g.shops ? " · " : ""}${g.shops ? g.shops + (g.shops === 1 ? " shop" : " shops") : ""}</div>
+        <div class="common">${[esc(g.common), g.life.map(l => LIFE[l]).join(" / "),
+          g.shops ? g.shops + (g.shops === 1 ? " shop" : " shops") : ""].filter(Boolean).join(" · ")}</div>
       </div></div>${rows}${more}</section>`;
   }).join("") : `<div class="empty">${view === "new" ? "Nothing new this week for these filters." : "No matches."}</div>`;
 }
@@ -236,6 +250,12 @@ $("#stages").onclick = e => {
   const b = e.target.closest(".chip"); if (!b) return;
   stage = b.dataset.stage;
   document.querySelectorAll("#stages .chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+};
+$("#lifestyles").onclick = e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  life = b.dataset.life;
+  document.querySelectorAll("#lifestyles .chip").forEach(x => x.setAttribute("aria-pressed", x === b));
   render();
 };
 $("#groups").onclick = e => {

@@ -31,6 +31,19 @@ At the bottom of the stock page, open **Shops checked**. It shows each shop as w
 - **Check times:** edit the `cron` lines in `.github/workflows/check-stock.yml`. The times are in UTC.
 - **Check right now:** go to Actions → Run workflow.
 
+## Filters on the page
+
+- **Spider type:** tarantulas, jumping spiders, true & other spiders
+- **Lifestyle:** arboreal, terrestrial, fossorial / burrowing, trapdoor. If a shop prints the lifestyle on its listing, that's used. Otherwise it comes from a genus/species table in `tracker/lifestyle.py`. Opportunistic burrowers get both terrestrial and fossorial.
+- **Size:** slings, juveniles, sub-adults, adults. This comes from the listing name, size option or description; the "adult size" shown on care sheets is ignored.
+- **Sex**, **shop**, and search by scientific or common name
+
+The same species from different shops is shown as one card. Spelling slips and old names are merged, and current names follow the World Spider Catalog. For example, *Haplopelma/Cyriopagopus schmidti, lividus, albostriatus, minax* are now *Melopoeus*, and *Orphnaecus philippinus* is now *Selenobrachys*.
+
+## Quality check
+
+`python tracker/qc.py docs/stock.json 7` opens a random sample of real product pages from every shop and checks that the recorded price is on the page and that in-stock or sold-out matches. It also checks each listing's species against its own name.
+
 ## How it reads shops
 
 For each shop it tries three methods in order:

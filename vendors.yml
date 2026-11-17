@@ -9,6 +9,7 @@
 # follow: regex   = also open links matching this from the listing pages (sibling categories)
 # filter: true    = the listing page mixes tarantulas with other things, so keep
 #                   only tarantulas (matched by name or genus)
+# stage: ...      = every listing from this shop is this size (e.g. spiderlings)
 # enabled: false  = pause a shop without deleting it
 
 vendors:
@@ -91,6 +92,7 @@ vendors:
   - name: MARPC
     base: https://www.marpc.co.uk
     filter: true
+    stage: spiderlings   # the page is "Spiderlings for Sale" and gives no sizes
     listings:
       - https://www.marpc.co.uk/html/spiderlings.html
   - name: Riverview Reptiles
@@ -98,6 +100,11 @@ vendors:
     listings:
       - https://www.riverviewreptiles.co.uk/collections/jumping-spiders-and-other-spiders
       - https://www.riverviewreptiles.co.uk/collections/tarantulas
+
+  - name: Tarantula Room
+    base: https://tarantularoom.co.uk
+    listings:
+      - https://tarantularoom.co.uk/product-category/tarantulas/
 
   - name: BugzUK
     base: https://bugzuk.com
@@ -120,7 +127,5 @@ vendors:
     base: https://www.exoticsatheart.com
     filter: true
     listings:
-      - https://www.exoticsatheart.com/shop/other-spiders/10
-      - https://www.exoticsatheart.com/tarantulas
-      - https://www.exoticsatheart.com/invertebrates
-      - https://www.exoticsatheart.com/
+      - https://www.exoticsatheart.com/shop/tarantulas/2?page=1&limit=180&sort_by=category_order&sort_order=asc
+      - https://www.exoticsatheart.com/shop/other-spiders/10?page=1&limit=180&sort_by=category_order&sort_order=asc

@@ -11,6 +11,8 @@ import re
 from collections import Counter, defaultdict
 from urllib.parse import unquote, urlparse
 
+from lifestyle import lifestyle_of
+
 KNOWN_GENERA = set("""
 abdomegaphobema acanthoscurria acanthopelma aenigmarachne ami anqasha antillena aphonopelma
 aspinochilus augacephalus avicularia birupes bonnetina brachionopus brachypelma bumba
@@ -27,7 +29,7 @@ phrixotrichus plesiopelma poecilotheria proshapalopus psalmopoeus pseudhapalopus
 pseudoclamoris pterinochilus pterinopelma reversopelma selenocosmia selenotholus
 selenotypus sericopelma sickius stromatopelma tapinauchenius theraphosa thrigmopoeus
 thrixopelma tliltocatl tmesiphantes typhochlaena umbyquyra vitalius xenesthis ybyrapora
-yanomamius amazonius viridasius spinosatibiapalpus euthycaelus
+yanomamius amazonius viridasius selenobrachys neischnocolus ornithoctoninae spinosatibiapalpus euthycaelus
 """.split())
 
 JUMPING_GENERA = set("""
@@ -54,20 +56,33 @@ orientothele bolostromus barychelidae
 
 # Misspellings and old names -> current hobby names.
 GENUS_FIX = {
-    "tlitocatl": "tliltocatl", "amazonicus": "amazonius", "theraposa": "theraphosa", "lasiodera": "lasiodora",
+    "tlitocatl": "tliltocatl", "amazonicus": "amazonius", "avicuaria": "avicularia",
+    "ideothele": "idiothele", "orphaneus": "orphnaecus", "photmictopus": "phormictopus", "phormingochiluis": "phormingochilus",
+    "phormictopous": "phormictopus", "brachypelama": "brachypelma", "poecilotheira": "poecilotheria", "theraposa": "theraphosa", "lasiodera": "lasiodora",
     "psalmopeus": "psalmopoeus", "pseudohapalopus": "pseudhapalopus", "pseudohaplopus": "pseudhapalopus", "thrixoplema": "thrixopelma", "cyriopagopoeus": "cyriopagopus", "pterinochillus": "pterinochilus",
     "phormingochillus": "phormingochilus", "chilobrachis": "chilobrachys",
 }
 EPITHET_FIX = {
-    "albopilosum": "albopilosus", "albopilosom": "albopilosus", "atrichromatus": "atrichomatus", "bohemi": "boehmei",
+    "albopilosum": "albopilosus", "albopilosom": "albopilosus",
+    "pingungensis": "pingtungensis", "cyanopubescens": "cyaneopubescens", "oliveaceum": "olivaceum",
+    "caraponensis": "carapoensis", "metalica": "metallica", "germanii": "germani", "albostriatum": "albostriatus",
+    "uataman": "uatuman", "ornate": "ornata", "vittate": "vittata", "stiata": "striata",
+    "vegans": "vagans", "gniculata": "geniculata", "viollosella": "villosella", "gabomensis": "gabonensis",
+    "huahnini": "huahini", "albostiantum": "albostriatus", "colloratovilosum": "coloratovillosus", "coloratovillosum": "coloratovillosus", "klassi": "klaasi", "pentalore": "pentaloris", "phsycadelicus": "psychedelicus",
+    "psychadelicus": "psychedelicus", "fuego": "fuego", "atrichromatus": "atrichomatus", "bohemi": "boehmei",
     "boehmi": "boehmei", "versilcolor": "versicolor", "blondii": "blondi", "seemani": "seemanni",
     "victorii": "victori", "sazmai": "sazimai", "lividum": "lividus", "hati": "hatihati",
 "cyaneopubescens": "cyaneopubescens", "vagan": "vagans",
 }
 SPECIES_FIX = {
+    # World Spider Catalog: Smith, Daniel & Vignaud 2026 moved these to Melopoeus
+    **{f"{g} {e}": f"melopoeus {e}" for g in ("haplopelma", "cyriopagopus", "melopoeus")
+       for e in ("albostriatus", "hainanus", "lividus", "longipes", "minax", "schmidti", "vonwirthi")},
+    # WSC: Acuña et al. 2025 restored Selenobrachys
+    "orphnaecus philippinus": "selenobrachys philippinus",
+    "euathlus fuego": "euathlus sp. fuego",
     "brachypelma albopilosus": "tliltocatl albopilosus",
     "brachypelma vagans": "tliltocatl vagans",
-    "haplopelma lividus": "cyriopagopus lividus",
     "avicularia versicolor": "caribena versicolor",
     "nhandu chromatus": "vitalius chromatus",
     "pterinopelma sazimai": "lasiocyano sazimai",
@@ -141,6 +156,18 @@ def find_binomial(text: str, genera: set[str]) -> str | None:
     return None
 
 
+# Abbreviated names written with an old genus initial: (initial, epithet) -> current species.
+ABBREV = {
+    ("b", "smithi"): "brachypelma hamorii", ("p", "sazimai"): "lasiocyano sazimai",
+    ("c", "minax"): "melopoeus minax", ("c", "lividus"): "melopoeus lividus",
+    ("h", "lividus"): "melopoeus lividus", ("p", "striata"): "poecilotheria striata",
+    ("c", "sanderi"): "ceratogyrus sanderi", ("o", "schioedtei"): "omothymus schioedtei",
+    ("b", "cabocla"): "bumba cabocla", ("p", "vespertinus"): "pamphobeteus vespertinus",
+    ("t", "epicureanum"): "tliltocatl epicureanus", ("t", "epicureanus"): "tliltocatl epicureanus",
+    ("t", "kahlenbergeri"): "tliltocatl kahlenbergeri", ("t", "cupreus"): "tapinauchenius cupreus",
+    ("t", "violceus"): "tapinauchenius violaceus", ("t", "violaceus"): "tapinauchenius violaceus",
+}
+
 LOCALITY_FIX = {"dom purple": "dominican purple", "machalla": "machala", "platyomma": "platyoma",
                 "magnanegra": "manganegra", "columbia": "colombia", "columbia large": "colombia large"}
 
@@ -189,6 +216,20 @@ def common_part(name: str, key: str) -> str | None:
     return None
 
 
+def _one_edit(a: str, b: str) -> bool:
+    """True if a and b differ by exactly one insert, delete or substitution."""
+    if a == b or abs(len(a) - len(b)) > 1:
+        return False
+    if len(a) == len(b):
+        return sum(x != y for x, y in zip(a, b)) == 1
+    if len(a) > len(b):
+        a, b = b, a
+    i = 0
+    while i < len(a) and a[i] == b[i]:
+        i += 1
+    return a[i:] == b[i + 1:]
+
+
 def group_of(it: dict) -> str:
     """tarantula / jumping / other (true spiders and non-tarantula mygalomorphs)."""
     g = (it.get("species") or "").split(" ")[0]
@@ -215,7 +256,7 @@ def group_of(it: dict) -> str:
 
 def stage_of(text: str) -> str:
     t = text.lower()
-    if re.search(r"sub[\s-]?adult|semi[\s-]?adult|\bs/a\b|\(sa\)", t):
+    if re.search(r"sub[\s-]?adult|semi[\s-]?adult|\bs/a\b|\(sa\)|\bsa[fm]\b", t):
         return "subadult"
     if re.search(r"spiderling|\bslings?\b|\bslg\b", t):
         return "sling"
@@ -247,9 +288,9 @@ def sex_of(text: str) -> str:
     t = text.lower()
     if re.search(r"\b1\.1\b|\bpair\b", t):
         return "pair"
-    if re.search(r"\bfemales?\b|♀|\baf\b|\b0\.1\b", t):
+    if re.search(r"\bfemales?\b|♀|\b(af|saf|jf)\b|\b0\.1\b", t):
         return "female"
-    if re.search(r"\bmales?\b|♂|\b(am|mm)\b|\b1\.0\b", t):
+    if re.search(r"\bmales?\b|♂|\b(am|mm|sam|jm)\b|\b1\.0\b", t):
         return "male"
     return ""
 
@@ -276,10 +317,15 @@ def annotate(items: dict) -> None:
         it["stage"] = stage_of(it["name"]) or stage_of(hint)
         it["sex"] = sex_of(text)
 
-    # Second look now that genera seen in other shops are known.
+    # Second look now that genera seen in other shops are known (name, then URL slug).
     for it in live:
         if not it["species"]:
             it["species"] = find_binomial(it["name"], genera)
+        if not it["species"]:
+            slug = unquote(urlparse(it.get("url", "")).path.rstrip("/").split("/")[-1])
+            key = find_binomial(re.sub(r"[-_]+", " ", slug), genera)
+            if key and key.split()[0] in genera:
+                it["species"] = key
 
     # Abbreviated genus, e.g. "T. kahlenbergeri" -> tliltocatl kahlenbergeri.
     by_epithet = defaultdict(set)
@@ -287,15 +333,37 @@ def annotate(items: dict) -> None:
         if it["species"] and not it["species"].split(" ", 1)[1].startswith("sp"):
             g, ep = it["species"].split(" ", 1)
             by_epithet[ep].add(g)
+    sp_keys = {}
+    for it in live:
+        if it["species"] and " sp. " in it["species"]:
+            g, loc = it["species"].split(" sp. ", 1)
+            sp_keys.setdefault((g[0], re.sub(r"[^a-z]", "", loc)), set()).add(it["species"])
     for it in live:
         if it["species"]:
             continue
-        m = re.search(r"\b([A-Z])\.\s*([a-z]{4,})", it["name"])
+        # "C. sp. Hati hati" / "O.sp. cebu": genus initial + locality matching a known sp. key
+        m = re.search(r"\b([A-Z])\.\s*sp\.?,?\s*([A-Za-z][A-Za-z .'-]{2,30}?)\s*,", it["name"] + ",")
         if m:
-            ep = EPITHET_FIX.get(m.group(2), m.group(2))
-            cands = [g for g in by_epithet.get(ep, ()) if g[0] == m.group(1).lower()]
+            loc = re.sub(r"[^a-z]", "", m.group(2).lower())
+            for (ini, l), ks in sp_keys.items():
+                if ini == m.group(1).lower() and (l == loc or _one_edit(l, loc)) and len(ks) == 1:
+                    it["species"] = next(iter(ks))
+                    break
+            continue
+        # "B. bohemi" / "A. gniculata": genus initial + epithet, allowing one typo
+        m = re.search(r"(?<![A-Za-z])([A-Z])(?![A-Za-z])[.,]?\s*([A-Za-z]{4,})\s*,", it["name"] + ",") or \
+            re.search(r"(?<![A-Za-z])([A-Z])\.\s*([A-Za-z]{4,})", it["name"])
+        if m:
+            ep = EPITHET_FIX.get(m.group(2).lower(), m.group(2).lower())
+            if (m.group(1).lower(), ep) in ABBREV:
+                it["species"] = ABBREV[(m.group(1).lower(), ep)]
+                continue
+            cands = {f"{g} {ep}" for g in by_epithet.get(ep, ()) if g[0] == m.group(1).lower()}
+            if not cands:
+                cands = {f"{g} {e}" for e, gs in by_epithet.items() for g in gs
+                         if g[0] == m.group(1).lower() and len(e) >= 6 and _one_edit(e, ep)}
             if len(cands) == 1:
-                it["species"] = f"{cands[0]} {ep}"
+                it["species"] = normalise(next(iter(cands)))
 
     # Learn common names from listings that have both, then match common-only listings.
     commons = defaultdict(Counter)
@@ -311,12 +379,35 @@ def annotate(items: dict) -> None:
     for it in live:
         if it["species"]:
             continue
-        plain = re.sub(r"\s+", " ", re.sub(r"[^A-Za-z' ]", " ", SIZE_WORDS.sub(" ", it["name"]))).strip().lower()
-        if plain in by_common:
-            it["species"] = by_common[plain].most_common(1)[0][0]
+        for cand in (it["name"], it["name"].split(",")[0], it["name"].split(" - ")[0]):
+            plain = re.sub(r"\s+", " ", re.sub(r"[^A-Za-z' ]", " ", SIZE_WORDS.sub(" ", cand))).strip().lower()
+            if plain in by_common:
+                it["species"] = by_common[plain].most_common(1)[0][0]
+                break
+
+    # Spelling slips between shops ("pingungensis" vs "pingtungensis"): merge keys in the
+    # same genus that are one letter apart, keeping the spelling most shops use.
+    counts = Counter(it["species"] for it in live if it["species"])
+    keys = sorted(counts)
+    alias = {}
+    for i, a in enumerate(keys):
+        ga, ea = a.split(" ", 1)
+        if ea.startswith("sp") or len(ea) < 8:
+            continue
+        for b in keys[i + 1:]:
+            gb, eb = b.split(" ", 1)
+            if gb != ga:
+                break
+            if not eb.startswith("sp") and _one_edit(ea, eb):
+                keep, drop = (a, b) if counts[a] >= counts[b] else (b, a)
+                alias[drop] = keep
+    for it in live:
+        if it["species"] in alias:
+            it["species"] = alias[it["species"]]
 
     for it in live:
         it["group"] = group_of(it)
+        it["lifestyle"] = lifestyle_of(it)
     for it in live:
         key = it["species"]
         it["species_name"] = display_name(key) if key else it["name"]

@@ -21,6 +21,8 @@ from urllib.parse import urljoin, urlparse
 
 import requests
 import yaml
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 import species
 
@@ -34,7 +36,7 @@ HEADERS = {"User-Agent": UA, "Accept": "application/json,text/html;q=0.9,*/*;q=0
 TIMEOUT = 30
 GONE_RETENTION_DAYS = 60
 APPAREL = re.compile(r"^(xxs|xs|s|m|l|xl|xxl|[2-5]xl|small|medium|large|x-large)$", re.I)
-SHAPE = "spiders-1"
+SHAPE = "spiders-2"
 
 # Genera so listings without the word "tarantula" are still picked up.
 GENERA = """acanthoscurria aphonopelma avicularia brachypelma bumba caribena ceratogyrus
@@ -71,6 +73,14 @@ NOT_LIVESTOCK = re.compile(
     r"t-shirt|tshirt|mug|tongs|tweezers|gift card|voucher|feeder|crickets|locusts|"
     r"roaches|mealworms|dubia|faunarium|kit only|just kit|exo terra|decor|set ?ups?|"
     r"complete setups?|minimum order|postage|delivery|gift|donation|review|video|competition|raffle|win the|spiderling box|pots?|caves?|burrow|nest|vouchers?|lamps?|bulbs?|heat\w*|cables?|thermo\w*|hygro\w*|terrarium|invertarium|moss|misting|spray|supplements?|grub|gel|coir|nutrobal|projector|kits?|fittings?|bedding|backing|t-?shirt|tee|hoodie|sweatshirt|sticker|keyring|mug|print|poster|plush|bulk|bundle|pack of|lot of|multi ?buy)\b", re.I)
+
+
+# Retry flaky connections (resets, timeouts, 5xx) a few times with backoff.
+_session = requests.Session()
+_session.mount("https://", HTTPAdapter(max_retries=Retry(
+    total=4, connect=4, read=3, backoff_factor=2, status_forcelist=(429, 500, 502, 503, 504),
+    allowed_methods=frozenset(["GET", "POST"]))))
+requests.get = _session.get  # type: ignore[assignment]
 
 
 def now_iso() -> str:
@@ -176,6 +186,14 @@ def _pretty_option(value: str) -> str:
 MAX_VARIATIONS = 3000
 
 
+def _option_url(permalink: str, attrs: list[dict]) -> str:
+    """Link that opens the product with this size/option already selected."""
+    base = (permalink or "").split("?")[0]
+    q = [f"attribute_pa_{re.sub(r'[^a-z0-9]+', '-', a.get('name', '').lower()).strip('-')}={a.get('value')}"
+         for a in attrs if a.get("name") and a.get("value")]
+    return base + ("?" + "&".join(q) if q else "")
+
+
 def _woo_variations(api: str, ids: list[int]) -> dict[int, dict]:
     """Price/stock for many variation ids: batched where the shop allows, else in parallel."""
     from concurrent.futures import ThreadPoolExecutor
@@ -266,7 +284,7 @@ def try_woo(base: str) -> list[dict] | None:
                     "name": f"{name} – {option}" if option else name,
                     "price": _woo_price(v),
                     "in_stock": bool(v.get("is_in_stock")),
-                    "url": v.get("permalink") or p.get("permalink"),
+                    "url": _option_url(p.get("permalink"), var.get("attributes", [])),
                     "image": ((v.get("images") or [{}])[0].get("thumbnail") or image),
                     "hint": hint,
                     "listed": None,
@@ -294,9 +312,31 @@ EXTRACT_JS = r"""
   const priceRe = /[£$]\s?\d[\d,]*(?:\.\d{1,2})?/;
   const skip = /add-to-cart|\/cart|\/basket|\/account|\/login|\/checkout|wishlist|mailto:|tel:/i;
   const notProduct = /\/(shipping|delivery|terms|about|contact|faq|blog|care|guide|policy|privacy|returns|info|pages?)\b/i;
-  const inStockRe = /\b\d+\s+(left|in stock|available)\b|\bin stock\b|add to (cart|basket)/i;
+  // "Back in stock!" banners don't count; a real basket button or "3 left" does.
+  const inStockRe = /\b\d+\s+(left|in stock|available)\b|add to (cart|basket|bag)|buy now/i;
   const outRe = /out of stock|sold out|currently unavailable/i;
   const productPath = h => { try { const u = new URL(h); return okOrigin(u.origin) ? u.pathname.replace(/\/$/, '') : null; } catch { return null; } };
+  // The price you'd pay: skip struck-through / "was" / compare-at prices.
+  const struck = /compare|was-price|\bwas\b|old-price|regular|original|strike|line-through|crossed/i;
+  const currentPrice = (card, text) => {
+    const walker = document.createTreeWalker(card, NodeFilter.SHOW_TEXT);
+    const live = [], dead = [];
+    for (let n = walker.nextNode(); n; n = walker.nextNode()) {
+      const m = (n.textContent || '').match(priceRe);
+      if (!m) continue;
+      let el = n.parentElement, isDead = false;
+      for (let i = 0; i < 4 && el && el !== card.parentElement; i++, el = el.parentElement) {
+        const cs = getComputedStyle(el);
+        if (/^(DEL|S|STRIKE)$/.test(el.tagName) || struck.test(el.className || '') ||
+            (cs.textDecorationLine || cs.textDecoration || '').includes('line-through')) { isDead = true; break; }
+      }
+      if (/^[£$]\s?0+(\.0+)?$/.test(m[0].trim())) continue;  // £0.00 placeholders for sold-out options
+      (isDead ? dead : live).push(m[0]);
+    }
+    if (live.length) return live[0];
+    const any = (text.match(new RegExp(priceRe.source, 'g')) || []).filter(p => !/^[£$]\s?0+(\.0+)?$/.test(p.trim()));
+    return any[0] || null;
+  };
   const cards = new Map();
   for (const a of document.querySelectorAll('a[href]')) {
     let href;
@@ -331,7 +371,7 @@ EXTRACT_JS = r"""
     const img = card.querySelector('img');
     let image = img ? (img.currentSrc || img.src || img.getAttribute('data-src') || '') : '';
     if (image.startsWith('data:')) image = img.getAttribute('data-src') || '';
-    cards.set(card, { name, url, image, hint: text.replace(/\s+/g, ' ').slice(0, 700), price: (text.match(priceRe) || [null])[0],
+    cards.set(card, { name, url, image, hint: text.replace(/\s+/g, ' ').slice(0, 700), price: currentPrice(card, text),
                       out: outRe.test(text) && !inStockRe.test(text) });
   }
   let items = [...cards.values()].filter(i => i.name && i.name.length > 2);
@@ -391,13 +431,26 @@ def _load(page, url):
         if hit:
             break
         page.wait_for_timeout(1000)
-    for _ in range(12):  # lazy loading + "load more" buttons
+    # Lazy loading + "load more" buttons: keep going until the page stops growing.
+    last, steady = -1, 0
+    for _ in range(40):
         page.mouse.wheel(0, 20000)
-        page.wait_for_timeout(700)
-        btn = page.locator("button:has-text('Load More'), button:has-text('Show more'), a:has-text('Load more')")
-        if btn.count() and btn.first.is_visible():
-            btn.first.click()
-            page.wait_for_timeout(1500)
+        page.wait_for_timeout(900)
+        btn = page.locator("button:has-text('Load More'), button:has-text('Show more'), a:has-text('Load more'), "
+                           "button:has-text('Load more')")
+        try:
+            if btn.count() and btn.first.is_visible():
+                btn.first.click()
+                page.wait_for_timeout(2000)
+                steady = 0
+                continue
+        except Exception:  # noqa: BLE001
+            pass
+        size = page.evaluate("() => document.querySelectorAll('a[href]').length + (document.body.innerText.match(/£/g) || []).length")
+        steady = steady + 1 if size == last else 0
+        last = size
+        if steady >= 3:
+            break
     # Some shops (e.g. embedded store widgets) render products inside iframes.
     merged = None
     for frame in page.frames:
@@ -505,10 +558,17 @@ def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str,
 
 
 # ------------------------------------------------------------------ main
+def _strip_tracking(u: str) -> str:
+    """Drop tracking junk (?srsltid=, utm_*, gclid...) but keep real options like ?limit=180."""
+    base, _, q = u.partition("?")
+    keep = [kv for kv in q.split("&") if kv and not re.match(r"(srsltid|utm_\w+|gclid|fbclid|mc_\w+)=", kv)]
+    return base + ("?" + "&".join(keep) if keep else "")
+
+
 def scrape_vendor(v: dict) -> tuple[list[dict] | None, str, str]:
     base = v["base"].rstrip("/")
     # Drop tracking junk like ?srsltid=... from pasted links.
-    listings = [u.split("?")[0] for u in v.get("listings", [])]
+    listings = [_strip_tracking(u) for u in v.get("listings", [])]
     collections = [urlparse(u).path.rstrip("/") for u in listings if "/collections/" in u]
     errors = []
     attempts = []
@@ -594,6 +654,14 @@ def main():
         found, method, err = scrape_vendor(v)
         if found:
             found = [f for f in found if looks_like_livestock(f["name"])]
+            # The same listing can show up on two category pages: keep one.
+            uniq, seen_ids, seen_rows = [], set(), set()
+            for f in found:
+                row = (f["url"].rstrip("/"), re.sub(r"\W+", "", f["name"].lower()), f.get("price"))
+                if f["id"] in seen_ids or row in seen_rows:
+                    continue
+                seen_ids.add(f["id"]); seen_rows.add(row); uniq.append(f)
+            found = uniq
         vs = vendors.setdefault(name, {"first_ok": None})
         prev_ids = {k for k, it in items.items() if it["vendor"] == name and not it.get("gone")}
 
@@ -618,6 +686,8 @@ def main():
         seen = set()
         for f in found:
             f["currency"] = v.get("currency", "GBP")
+            if v.get("stage"):  # shop page that only sells one size, e.g. "Spiderlings for Sale"
+                f["hint"] = f"{f.get('hint', '')} {v['stage']}".strip()
             key = f"{name}|{f['id']}"
             seen.add(key)
             old = items.get(key)
