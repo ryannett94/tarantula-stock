@@ -94,13 +94,16 @@
   </div>
 </header>
 <div class="setup" id="setup" hidden>
-  <b>One-time setup for the Update button</b>
+  <b>Quickest: no token needed</b>
+  <div style="color:var(--muted);margin:4px 0 8px">Opens GitHub, tap <b>Run workflow</b> → green <b>Run workflow</b>, then come back here. This page watches the check and loads the results when it's done.</div>
+  <button id="runGh">Run it on GitHub</button>
+  <div style="margin-top:14px"><b>Or set up one-tap updates (token)</b></div>
   <ol>
-    <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → new fine-grained token</a>.</li>
-    <li>Name it "stock update", expiry up to 1 year.</li>
+    <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → new fine-grained token</a>. Resource owner: <b>ryannett94</b>.</li>
     <li>Repository access: <b>Only select repositories</b> → <b>tarantula-stock</b>.</li>
-    <li>Repository permissions: <b>Actions: Read and write</b> and <b>Contents: Read-only</b>. Nothing else.</li>
-    <li>Generate, copy it, paste below. It is kept only in this browser.</li>
+    <li>Choosing the repo gives <b>no permissions on its own</b> – that's the "no permissions" message. Under <b>Permissions</b>, tap <b>Add permissions</b> (or open <b>Repository permissions</b>) and add <b>Actions</b> and <b>Contents</b>.</li>
+    <li>Set <b>Actions → Read and write</b>. Leave <b>Contents → Read-only</b>. (Metadata read-only gets added automatically.)</li>
+    <li>The summary should now say access to 1 repository with those permissions. Generate, copy, paste below. It's kept only in this browser.</li>
   </ol>
   <div class="row"><input id="tok" type="password" placeholder="github_pat_…" autocomplete="off">
     <button id="tokSave">Save</button></div>
@@ -328,7 +331,8 @@ const store = {
   set(v) { try { v ? localStorage.setItem(TOKEN_KEY, v) : localStorage.removeItem(TOKEN_KEY); } catch {} },
 };
 const gh = (path, opt = {}) => fetch(API + path, { ...opt, cache: "no-store", headers: {
-  Accept: "application/vnd.github+json", Authorization: "Bearer " + store.get(), ...(opt.headers || {}) } });
+  Accept: "application/vnd.github+json", ...(store.get() ? { Authorization: "Bearer " + store.get() } : {}),
+  ...(opt.headers || {}) } });
 function show(j) {
   data = j;
   $("#checked").textContent = j.checked ? "Last checked " + ago(j.checked) : "Not checked yet.";
@@ -346,16 +350,26 @@ function setupBox(open) {
 }
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let busy = false;
-async function update() {
+async function loadFromPages(after) {
+  // No token: wait for GitHub Pages to publish the new results (usually under a minute).
+  for (let i = 0; i < 24; i++) {
+    const j = await fetch("stock.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.json());
+    if (!after || (j.checked || "") > after) { show(j); return; }
+    await sleep(10e3);
+  }
+  throw new Error("results not published yet – refresh in a minute");
+}
+async function update(manual = false) {
   if (busy) return;
-  if (!store.get()) { setupBox(true); return; }
+  if (!store.get() && !manual) { setupBox(true); return; }
   busy = true;
+  const before = data && data.checked;
   const btn = $("#upd"), t0 = Date.now(), since = new Date(t0 - 5000).toISOString();
   const tick = msg => { btn.textContent = msg; };
   btn.disabled = true;
   try {
-    tick("Starting…");
-    const d = await gh(`/actions/workflows/${WORKFLOW}/dispatches`, { method: "POST", body: JSON.stringify({ ref: "main" }) });
+    tick(manual ? "Waiting for GitHub…" : "Starting…");
+    const d = manual ? { ok: true, status: 204 } : await gh(`/actions/workflows/${WORKFLOW}/dispatches`, { method: "POST", body: JSON.stringify({ ref: "main" }) });
     if (d.status === 401 || d.status === 403 || d.status === 404) {
       tick("Update now"); setupBox(true);
       alert("GitHub refused the token (" + d.status + "). It may have expired or be missing \"Actions: Read and write\" for tarantula-stock.");
@@ -364,17 +378,17 @@ async function update() {
     if (!d.ok) throw new Error("dispatch " + d.status);
     let run = null;
     while (Date.now() - t0 < 15 * 60e3) {
-      await sleep(run ? 10e3 : 4e3);
+      await sleep(manual ? 20e3 : run ? 10e3 : 4e3);  // no token: GitHub allows ~60 checks an hour
       const secs = Math.round((Date.now() - t0) / 1000);
       const r = await gh(`/actions/workflows/${WORKFLOW}/runs?event=workflow_dispatch&per_page=5&created=${encodeURIComponent(">=" + since)}`);
       if (r.ok) run = ((await r.json()).workflow_runs || [])[0] || run;
       if (run && run.status === "completed") break;
-      tick((run && run.status === "in_progress" ? "Checking shops… " : "Queued… ") + Math.floor(secs / 60) + ":" + String(secs % 60).padStart(2, "0"));
+      tick((run && run.status === "in_progress" ? "Checking shops… " : manual && !run ? "Waiting for you to run it… " : "Queued… ") + Math.floor(secs / 60) + ":" + String(secs % 60).padStart(2, "0"));
     }
     if (!run || run.status !== "completed") throw new Error("still running – try again in a minute");
     if (run.conclusion !== "success") throw new Error("the check failed (" + run.conclusion + ")");
     tick("Loading…");
-    await loadFromRepo();
+    await (store.get() ? loadFromRepo() : loadFromPages(before));
     tick("Updated ✓");
     await sleep(2500);
   } catch (e) {
@@ -383,7 +397,11 @@ async function update() {
     busy = false; btn.disabled = false; btn.textContent = "Update now";
   }
 }
-$("#upd").onclick = update;
+$("#upd").onclick = () => update();
+$("#runGh").onclick = () => {
+  window.open("https://github.com/" + REPO + "/actions/workflows/" + WORKFLOW, "_blank", "noopener");
+  setupBox(false); update(true);
+};
 $("#tokSave").onclick = () => {
   const v = $("#tok").value.trim(); if (!v) return;
   store.set(v); $("#tok").value = ""; setupBox(false); update();
