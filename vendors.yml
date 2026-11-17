@@ -92,9 +92,16 @@ vendors:
   - name: MARPC
     base: https://www.marpc.co.uk
     filter: true
-    stage: spiderlings   # the page is "Spiderlings for Sale" and gives no sizes
+    # MARPC only publishes price lists ("please contact us to check on price and
+    # availability"), with no sold-out markers. Nothing there proves stock, so their
+    # listings show as "phone to check" with the list's date, never "in stock".
+    stock: unconfirmed
     listings:
-      - https://www.marpc.co.uk/html/spiderlings.html
+      - url: https://www.marpc.co.uk/html/spiderlings.html
+        stage: spiderlings
+      - url: https://www.marpc.co.uk/html/juvenile-spiders.html
+        stage: juvenile
+      - url: https://www.marpc.co.uk/html/sub-adult-and-adult-spiders.html
   - name: Riverview Reptiles
     base: https://www.riverviewreptiles.co.uk
     listings:

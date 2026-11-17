@@ -1,8 +1,9 @@
 """How each spider lives: arboreal, terrestrial, fossorial (burrowing) or trapdoor.
 
 Based on hobby/husbandry consensus by genus, with species-level exceptions where a
-genus is mixed. A lifestyle printed on the shop's own listing (e.g. "LIFESTYLE:
-Arboreal") wins over this table. Some spiders get two tags, e.g. opportunistic
+genus is mixed. This table wins over whatever a shop prints, because shops get it
+wrong (e.g. a velvet spider listed as "Arboreal"); a shop's own "LIFESTYLE:" label
+is only used for a genus this table doesn't know. Some spiders get two tags, e.g. opportunistic
 burrowers are "terrestrial" + "fossorial".
 """
 from __future__ import annotations
@@ -43,6 +44,8 @@ GENUS = {
     "aenigmarachne": [T], "reversopelma": [T], "yanomamius": [T], "munduruku": [T], "cardiopelma": [T],
     "ami": [T], "anqasha": [T], "acanthopelma": [T], "neischnocolus": [T], "warmiru": [T],
     "antikuna": [T], "uropelma": [T], "theraphosinae": [T],
+    "aspinochilus": [A], "magnacrus": [F], "chilocosmia": [T], "selenocosmiinae": [T],
+    "theraphosidae": [T], "neostenotarsus": [T],
     "haplocosmia": [F], "psednocnemis": [F], "brachionopus": [F], "cilantica": [F],
     # --- jumping spiders: climbers, live up high
     **{g: [A] for g in """phidippus hyllus evarcha salticus plexippus menemerus marpissa thiania epeus
@@ -58,7 +61,7 @@ GENUS = {
     "gasteracantha": [A], "cyrtophora": [A], "caerostris": [A], "poltys": [A], "cyclosa": [A],
     "deinopis": [A], "oxyopes": [A], "peucetia": [A], "thomisus": [A], "misumena": [A],
     "phrynarachne": [A], "hersilia": [A], "tibellus": [A], "stegodyphus": [A], "gandanameno": [A],
-    "dresserus": [F], "eresus": [F], "psechrus": [T], "zoropsis": [T],
+    "dresserus": [F], "eresus": [F], "paradonea": [F], "selenops": [A], "psechrus": [T], "zoropsis": [T],
     "hogna": [T, F], "lycosa": [T, F], "geolycosa": [F], "tigrosa": [T, F], "rabidosa": [T],
     "pardosa": [T], "hippasa": [T], "sosippus": [T], "dolomedes": [T], "thalassius": [T], "nilus": [T],
     "pisaura": [T], "cupiennius": [A], "phoneutria": [T], "ctenus": [T], "africactenus": [T],
@@ -67,7 +70,7 @@ GENUS = {
     "parasteatoda": [T], "pholcus": [T], "tegenaria": [T], "eratigena": [T], "agelena": [T],
     "segestria": [T], "dysdera": [T], "diguetia": [T], "tengella": [T],
     # non-tarantula mygalomorphs
-    "linothele": [T], "ischnothele": [T], "euagrus": [T], "trechona": [T], "macrothele": [T, F],
+    "diplura": [T], "linothele": [T], "ischnothele": [T], "euagrus": [T], "trechona": [T], "macrothele": [T, F],
     "porrhothele": [T, F], "orientothele": [T], "atypus": [F], "sphodros": [F], "calommata": [F],
     "liphistius": [D], "luthela": [D], "cyclocosmia": [D], "ummidia": [D], "cteniza": [D],
     "nemesia": [D], "idiops": [D], "gorgyrella": [D], "heligmomerus": [D], "bothriocyrtum": [D],
@@ -80,8 +83,12 @@ SPECIES = {
     "pterinochilus murinus": [T, F],
     "monocentropus balfouri": [T, F],
     "chilobrachys fimbriatus": [F], "chilobrachys dyscolus": [F],
-    "cyriopagopus sp. hati hati": [F], "cyriopagopus sp. hatihati": [F],
-    "phormingochilus sp. hati hati": [A], "phormingochilus sp. hatihati": [A],
+    # young dig, adults climb: needs depth plus height
+    "phormingochilus hatihati": [A, F],
+    "chilobrachys sp. nepal": [F],
+    # Phan Cay (Vietnam) ornithoctonines are kept as arboreals
+    "ornithoctoninae sp. phan cay": [A], "ornithoctoninae sp. phan cay red": [A],
+    "ornithoctoninae sp. phan cay blue": [A], "orphnaecus sp. cebu": [F],
     "orphnaecus sp. blue panay": [F],
     "theraphosa blondi": [T, F], "theraphosa stirmi": [T, F], "theraphosa apophysis": [T, F],
     "xenesthis immanis": [T, F],
@@ -105,19 +112,19 @@ SHOP_WORDS = [
 
 def lifestyle_of(it: dict) -> list[str]:
     key = it.get("species") or ""
-    # 1. What the shop itself says ("LIFESTYLE: Arboreal", "Type: Fossorial")
+    # 1. Our researched table: species exception, then genus
+    if key in SPECIES:
+        return SPECIES[key]
+    genus = key.split(" ")[0] if key else ""
+    if genus in GENUS:
+        return GENUS[genus]
+    # 2. Unknown genus: what the shop itself says ("LIFESTYLE: Arboreal")
     hint = it.get("hint") or ""
     m = re.search(r"(lifestyle|type|habit(at)?)\s*:?\s*([A-Za-z /,-]{4,40})", hint, re.I)
     if m:
         tags = [tag for rx, tag in SHOP_WORDS if rx.search(m.group(3))]
         if tags:
             return sorted(set(tags), key=[A, T, F, D].index)
-    # 2. Species exceptions, then genus
-    if key in SPECIES:
-        return SPECIES[key]
-    genus = key.split(" ")[0] if key else ""
-    if genus in GENUS:
-        return GENUS[genus]
     # 3. Words in the listing name/description ("Trapdoor Spider", "burrowing")
     text = f"{it.get('name', '')} {hint}"
     tags = [tag for rx, tag in SHOP_WORDS if rx.search(text)]

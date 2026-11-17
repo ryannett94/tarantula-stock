@@ -1,0 +1,21 @@
+# Fixes for mistakes in shops' own listings.
+#
+# Each entry matches listings by a regex on "<listing name> <listing URL>" (case-insensitive),
+# optionally limited to one shop, then either drops them or overrides fields.
+#   set:  species (e.g. "warmiru lagunas"), stage (sling/juvenile/subadult/adult),
+#         sex (female/male/unsexed), lifestyle ([arboreal, terrestrial, fossorial, trapdoor])
+#   drop: true   -> not a spider for sale (merch, boxes, promo text)
+#
+# Most shop errors are fixed automatically (spelling of genus/species, outdated names
+# via the World Spider Catalog, lifestyle from our researched table). Use this file
+# for the one-offs that can't be fixed by a rule.
+
+- vendor: MARPC
+  match: '^from only\b'          # promo banner text picked up as a row
+  drop: true
+- vendor: The Spider Shop
+  match: 'birdeater-box'          # "Phormictopus of" = a mixed birdeater box, not one species
+  drop: true
+- vendor: Bugpets
+  match: 'plush'                  # soft toys
+  drop: true

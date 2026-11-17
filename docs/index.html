@@ -57,6 +57,19 @@
   .buy { background: var(--accent); color: #1a120b; font-weight: 700; font-size: 13px;
     padding: 6px 10px; border-radius: 8px; white-space: nowrap; }
   .offer.out { opacity: .5; }
+  .offer.phone .buy { background: var(--panel2); color: var(--text); border: 1px solid var(--line); }
+  .b-phone { background: #3a3128; color: #e8c79a; }
+  .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+  .upd { flex: 0 0 auto; background: var(--accent); color: #1a120b; border: 0; border-radius: 10px;
+    font-weight: 700; font-size: 14px; padding: 9px 14px; margin-top: 2px; }
+  .upd[disabled] { opacity: .6; }
+  .setup { margin: 10px 16px 0; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r);
+    padding: 12px 14px; font-size: 14px; }
+  .setup ol { margin: 6px 0 10px; padding-left: 20px; color: var(--muted); }
+  .setup a { color: var(--accent); }
+  .setup .row { margin: 0; }
+  .setup button { background: var(--accent); color: #1a120b; border: 0; border-radius: 10px; font-weight: 700; padding: 9px 14px; }
+  .linkish { background: none !important; color: var(--muted) !important; font-weight: 400 !important; padding: 4px 0 !important; text-decoration: underline; }
   .offer.out .buy { background: var(--line); color: var(--muted); }
   .badge { font-size: 10px; font-weight: 800; letter-spacing: .05em; padding: 2px 6px; border-radius: 5px; }
   .b-new { background: var(--accent); color: #1a120b; }
@@ -74,9 +87,25 @@
 </head>
 <body>
 <header>
-  <h1>UK Spider Stock</h1>
-  <div class="sub" id="checked">Loading…</div>
+  <div class="top">
+    <div><h1>UK Spider Stock</h1>
+      <div class="sub" id="checked">Loading…</div></div>
+    <button class="upd" id="upd">Update now</button>
+  </div>
 </header>
+<div class="setup" id="setup" hidden>
+  <b>One-time setup for the Update button</b>
+  <ol>
+    <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → new fine-grained token</a>.</li>
+    <li>Name it "stock update", expiry up to 1 year.</li>
+    <li>Repository access: <b>Only select repositories</b> → <b>tarantula-stock</b>.</li>
+    <li>Repository permissions: <b>Actions: Read and write</b> and <b>Contents: Read-only</b>. Nothing else.</li>
+    <li>Generate, copy it, paste below. It is kept only in this browser.</li>
+  </ol>
+  <div class="row"><input id="tok" type="password" placeholder="github_pat_…" autocomplete="off">
+    <button id="tokSave">Save</button></div>
+  <button class="linkish" id="tokForget" hidden>Remove saved token from this browser</button>
+</div>
 
 <div class="bar">
   <div class="tabs" id="tabs">
@@ -152,6 +181,13 @@ function sizeOf(it) {
   const m = (it.name + " " + (it.hint || "")).match(/\d+(?:\.\d+)?\s*(?:-|–|to)?\s*(?:\d+(?:\.\d+)?)?\s*cm/i);
   return m ? m[0].replace(/\s+/g, "").replace(/CM/, "cm") : "";
 }
+function fmtDate(iso) {
+  return new Date(iso + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+}
+function listDate(vendor) {
+  const v = data.vendors[vendor] || {};
+  return v.list_updated ? fmtDate(v.list_updated).toUpperCase() : "";
+}
 function speciesTitle(name) {
   // Italicise "Genus species", leave a quoted locality upright.
   const m = name.match(/^([A-Z][a-z]+)\s+(sp\.)?\s*(.*)$/);
@@ -188,7 +224,8 @@ function render() {
   let list = [...groups.values()];
   if (q) list = list.filter(g => (g.name + " " + g.common + " " + g.offers.map(o => o.name + " " + o.vendor).join(" ")).toLowerCase().includes(q));
   for (const g of list) {
-    g.offers.sort((a, b) => (b.in_stock - a.in_stock) || ((a.price || 1e9) - (b.price || 1e9)));
+    const rank = o => o.in_stock ? 0 : o.unconfirmed ? 1 : 2;
+    g.offers.sort((a, b) => (rank(a) - rank(b)) || ((a.price || 1e9) - (b.price || 1e9)));
     g.fresh = g.offers.map(freshAt).filter(Boolean).sort().pop() || "";
     g.shops = new Set(g.offers.filter(o => o.in_stock).map(o => o.vendor)).size;
     const prices = g.offers.filter(o => o.in_stock && o.price && o.currency !== "USD").map(o => o.price);
@@ -208,12 +245,15 @@ function render() {
       const f = freshAt(it);
       const badge = f ? (f === it.restocked_at ? '<span class="badge b-back">BACK</span>' : '<span class="badge b-new">NEW</span>') : "";
       const bits = [STAGE[it.stage], SEX[it.sex], sizeOf(it)].filter(Boolean).join(" · ");
-      return `<a class="offer ${it.in_stock ? "" : "out"}" href="${esc(it.url)}" target="_blank" rel="noopener">
+      const phone = it.unconfirmed && !it.in_stock;
+      const listed = phone ? listDate(it.vendor) : "";
+      const pb = phone ? `<span class="badge b-phone">STOCK NOT LISTED${listed ? " · LIST " + listed : ""}</span>` : "";
+      return `<a class="offer ${it.in_stock ? "" : phone ? "phone" : "out"}" href="${esc(it.url)}" target="_blank" rel="noopener">
         <div><div class="shop">${esc(it.vendor)}</div>
-          <div class="desc">${badge}<span>${esc(bits)}</span></div>
+          <div class="desc">${badge}${pb}<span>${esc(bits)}</span></div>
           <div class="lname">${esc(it.name)}</div></div>
         <span class="price">${money(it)}</span>
-        <span class="buy">${it.in_stock ? "Buy ›" : "Sold out"}</span></a>`;
+        <span class="buy">${it.in_stock ? "Buy ›" : phone ? "Phone ›" : "Sold out"}</span></a>`;
     }).join("");
     const more = g.offers.length > SHOW
       ? `<button class="more" data-key="${esc(g.key)}">${open ? "Show fewer" : `Show all ${g.offers.length}`}</button>` : "";
@@ -235,9 +275,13 @@ function renderVendors() {
   $("#status summary").textContent = `Shops checked (${ok} of ${vs.length} working)`;
   $("#vendors").innerHTML = vs.map(([name, v]) => `<div class="v"><div>${esc(name)}
       ${v.status !== "ok" ? `<div class="err">${esc(v.error)}</div>` : ""}</div>
-      <div class="${v.status === "ok" ? "ok" : "fail"}">${v.status === "ok" ? `${v.in_stock}/${v.count} in stock` : "failed"}</div></div>`).join("");
-  const sel = $("#vendor");
+      <div class="${v.status === "ok" ? "ok" : "fail"}">${v.status !== "ok" ? "failed"
+        : v.stock === "unconfirmed" ? `price list only${v.list_updated ? " · " + fmtDate(v.list_updated) : ""}`
+        : `${v.in_stock}/${v.count} in stock`}</div></div>`).join("");
+  const sel = $("#vendor"), keep = sel.value;
+  sel.length = 1;
   vs.forEach(([name]) => { const o = document.createElement("option"); o.value = o.textContent = name; sel.appendChild(o); });
+  sel.value = keep;
 }
 
 $("#tabs").onclick = e => {
@@ -273,11 +317,82 @@ $("#q").oninput = render;
 $("#vendor").onchange = render;
 $("#sex").onchange = render;
 
-fetch("stock.json?t=" + Date.now()).then(r => r.json()).then(j => {
+// ---------------------------------------------------------------- live update
+// The page is static, so "Update now" asks GitHub to run the checker straight away
+// (workflow_dispatch) and then pulls the fresh results from the repo. That needs a
+// fine-grained token limited to this one repo, stored only in this browser.
+const REPO = "ryannett94/tarantula-stock", WORKFLOW = "check-stock.yml", API = "https://api.github.com/repos/" + REPO;
+const TOKEN_KEY = "tstock-token";
+const store = {
+  get() { try { return localStorage.getItem(TOKEN_KEY) || ""; } catch { return ""; } },
+  set(v) { try { v ? localStorage.setItem(TOKEN_KEY, v) : localStorage.removeItem(TOKEN_KEY); } catch {} },
+};
+const gh = (path, opt = {}) => fetch(API + path, { ...opt, cache: "no-store", headers: {
+  Accept: "application/vnd.github+json", Authorization: "Bearer " + store.get(), ...(opt.headers || {}) } });
+function show(j) {
   data = j;
   $("#checked").textContent = j.checked ? "Last checked " + ago(j.checked) : "Not checked yet.";
   renderVendors(); render();
-}).catch(() => { $("#checked").textContent = "Couldn't load stock list."; });
+}
+async function loadFromRepo() {
+  // Straight from the repo, so results show the moment a run finishes (Pages lags ~1 min).
+  const r = await gh("/contents/docs/stock.json?ref=main", { headers: { Accept: "application/vnd.github.raw+json" } });
+  if (!r.ok) throw new Error("load " + r.status);
+  show(await r.json());
+}
+function setupBox(open) {
+  $("#setup").hidden = !open;
+  $("#tokForget").hidden = !store.get();
+}
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+let busy = false;
+async function update() {
+  if (busy) return;
+  if (!store.get()) { setupBox(true); return; }
+  busy = true;
+  const btn = $("#upd"), t0 = Date.now(), since = new Date(t0 - 5000).toISOString();
+  const tick = msg => { btn.textContent = msg; };
+  btn.disabled = true;
+  try {
+    tick("Starting…");
+    const d = await gh(`/actions/workflows/${WORKFLOW}/dispatches`, { method: "POST", body: JSON.stringify({ ref: "main" }) });
+    if (d.status === 401 || d.status === 403 || d.status === 404) {
+      tick("Update now"); setupBox(true);
+      alert("GitHub refused the token (" + d.status + "). It may have expired or be missing \"Actions: Read and write\" for tarantula-stock.");
+      return;
+    }
+    if (!d.ok) throw new Error("dispatch " + d.status);
+    let run = null;
+    while (Date.now() - t0 < 15 * 60e3) {
+      await sleep(run ? 10e3 : 4e3);
+      const secs = Math.round((Date.now() - t0) / 1000);
+      const r = await gh(`/actions/workflows/${WORKFLOW}/runs?event=workflow_dispatch&per_page=5&created=${encodeURIComponent(">=" + since)}`);
+      if (r.ok) run = ((await r.json()).workflow_runs || [])[0] || run;
+      if (run && run.status === "completed") break;
+      tick((run && run.status === "in_progress" ? "Checking shops… " : "Queued… ") + Math.floor(secs / 60) + ":" + String(secs % 60).padStart(2, "0"));
+    }
+    if (!run || run.status !== "completed") throw new Error("still running – try again in a minute");
+    if (run.conclusion !== "success") throw new Error("the check failed (" + run.conclusion + ")");
+    tick("Loading…");
+    await loadFromRepo();
+    tick("Updated ✓");
+    await sleep(2500);
+  } catch (e) {
+    alert("Update didn't finish: " + e.message);
+  } finally {
+    busy = false; btn.disabled = false; btn.textContent = "Update now";
+  }
+}
+$("#upd").onclick = update;
+$("#tokSave").onclick = () => {
+  const v = $("#tok").value.trim(); if (!v) return;
+  store.set(v); $("#tok").value = ""; setupBox(false); update();
+};
+$("#tokForget").onclick = () => { store.set(""); setupBox(true); };
+
+(store.get() ? loadFromRepo() : Promise.reject())
+  .catch(() => fetch("stock.json?t=" + Date.now()).then(r => r.json()).then(show))
+  .catch(() => { $("#checked").textContent = "Couldn't load stock list."; });
 </script>
 </body>
 </html>

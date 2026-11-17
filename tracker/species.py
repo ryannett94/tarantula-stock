@@ -29,7 +29,7 @@ phrixotrichus plesiopelma poecilotheria proshapalopus psalmopoeus pseudhapalopus
 pseudoclamoris pterinochilus pterinopelma reversopelma selenocosmia selenotholus
 selenotypus sericopelma sickius stromatopelma tapinauchenius theraphosa thrigmopoeus
 thrixopelma tliltocatl tmesiphantes typhochlaena umbyquyra vitalius xenesthis ybyrapora
-yanomamius amazonius viridasius selenobrachys neischnocolus ornithoctoninae spinosatibiapalpus euthycaelus
+yanomamius amazonius viridasius selenobrachys neischnocolus ornithoctoninae spinosatibiapalpus euthycaelus magnacrus selenocosmiinae theraphosidae
 """.split())
 
 JUMPING_GENERA = set("""
@@ -41,7 +41,7 @@ sassacus servaea siler simaetha sitticus tauala telamonia thiania thyene zygobal
 """.split())
 
 OTHER_SPIDER_GENERA = set("""
-agelena ancylometes aphantochilus araneus argiope atypus caerostris cteniza cupiennius cyclosa
+agelena selenops ancylometes aphantochilus araneus argiope atypus caerostris cteniza cupiennius cyclosa
 cyrtophora deinopis diguetia dolomedes dresserus eratigena eresus euagrus eusparassus filistata
 gandanameno gasteracantha geolycosa hersilia heteropoda hexophthalma hippasa hogna holocnemus
 ischnothele kukulcania latrodectus linothele liphistius loxosceles lycosa macrothele micrommata
@@ -56,6 +56,8 @@ orientothele bolostromus barychelidae
 
 # Misspellings and old names -> current hobby names.
 GENUS_FIX = {
+    "phormictopuss": "phormictopus", "aviculata": "avicularia", "tiltocatl": "tliltocatl",
+    "ornith": "ornithoctoninae", "cheatopelma": "chaetopelma",
     "tlitocatl": "tliltocatl", "amazonicus": "amazonius", "avicuaria": "avicularia",
     "ideothele": "idiothele", "orphaneus": "orphnaecus", "photmictopus": "phormictopus", "phormingochiluis": "phormingochilus",
     "phormictopous": "phormictopus", "brachypelama": "brachypelma", "poecilotheira": "poecilotheria", "theraposa": "theraphosa", "lasiodera": "lasiodora",
@@ -87,6 +89,16 @@ SPECIES_FIX = {
     "nhandu chromatus": "vitalius chromatus",
     "pterinopelma sazimai": "lasiocyano sazimai",
     "brachypelma smithi": "brachypelma hamorii",
+    # WSC: Sherwood et al. 2025 moved T. lagunas to the new genus Warmiru
+    "thrixopelma lagunas": "warmiru lagunas",
+    "phormingochilus sp. rufus": "aspinochilus rufus", "phormingochilus rufus": "aspinochilus rufus",
+    "orphnaecus dichromata": "chilocosmia dichromata",
+    # WSC: Müller et al. 2024 described hobby "Cyriopagopus sp. hati hati" as Phormingochilus hatihati
+    **{f"{g} {e}": "phormingochilus hatihati" for g in ("cyriopagopus", "phormingochilus", "omothymus")
+       for e in ("sp. hati hati", "sp. hatihati", "sp. hati", "hati hati", "hatihati", "hati")},
+    "pseudhapalopus sp. colom": "pseudhapalopus sp. colombia",
+    # common names some shops print in the Latin slot
+    "trinidad olive": "neoholothele incei", "trinidad chevron": "psalmopoeus cambridgei",
 }
 
 DESCRIPTOR = re.compile(r"^(blue|green|red|black|tiger|small|large|giant|dwarf|purple|gold|golden|orange|"
@@ -112,8 +124,12 @@ def _epithet_after(tokens: list[str], i: int) -> str | None:
         # sp. "Locality" or sp. Locality Words
         rest = []
         nxt = tokens[i + 1] if i + 1 < len(tokens) else ""
-        if nxt.startswith(("\"", "“")):  # sp. "Locality" -> just the quoted part
-            rest = [nxt.strip("\"“”").lower()]
+        if nxt.startswith(("\"", "“")):  # sp. "Locality Words" -> the whole quoted part
+            for tok in tokens[i + 1:i + 5]:
+                rest.append(tok.strip("\"“”'’.,()").lower())
+                if re.search(r"[\"”]", tok[1:] if tok is nxt else tok):
+                    break
+            rest = [w for w in rest if w]
         else:
             for tok in tokens[i + 1:i + 3]:
                 clean = tok.strip("\"“”'’.,()").lower()
@@ -166,7 +182,30 @@ ABBREV = {
     ("t", "epicureanum"): "tliltocatl epicureanus", ("t", "epicureanus"): "tliltocatl epicureanus",
     ("t", "kahlenbergeri"): "tliltocatl kahlenbergeri", ("t", "cupreus"): "tapinauchenius cupreus",
     ("t", "violceus"): "tapinauchenius violaceus", ("t", "violaceus"): "tapinauchenius violaceus",
+    ("n", "panamanus"): "neischnocolus panamanus", ("t", "lagunas"): "warmiru lagunas",
+    ("t", "iagunas"): "warmiru lagunas", ("w", "lagunas"): "warmiru lagunas",
+    ("t", "angustum"): "sericopelma angustum", ("s", "angustum"): "sericopelma angustum",
+    ("c", "schmardae"): "cyclosternum schmardae", ("n", "incei"): "neoholothele incei",
+    ("p", "cambridgei"): "psalmopoeus cambridgei", ("d", "sanguinea"): "diplura sanguinea",
 }
+
+# "O. sp. cebu" style: (initial, locality letters only) -> key, for names no other shop spells out
+SP_ABBREV = {
+    ("o", "cebu"): "orphnaecus sp. cebu", ("p", "blue"): "pseudhapalopus sp. blue",
+    ("h", "columbialongform"): "hapalopus sp. colombia large", ("h", "colombialongform"): "hapalopus sp. colombia large",
+    ("n", "panama"): "neischnocolus sp. panama", ("c", "hatihati"): "phormingochilus hatihati", ("p", "hatihati"): "phormingochilus hatihati",
+    ("p", "rufus"): "aspinochilus rufus", ("c", "nepal"): "chilobrachys sp. nepal",
+}
+
+COLOUR_FORMS = ("phan cay",)
+
+# Listings that give only a common name (or a garbled Latin one)
+NAME_ONLY = [
+    (re.compile(r"^yellow (bottle blue|blue bottle)\b", re.I), "pseudhapalopus sp. colombia"),
+    (re.compile(r"neosteno\w*\W+french guiana", re.I), "neostenotarsus sp. french guiana"),
+    (re.compile(r"\bN\.\s*suriname\b"), "neostenotarsus sp. suriname"),
+    (re.compile(r"\bdecorated velvet spider\b", re.I), "paradonea sp. limpopo"),
+]
 
 LOCALITY_FIX = {"dom purple": "dominican purple", "machalla": "machala", "platyomma": "platyoma",
                 "magnanegra": "manganegra", "columbia": "colombia", "columbia large": "colombia large"}
@@ -338,13 +377,29 @@ def annotate(items: dict) -> None:
         if it["species"] and " sp. " in it["species"]:
             g, loc = it["species"].split(" sp. ", 1)
             sp_keys.setdefault((g[0], re.sub(r"[^a-z]", "", loc)), set()).add(it["species"])
+    # Colour forms sold as different animals ("Phan Cay Red" vs "Phan Cay Blue")
     for it in live:
+        sp = it["species"] or ""
+        for loc in COLOUR_FORMS:
+            if sp.endswith("sp. " + loc):
+                m = re.search(loc.replace(" ", r"\W*") + r"\W*(red|blue|black|gold|green)\b", it["name"], re.I)
+                if m:
+                    it["species"] = f"{sp} {m.group(1).lower()}"
+    for it in live:
+        if not it["species"]:
+            for rx, key in NAME_ONLY:
+                if rx.search(it["name"]):
+                    it["species"] = key
+                    break
         if it["species"]:
             continue
         # "C. sp. Hati hati" / "O.sp. cebu": genus initial + locality matching a known sp. key
         m = re.search(r"\b([A-Z])\.\s*sp\.?,?\s*([A-Za-z][A-Za-z .'-]{2,30}?)\s*,", it["name"] + ",")
         if m:
             loc = re.sub(r"[^a-z]", "", m.group(2).lower())
+            if (m.group(1).lower(), loc) in SP_ABBREV:
+                it["species"] = SP_ABBREV[(m.group(1).lower(), loc)]
+                continue
             for (ini, l), ks in sp_keys.items():
                 if ini == m.group(1).lower() and (l == loc or _one_edit(l, loc)) and len(ks) == 1:
                     it["species"] = next(iter(ks))

@@ -29,16 +29,34 @@ At the bottom of the stock page, open **Shops checked**. It shows each shop as w
 
 - **Add or remove a shop:** edit `vendors.yml`.
 - **Check times:** edit the `cron` lines in `.github/workflows/check-stock.yml`. The times are in UTC.
-- **Check right now:** go to Actions → Run workflow.
+- **Check right now:** tap **Update now** at the top of the stock page (see below), or go to Actions → Run workflow.
+- **Fix a shop's mistake** (wrong name, size or sex on a listing, or something that isn't a spider): add an entry to `corrections.yml`. The file explains the format.
+
+## Update now button
+
+The page is a static site, so the button asks GitHub to run the checker straight away, waits for it (about 3–4 minutes for all 19 shops, run side by side), and then loads the fresh results directly from the repo.
+
+It needs a GitHub token, entered once per browser. The page shows these steps the first time you tap it:
+
+1. Open github.com → Settings → Developer settings → Fine-grained tokens → Generate new token.
+2. Repository access: **Only select repositories** → `tarantula-stock`.
+3. Permissions: **Actions: Read and write** and **Contents: Read-only**. Nothing else.
+4. Paste it into the box on the page.
+
+The token is kept only in that browser's storage and can only start this checker and read this repo. A "Remove saved token" link is under the box.
+
+## Shops that only publish a price list
+
+MARPC lists prices but says to phone to check availability, and marks nothing as sold out. Its listings are never shown as in stock and never alert. In the **All** tab they show **Phone ›** with the date the shop last updated its list. This is set with `stock: unconfirmed` on the shop in `vendors.yml`.
 
 ## Filters on the page
 
 - **Spider type:** tarantulas, jumping spiders, true & other spiders
-- **Lifestyle:** arboreal, terrestrial, fossorial / burrowing, trapdoor. If a shop prints the lifestyle on its listing, that's used. Otherwise it comes from a genus/species table in `tracker/lifestyle.py`. Opportunistic burrowers get both terrestrial and fossorial.
+- **Lifestyle:** arboreal, terrestrial, fossorial / burrowing, trapdoor. This comes from a researched genus/species table in `tracker/lifestyle.py`, which wins over what the shop prints, because shops sometimes get it wrong. A shop's own label is used only for a genus the table doesn't know. Opportunistic burrowers get both terrestrial and fossorial. Species that dig as slings and climb as adults, like *Phormingochilus hatihati*, get arboreal and fossorial.
 - **Size:** slings, juveniles, sub-adults, adults. This comes from the listing name, size option or description; the "adult size" shown on care sheets is ignored.
 - **Sex**, **shop**, and search by scientific or common name
 
-The same species from different shops is shown as one card. Spelling slips and old names are merged, and current names follow the World Spider Catalog. For example, *Haplopelma/Cyriopagopus schmidti, lividus, albostriatus, minax* are now *Melopoeus*, and *Orphnaecus philippinus* is now *Selenobrachys*.
+The same species from different shops is shown as one card. Spelling slips and old names are merged, and current names follow the World Spider Catalog. For example, *Haplopelma/Cyriopagopus schmidti, lividus, albostriatus, minax* are now *Melopoeus*, *Orphnaecus philippinus* is now *Selenobrachys*, *Thrixopelma lagunas* is now *Warmiru lagunas*, and the hobby's *Cyriopagopus* sp. "Hati Hati" and *Phormingochilus* sp. "Rufus" are now *Phormingochilus hatihati* and *Aspinochilus rufus*.
 
 ## Quality check
 

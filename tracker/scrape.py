@@ -72,7 +72,7 @@ NOT_LIVESTOCK = re.compile(
     r"\b(enclosure|substrate|tub|hide|cork|bowls?|wood|heat ?mat|thermostat|book|poster|"
     r"t-shirt|tshirt|mug|tongs|tweezers|gift card|voucher|feeder|crickets|locusts|"
     r"roaches|mealworms|dubia|faunarium|kit only|just kit|exo terra|decor|set ?ups?|"
-    r"complete setups?|minimum order|postage|delivery|gift|donation|review|video|competition|raffle|win the|spiderling box|pots?|caves?|burrow|nest|vouchers?|lamps?|bulbs?|heat\w*|cables?|thermo\w*|hygro\w*|terrarium|invertarium|moss|misting|spray|supplements?|grub|gel|coir|nutrobal|projector|kits?|fittings?|bedding|backing|t-?shirt|tee|hoodie|sweatshirt|sticker|keyring|mug|print|poster|plush|bulk|bundle|pack of|lot of|multi ?buy)\b", re.I)
+    r"complete setups?|minimum order|postage|delivery|gift|donation|review|video|competition|raffle|win the|spiderling box|pots?|caves?|burrow|nest|vouchers?|lamps?|bulbs?|heat\w*|cables?|thermo\w*|hygro\w*|terrarium|invertarium|moss|misting|spray|supplements?|grub|gel|coir|nutrobal|projector|kits?|fittings?|bedding|backing|t-?shirt|tee|hoodie|sweatshirt|sticker|keyring|mug|print|poster|plush\w*|soft toy|from only|bulk|bundle|pack of|lot of|multi ?buy)\b", re.I)
 
 
 # Retry flaky connections (resets, timeouts, 5xx) a few times with backoff.
@@ -96,7 +96,12 @@ def is_spider(text: str) -> bool:
     return bool(is_tarantula(text) or SPIDER_GENUS_RE.search(text) or SPIDER_WORDS.search(text))
 
 
-def looks_like_livestock(name: str) -> bool:
+JUNK_URL = re.compile(r"(mystery|lucky[-_]?dip|surprise|[-_/]box([-_/]|\d|$)|bundle|bulk|plush)", re.I)
+
+
+def looks_like_livestock(name: str, url: str = "") -> bool:
+    if url and JUNK_URL.search(urlparse(url).path):
+        return False  # e.g. "Phormictopus of" whose page is /product/birdeater-box-2/
     return not NOT_LIVESTOCK.search(name) and not BULK.search(name) and not NOT_SPIDER.search(name)
 
 
@@ -474,11 +479,12 @@ def _load(page, url):
 
 
 def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str,
-                follow: str | None = None) -> list[dict] | None:
+                follow: str | None = None, stages: dict | None = None) -> list[dict] | None:
     from playwright.sync_api import sync_playwright
 
     found: dict[str, dict] = {}
     log = DEBUG.setdefault(vendor, [])
+    cur = {"stage": None}
 
     def harvest(result, force_filter):
         n = 0
@@ -489,8 +495,10 @@ def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str,
             # Only the URL path counts: a shop called "...tarantulas.co.uk" says nothing about the item.
             if (filter_names or force_filter) and not is_spider(it["name"] + " " + urlparse(it["url"]).path):
                 continue
-            if not looks_like_livestock(it["name"]):
+            if not looks_like_livestock(it["name"], it["url"]):
                 continue
+            if cur["stage"]:  # this list page only sells one size, e.g. "Juvenile Spiders"
+                it["hint"] = f"{it.get('hint', '')} {cur['stage']}".strip()
             if it["url"] not in found:
                 found[it["url"]] = it
                 n += 1
@@ -519,14 +527,17 @@ def try_browser(listings: list[str], vendor: str, filter_names: bool, base: str,
         page = browser.new_page(user_agent=UA, locale="en-GB")
         visited = set()
         for start in listings:
+            cur["stage"] = (stages or {}).get(start)
             res = crawl(start)
             visited.add(start)
             # Optional: also walk sibling category pages (e.g. Slings -> Juveniles -> Adults).
             if follow and res:
+                cur["stage"] = None
                 for link in [l for l in res.get("allLinks", []) if re.search(follow, l)][:10]:
                     if link not in visited:
                         visited.add(link)
                         crawl(link)
+        cur["stage"] = None
         if not found:
             # Discover tarantula pages from the home page and try those.
             home = crawl(base + "/", force_filter=True)
@@ -568,7 +579,10 @@ def _strip_tracking(u: str) -> str:
 def scrape_vendor(v: dict) -> tuple[list[dict] | None, str, str]:
     base = v["base"].rstrip("/")
     # Drop tracking junk like ?srsltid=... from pasted links.
-    listings = [_strip_tracking(u) for u in v.get("listings", [])]
+    # A listing is a URL, or {url: ..., stage: ...} for a page that only sells one size.
+    entries = [u if isinstance(u, dict) else {"url": u} for u in v.get("listings", [])]
+    listings = [_strip_tracking(e["url"]) for e in entries]
+    stages = {_strip_tracking(e["url"]): e["stage"] for e in entries if e.get("stage")}
     collections = [urlparse(u).path.rstrip("/") for u in listings if "/collections/" in u]
     errors = []
     attempts = []
@@ -593,7 +607,7 @@ def scrape_vendor(v: dict) -> tuple[list[dict] | None, str, str]:
         except Exception as e:  # noqa: BLE001
             errors.append(f"{method}: {e}")
     try:
-        items = try_browser(listings, v["name"], v.get("filter", False), base, v.get("follow"))
+        items = try_browser(listings, v["name"], v.get("filter", False), base, v.get("follow"), stages)
         if items:
             return items, "browser", ""
         if feed_ok:
@@ -639,6 +653,49 @@ def notify(alerts: list[dict]):
         print(f"ntfy failed: {e}")
 
 
+def list_date(v: dict) -> str | None:
+    """'Last updated 09/10/2026' on a shop's price-list page -> '2026-10-09'."""
+    for e in v.get("listings", []):
+        url = e["url"] if isinstance(e, dict) else e
+        try:
+            text = clean(requests.get(url, headers=HEADERS, timeout=30).text)
+        except Exception:  # noqa: BLE001
+            continue
+        m = re.search(r"last updated:?\s*(\d{1,2})[/.-](\d{1,2})[/.-](\d{2,4})", text, re.I)
+        if m:
+            d, mth, y = (int(x) for x in m.groups())
+            return f"{y + 2000 if y < 100 else y:04d}-{mth:02d}-{d:02d}"
+    return None
+
+
+CORRECTIONS_FILE = Path(__file__).resolve().parent.parent / "corrections.yml"
+
+
+def apply_corrections(items: dict) -> None:
+    """Fix mistakes in shops' own listings (corrections.yml): wrong names, stages, sexes,
+    lifestyles, or listings that are not spiders at all."""
+    if not CORRECTIONS_FILE.exists():
+        return
+    from lifestyle import lifestyle_of
+    for c in yaml.safe_load(CORRECTIONS_FILE.read_text()) or []:
+        rx = re.compile(c["match"], re.I)
+        for key in list(items):
+            it = items[key]
+            if c.get("vendor") and it["vendor"].lower() != c["vendor"].lower():
+                continue
+            if not rx.search(f"{it['name']} {it.get('url', '')}"):
+                continue
+            if c.get("drop"):
+                del items[key]
+                continue
+            fix = dict(c.get("set") or {})
+            it.update(fix)
+            if "species" in fix:
+                it["group"] = fix.get("group") or species.group_of(it)
+                if "lifestyle" not in fix:
+                    it["lifestyle"] = lifestyle_of(it)
+
+
 def main():
     cfg = yaml.safe_load(VENDORS_FILE.read_text())
     state = load_state()
@@ -646,14 +703,21 @@ def main():
     stamp = now_iso()
     alerts = []
 
-    for v in cfg["vendors"]:
-        if v.get("enabled", True) is False:
-            continue
+    only = {n.strip().lower() for n in os.environ.get("ONLY_VENDORS", "").split(",") if n.strip()}
+    todo = [v for v in cfg["vendors"] if v.get("enabled", True) is not False
+            and (not only or v["name"].lower() in only)]
+    # Shops are scraped side by side (each browser in its own thread), then merged in order.
+    from concurrent.futures import ThreadPoolExecutor
+    started = time.time()
+    with ThreadPoolExecutor(max_workers=int(os.environ.get("SCRAPE_THREADS", "6"))) as pool:
+        results = list(pool.map(lambda v: (v, *scrape_vendor(v)), todo))
+    print(f"scraped {len(todo)} shops in {time.time() - started:.0f}s")
+
+    for v, found, method, err in results:
         name = v["name"]
         print(f"- {name}")
-        found, method, err = scrape_vendor(v)
         if found:
-            found = [f for f in found if looks_like_livestock(f["name"])]
+            found = [f for f in found if looks_like_livestock(f["name"], f.get("url", ""))]
             # The same listing can show up on two category pages: keep one.
             uniq, seen_ids, seen_rows = [], set(), set()
             for f in found:
@@ -683,15 +747,31 @@ def main():
         print(f"    ok via {method}: {len(found)} spiders ({vs['in_stock']} in stock)"
               + (" [first run, no alerts]" if seeding else ""))
 
+        # Some shops only publish a price list and say "phone to check availability":
+        # nothing on the page says what is actually in stock, so never show it as in stock.
+        unconfirmed = v.get("stock") == "unconfirmed"
+        if unconfirmed:
+            vs["stock"] = "unconfirmed"
+            vs["list_updated"] = list_date(v) or vs.get("list_updated")
+            vs["in_stock"] = 0
+        else:
+            vs.pop("stock", None)
+            vs.pop("list_updated", None)
+
         seen = set()
         for f in found:
             f["currency"] = v.get("currency", "GBP")
+            if unconfirmed:
+                f["in_stock"] = False
+                f["unconfirmed"] = True
             if v.get("stage"):  # shop page that only sells one size, e.g. "Spiderlings for Sale"
                 f["hint"] = f"{f.get('hint', '')} {v['stage']}".strip()
             key = f"{name}|{f['id']}"
             seen.add(key)
             old = items.get(key)
             rec = {**(old or {}), **f, "vendor": name, "last_seen": stamp, "gone": False}
+            if not unconfirmed:
+                rec.pop("unconfirmed", None)
             if old is None:
                 rec["first_seen"] = stamp
                 rec["new_at"] = None if seeding else (stamp if f["in_stock"] else None)
@@ -708,7 +788,7 @@ def main():
                 items[key].update(gone=True, in_stock=False)
 
     # Drop anything that is clearly not a spider (old junk rows included).
-    for key in [k for k, it in items.items() if not looks_like_livestock(it["name"])]:
+    for key in [k for k, it in items.items() if not looks_like_livestock(it["name"], it.get("url", ""))]:
         del items[key]
     # Forget shops that have been removed from vendors.yml.
     active = {v["name"] for v in cfg["vendors"] if v.get("enabled", True) is not False}
@@ -722,6 +802,7 @@ def main():
         del items[key]
 
     species.annotate(items)
+    apply_corrections(items)
     # Without a recognisable species name, keep it only if the name says it's a spider.
     for key in [k for k, it in items.items()
                 if not it.get("species") and not ANIMAL_WORDS.search(it["name"] + " " + (it.get("hint") or ""))]:
