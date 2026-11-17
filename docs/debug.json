@@ -1,97 +1,4 @@
 {
- "So Many Legs": [
-  {
-   "url": "https://www.somanylegs.co.uk/tarantulas?page=5",
-   "title": "Tarantulas | Norfolk | So Many Legs Ltd",
-   "found": 86,
-   "frames": [
-    "https://www.somanylegs.co.uk/tarantulas?page=5",
-    "https://wix-instantsearchplus-ssl.akamaized.net/wix_widget/wix_instantsearchplus"
-   ],
-   "pounds": 87,
-   "snippet": ""
-  },
-  {
-   "url": "https://www.somanylegs.co.uk/shop",
-   "title": "Other Spiders | So Many Legs Ltd | Essex",
-   "found": 2,
-   "frames": [
-    "https://www.somanylegs.co.uk/shop",
-    "https://wix-instantsearchplus-ssl.akamaized.net/wix_widget/wix_instantsearchplus"
-   ],
-   "pounds": 3,
-   "snippet": ""
-  }
- ],
- "Just One More": [
-  {
-   "url": "https://www.justonemore.uk/shop/Jumping-spiders-c167146093/",
-   "title": "Shop Online: Discover Your Favourite Inverts Today",
-   "found": 2,
-   "frames": [
-    "https://www.justonemore.uk/shop/Jumping-spiders-c167146093/",
-    "https://js.stripe.com/v3/m-outer-0edadf75b42c6ef7240c043f3272f3f9.html#url=https",
-    "https://m.stripe.network/inner.html#url=https%3A%2F%2Fwww.justonemore.uk%2Fshop%"
-   ],
-   "pounds": 4,
-   "snippet": ""
-  },
-  {
-   "url": "https://www.justonemore.uk/shop/True-spiders-c203842271/",
-   "title": "Shop Online: Discover Your Favourite Inverts Today",
-   "found": 2,
-   "frames": [
-    "https://www.justonemore.uk/shop/True-spiders-c203842271/",
-    "https://js.stripe.com/v3/m-outer-0edadf75b42c6ef7240c043f3272f3f9.html#url=https",
-    "https://m.stripe.network/inner.html#url=https%3A%2F%2Fwww.justonemore.uk%2Fshop%"
-   ],
-   "pounds": 7,
-   "snippet": ""
-  },
-  {
-   "url": "https://www.justonemore.uk/shop/",
-   "title": "Shop Online: Discover Your Favourite Inverts Today",
-   "found": 9,
-   "frames": [
-    "https://www.justonemore.uk/shop/",
-    "https://js.stripe.com/v3/m-outer-0edadf75b42c6ef7240c043f3272f3f9.html#url=https",
-    "https://m.stripe.network/inner.html#url=https%3A%2F%2Fwww.justonemore.uk%2Fshop%"
-   ],
-   "pounds": 12,
-   "snippet": ""
-  },
-  {
-   "url": "javascript:;",
-   "error": "Page.goto: net::ERR_ABORTED at javascript:;\nCall log:\n  - navigating to \"javascript:;\", waiting until \"domcontentloaded\"\n"
-  },
-  {
-   "url": "https://www.justonemore.uk/",
-   "title": "Just One More: Jumping Spiders & Tarantulas Care",
-   "found": 0,
-   "frames": [
-    "https://www.justonemore.uk/",
-    "https://js.stripe.com/v3/m-outer-0edadf75b42c6ef7240c043f3272f3f9.html#url=https",
-    "https://m.stripe.network/inner.html#url=https%3A%2F%2Fwww.justonemore.uk%2F&titl"
-   ],
-   "pounds": 0,
-   "snippet": "Skip to Main Content\nSkip to Footer\nSkip to Navigation\n(0)\nHome\nShop\nContact us\nAbout Us\nShipping\n\nLove Invertebrates?\n\n\u00a0You\u2019re in the Right Place.\n\n\u00a0\n\nWelcome to Just One More\u2014your UK-based specialist shop for ethically captive-bred jumping spiders, tarantulas, and unique exotic invertebrates.\n\nWe perfectly bridge the gap between premium care and budget-friendly keeping. From vibrant jumping spiders and stunning tarantulas to our signature, adorable 3D-printed hideouts, we provide your next dream pet and the creative custom styling to bring their habitats to life\u2014all at a highly competitive p"
-  }
- ],
- "Spider Farm": [
-  {
-   "url": "https://spiderfarm.co.uk/shop",
-   "title": "Tarantulas for Sale in the UK \u2014 Spider Farm",
-   "found": 166,
-   "frames": [
-    "https://spiderfarm.co.uk/shop",
-    "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LdDFQwjAAAAAPigEvvPgE",
-    "about:blank",
-    "about:blank"
-   ],
-   "pounds": 92,
-   "snippet": ""
-  }
- ],
  "Portsmouth Tarantulas": [
   {
    "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Slings-c27598628",
@@ -100,10 +7,10 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Slings-c27598628",
     "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Slings-c27598628?pageId=u3qgp&compId=TPASect",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Slings-c27598628?lang=en&dateNumberFormat=en",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
    ],
    "pounds": 0,
    "snippet": ""
@@ -130,10 +37,10 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Sub-Adults-c200038256",
     "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
-    "https://wix.ecwid.com/wix/app/store/Sub-Adults-c200038256?lang=en&dateNumberForm",
-    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
+    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
+    "https://wix.ecwid.com/wix/app/store/Sub-Adults-c200038256?pageId=u3qgp&compId=TP",
+    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
    ],
    "pounds": 0,
    "snippet": ""
@@ -144,10 +51,11 @@
    "found": 1,
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Females-c65002123",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Females-c65002123?pageId=u3qgp&compId=TPASec",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+    "about:blank",
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Females-c65002123?lang=en&dateNumberFormat=e",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
    ],
    "pounds": 0,
    "snippet": ""
@@ -159,10 +67,10 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Males-c31298501",
     "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Males-c31298501?pageId=u3qgp&compId=TPASecti",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Males-c31298501?lang=en&dateNumberFormat=en-",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
    ],
    "pounds": 0,
    "snippet": ""
@@ -174,10 +82,10 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Juveniles-c27598629",
     "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Juveniles-c27598629?pageId=u3qgp&compId=TPAS",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Juveniles-c27598629?lang=en&dateNumberFormat",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
    ],
    "pounds": 0,
    "snippet": ""
@@ -249,13 +157,106 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Reptile-Supplies-c164576516",
     "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Reptile-Supplies-c164576516?pageId=u3qgp&com",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Reptile-Supplies-c164576516?lang=en&dateNumb",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
    ],
    "pounds": 0,
    "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
+  }
+ ],
+ "Just One More": [
+  {
+   "url": "https://www.justonemore.uk/shop/Jumping-spiders-c167146093/",
+   "title": "Shop Online: Discover Your Favourite Inverts Today",
+   "found": 2,
+   "frames": [
+    "https://www.justonemore.uk/shop/Jumping-spiders-c167146093/",
+    "https://js.stripe.com/v3/m-outer-0edadf75b42c6ef7240c043f3272f3f9.html#url=https",
+    "https://m.stripe.network/inner.html#url=https%3A%2F%2Fwww.justonemore.uk%2Fshop%"
+   ],
+   "pounds": 4,
+   "snippet": ""
+  },
+  {
+   "url": "https://www.justonemore.uk/shop/True-spiders-c203842271/",
+   "title": "Shop Online: Discover Your Favourite Inverts Today",
+   "found": 2,
+   "frames": [
+    "https://www.justonemore.uk/shop/True-spiders-c203842271/",
+    "https://js.stripe.com/v3/m-outer-0edadf75b42c6ef7240c043f3272f3f9.html#url=https",
+    "https://m.stripe.network/inner.html#url=https%3A%2F%2Fwww.justonemore.uk%2Fshop%"
+   ],
+   "pounds": 7,
+   "snippet": ""
+  },
+  {
+   "url": "https://www.justonemore.uk/shop/",
+   "title": "Shop Online: Discover Your Favourite Inverts Today",
+   "found": 9,
+   "frames": [
+    "https://www.justonemore.uk/shop/",
+    "https://js.stripe.com/v3/m-outer-0edadf75b42c6ef7240c043f3272f3f9.html#url=https",
+    "https://m.stripe.network/inner.html#url=https%3A%2F%2Fwww.justonemore.uk%2Fshop%"
+   ],
+   "pounds": 12,
+   "snippet": ""
+  },
+  {
+   "url": "javascript:;",
+   "error": "Page.goto: net::ERR_ABORTED at javascript:;\nCall log:\n  - navigating to \"javascript:;\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+   "url": "https://www.justonemore.uk/",
+   "title": "Just One More: Jumping Spiders & Tarantulas Care",
+   "found": 0,
+   "frames": [
+    "https://www.justonemore.uk/",
+    "https://js.stripe.com/v3/m-outer-0edadf75b42c6ef7240c043f3272f3f9.html#url=https",
+    "https://m.stripe.network/inner.html#url=https%3A%2F%2Fwww.justonemore.uk%2F&titl"
+   ],
+   "pounds": 0,
+   "snippet": "Skip to Main Content\nSkip to Footer\nSkip to Navigation\n(0)\nHome\nShop\nContact us\nAbout Us\nShipping\n\nLove Invertebrates?\n\n\u00a0You\u2019re in the Right Place.\n\n\u00a0\n\nWelcome to Just One More\u2014your UK-based specialist shop for ethically captive-bred jumping spiders, tarantulas, and unique exotic invertebrates.\n\nWe perfectly bridge the gap between premium care and budget-friendly keeping. From vibrant jumping spiders and stunning tarantulas to our signature, adorable 3D-printed hideouts, we provide your next dream pet and the creative custom styling to bring their habitats to life\u2014all at a highly competitive p"
+  }
+ ],
+ "Spider Farm": [
+  {
+   "url": "https://spiderfarm.co.uk/shop",
+   "title": "Tarantulas for Sale in the UK \u2014 Spider Farm",
+   "found": 166,
+   "frames": [
+    "https://spiderfarm.co.uk/shop",
+    "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LdDFQwjAAAAAPigEvvPgE",
+    "about:blank",
+    "about:blank"
+   ],
+   "pounds": 92,
+   "snippet": ""
+  }
+ ],
+ "So Many Legs": [
+  {
+   "url": "https://www.somanylegs.co.uk/tarantulas?page=5",
+   "title": "Tarantulas | Norfolk | So Many Legs Ltd",
+   "found": 86,
+   "frames": [
+    "https://www.somanylegs.co.uk/tarantulas?page=5",
+    "https://wix-instantsearchplus-ssl.akamaized.net/wix_widget/wix_instantsearchplus"
+   ],
+   "pounds": 87,
+   "snippet": ""
+  },
+  {
+   "url": "https://www.somanylegs.co.uk/shop",
+   "title": "Other Spiders | So Many Legs Ltd | Essex",
+   "found": 2,
+   "frames": [
+    "https://www.somanylegs.co.uk/shop",
+    "https://wix-instantsearchplus-ssl.akamaized.net/wix_widget/wix_instantsearchplus"
+   ],
+   "pounds": 3,
+   "snippet": ""
   }
  ],
  "Eight Legged Emporium": [
@@ -331,6 +332,41 @@
    "snippet": ""
   }
  ],
+ "MARPC": [
+  {
+   "url": "https://www.marpc.co.uk/html/spiderlings.html",
+   "title": "Spiderlings for Sale | Buy a Spider | Marp Centre | UK Delivery",
+   "found": 113,
+   "frames": [
+    "https://www.marpc.co.uk/html/spiderlings.html",
+    "about:blank"
+   ],
+   "pounds": 114,
+   "snippet": ""
+  },
+  {
+   "url": "https://www.marpc.co.uk/html/juvenile-spiders.html",
+   "title": "Juvenile Spiders for Sale | Buy a Spider | Marp Centre",
+   "found": 27,
+   "frames": [
+    "https://www.marpc.co.uk/html/juvenile-spiders.html",
+    "about:blank"
+   ],
+   "pounds": 28,
+   "snippet": ""
+  },
+  {
+   "url": "https://www.marpc.co.uk/html/sub-adult-and-adult-spiders.html",
+   "title": "Adult Spiders for Sale | Spiders Tarantulas | Marp Centre",
+   "found": 11,
+   "frames": [
+    "https://www.marpc.co.uk/html/sub-adult-and-adult-spiders.html",
+    "about:blank"
+   ],
+   "pounds": 11,
+   "snippet": ""
+  }
+ ],
  "Swansea Spiders": [
   {
    "url": "https://www.swanseaspiders.co.uk/shop/True-Spiders-c198521145/",
@@ -383,41 +419,6 @@
    ],
    "pounds": 0,
    "snippet": "Skip to Main Content\nSkip to Footer\nSkip to Navigation\nHome\nShop\nAbout Us\nContact us\n(0)\nDiscover Unique Tarantulas & Exotic Spiders\nCall Us Now: 01792 677897\n\nShop a wide range of:\n\nSpiderlings, Juveniles, Adults, and Invertebrates.\u00a0\n\n\u00a0\n\nTrusted for quality exotic pets with secure UK delivery.\n\nShop Now\nModern Specialist Spider Retailer UK\n\nSwansea Spiders offers a diverse collection of tarantulas and exotic invertebrates across all life stages. We combine specialist knowledge with a seamless shopping experience tailored for exotic pet lovers across the UK.\n\nShop Now\nExtensive Spider Selectio"
-  }
- ],
- "MARPC": [
-  {
-   "url": "https://www.marpc.co.uk/html/spiderlings.html",
-   "title": "Spiderlings for Sale | Buy a Spider | Marp Centre | UK Delivery",
-   "found": 113,
-   "frames": [
-    "https://www.marpc.co.uk/html/spiderlings.html",
-    "about:blank"
-   ],
-   "pounds": 114,
-   "snippet": ""
-  },
-  {
-   "url": "https://www.marpc.co.uk/html/juvenile-spiders.html",
-   "title": "Juvenile Spiders for Sale | Buy a Spider | Marp Centre",
-   "found": 27,
-   "frames": [
-    "https://www.marpc.co.uk/html/juvenile-spiders.html",
-    "about:blank"
-   ],
-   "pounds": 28,
-   "snippet": ""
-  },
-  {
-   "url": "https://www.marpc.co.uk/html/sub-adult-and-adult-spiders.html",
-   "title": "Adult Spiders for Sale | Spiders Tarantulas | Marp Centre",
-   "found": 11,
-   "frames": [
-    "https://www.marpc.co.uk/html/sub-adult-and-adult-spiders.html",
-    "about:blank"
-   ],
-   "pounds": 11,
-   "snippet": ""
   }
  ],
  "BugzUK": [
