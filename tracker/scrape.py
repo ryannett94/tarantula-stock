@@ -223,7 +223,7 @@ def _woo_variations(api: str, ids: list[int]) -> dict[int, dict]:
         except Exception:  # noqa: BLE001
             return vid, None
 
-    with ThreadPoolExecutor(max_workers=8) as pool:
+    with ThreadPoolExecutor(max_workers=4) as pool:
         for vid, v in pool.map(one, missing):
             if v:
                 out[vid] = v
