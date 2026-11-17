@@ -58,6 +58,20 @@ MARPC lists prices but says to phone to check availability, and marks nothing as
 
 The same species from different shops is shown as one card. Spelling slips and old names are merged, and current names follow the World Spider Catalog. For example, *Haplopelma/Cyriopagopus schmidti, lividus, albostriatus, minax* are now *Melopoeus*, *Orphnaecus philippinus* is now *Selenobrachys*, *Thrixopelma lagunas* is now *Warmiru lagunas*, and the hobby's *Cyriopagopus* sp. "Hati Hati" and *Phormingochilus* sp. "Rufus" are now *Phormingochilus hatihati* and *Aspinochilus rufus*.
 
+## Species pages and photos
+
+Tap a species card (the photo or name) to open its page:
+
+- **Gallery:** openly licensed photos from iNaturalist, each credited to its photographer, plus the shops' own listing photos. A shop photo that appears on more than one species is treated as a logo or stock image and left out. For hobby forms without a formal name (`Genus sp. "Locality"`), the shops' photos come first and any iNaturalist photo is labelled **GENUS PHOTO**, because it shows the genus, not that exact form. Tap a photo to see it large.
+- **Where it's from:** countries with research-grade wild records on iNaturalist. Captive records are left out.
+- **Defence & bite** and **Keeping:** general notes for the spider's group (New or Old World tarantula subfamily, or spider family) and its lifestyle. These aren't a full care sheet.
+- **About:** the Wikipedia summary, with the link.
+- **Where to buy:** every current listing.
+
+The info is built by `tracker/enrich.py` into `docs/species.json`. Each check looks up up to 25 new species, and entries refresh every 60 days.
+
+Lifestyle chips can be combined. Tick Arboreal and Fossorial to see species that are either.
+
 ## Quality check
 
 `python tracker/qc.py docs/stock.json 7` opens a random sample of real product pages from every shop and checks that the recorded price is on the page and that in-stock or sold-out matches. It also checks each listing's species against its own name.

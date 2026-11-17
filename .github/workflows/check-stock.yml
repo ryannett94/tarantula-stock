@@ -57,10 +57,18 @@ jobs:
           SCRAPE_THREADS: "8"
         run: python tracker/scrape.py
 
+      # Photos and info for any species seen for the first time (a few per run).
+      - name: Species info
+        continue-on-error: true
+        timeout-minutes: 8
+        env:
+          MAX_LOOKUPS: "25"
+        run: python tracker/enrich.py
+
       - name: Save results
         run: |
           git config user.name "stock-bot"
           git config user.email "stock-bot@users.noreply.github.com"
-          git add docs/stock.json docs/debug.json
+          git add docs/stock.json docs/debug.json docs/species.json
           git diff --cached --quiet || git commit -m "Stock update $(date -u +%F' '%H:%M)"
           git pull --rebase origin main && git push

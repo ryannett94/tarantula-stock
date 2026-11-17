@@ -65,6 +65,7 @@ GENUS_FIX = {
     "phormingochillus": "phormingochilus", "chilobrachis": "chilobrachys",
 }
 EPITHET_FIX = {
+    "diamantensis": "diamantinensis", "minerium": "mineirum",
     "albopilosum": "albopilosus", "albopilosom": "albopilosus",
     "pingungensis": "pingtungensis", "cyanopubescens": "cyaneopubescens", "oliveaceum": "olivaceum",
     "caraponensis": "carapoensis", "metalica": "metallica", "germanii": "germani", "albostriatum": "albostriatus",
@@ -98,6 +99,8 @@ SPECIES_FIX = {
        for e in ("sp. hati hati", "sp. hatihati", "sp. hati", "hati hati", "hatihati", "hati")},
     "pseudhapalopus sp. colom": "pseudhapalopus sp. colombia",
     # common names some shops print in the Latin slot
+    "cyriopagopus bach": "cyriopagopus sp. bach ma",
+    "pseudhapalopus columbia": "pseudhapalopus sp. colombia", "thyene jumping": "thyene sp.",
     "trinidad olive": "neoholothele incei", "trinidad chevron": "psalmopoeus cambridgei",
 }
 

@@ -11,6 +11,7 @@
     --accent: #e8833a; --back: #5fb38a; --r: 14px;
   }
   * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
   body { margin: 0; background: var(--bg); color: var(--text);
     font: 16px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     padding: env(safe-area-inset-top) 0 40px; }
@@ -83,6 +84,38 @@
   .ok { color: var(--back); } .fail { color: #e06c5a; }
   .err { color: var(--muted); font-size: 12px; margin-top: 2px; word-break: break-word; }
   .empty { color: var(--muted); text-align: center; padding: 40px 10px; }
+  .sp-head { cursor: pointer; }
+  .info { color: var(--accent); font-size: 13px; font-weight: 600; margin-top: 3px; }
+  .sheet { position: fixed; inset: 0; background: var(--bg); z-index: 20; overflow-y: auto;
+    padding-bottom: calc(30px + env(safe-area-inset-bottom)); -webkit-overflow-scrolling: touch; }
+  .sheet-bar { position: sticky; top: 0; z-index: 2; display: flex; justify-content: space-between; align-items: center;
+    padding: calc(10px + env(safe-area-inset-top)) 12px 10px 16px; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .sheet-bar b { font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .x { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 999px;
+    width: 36px; height: 36px; font-size: 20px; line-height: 1; flex: 0 0 auto; }
+  .gal { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 12px 16px 4px; scrollbar-width: none; }
+  .gal::-webkit-scrollbar { display: none; }
+  .gal figure { margin: 0; flex: 0 0 82%; scroll-snap-align: center; }
+  .gal img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; background: var(--panel2); display: block; }
+  .gal figcaption { color: var(--muted); font-size: 11px; margin-top: 4px; line-height: 1.3; }
+  .gal figcaption a, .lightbox a { color: var(--accent); }
+  .gal .tag { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: .04em; padding: 1px 5px;
+    border-radius: 4px; background: var(--panel2); color: var(--text); margin-right: 4px; }
+  .nopics { margin: 12px 16px; padding: 30px; text-align: center; color: var(--muted); background: var(--panel); border-radius: 12px; }
+  .det { padding: 4px 16px; }
+  .det h2 { font-size: 22px; margin: 10px 0 2px; }
+  .det h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 18px 0 6px; }
+  .det p { margin: 0 0 8px; font-size: 15px; }
+  .det .pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .det .pill { font-size: 12px; font-weight: 600; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); }
+  .det a { color: var(--accent); }
+  .det .src { color: var(--muted); font-size: 12px; }
+  .det .buyers { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+  .det .buyers .offer:first-child { border-top: 0; }
+  .det .buyers a.offer { color: var(--text); }
+  .lightbox { position: fixed; inset: 0; z-index: 30; background: rgba(0,0,0,.94); display: grid; place-items: center; padding: 12px; }
+  .lightbox img { max-width: 100%; max-height: 82vh; border-radius: 8px; }
+  .lightbox div { color: #ccc; font-size: 12px; text-align: center; margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -151,13 +184,17 @@
   <div id="list"></div>
 </main>
 
+<div class="sheet" id="sheet" hidden></div>
+<div class="lightbox" id="lightbox" hidden></div>
+
 <details id="status"><summary>Shops checked</summary><div id="vendors"></div></details>
 
 <script>
 const NEW_DAYS = 7, SHOW = 4;
 const STAGE = { sling: "Sling", juvenile: "Juvenile", subadult: "Sub-adult", adult: "Adult" };
 const SEX = { female: "Female", male: "Male", pair: "Pair" };
-let data = null, view = "in", stage = "", group = "", life = "";
+let data = null, view = "in", stage = "", group = "", info = {};
+const life = new Set();  // lifestyles ticked; empty = any
 const LIFE = { arboreal: "Arboreal", terrestrial: "Terrestrial", fossorial: "Fossorial", trapdoor: "Trapdoor" };
 const expanded = new Set();
 const $ = s => document.querySelector(s);
@@ -205,7 +242,7 @@ function offerPasses(it) {
   if ($("#vendor").value && it.vendor !== $("#vendor").value) return false;
   if (stage && it.stage !== stage) return false;
   if (group && (it.group || "tarantula") !== group) return false;
-  if (life && !(it.lifestyle || []).includes(life)) return false;
+  if (life.size && !(it.lifestyle || []).some(l => life.has(l))) return false;
   const sx = $("#sex").value;
   if (sx && (sx === "unsexed" ? it.sex : it.sex !== sx)) return false;
   return true;
@@ -244,32 +281,35 @@ function render() {
   $("#list").innerHTML = list.length ? list.map(g => {
     const open = expanded.has(g.key);
     const shown = open ? g.offers : g.offers.slice(0, SHOW);
-    const rows = shown.map(it => {
-      const f = freshAt(it);
-      const badge = f ? (f === it.restocked_at ? '<span class="badge b-back">BACK</span>' : '<span class="badge b-new">NEW</span>') : "";
-      const bits = [STAGE[it.stage], SEX[it.sex], sizeOf(it)].filter(Boolean).join(" · ");
-      const phone = it.unconfirmed && !it.in_stock;
-      const listed = phone ? listDate(it.vendor) : "";
-      const pb = phone ? `<span class="badge b-phone">STOCK NOT LISTED${listed ? " · LIST " + listed : ""}</span>` : "";
-      return `<a class="offer ${it.in_stock ? "" : phone ? "phone" : "out"}" href="${esc(it.url)}" target="_blank" rel="noopener">
-        <div><div class="shop">${esc(it.vendor)}</div>
-          <div class="desc">${badge}${pb}<span>${esc(bits)}</span></div>
-          <div class="lname">${esc(it.name)}</div></div>
-        <span class="price">${money(it)}</span>
-        <span class="buy">${it.in_stock ? "Buy ›" : phone ? "Phone ›" : "Sold out"}</span></a>`;
-    }).join("");
+    const rows = shown.map(offerRow).join("");
     const more = g.offers.length > SHOW
       ? `<button class="more" data-key="${esc(g.key)}">${open ? "Show fewer" : `Show all ${g.offers.length}`}</button>` : "";
-    const pic = (g.offers.find(o => o.in_stock && o.image) || g.offers.find(o => o.image) || {}).image;
+    const pic = (photosFor(g.key, g.offers)[0] || {}).src;
     const thumb = pic ? `<img class="thumb" src="${esc(pic)}" alt="" loading="lazy" referrerpolicy="no-referrer"
         onerror="this.outerHTML='<div class=&quot;thumb none&quot;>🕷</div>'">` : `<div class="thumb none">🕷</div>`;
-    return `<section class="sp"><div class="sp-head">${thumb}<div class="txt"><div class="sp-top">
+    return `<section class="sp"><div class="sp-head" data-open="${esc(g.key)}">${thumb}<div class="txt"><div class="sp-top">
         <span class="sp-name">${g.key.startsWith("x:") ? esc(g.name) : speciesTitle(g.name)}</span>
         ${g.min ? `<span class="from">from <b>£${Number(g.min).toFixed(2).replace(/\.00$/, "")}</b></span>` : ""}</div>
         <div class="common">${[esc(g.common), g.life.map(l => LIFE[l]).join(" / "),
           g.shops ? g.shops + (g.shops === 1 ? " shop" : " shops") : ""].filter(Boolean).join(" · ")}</div>
+        <div class="info">About this spider ›</div>
       </div></div>${rows}${more}</section>`;
   }).join("") : `<div class="empty">${view === "new" ? "Nothing new this week for these filters." : "No matches."}</div>`;
+}
+
+function offerRow(it) {
+  const f = freshAt(it);
+  const badge = f ? (f === it.restocked_at ? '<span class="badge b-back">BACK</span>' : '<span class="badge b-new">NEW</span>') : "";
+  const bits = [STAGE[it.stage], SEX[it.sex], sizeOf(it)].filter(Boolean).join(" · ");
+  const phone = it.unconfirmed && !it.in_stock;
+  const listed = phone ? listDate(it.vendor) : "";
+  const pb = phone ? `<span class="badge b-phone">STOCK NOT LISTED${listed ? " · LIST " + listed : ""}</span>` : "";
+  return `<a class="offer ${it.in_stock ? "" : phone ? "phone" : "out"}" href="${esc(it.url)}" target="_blank" rel="noopener">
+    <div><div class="shop">${esc(it.vendor)}</div>
+      <div class="desc">${badge}${pb}<span>${esc(bits)}</span></div>
+      <div class="lname">${esc(it.name)}</div></div>
+    <span class="price">${money(it)}</span>
+    <span class="buy">${it.in_stock ? "Buy ›" : phone ? "Phone ›" : "Sold out"}</span></a>`;
 }
 
 function renderVendors() {
@@ -300,9 +340,12 @@ $("#stages").onclick = e => {
   render();
 };
 $("#lifestyles").onclick = e => {
+  // Several can be ticked at once (shows species with any of them); "Any lifestyle" clears.
   const b = e.target.closest(".chip"); if (!b) return;
-  life = b.dataset.life;
-  document.querySelectorAll("#lifestyles .chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+  const l = b.dataset.life;
+  if (!l) life.clear(); else life.has(l) ? life.delete(l) : life.add(l);
+  document.querySelectorAll("#lifestyles .chip").forEach(x =>
+    x.setAttribute("aria-pressed", x.dataset.life ? life.has(x.dataset.life) : !life.size));
   render();
 };
 $("#groups").onclick = e => {
@@ -312,6 +355,8 @@ $("#groups").onclick = e => {
   render();
 };
 $("#list").onclick = e => {
+  const h = e.target.closest("[data-open]");
+  if (h) { openSheet(h.dataset.open); return; }
   const b = e.target.closest(".more"); if (!b) return;
   expanded.has(b.dataset.key) ? expanded.delete(b.dataset.key) : expanded.add(b.dataset.key);
   render();
@@ -319,6 +364,197 @@ $("#list").onclick = e => {
 $("#q").oninput = render;
 $("#vendor").onchange = render;
 $("#sex").onchange = render;
+
+// ---------------------------------------------------------------- species info
+// Facts by family / subfamily / genus. Kept general on purpose: they describe the group,
+// and say so, rather than claiming species-level detail we don't have.
+const OLD_WORLD = ["Harpactirinae", "Ornithoctoninae", "Selenocosmiinae", "Stromatopelminae", "Eumenophorinae",
+  "Poecilotheriinae", "Thrigmopoeinae", "Selenogyrinae", "Ischnocolinae", "Pelinobiinae"];
+const OW = {
+  world: "Old World tarantula (Africa, Asia or Europe)",
+  hairs: "No urticating hairs – it defends itself by threat posing and biting.",
+  bite: "Old World venom is more potent: bites are very painful and can cause muscle cramps or other symptoms that last days. Not known to be fatal, but get medical advice if symptoms go beyond the bite site.",
+  temper: "Generally fast and defensive. Not a beginner species.",
+};
+const SUBFAMILY = {
+  Theraphosinae: { world: "New World tarantula (the Americas)",
+    hairs: "Flicks urticating (itchy) hairs off its abdomen when disturbed – keep them away from eyes and skin.",
+    bite: "Venom is mild for people – usually compared to a bee sting. Allergic reactions are possible." },
+  Aviculariinae: { world: "New World tarantula (the Americas)",
+    hairs: "Has urticating hairs, but presses them onto a threat rather than flicking them.",
+    bite: "Venom is mild for people. Usually runs or jumps rather than bites.",
+    temper: "Skittish and can jump – open the enclosure carefully.",
+    keep: "Needs strong cross-ventilation and dry substrate with a water dish. Stuffy, humid tanks are a common cause of deaths." },
+  Psalmopoeinae: { world: "New World tarantula (the Americas)",
+    hairs: "No urticating hairs – it runs or bites.",
+    bite: "Stronger venom than most New World species: bites are painful and can cause cramps.",
+    temper: "Very fast. Not a first tarantula." },
+  Schismatoeciinae: { world: "New World tarantula (the Americas)",
+    hairs: "No urticating hairs.",
+    bite: "Little is recorded about bites; treat like any tarantula and avoid handling.",
+    temper: "Quick and skittish." },
+};
+for (const s of OLD_WORLD) SUBFAMILY[s] = OW;
+SUBFAMILY.Poecilotheriinae = { ...OW,
+  bite: "Among the most potent tarantula venoms: bites have caused severe cramps lasting days. Never handle; get medical advice after a bite.",
+  temper: "Extremely fast and defensive. Experienced keepers only." };
+const GENUS = {
+  ephebopus: { hairs: "Has urticating hairs on its pedipalps (the short front 'arms'), not its abdomen." },
+  poecilotheria: { note: "Listed on CITES Appendix II." },
+  brachypelma: { note: "Listed on CITES Appendix II – keep the seller's paperwork." },
+  tliltocatl: { note: "Listed on CITES Appendix II (as former Brachypelma) – keep the seller's paperwork." },
+  sicarius: { bite: "Medically significant, tissue-damaging venom. Bites are very rare because it is extremely reclusive, but never handle it and get medical help after any bite.", temper: "Buries itself in sand and ambushes prey." },
+  dolomedes: { keep: "Semi-aquatic: needs a large water area as well as land and plants to climb." },
+  stegodyphus: { temper: "Some Stegodyphus live in colonies and share a web." },
+  typhochlaena: { hairs: "No urticating hairs (unusual for its subfamily)." },
+  cyclocosmia: { temper: "Plugs its burrow with its hard, disc-shaped rear end." },
+};
+const FAMILY = {
+  Salticidae: { kind: "Jumping spider", bite: "Harmless to people.", temper: "Active by day and hunts by sight. Curious, but quick to jump.",
+    keep: "Give height, bright light and ventilation; it sleeps in a silk hammock up high." },
+  Sicariidae: { kind: "Six-eyed sand spider" },
+  Macrothelidae: { kind: "Macrothelid (Asian funnel-web relative)", bite: "Fast and defensive with potent venom: bites can be very painful with symptoms beyond the bite. Don't handle.", temper: "Very fast and defensive." },
+  Atypidae: { kind: "Purse-web spider", bite: "Not considered dangerous.", temper: "Lives inside a silk tube and strikes through the wall at prey." },
+  Liphistiidae: { kind: "Segmented trapdoor spider (an ancient lineage)", bite: "Not considered dangerous.", temper: "Rarely leaves its burrow." },
+  Halonoproctidae: { kind: "Trapdoor spider", bite: "Not considered dangerous." },
+  Barychelidae: { kind: "Brush-footed trapdoor spider", bite: "Not considered dangerous." },
+  Dipluridae: { kind: "Curtain-web spider", bite: "Painful but not considered dangerous.", temper: "Fast; builds sheet webs leading to a silk tunnel." },
+  Ischnothelidae: { kind: "Curtain-web spider", bite: "Painful but not considered dangerous.", temper: "Fast; builds sheet webs leading to a silk tunnel." },
+  Eresidae: { kind: "Velvet spider", bite: "Not considered dangerous." },
+  Sparassidae: { kind: "Huntsman spider", bite: "Can be painful, not dangerous.", temper: "Extremely fast – open enclosures with care.",
+    keep: "Give height and flat bark or cork to hide behind." },
+  Lycosidae: { kind: "Wolf spider", bite: "Mild for people.", temper: "Active ground hunter." },
+  Pisauridae: { kind: "Fishing / nursery-web spider", bite: "Mild for people." },
+  Oxyopidae: { kind: "Lynx spider", bite: "Harmless to people.", temper: "Active hunter on plants." },
+  Ctenidae: { kind: "Wandering spider", bite: "Bites are painful. The family includes the dangerous Brazilian wandering spiders (Phoneutria), which aren't sold here; treat any bite seriously.", temper: "Fast night hunter." },
+  Filistatidae: { kind: "Crevice weaver", bite: "Not considered dangerous." },
+  Selenopidae: { kind: "Flattie (wall crab spider)", bite: "Harmless to people.", temper: "One of the fastest spiders – open with care.",
+    keep: "Give vertical bark or slate with narrow gaps to hide in." },
+  Theraphosidae: { kind: "Tarantula" },
+  Dolomedidae: { kind: "Fishing spider", bite: "Mild for people." },
+  Cyrtaucheniidae: { kind: "Wafer-lid trapdoor spider", bite: "Not considered dangerous." },
+  Viridasiidae: { kind: "Viridasiid spider (Madagascar)" },
+};
+const KEEP = {
+  arboreal: "Arboreal: give height over floor space, a vertical cork tube or bark to web on, and good cross-ventilation.",
+  terrestrial: "Terrestrial: give floor space over height, a hide and a water dish. Keep the climb low – falls can injure heavy-bodied spiders.",
+  fossorial: "Fossorial: give deep substrate so it can dig a proper burrow. Expect to see it rarely.",
+  trapdoor: "Trapdoor: give deep, firm, slightly moist substrate for a lidded burrow, and disturb it as little as possible.",
+};
+// Recent subfamily splits that iNaturalist's taxonomy may not have yet (Foley et al. 2019, Turner et al. 2018).
+const SUBFAMILY_OF = Object.fromEntries([
+  ...["psalmopoeus", "tapinauchenius", "pseudoclamoris", "amazonius", "ephebopus"].map(g => [g, "Psalmopoeinae"]),
+  // New World genera without urticating hairs (Schismatoeciinae and relatives iNaturalist files under Ischnocolinae)
+  ...["neoholothele", "euthycaelus", "schismatothele", "hemiercus", "holothele", "dolichothele"].map(g => [g, "Schismatoeciinae"]),
+]);
+function factsFor(key, sp, life) {
+  const genus = key.split(" ")[0];
+  const sub = SUBFAMILY_OF[genus] || sp.subfamily;
+  const f = { ...(FAMILY[sp.family] || {}), ...(SUBFAMILY[sub] || {}), ...(GENUS[genus] || {}) };
+  if (sp.family === "Theraphosidae") f.kind = "Tarantula";
+  f.keep = [...life.map(l => KEEP[l]), f.keep].filter(Boolean);
+  return f;
+}
+
+// ---------------------------------------------------------------- photos
+// Shop photos that appear on more than one species are logos or stock images, not the animal.
+let badImg = new Set();
+function scanImages() {
+  const seen = new Map();
+  for (const it of Object.values(data.items)) {
+    if (!it.image || !it.species) continue;
+    if (!seen.has(it.image)) seen.set(it.image, new Set());
+    seen.get(it.image).add(it.species);
+  }
+  badImg = new Set([...seen].filter(([u, s]) => s.size > 1 || /placeholder|no[-_]?image|logo/i.test(u)).map(([u]) => u));
+}
+function itemsOf(key) {
+  return Object.values(data.items).filter(it => !it.gone && (it.species || ("x:" + it.vendor + ":" + it.name)) === key);
+}
+function photosFor(key, offers) {
+  const sp = info[key] || {}, out = [], seen = new Set();
+  // Photos of a wider group (genus, subfamily…) are labelled so they aren't mistaken for this spider.
+  const inat = (sp.photos || []).map(p => ({ ...p,
+    group: p.genus ? "genus" : sp.level !== "species" ? sp.level : "", groupName: p.genus || sp.inat_name }));
+  const shop = [];
+  for (const it of [...offers, ...itemsOf(key)]) {
+    if (!it.image || badImg.has(it.image) || seen.has(it.image)) continue;
+    seen.add(it.image);
+    shop.push({ src: it.image, big: it.image, shop: it.vendor, link: it.url });
+  }
+  // A verified photo of the species first; for hobby forms, the shops' own animals before genus photos.
+  const exact = inat.filter(p => !p.group), wider = inat.filter(p => p.group);
+  for (const p of [...exact, ...shop, ...wider]) out.push(p);
+  return out;
+}
+function caption(p, sp) {
+  if (p.shop) return `Photo from the <a href="${esc(p.link)}" target="_blank" rel="noopener">${esc(p.shop)}</a> listing`;
+  const tag = p.group ? `<span class="tag">${esc(p.group.toUpperCase())} PHOTO</span>Shows the ${esc(p.group)} <i>${esc(p.groupName)}</i>, not necessarily this spider. ` : "";
+  return `${tag}${esc(p.credit)} · via <a href="https://www.inaturalist.org/taxa/${sp.inat_id}" target="_blank" rel="noopener">iNaturalist</a>`;
+}
+
+// ---------------------------------------------------------------- species sheet
+function wscLink(key) {
+  const [g, s] = key.split(" ");
+  const q = s && !/^sp\.?$/.test(s) ? `&sSpecies=${encodeURIComponent(s)}` : "";
+  return `https://wsc.nmbe.ch/search?sGenus=${encodeURIComponent(g)}${q}`;
+}
+function openSheet(key, push = true) {
+  const items = itemsOf(key);
+  if (!items.length) return;
+  const first = items.find(i => i.common) || items[0];
+  const sp = info[key] || {}, lifeTags = first.lifestyle || [];
+  const name = first.species_name || first.name, common = first.common || sp.common_en || "";
+  const f = factsFor(key, sp, lifeTags);
+  const pics = photosFor(key, items);
+  const rank = o => o.in_stock ? 0 : o.unconfirmed ? 1 : 2;
+  const offers = items.sort((a, b) => (rank(a) - rank(b)) || ((a.price || 1e9) - (b.price || 1e9)));
+  const genusOnly = !!sp.level && sp.level !== "species";
+  const renamed = sp.level === "species" && sp.inat_name && sp.inat_name.toLowerCase() !== key;
+  const sec = (t, body) => body ? `<h3>${t}</h3>${body}` : "";
+  const ps = arr => arr.filter(Boolean).map(x => `<p>${x}</p>`).join("");
+  $("#sheet").innerHTML = `
+    <div class="sheet-bar"><b>${key.startsWith("x:") ? esc(name) : speciesTitle(name)}</b><button class="x" id="close" aria-label="Close">×</button></div>
+    ${pics.length ? `<div class="gal">${pics.map((p, i) => `<figure><img src="${esc(p.src)}" data-i="${i}" alt="" loading="lazy" referrerpolicy="no-referrer"
+        onerror="this.closest('figure').remove()"><figcaption>${caption(p, sp)}</figcaption></figure>`).join("")}</div>`
+      : `<div class="nopics">No photo available yet</div>`}
+    <div class="det">
+      <h2>${key.startsWith("x:") ? esc(name) : speciesTitle(name)}</h2>
+      ${common ? `<div class="common">${esc(common)}</div>` : ""}
+      <div class="pills">${[f.kind, ...lifeTags.map(l => LIFE[l]), f.world].filter(Boolean).map(x => `<span class="pill">${esc(x)}</span>`).join("")}</div>
+      ${renamed ? `<p class="src" style="margin-top:8px">iNaturalist currently files this as <i>${esc(sp.inat_name)}</i>.</p>` : ""}
+      ${sec("Where it's from", sp.wild_in && sp.wild_in.length && !genusOnly
+        ? `<p>Recorded in the wild in ${esc(sp.wild_in.join(", "))}.</p><p class="src">From research-grade wild records on iNaturalist.</p>` : "")}
+      ${sec("Defence &amp; bite", ps([f.hairs, f.bite, f.temper, f.note].map(x => x && esc(x))))}
+      ${sec("Keeping", ps(f.keep.map(esc)))}
+      ${sec(genusOnly ? `About the ${esc(sp.level)} <i>${esc(sp.inat_name || "")}</i>` : "About", (sp.summary || "").length > 30
+        ? `<p>${esc(sp.summary)}</p><p class="src">From ${sp.wiki ? `<a href="${esc(sp.wiki)}" target="_blank" rel="noopener">Wikipedia</a>` : "Wikipedia"} (CC BY-SA), via iNaturalist.</p>` : "")}
+      <h3>Where to buy</h3><div class="buyers">${offers.map(offerRow).join("")}</div>
+      <h3>More</h3>
+      <p>${sp.inat_id ? `<a href="https://www.inaturalist.org/taxa/${sp.inat_id}" target="_blank" rel="noopener">iNaturalist</a> · ` : ""}<a href="${wscLink(key)}" target="_blank" rel="noopener">World Spider Catalog</a></p>
+      <p class="src">Bite, hair and keeping notes describe the spider's group in general – not a full care sheet for this species.</p>
+    </div>`;
+  $("#sheet").hidden = false; $("#sheet").scrollTop = 0;
+  document.body.style.overflow = "hidden";
+  $("#close").onclick = () => history.state && history.state.sheet ? history.back() : closeSheet();
+  $("#sheet").querySelector(".gal")?.addEventListener("click", e => {
+    const img = e.target.closest("img[data-i]"); if (!img) return;
+    const p = pics[+img.dataset.i];
+    $("#lightbox").innerHTML = `<div><img src="${esc(p.big)}" alt="" referrerpolicy="no-referrer"><div>${caption(p, sp)}</div></div>`;
+    $("#lightbox").hidden = false;
+  });
+  if (push) history.pushState({ sheet: key }, "", "#" + encodeURIComponent(key));
+}
+function closeSheet() {
+  $("#sheet").hidden = true; $("#lightbox").hidden = true; document.body.style.overflow = "";
+  if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+}
+$("#lightbox").onclick = e => { if (!e.target.closest("a")) $("#lightbox").hidden = true; };
+window.addEventListener("popstate", e => e.state && e.state.sheet ? openSheet(e.state.sheet, false) : closeSheet());
+function openFromHash() {
+  const k = decodeURIComponent(location.hash.slice(1));
+  if (k && data && itemsOf(k).length) openSheet(k, false);
+}
 
 // ---------------------------------------------------------------- live update
 // The page is static, so "Update now" asks GitHub to run the checker straight away
@@ -334,9 +570,11 @@ const gh = (path, opt = {}) => fetch(API + path, { ...opt, cache: "no-store", he
   Accept: "application/vnd.github+json", ...(store.get() ? { Authorization: "Bearer " + store.get() } : {}),
   ...(opt.headers || {}) } });
 function show(j) {
-  data = j;
+  data = j; scanImages();
   $("#checked").textContent = j.checked ? "Last checked " + ago(j.checked) : "Not checked yet.";
   renderVendors(); render();
+  if (!$("#sheet").hidden && history.state && history.state.sheet) openSheet(history.state.sheet, false);
+  else openFromHash();
 }
 async function loadFromRepo() {
   // Straight from the repo, so results show the moment a run finishes (Pages lags ~1 min).
@@ -408,6 +646,9 @@ $("#tokSave").onclick = () => {
 };
 $("#tokForget").onclick = () => { store.set(""); setupBox(true); };
 
+// Species info and photos change rarely; load them alongside the stock list.
+fetch("species.json?t=" + Date.now()).then(r => r.ok ? r.json() : {}).catch(() => ({}))
+  .then(j => { info = j || {}; if (data) { render(); openFromHash(); } });
 (store.get() ? loadFromRepo() : Promise.reject())
   .catch(() => fetch("stock.json?t=" + Date.now()).then(r => r.json()).then(show))
   .catch(() => { $("#checked").textContent = "Couldn't load stock list."; });
