@@ -27678,6 +27678,99 @@
    "Cuba"
   ]
  },
+ "phormictopus cancerides": {
+  "common_en": "Hispaniolan Giant Tarantula",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 354550,
+  "inat_name": "Phormictopus cancerides",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/215594339/large.jpeg",
+    "credit": "(c) Antonio Tosto, some rights reserved (CC BY-NC), uploaded by Antonio Tosto",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/215594339/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/304878334/large.jpg",
+    "credit": "(c) rickyp29, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/304878334/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/221810582/large.jpeg",
+    "credit": "(c) Brian Oakes Haiti Hunter, some rights reserved (CC BY), uploaded by Brian Oakes Haiti Hunter",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/221810582/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/4765751/large.jpeg",
+    "credit": "(c) Olivier Testa, some rights reserved (CC BY-NC-ND), uploaded by Olivier Testa",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/4765751/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/475140975/large.jpg",
+    "credit": "(c) Matthew Voelker, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 264599833,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/475140975/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/14749769/large.jpeg",
+    "credit": "(c) J. Burke Korol, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 10582413,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/14749769/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/351400091/large.jpg",
+    "credit": "(c) Aitor, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 199272737,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/351400091/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/106675391/large.jpeg",
+    "credit": "(c) gabrielabruno, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 66208157,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/106675391/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/454030686/large.jpg",
+    "credit": "(c) Katharina Geiß, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 253558605,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/454030686/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/643364715/large.jpg",
+    "credit": "(c) Emery Seitz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 352491252,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/643364715/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "The Hispaniolan Giant Tarantula (Phormictopus cancerides) is a tarantula native to the Dominican Republic, where it is called Cacata; Haiti, where it is called Araignée-crab; and Cuba, where it is rare. It occurs from the West Indies to Brazil. During the day they hide under rocks and debris and come out at night to look for prey. Their fangs are quite formidable at more than 2 centimeters long, and when they pierce the body of a...",
+  "wiki": "https://en.wikipedia.org/wiki/Phormictopus cancerides",
+  "wild_in": [
+   "Dominican Republic",
+   "Haiti"
+  ]
+ },
  "phormictopus cautus": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -27714,6 +27807,103 @@
   "common_en": null,
   "family": "Theraphosidae",
   "fetched": "2026-11-17",
+  "inat_id": 124392,
+  "inat_name": "Phormictopus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/3159228/large.jpg",
+    "credit": "(c) René Durocher, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/3159228/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/228283728/large.jpg",
+    "credit": "(c) Alexis Felipe, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 133973160,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/228283728/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/340891323/large.jpeg",
+    "credit": "(c) Kristin A. Bakkegard, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 193928767,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/340891323/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/221810582/large.jpeg",
+    "credit": "(c) Brian Oakes Haiti Hunter, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 130428980,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/221810582/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/31288916/large.jpg",
+    "credit": "(c) José Garrido, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 20270934,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/31288916/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/233381844/large.jpeg",
+    "credit": "(c) James Bailey, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 136722941,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/233381844/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67250222/large.jpeg",
+    "credit": "(c) René Durocher, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 42357260,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67250222/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/12860014/large.jpg",
+    "credit": "(c) Wayne Fidler, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 9389033,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/12860014/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/304878334/large.jpg",
+    "credit": "(c) rickyp29, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 175429520,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/304878334/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/104208231/large.jpeg",
+    "credit": "(c) René Durocher, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 64781842,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/104208231/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Phormictopus is a genus of spiders in the family Theraphosidae (tarantulas) that occurs in the West Indies, mainly Cuba, with three species probably misplaced in this genus found in Brazil and Argentina.",
+  "wiki": "https://en.wikipedia.org/wiki/Phormictopus",
+  "wild_in": [
+   "Dominican Republic",
+   "Cuba",
+   "Haiti"
+  ]
+ },
+ "phormictopus sp. azul": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
   "inat_id": 124392,
   "inat_name": "Phormictopus",
   "level": "genus",
@@ -28005,6 +28195,200 @@
   "common_en": null,
   "family": "Theraphosidae",
   "fetched": "2026-11-17",
+  "inat_id": 124392,
+  "inat_name": "Phormictopus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/3159228/large.jpg",
+    "credit": "(c) René Durocher, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/3159228/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/228283728/large.jpg",
+    "credit": "(c) Alexis Felipe, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 133973160,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/228283728/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/340891323/large.jpeg",
+    "credit": "(c) Kristin A. Bakkegard, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 193928767,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/340891323/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/221810582/large.jpeg",
+    "credit": "(c) Brian Oakes Haiti Hunter, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 130428980,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/221810582/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/31288916/large.jpg",
+    "credit": "(c) José Garrido, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 20270934,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/31288916/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/233381844/large.jpeg",
+    "credit": "(c) James Bailey, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 136722941,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/233381844/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67250222/large.jpeg",
+    "credit": "(c) René Durocher, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 42357260,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67250222/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/12860014/large.jpg",
+    "credit": "(c) Wayne Fidler, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 9389033,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/12860014/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/304878334/large.jpg",
+    "credit": "(c) rickyp29, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 175429520,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/304878334/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/104208231/large.jpeg",
+    "credit": "(c) René Durocher, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 64781842,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/104208231/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Phormictopus is a genus of spiders in the family Theraphosidae (tarantulas) that occurs in the West Indies, mainly Cuba, with three species probably misplaced in this genus found in Brazil and Argentina.",
+  "wiki": "https://en.wikipedia.org/wiki/Phormictopus",
+  "wild_in": [
+   "Dominican Republic",
+   "Cuba",
+   "Haiti"
+  ]
+ },
+ "phormictopus sp. full": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 124392,
+  "inat_name": "Phormictopus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/3159228/large.jpg",
+    "credit": "(c) René Durocher, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/3159228/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/228283728/large.jpg",
+    "credit": "(c) Alexis Felipe, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 133973160,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/228283728/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/340891323/large.jpeg",
+    "credit": "(c) Kristin A. Bakkegard, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 193928767,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/340891323/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/221810582/large.jpeg",
+    "credit": "(c) Brian Oakes Haiti Hunter, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 130428980,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/221810582/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/31288916/large.jpg",
+    "credit": "(c) José Garrido, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 20270934,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/31288916/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/233381844/large.jpeg",
+    "credit": "(c) James Bailey, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 136722941,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/233381844/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67250222/large.jpeg",
+    "credit": "(c) René Durocher, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 42357260,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67250222/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/12860014/large.jpg",
+    "credit": "(c) Wayne Fidler, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 9389033,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/12860014/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/304878334/large.jpg",
+    "credit": "(c) rickyp29, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 175429520,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/304878334/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/104208231/large.jpeg",
+    "credit": "(c) René Durocher, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 64781842,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/104208231/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Phormictopus is a genus of spiders in the family Theraphosidae (tarantulas) that occurs in the West Indies, mainly Cuba, with three species probably misplaced in this genus found in Brazil and Argentina.",
+  "wiki": "https://en.wikipedia.org/wiki/Phormictopus",
+  "wild_in": [
+   "Dominican Republic",
+   "Cuba",
+   "Haiti"
+  ]
+ },
+ "phormictopus sp. green": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
   "inat_id": 124392,
   "inat_name": "Phormictopus",
   "level": "genus",
@@ -28774,6 +29158,101 @@
    "Indonesia"
   ]
  },
+ "phormingochilus sp. sabah": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 84866,
+  "inat_name": "Phormingochilus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/161664133/large.jpg",
+    "credit": "(c) Bob Zakaria, some rights reserved (CC BY-NC), uploaded by Bob Zakaria",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/161664133/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/336292575/large.jpg",
+    "credit": "(c) Zdeněk Mačát, some rights reserved (CC BY-NC), uploaded by Zdeněk Mačát",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/336292575/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/387359674/large.jpg",
+    "credit": "(c) Amber Lancaster, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "obs": 218877243,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/387359674/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/597391151/large.jpg",
+    "credit": "(c) Renhart Jemi, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 329550062,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/597391151/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/94284365/large.jpg",
+    "credit": "(c) Les Day, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 59028315,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/94284365/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/204573051/large.jpg",
+    "credit": "(c) budak, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 120920855,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/204573051/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/148692433/large.jpg",
+    "credit": "(c) Albert Kang, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 90003323,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/148692433/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/85947374/large.jpg",
+    "credit": "(c) antonsrkn, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 54026470,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/85947374/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/583640716/large.jpg",
+    "credit": "(c) David Torres, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 322610221,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/583640716/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/583639519/large.jpg",
+    "credit": "(c) David Torres, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 322610220,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/583639519/medium.jpg"
+   }
+  ],
+  "subfamily": "Ornithoctoninae",
+  "summary": "Phormingochilus is a genus of spiders in the Theraphosidae family. It was first described in 1895 by Pocock. As of 2016, it contains 5 Asian species.",
+  "wiki": "https://en.wikipedia.org/wiki/Phormingochilus",
+  "wild_in": [
+   "Malaysia",
+   "Indonesia"
+  ]
+ },
  "phormingochilus sp. sabah blue": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -28869,6 +29348,98 @@
    "Indonesia"
   ]
  },
+ "phrixotrichus vulpinus": {
+  "common_en": "Chilean Ocelot Tarantula",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 803565,
+  "inat_name": "Phrixotrichus vulpinus",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/39735333/large.jpg",
+    "credit": "(c) Claudio Maureira, some rights reserved (CC BY-NC-SA), uploaded by Claudio Maureira",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/39735333/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/38310638/large.jpg",
+    "credit": "(c) Claudio Maureira, some rights reserved (CC BY-NC-SA), uploaded by Claudio Maureira",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/38310638/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/35315940/large.jpeg",
+    "credit": "(c) Cristian Riquelme, some rights reserved (CC BY), uploaded by Cristian Riquelme",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/35315940/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/28830455/large.jpg",
+    "credit": "(c) Amelia Ryan, some rights reserved (CC BY-NC), uploaded by Amelia Ryan",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/28830455/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/28474387/large.jpg",
+    "credit": "(c) Cristian Riquelme, some rights reserved (CC BY), uploaded by Cristian Riquelme",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/28474387/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/290390257/large.jpg",
+    "credit": "(c) Daniel Stange, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 167622294,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/290390257/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/236765510/large.jpeg",
+    "credit": "(c) Martín Balcázar, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 138514167,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/236765510/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/357104699/large.jpeg",
+    "credit": "(c) Eduardo Fernández Reza, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 202222525,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/357104699/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/52507379/large.gif",
+    "credit": "(c) Claudio Maureira, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "obs": 33431060,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/52507379/medium.gif"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/147374063/large.jpg",
+    "credit": "(c) Francia Álvarez-Navarro, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 89255557,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/147374063/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": [
+   "Chile",
+   "Argentina"
+  ]
+ },
  "piloctenus haematostoma": {
   "common_en": null,
   "family": "Ctenidae",
@@ -28961,6 +29532,104 @@
    "Cameroon",
    "Gabon",
    "Republic of Congo"
+  ]
+ },
+ "platythomisus octomaculatus": {
+  "common_en": "Eight-spotted Crab Spider",
+  "family": "Thomisidae",
+  "fetched": "2026-11-19",
+  "inat_id": 474608,
+  "inat_name": "Platythomisus octomaculatus",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/10512550/large.jpg",
+    "credit": "(c) Frank Starmer, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/10512550/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/39592696/large.jpg",
+    "credit": "(c) Leonid A. Neymark, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 25551510,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/39592696/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/99162246/large.jpeg",
+    "credit": "(c) blackdogto, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 61930673,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/99162246/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/491109416/large.jpg",
+    "credit": "(c) Melvyn Yeo, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 272999770,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/491109416/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/461654856/large.jpeg",
+    "credit": "(c) AnnNKong, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 257360563,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/461654856/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/474723822/large.jpg",
+    "credit": "(c) Bridgette Gower, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 264273827,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/474723822/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/715870497/large.jpg",
+    "credit": "(c) babaprata, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 390760275,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/715870497/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/576267534/large.jpg",
+    "credit": "(c) Axl P., some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 130118192,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/576267534/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/262164629/large.jpeg",
+    "credit": "(c) Kevin S. Zebua, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 151899822,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/262164629/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/254258004/large.jpeg",
+    "credit": "(c) James Donnelly, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 147730791,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/254258004/medium.jpeg"
+   }
+  ],
+  "subfamily": "Thomisinae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": [
+   "Singapore",
+   "Thailand",
+   "Malaysia",
+   "Indonesia"
   ]
  },
  "poecilotheria fasciata": {
@@ -30276,6 +30945,27 @@
   "common_en": null,
   "family": "Theraphosidae",
   "fetched": "2026-11-17",
+  "inat_id": 421539,
+  "inat_name": "Pseudhapalopus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/4437379/large.jpg",
+    "credit": "(c) John Karges, some rights reserved (CC BY-NC), uploaded by John Karges",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/4437379/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Pseudhapalopus is a genus of spiders in the Theraphosidae family. It was first described in 1907 by Strand. As of 2016, it contains 5 species.",
+  "wiki": "https://en.wikipedia.org/wiki/Pseudhapalopus",
+  "wild_in": []
+ },
+ "pseudhapalopus sp. blue colombian": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
   "inat_id": 421539,
   "inat_name": "Pseudhapalopus",
   "level": "genus",
@@ -32998,6 +33688,99 @@
    "Guyana"
   ]
  },
+ "theraphosidae sp. azul": {
+  "common_en": "Tarantulas",
+  "family": null,
+  "fetched": "2026-11-19",
+  "inat_id": 47424,
+  "inat_name": "Theraphosidae",
+  "level": "family",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/1801748/large.JPG",
+    "credit": "(c) Roberto Sindaco, some rights reserved (CC BY-NC-SA), uploaded by Roberto Sindaco",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/1801748/medium.JPG"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/569216/large.jpg",
+    "credit": "(c) mekvillage, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/569216/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2467553/large.jpg",
+    "credit": "(c) Cheryl Harleston López Espino, some rights reserved (CC BY-NC-ND), uploaded by Cheryl Harleston López Espino",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2467553/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/34513001/large.jpg",
+    "credit": "(c) Stuart Longhorn, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/34513001/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/34513002/large.jpg",
+    "credit": "(c) wicker_man, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/34513002/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/34513003/large.jpg",
+    "credit": "(c) Richard Adams, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/34513003/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62160899/large.jpeg",
+    "credit": "(c) Sanjaya Kanishka, some rights reserved (CC BY-NC), uploaded by Sanjaya Kanishka",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62160899/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/57696957/large.jpeg",
+    "credit": "(c) Joubert Heymans, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "obs": 36495577,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/57696957/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/5216024/large.jpg",
+    "credit": "(c) vorona, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 4344183,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/5216024/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2357740/large.jpg",
+    "credit": "(c) 115527224325819725585, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 1927627,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2357740/medium.jpg"
+   }
+  ],
+  "subfamily": null,
+  "summary": "Tarantulas comprise a group of large and often hairy arachnids belonging to the Theraphosidae family of spiders, of which about 900 species have been identified. This article only describes members of the Theraphosidae, although some other members of the same infraorder (Mygalomorphae) are commonly referred to as \"tarantulas\". Except in cases of anaphylaxis (severe allergic reaction), no species of tarantula is dangerous to humans, and some species have become popular in the exotic pet trade.",
+  "wiki": "https://en.wikipedia.org/wiki/Theraphosidae",
+  "wild_in": [
+   "United States",
+   "South Africa",
+   "India",
+   "Mexico",
+   "Yemen"
+  ]
+ },
  "theraphosidae sp. colombia": {
   "common_en": "Tarantulas",
   "family": null,
@@ -33184,6 +33967,99 @@
    "Yemen"
   ]
  },
+ "theraphosidae sp. magma": {
+  "common_en": "Tarantulas",
+  "family": null,
+  "fetched": "2026-11-19",
+  "inat_id": 47424,
+  "inat_name": "Theraphosidae",
+  "level": "family",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/1801748/large.JPG",
+    "credit": "(c) Roberto Sindaco, some rights reserved (CC BY-NC-SA), uploaded by Roberto Sindaco",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/1801748/medium.JPG"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/569216/large.jpg",
+    "credit": "(c) mekvillage, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/569216/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2467553/large.jpg",
+    "credit": "(c) Cheryl Harleston López Espino, some rights reserved (CC BY-NC-ND), uploaded by Cheryl Harleston López Espino",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2467553/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/34513001/large.jpg",
+    "credit": "(c) Stuart Longhorn, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/34513001/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/34513002/large.jpg",
+    "credit": "(c) wicker_man, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/34513002/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/34513003/large.jpg",
+    "credit": "(c) Richard Adams, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/34513003/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62160899/large.jpeg",
+    "credit": "(c) Sanjaya Kanishka, some rights reserved (CC BY-NC), uploaded by Sanjaya Kanishka",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62160899/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/57696957/large.jpeg",
+    "credit": "(c) Joubert Heymans, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "obs": 36495577,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/57696957/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/5216024/large.jpg",
+    "credit": "(c) vorona, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 4344183,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/5216024/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2357740/large.jpg",
+    "credit": "(c) 115527224325819725585, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 1927627,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2357740/medium.jpg"
+   }
+  ],
+  "subfamily": null,
+  "summary": "Tarantulas comprise a group of large and often hairy arachnids belonging to the Theraphosidae family of spiders, of which about 900 species have been identified. This article only describes members of the Theraphosidae, although some other members of the same infraorder (Mygalomorphae) are commonly referred to as \"tarantulas\". Except in cases of anaphylaxis (severe allergic reaction), no species of tarantula is dangerous to humans, and some species have become popular in the exotic pet trade.",
+  "wiki": "https://en.wikipedia.org/wiki/Theraphosidae",
+  "wild_in": [
+   "United States",
+   "South Africa",
+   "India",
+   "Mexico",
+   "Yemen"
+  ]
+ },
  "theraphosidae sp. yurimaguas": {
   "common_en": "Tarantulas",
   "family": null,
@@ -33277,10 +34153,194 @@
    "Yemen"
   ]
  },
+ "theraphosinae sp. dorado": {
+  "common_en": "Theraphosine Tarantulas",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 808282,
+  "inat_name": "Theraphosinae",
+  "level": "subfamily",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/14704736/large.jpg",
+    "credit": "(c) Miguel Diaz Anaya, some rights reserved (CC BY-NC), uploaded by Miguel Diaz Anaya",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/14704736/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62232687/large.jpeg",
+    "credit": "(c) Alexandre S. Michelotto, some rights reserved (CC BY-SA), uploaded by Alexandre S. Michelotto",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62232687/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/21539289/large.jpg",
+    "credit": "(c) Andy J. Boyce, some rights reserved (CC BY-NC), uploaded by Andy J. Boyce",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/21539289/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/10088142/large.jpeg",
+    "credit": "(c) rejoy007, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/10088142/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/266891830/large.jpg",
+    "credit": "(c) nmoorhatch, some rights reserved (CC BY), uploaded by nmoorhatch",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/266891830/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/236765574/large.jpeg",
+    "credit": "(c) Martín Balcázar, some rights reserved (CC BY-NC), uploaded by Martín Balcázar",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/236765574/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/222698229/large.jpg",
+    "credit": "(c) anselmodaffonseca, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/222698229/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2470701/large.JPG",
+    "credit": "(c) Juan Cruzado Cortés, some rights reserved (CC BY-SA), uploaded by Juan Cruzado Cortés",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2470701/medium.JPG"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/569216/large.jpg",
+    "credit": "(c) mekvillage, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 451357,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/569216/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/5216024/large.jpg",
+    "credit": "(c) vorona, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 4344183,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/5216024/medium.jpg"
+   }
+  ],
+  "subfamily": null,
+  "summary": "The Theraphosinae are a large subfamily of Mygalomorphae spiders in the Theraphosidae family found if the Neotropical ecozone.",
+  "wiki": "http://en.wikipedia.org/wiki/Theraphosinae",
+  "wild_in": [
+   "United States",
+   "Mexico",
+   "Venezuela",
+   "Brazil",
+   "Colombia"
+  ]
+ },
  "theraphosinae sp. highland blue": {
   "common_en": "Theraphosine Tarantulas",
   "family": "Theraphosidae",
   "fetched": "2026-11-17",
+  "inat_id": 808282,
+  "inat_name": "Theraphosinae",
+  "level": "subfamily",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/14704736/large.jpg",
+    "credit": "(c) Miguel Diaz Anaya, some rights reserved (CC BY-NC), uploaded by Miguel Diaz Anaya",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/14704736/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62232687/large.jpeg",
+    "credit": "(c) Alexandre S. Michelotto, some rights reserved (CC BY-SA), uploaded by Alexandre S. Michelotto",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62232687/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/21539289/large.jpg",
+    "credit": "(c) Andy J. Boyce, some rights reserved (CC BY-NC), uploaded by Andy J. Boyce",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/21539289/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/10088142/large.jpeg",
+    "credit": "(c) rejoy007, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/10088142/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/266891830/large.jpg",
+    "credit": "(c) nmoorhatch, some rights reserved (CC BY), uploaded by nmoorhatch",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/266891830/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/236765574/large.jpeg",
+    "credit": "(c) Martín Balcázar, some rights reserved (CC BY-NC), uploaded by Martín Balcázar",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/236765574/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/222698229/large.jpg",
+    "credit": "(c) anselmodaffonseca, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/222698229/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2470701/large.JPG",
+    "credit": "(c) Juan Cruzado Cortés, some rights reserved (CC BY-SA), uploaded by Juan Cruzado Cortés",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2470701/medium.JPG"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/569216/large.jpg",
+    "credit": "(c) mekvillage, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 451357,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/569216/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/5216024/large.jpg",
+    "credit": "(c) vorona, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 4344183,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/5216024/medium.jpg"
+   }
+  ],
+  "subfamily": null,
+  "summary": "The Theraphosinae are a large subfamily of Mygalomorphae spiders in the Theraphosidae family found if the Neotropical ecozone.",
+  "wiki": "http://en.wikipedia.org/wiki/Theraphosinae",
+  "wild_in": [
+   "United States",
+   "Mexico",
+   "Venezuela",
+   "Brazil",
+   "Colombia"
+  ]
+ },
+ "theraphosinae sp. oscar": {
+  "common_en": "Theraphosine Tarantulas",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
   "inat_id": 808282,
   "inat_name": "Theraphosinae",
   "level": "subfamily",
@@ -33458,6 +34518,27 @@
    "India"
   ]
  },
+ "thrixopelma cyaneolum": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 1659168,
+  "inat_name": "Ewok cyaneolus",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/607838727/large.jpg",
+    "credit": "(c) isjo, algunos derechos reservados (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/607838727/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": []
+ },
  "thrixopelma cyanoelum": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -33597,6 +34678,97 @@
   "subfamily": "Theraphosinae",
   "summary": "",
   "wiki": null,
+  "wild_in": [
+   "Peru"
+  ]
+ },
+ "thrixopelma ockerti": {
+  "common_en": "Peruvian Red-rump Tarantula",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 540970,
+  "inat_name": "Thrixopelma ockerti",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/468252220/large.jpeg",
+    "credit": "(c) Wildlife Tours Peru, Christoph Meyer, some rights reserved (CC BY-NC), uploaded by Wildlife Tours Peru, Christoph Meyer",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/468252220/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/315688460/large.jpg",
+    "credit": "(c) susanmasta, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/315688460/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/218048421/large.jpg",
+    "credit": "(c) Ronald Mori, some rights reserved (CC BY-NC), uploaded by Ronald Mori",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/218048421/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/6687748/large.jpg",
+    "credit": "(c) Wayne Godbehere, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/6687748/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/22889701/large.jpeg",
+    "credit": "(c) leedoolan, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/22889701/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/315688449/large.jpg",
+    "credit": "(c) susanmasta, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 181158156,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/315688449/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/462266949/large.jpeg",
+    "credit": "(c) Justin Walker, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 257669317,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/462266949/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/218048381/large.jpg",
+    "credit": "(c) Ronald Mori, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 128375032,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/218048381/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/335696303/large.jpeg",
+    "credit": "(c) bwhitaker, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 191366442,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/335696303/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/750944817/large.jpg",
+    "credit": "(c) 郑洋, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 408514303,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/750944817/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Thrixopelma ockerti, commonly known as the Peruvian flame rump, is a species of tarantula and the type species of the genus Thrixopelma. It is endemic to Peru.",
+  "wiki": "https://en.wikipedia.org/wiki/Thrixopelma ockerti",
   "wild_in": [
    "Peru"
   ]
@@ -33759,10 +34931,202 @@
    "Ecuador"
   ]
  },
+ "thrixopelma sp. golden": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 421553,
+  "inat_name": "Thrixopelma",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/73179522/large.jpg",
+    "credit": "(c) wildgyeinitiative, some rights reserved (CC BY-NC), uploaded by wildgyeinitiative",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/73179522/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/254776616/large.jpg",
+    "credit": "(c) Morgan Heinz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 147999461,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/254776616/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/211784210/large.jpeg",
+    "credit": "(c) Jan Phillipp Geißel, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 124917392,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/211784210/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/539278218/large.jpg",
+    "credit": "(c) david_sannier_vireon, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 299335775,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/539278218/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/315688449/large.jpg",
+    "credit": "(c) susanmasta, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 181158156,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/315688449/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/462266949/large.jpeg",
+    "credit": "(c) Justin Walker, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 257669317,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/462266949/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/218048381/large.jpg",
+    "credit": "(c) Ronald Mori, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 128375032,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/218048381/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/6687748/large.jpg",
+    "credit": "(c) Wayne Godbehere, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 5435751,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/6687748/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/335696303/large.jpeg",
+    "credit": "(c) bwhitaker, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 191366442,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/335696303/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/750944817/large.jpg",
+    "credit": "(c) 郑洋, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 408514303,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/750944817/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Thrixopelma is a genus of spiders in the family Theraphosidae, found in Peru and Chile.",
+  "wiki": "https://en.wikipedia.org/wiki/Thrixopelma",
+  "wild_in": [
+   "Peru",
+   "Ecuador"
+  ]
+ },
  "thrixopelma sp. golden blue": {
   "common_en": null,
   "family": "Theraphosidae",
   "fetched": "2026-11-17",
+  "inat_id": 421553,
+  "inat_name": "Thrixopelma",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/73179522/large.jpg",
+    "credit": "(c) wildgyeinitiative, some rights reserved (CC BY-NC), uploaded by wildgyeinitiative",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/73179522/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/254776616/large.jpg",
+    "credit": "(c) Morgan Heinz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 147999461,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/254776616/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/211784210/large.jpeg",
+    "credit": "(c) Jan Phillipp Geißel, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 124917392,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/211784210/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/539278218/large.jpg",
+    "credit": "(c) david_sannier_vireon, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 299335775,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/539278218/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/315688449/large.jpg",
+    "credit": "(c) susanmasta, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 181158156,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/315688449/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/462266949/large.jpeg",
+    "credit": "(c) Justin Walker, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 257669317,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/462266949/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/218048381/large.jpg",
+    "credit": "(c) Ronald Mori, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 128375032,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/218048381/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/6687748/large.jpg",
+    "credit": "(c) Wayne Godbehere, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 5435751,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/6687748/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/335696303/large.jpeg",
+    "credit": "(c) bwhitaker, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 191366442,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/335696303/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/750944817/large.jpg",
+    "credit": "(c) 郑洋, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 408514303,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/750944817/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Thrixopelma is a genus of spiders in the family Theraphosidae, found in Peru and Chile.",
+  "wiki": "https://en.wikipedia.org/wiki/Thrixopelma",
+  "wild_in": [
+   "Peru",
+   "Ecuador"
+  ]
+ },
+ "thrixopelma sp. purple": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
   "inat_id": 421553,
   "inat_name": "Thrixopelma",
   "level": "genus",
@@ -35779,6 +37143,101 @@
    "Venezuela"
   ]
  },
+ "xenesthis sp. light": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 120908,
+  "inat_name": "Xenesthis",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/161830/large.jpg",
+    "credit": "(c) Óscar Méndez, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/161830/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/101285784/large.jpg",
+    "credit": "(c) José Gabriel Julio Guzmán, some rights reserved (CC BY), uploaded by José Gabriel Julio Guzmán",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/101285784/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/91247233/large.jpg",
+    "credit": "(c) Agroparque Sabio Mutis, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 57220917,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/91247233/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/110815983/large.jpeg",
+    "credit": "(c) Damaris Rojas, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 68438413,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/110815983/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102810952/large.jpg",
+    "credit": "(c) Damaris Rojas, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 63999035,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102810952/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/171782074/large.jpeg",
+    "credit": "(c) Damaris Rojas, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 102724976,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/171782074/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/101878024/large.jpg",
+    "credit": "(c) Luis Enrique Villegas, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 63477688,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/101878024/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/186389985/large.jpeg",
+    "credit": "(c) Andrés Julián Lozano Florez, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 110486898,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/186389985/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/615059967/large.jpg",
+    "credit": "(c) Estef, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 338238598,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/615059967/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/354217004/large.jpeg",
+    "credit": "(c) Damaris Rojas, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 200737211,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/354217004/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Xenesthis is a genus of spiders in the Theraphosidae family. It was first described in 1891 by Simon. As of 2016, it contains 3 species.",
+  "wiki": "https://en.wikipedia.org/wiki/Xenesthis",
+  "wild_in": [
+   "Colombia",
+   "Venezuela"
+  ]
+ },
  "xenesthis sp. megascopula": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -35878,6 +37337,101 @@
   "common_en": null,
   "family": "Theraphosidae",
   "fetched": "2026-11-17",
+  "inat_id": 120908,
+  "inat_name": "Xenesthis",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/161830/large.jpg",
+    "credit": "(c) Óscar Méndez, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/161830/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/101285784/large.jpg",
+    "credit": "(c) José Gabriel Julio Guzmán, some rights reserved (CC BY), uploaded by José Gabriel Julio Guzmán",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/101285784/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/91247233/large.jpg",
+    "credit": "(c) Agroparque Sabio Mutis, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 57220917,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/91247233/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/110815983/large.jpeg",
+    "credit": "(c) Damaris Rojas, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 68438413,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/110815983/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102810952/large.jpg",
+    "credit": "(c) Damaris Rojas, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 63999035,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102810952/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/171782074/large.jpeg",
+    "credit": "(c) Damaris Rojas, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 102724976,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/171782074/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/101878024/large.jpg",
+    "credit": "(c) Luis Enrique Villegas, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 63477688,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/101878024/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/186389985/large.jpeg",
+    "credit": "(c) Andrés Julián Lozano Florez, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 110486898,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/186389985/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/615059967/large.jpg",
+    "credit": "(c) Estef, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 338238598,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/615059967/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/354217004/large.jpeg",
+    "credit": "(c) Damaris Rojas, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 200737211,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/354217004/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Xenesthis is a genus of spiders in the Theraphosidae family. It was first described in 1891 by Simon. As of 2016, it contains 3 species.",
+  "wiki": "https://en.wikipedia.org/wiki/Xenesthis",
+  "wild_in": [
+   "Colombia",
+   "Venezuela"
+  ]
+ },
+ "xenesthis sp. white lowland": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
   "inat_id": 120908,
   "inat_name": "Xenesthis",
   "level": "genus",
