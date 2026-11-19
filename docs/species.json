@@ -751,6 +751,101 @@
    "French Guiana"
   ]
  },
+ "amazonius sp. caqueta": {
+  "common_en": "Orange Tree Tarantulas",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 1376556,
+  "inat_name": "Amazonius",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/275810046/large.jpg",
+    "credit": "(c) Jason van Weenen, some rights reserved (CC BY-NC), uploaded by Jason van Weenen",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/275810046/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/315398717/large.jpg",
+    "credit": "(c) susanmasta, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/315398717/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/234976129/large.jpeg",
+    "credit": "(c) Samuel Büttler, some rights reserved (CC BY-NC), uploaded by Samuel Büttler",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/234976129/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/177338513/large.jpeg",
+    "credit": "(c) Guillaume Delaitre, some rights reserved (CC BY), uploaded by Guillaume Delaitre",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/177338513/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/60970436/large.jpeg",
+    "credit": "(c) smeierotto, some rights reserved (CC BY-NC), uploaded by smeierotto",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/60970436/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/300743075/large.jpeg",
+    "credit": "(c) Arnaud Aury, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 173192861,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/300743075/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/450628539/large.jpeg",
+    "credit": "(c) thewildgtrv, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 251806038,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/450628539/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/8214836/large.jpg",
+    "credit": "(c) Santiago Gutierrez, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 6492515,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/8214836/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/546624219/large.jpg",
+    "credit": "(c) Olivier Claessens, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 303295405,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/546624219/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/437873340/large.jpeg",
+    "credit": "(c) Evan, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 245386207,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/437873340/medium.jpeg"
+   }
+  ],
+  "subfamily": "Psalmopoeinae",
+  "summary": "Apollo Amazonius (Gr. Ἀμαζόνιος) was a cultic epithet of the Greek god Apollo, under which he was worshiped, and had a temple at Pyrrhichus in Laconia. The name was derived either from the belief that the mythological Amazons had penetrated into the Peloponnese region as far as Pyrrhichus, or that they themselves had founded Apollo's temple there.",
+  "wiki": "https://en.wikipedia.org/wiki/Amazonius",
+  "wild_in": [
+   "French Guiana",
+   "Colombia",
+   "Peru",
+   "Ecuador",
+   "Brazil"
+  ]
+ },
  "anqasha sp. blue": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -1410,6 +1505,98 @@
   "wiki": "http://en.wikipedia.org/wiki/Aphonopelma_johnnycashi",
   "wild_in": [
    "United States"
+  ]
+ },
+ "aphonopelma moderatum": {
+  "common_en": "Rio Grande Gold Tarantula",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 325505,
+  "inat_name": "Aphonopelma moderatum",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/4240967/large.jpg",
+    "credit": "(c) Chris A. Hamilton, Brent E. Hendrixson, Jason E. Bond, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/4240967/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/7964687/large.jpg",
+    "credit": "(c) Michael Jacobi, some rights reserved (CC BY-NC), uploaded by Michael Jacobi",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7964687/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/530756843/large.jpg",
+    "credit": "(c) Turner Brockman, some rights reserved (CC BY-SA), uploaded by Turner Brockman",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/530756843/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/4240968/large.jpg",
+    "credit": "(c) Chris A. Hamilton, Brent E. Hendrixson, Jason E. Bond, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/4240968/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/8192113/large.jpg",
+    "credit": "(c) Gerry Salmon, some rights reserved (CC BY-NC), uploaded by Gerry Salmon",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/8192113/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/183766585/large.jpg",
+    "credit": "(c) Julio Carq, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "obs": 109075476,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/183766585/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/424627647/large.jpeg",
+    "credit": "(c) loerar, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 238506501,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/424627647/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/73177598/large.jpeg",
+    "credit": "(c) Yazmin Zárate Sandoval, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "obs": 46139272,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/73177598/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/384541740/large.jpg",
+    "credit": "(c) Turner Brockman, some rights reserved (CC BY-SA)",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "obs": 217373144,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/384541740/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/499029364/large.jpg",
+    "credit": "(c) Leonardo daniel Quintero campos, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 277919935,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/499029364/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Aphonopelma moderatum is a species of spider in the family Theraphosidae, found in United States (Texas).",
+  "wiki": "http://en.wikipedia.org/wiki/Aphonopelma_moderatum",
+  "wild_in": [
+   "United States",
+   "Mexico"
   ]
  },
  "aphonopelma mooreae": {
@@ -2787,6 +2974,102 @@
    "Peru"
   ]
  },
+ "avicularia juruensis": {
+  "common_en": "Yellow-banded Pinktoe Tarantula",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 537961,
+  "inat_name": "Avicularia juruensis",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/315211851/large.jpg",
+    "credit": "(c) https://doi.org/10.3897/zookeys.659.10717, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/315211851/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/315211857/large.jpg",
+    "credit": "(c) https://doi.org/10.3897/zookeys.659.10717, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/315211857/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/203756807/large.jpeg",
+    "credit": "(c) Barna Takats, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 120469410,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/203756807/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/305778963/large.jpeg",
+    "credit": "(c) annahd, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 175916743,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/305778963/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/306122750/large.jpeg",
+    "credit": "(c) annahd, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 176098852,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/306122750/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/147539234/large.jpeg",
+    "credit": "(c) Galo Zapata Ríos, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 89350086,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/147539234/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/404891952/large.jpg",
+    "credit": "(c) rpadilla_, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 228181739,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/404891952/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/445247407/large.jpeg",
+    "credit": "(c) amikulyuk, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 249111390,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/445247407/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/641704747/large.jpg",
+    "credit": "(c) Camille Lacombe, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 351628740,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/641704747/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/692190232/large.jpg",
+    "credit": "(c) Taylor, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 378466766,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/692190232/medium.jpg"
+   }
+  ],
+  "subfamily": "Aviculariinae",
+  "summary": "Avicularia juruensis is a species of spider in the family Theraphosidae, found in South America (Colombia, Ecuador, Peru and Brazil). Avicularia urticans was brought into synonymy in 2017. It has been given the English name Amazonian pink toe spider. Under the synonym Avicularia urticans, it is also known as the Peruvian pinktoe tarantula. It is a large mygalomorph spider, with a maximum body length over 30 mm (1.2 in) and the longest fully extended leg about 60 mm (2.4 in)....",
+  "wiki": "https://en.wikipedia.org/wiki/Avicularia juruensis",
+  "wild_in": [
+   "Ecuador",
+   "Colombia",
+   "Peru"
+  ]
+ },
  "avicularia lynnae": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -2876,6 +3159,98 @@
   "wiki": "http://en.wikipedia.org/wiki/Avicularia_lynnae",
   "wild_in": [
    "Ecuador",
+   "Peru"
+  ]
+ },
+ "avicularia merianae": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 554904,
+  "inat_name": "Avicularia merianae",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/315212581/large.jpg",
+    "credit": "(c) P. Coxhead, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/315212581/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/177364283/large.jpeg",
+    "credit": "(c) Claus Rasmussen, some rights reserved (CC BY-NC), uploaded by Claus Rasmussen",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/177364283/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/118217365/large.jpg",
+    "credit": "(c) Nomole, some rights reserved (CC BY-NC), uploaded by Nomole",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/118217365/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/235685773/large.jpg",
+    "credit": "(c) veronica02, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/235685773/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/466754004/large.jpg",
+    "credit": "(c) Anders Hastings, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 259959003,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/466754004/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/494065555/large.jpeg",
+    "credit": "(c) Humberto Marcial Apagüeño vasquez, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 274884264,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/494065555/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/177266185/large.jpeg",
+    "credit": "(c) Claus Rasmussen, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 105627725,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/177266185/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/426625674/large.jpeg",
+    "credit": "(c) Alistair Smith, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 239536742,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/426625674/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/648015133/large.jpg",
+    "credit": "(c) veronica02, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 355298861,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/648015133/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/735884554/large.jpg",
+    "credit": "(c) Nikita Hoss, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 400962351,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/735884554/medium.jpg"
+   }
+  ],
+  "subfamily": "Aviculariinae",
+  "summary": "Avicularia merianae is a species of spiders in the family Theraphosidae, found in Peru. It was first described in 2017.",
+  "wiki": "http://en.wikipedia.org/wiki/Avicularia_merianae",
+  "wild_in": [
    "Peru"
   ]
  },
@@ -3016,6 +3391,98 @@
   "wiki": "http://en.wikipedia.org/wiki/Avicularia_minatrix",
   "wild_in": [
    "Venezuela"
+  ]
+ },
+ "avicularia peru": {
+  "common_en": "Pinktoe Tarantulas",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 68741,
+  "inat_name": "Avicularia",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/118217365/large.jpg",
+    "credit": "(c) Nomole, some rights reserved (CC BY-NC), uploaded by Nomole",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/118217365/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/443485967/large.jpg",
+    "credit": "(c) 昆虫学liuye, some rights reserved (CC BY-NC), uploaded by 昆虫学liuye",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/443485967/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102909908/large.jpg",
+    "credit": "(c) Jean Martins, some rights reserved (CC BY), uploaded by Jean Martins",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102909908/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/386614155/large.jpeg",
+    "credit": "(c) Maël Dewynter, some rights reserved (CC BY-NC), uploaded by Maël Dewynter",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/386614155/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/256679969/large.jpg",
+    "credit": "(c) Kamal Mahabir, some rights reserved (CC BY-NC), uploaded by Kamal Mahabir",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/256679969/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/179484394/large.jpg",
+    "credit": "(c) James Steamer, some rights reserved (CC BY-NC), uploaded by James Steamer",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/179484394/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/177815349/large.jpg",
+    "credit": "(c) Marco Aurelio de Sena, some rights reserved (CC BY-NC), uploaded by Marco Aurelio de Sena",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/177815349/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/543109044/large.jpg",
+    "credit": "(c) https://doi.org/10.3897/zookeys.659.10717, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/543109044/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/175571669/large.jpg",
+    "credit": "(c) César Favacho, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 104740662,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/175571669/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/11465502/large.jpg",
+    "credit": "(c) Felix Fleck, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 8580867,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/11465502/medium.jpg"
+   }
+  ],
+  "subfamily": "Aviculariinae",
+  "summary": "Avicularia is a genus of the family Theraphosidae containing various species of tarantulas. The genus is native to tropical South America. Each species in the genus has very distinguishable pink foot pads.",
+  "wiki": "https://en.wikipedia.org/wiki/Avicularia",
+  "wild_in": [
+   "Brazil",
+   "Ecuador",
+   "Colombia",
+   "French Guiana",
+   "Peru"
   ]
  },
  "avicularia purpurea": {
@@ -3291,6 +3758,190 @@
   "wild_in": [
    "Ecuador",
    "Brazil",
+   "Colombia",
+   "French Guiana",
+   "Peru"
+  ]
+ },
+ "avicularia sp. boa vista": {
+  "common_en": "Pinktoe Tarantulas",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 68741,
+  "inat_name": "Avicularia",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/118217365/large.jpg",
+    "credit": "(c) Nomole, some rights reserved (CC BY-NC), uploaded by Nomole",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/118217365/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/443485967/large.jpg",
+    "credit": "(c) 昆虫学liuye, some rights reserved (CC BY-NC), uploaded by 昆虫学liuye",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/443485967/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102909908/large.jpg",
+    "credit": "(c) Jean Martins, some rights reserved (CC BY), uploaded by Jean Martins",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102909908/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/386614155/large.jpeg",
+    "credit": "(c) Maël Dewynter, some rights reserved (CC BY-NC), uploaded by Maël Dewynter",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/386614155/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/256679969/large.jpg",
+    "credit": "(c) Kamal Mahabir, some rights reserved (CC BY-NC), uploaded by Kamal Mahabir",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/256679969/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/179484394/large.jpg",
+    "credit": "(c) James Steamer, some rights reserved (CC BY-NC), uploaded by James Steamer",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/179484394/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/177815349/large.jpg",
+    "credit": "(c) Marco Aurelio de Sena, some rights reserved (CC BY-NC), uploaded by Marco Aurelio de Sena",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/177815349/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/543109044/large.jpg",
+    "credit": "(c) https://doi.org/10.3897/zookeys.659.10717, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/543109044/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/175571669/large.jpg",
+    "credit": "(c) César Favacho, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 104740662,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/175571669/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/11465502/large.jpg",
+    "credit": "(c) Felix Fleck, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 8580867,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/11465502/medium.jpg"
+   }
+  ],
+  "subfamily": "Aviculariinae",
+  "summary": "Avicularia is a genus of the family Theraphosidae containing various species of tarantulas. The genus is native to tropical South America. Each species in the genus has very distinguishable pink foot pads.",
+  "wiki": "https://en.wikipedia.org/wiki/Avicularia",
+  "wild_in": [
+   "Brazil",
+   "Ecuador",
+   "Colombia",
+   "French Guiana",
+   "Peru"
+  ]
+ },
+ "avicularia sp. colombia silver": {
+  "common_en": "Pinktoe Tarantulas",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 68741,
+  "inat_name": "Avicularia",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/118217365/large.jpg",
+    "credit": "(c) Nomole, some rights reserved (CC BY-NC), uploaded by Nomole",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/118217365/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/443485967/large.jpg",
+    "credit": "(c) 昆虫学liuye, some rights reserved (CC BY-NC), uploaded by 昆虫学liuye",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/443485967/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102909908/large.jpg",
+    "credit": "(c) Jean Martins, some rights reserved (CC BY), uploaded by Jean Martins",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102909908/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/386614155/large.jpeg",
+    "credit": "(c) Maël Dewynter, some rights reserved (CC BY-NC), uploaded by Maël Dewynter",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/386614155/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/256679969/large.jpg",
+    "credit": "(c) Kamal Mahabir, some rights reserved (CC BY-NC), uploaded by Kamal Mahabir",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/256679969/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/179484394/large.jpg",
+    "credit": "(c) James Steamer, some rights reserved (CC BY-NC), uploaded by James Steamer",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/179484394/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/177815349/large.jpg",
+    "credit": "(c) Marco Aurelio de Sena, some rights reserved (CC BY-NC), uploaded by Marco Aurelio de Sena",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/177815349/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/543109044/large.jpg",
+    "credit": "(c) https://doi.org/10.3897/zookeys.659.10717, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/543109044/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/175571669/large.jpg",
+    "credit": "(c) César Favacho, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 104740662,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/175571669/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/11465502/large.jpg",
+    "credit": "(c) Felix Fleck, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 8580867,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/11465502/medium.jpg"
+   }
+  ],
+  "subfamily": "Aviculariinae",
+  "summary": "Avicularia is a genus of the family Theraphosidae containing various species of tarantulas. The genus is native to tropical South America. Each species in the genus has very distinguishable pink foot pads.",
+  "wiki": "https://en.wikipedia.org/wiki/Avicularia",
+  "wild_in": [
+   "Brazil",
+   "Ecuador",
    "Colombia",
    "French Guiana",
    "Peru"
@@ -7075,6 +7726,98 @@
    "Cuba"
   ]
  },
+ "coremiocnemis hoggi": {
+  "common_en": "Malaysian Purple-femur Tarantula",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 701953,
+  "inat_name": "Coremiocnemis hoggi",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/518035844/large.jpg",
+    "credit": "(c) Melvyn Yeo, some rights reserved (CC BY-NC), uploaded by Melvyn Yeo",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/518035844/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/99375031/large.jpeg",
+    "credit": "(c) Ben Tsai蔡維哲, some rights reserved (CC BY-NC), uploaded by Ben Tsai蔡維哲",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/99375031/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/291164216/large.jpeg",
+    "credit": "(c) Albert Kang, some rights reserved (CC BY-NC), uploaded by Albert Kang",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/291164216/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/28989201/large.jpg",
+    "credit": "(c) Arnold Wijker, some rights reserved (CC BY-NC), uploaded by Arnold Wijker",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/28989201/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/286835913/large.jpeg",
+    "credit": "(c) Alexius, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 165685595,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/286835913/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/386311599/large.jpeg",
+    "credit": "(c) wildpokedex, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "obs": 218193845,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/386311599/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/228650255/large.jpeg",
+    "credit": "(c) Darren Creighton, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 134168066,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/228650255/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59555936/large.jpg",
+    "credit": "(c) John Howes, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 37554249,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59555936/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/103169222/large.jpg",
+    "credit": "(c) dhfischer, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 64198486,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/103169222/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/256909188/large.jpg",
+    "credit": "(c) Vojtěch Víta, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 149119375,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/256909188/medium.jpg"
+   }
+  ],
+  "subfamily": "Selenocosmiinae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": [
+   "Malaysia"
+  ]
+ },
  "coremiocnemis sp.": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -7755,6 +8498,60 @@
    "Venezuela"
   ]
  },
+ "cyriocosmus giganteus": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 797436,
+  "inat_name": "Cyriocosmus giganteus",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/603709352/large.jpg",
+    "credit": "(c) portioid, some rights reserved (CC BY), uploaded by portioid",
+    "from": "inat",
+    "genus": "Cyriocosmus",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/603709352/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/107858798/large.jpeg",
+    "credit": "(c) Pedro H. Martins, some rights reserved (CC BY-NC), uploaded by Pedro H. Martins",
+    "from": "inat",
+    "genus": "Cyriocosmus",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/107858798/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/12889247/large.jpeg",
+    "credit": "(c) Mike G. Rutherford, some rights reserved (CC BY-NC), uploaded by Mike G. Rutherford",
+    "from": "inat",
+    "genus": "Cyriocosmus",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/12889247/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/166993617/large.jpeg",
+    "credit": "(c) Francisco González Táboas, some rights reserved (CC BY-NC), uploaded by Francisco González Táboas",
+    "from": "inat",
+    "genus": "Cyriocosmus",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/166993617/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/190132989/large.jpg",
+    "credit": "(c) Wilson Lombana Riaño, some rights reserved (CC BY-NC), uploaded by Wilson Lombana Riaño",
+    "from": "inat",
+    "genus": "Cyriocosmus",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/190132989/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": []
+ },
  "cyriocosmus leetzi": {
   "common_en": "Colombian Dwarf Tiger Tarantula",
   "family": "Theraphosidae",
@@ -7846,6 +8643,99 @@
    "Colombia"
   ]
  },
+ "cyriocosmus perezmilesi": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 797441,
+  "inat_name": "Cyriocosmus perezmilesi",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/600065862/large.jpg",
+    "credit": "(c) Mason Salem, some rights reserved (CC BY-NC), uploaded by Mason Salem",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/600065862/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/600066292/large.jpg",
+    "credit": "(c) Mason Salem, some rights reserved (CC BY-NC), uploaded by Mason Salem",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/600066292/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/600065562/large.jpg",
+    "credit": "(c) Mason Salem, some rights reserved (CC BY-NC), uploaded by Mason Salem",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/600065562/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/169601165/large.jpg",
+    "credit": "(c) Tarantuland, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/169601165/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/439426867/large.jpeg",
+    "credit": "(c) Raúl Ebbinghaus, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 246177111,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/439426867/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/474576674/large.jpg",
+    "credit": "(c) Raúl Ebbinghaus, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 264117025,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/474576674/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/600883389/large.jpg",
+    "credit": "(c) Mason Salem, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 331255833,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/600883389/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/451949341/large.jpeg",
+    "credit": "(c) maruzella, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 252464206,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/451949341/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/390001247/large.jpg",
+    "credit": "(c) fenf, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 220288344,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/390001247/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/600769615/large.jpg",
+    "credit": "(c) amoe___bugg, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 331200494,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/600769615/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Cyriocosmus perezmilesi otherwise known as the Bolivian dwarf beauty tarantula is a spider which was first described by Radan Kaderka in 2007. It was named in honor of Dr. Fernando Pérez-Miles, and is a fossorial tarantula. As its common name aptly states it is found in Bolivia.",
+  "wiki": "https://en.wikipedia.org/wiki/Cyriocosmus perezmilesi",
+  "wild_in": [
+   "Peru",
+   "Bolivia"
+  ]
+ },
  "cyriocosmus ritae": {
   "common_en": "Peruvian Dwarf Black-and-white Tarantula",
   "family": "Theraphosidae",
@@ -7922,6 +8812,100 @@
   "wiki": null,
   "wild_in": [
    "Peru"
+  ]
+ },
+ "cyriocosmus sp. oronegro": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 421486,
+  "inat_name": "Cyriocosmus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/603709352/large.jpg",
+    "credit": "(c) portioid, some rights reserved (CC BY), uploaded by portioid",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/603709352/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/107858798/large.jpeg",
+    "credit": "(c) Pedro H. Martins, some rights reserved (CC BY-NC), uploaded by Pedro H. Martins",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/107858798/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/12889247/large.jpeg",
+    "credit": "(c) Mike G. Rutherford, some rights reserved (CC BY-NC), uploaded by Mike G. Rutherford",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/12889247/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/166993617/large.jpeg",
+    "credit": "(c) Francisco González Táboas, some rights reserved (CC BY-NC), uploaded by Francisco González Táboas",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/166993617/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/190132989/large.jpg",
+    "credit": "(c) Wilson Lombana Riaño, some rights reserved (CC BY-NC), uploaded by Wilson Lombana Riaño",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/190132989/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/120330460/large.jpg",
+    "credit": "(c) Wilson Lombana Riaño, some rights reserved (CC BY-NC), uploaded by Wilson Lombana Riaño",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/120330460/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/582388878/large.jpg",
+    "credit": "(c) Damián Hagopián, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 321982537,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/582388878/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/312602288/large.jpg",
+    "credit": "(c) Sebastian Doak, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 179564746,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/312602288/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/187894076/large.jpg",
+    "credit": "(c) lalajerez14, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 111310727,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/187894076/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/397000535/large.jpg",
+    "credit": "(c) Corporación Sihyta, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 224026860,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/397000535/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Cyriocosmus is a spider genus in the family Theraphosidae (tarantulas).",
+  "wiki": "https://en.wikipedia.org/wiki/Cyriocosmus",
+  "wild_in": [
+   "Colombia",
+   "Brazil",
+   "Peru",
+   "Argentina",
+   "Venezuela"
   ]
  },
  "cyriocosmus sp. pinturas": {
@@ -8202,6 +9186,98 @@
    "Indonesia"
   ]
  },
+ "cyriopagopus sp. cambodian midnight": {
+  "common_en": "Southeast Asian Tarantulas",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 808274,
+  "inat_name": "Ornithoctoninae",
+  "level": "subfamily",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/354143073/large.jpeg",
+    "credit": "(c) Haocong_Cat, some rights reserved (CC BY-NC), uploaded by Haocong_Cat",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/354143073/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/355337616/large.jpeg",
+    "credit": "(c) fachrynurmallojr, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/355337616/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/352740001/large.jpeg",
+    "credit": "(c) salawinws, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/352740001/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/259646446/large.jpeg",
+    "credit": "(c) Vojtěch Víta, some rights reserved (CC BY-NC), uploaded by Vojtěch Víta",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/259646446/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/357786291/large.jpeg",
+    "credit": "(c) arternesverden, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/357786291/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/253886069/large.jpg",
+    "credit": "(c) Vojtěch Víta, some rights reserved (CC BY-NC), uploaded by Vojtěch Víta",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/253886069/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/340430043/large.jpg",
+    "credit": "(c) Isaac Krone, some rights reserved (CC BY), uploaded by Isaac Krone",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/340430043/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/233432929/large.jpeg",
+    "credit": "(c) Ng Yu Fei, some rights reserved (CC BY-NC), uploaded by Ng Yu Fei",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/233432929/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/458254473/large.jpg",
+    "credit": "(c) Melvyn Yeo, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 255682552,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/458254473/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/389524048/large.jpg",
+    "credit": "(c) https://www.biodiversitysingapore.com/, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 220034491,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/389524048/medium.jpg"
+   }
+  ],
+  "subfamily": null,
+  "summary": "The Ornithoctoninae, also known as earth tigers, are a subfamily of Asian tarantulas, which were first erected in 1895 by Reginald Innes Pocock on basis of the genotype Ornithoctonus andersoni described in 1892 from former Burma, now Myanmar.",
+  "wiki": "http://en.wikipedia.org/wiki/Ornithoctoninae",
+  "wild_in": [
+   "Thailand",
+   "China",
+   "Singapore",
+   "Malaysia",
+   "Indonesia"
+  ]
+ },
  "cyriopagopus sp. lam dong": {
   "common_en": "Southeast Asian Tarantulas",
   "family": "Theraphosidae",
@@ -8384,6 +9460,103 @@
    "Singapore",
    "Malaysia",
    "Indonesia"
+  ]
+ },
+ "cyrtopholis sp. hato caribbean": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 179955,
+  "inat_name": "Cyrtopholis",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/5949447/large.jpeg",
+    "credit": "(c) Ivelisse Irizarry, some rights reserved (CC BY-NC), uploaded by Ivelisse Irizarry",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/5949447/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/253041582/large.jpg",
+    "credit": "(c) Edd Russell, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 259328059,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/253041582/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/35810002/large.jpeg",
+    "credit": "(c) Ben Machado, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 23099066,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/35810002/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/61450956/large.jpg",
+    "credit": "(c) gazabarrows, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 38645643,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/61450956/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/347161280/large.jpg",
+    "credit": "(c) Matt Bertone, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 197155872,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/347161280/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/616175473/large.jpg",
+    "credit": "(c) Kurt Miller, some rights reserved (CC BY-SA)",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "obs": 338787981,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/616175473/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/438480308/large.jpeg",
+    "credit": "(c) akoutellos, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 245693054,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/438480308/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/751359738/large.jpg",
+    "credit": "(c) Kurt Miller, some rights reserved (CC BY-SA)",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "obs": 408719992,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/751359738/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/103390121/large.jpg",
+    "credit": "(c) nataliejg, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 64320980,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/103390121/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/417272708/large.jpeg",
+    "credit": "(c) Christine McGavran, some rights reserved (CC BY-SA)",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "obs": 234694449,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/417272708/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Cyrtopholis is a genus of spiders in the Theraphosidae family. It was first described in 1892 by Simon. As of 2017, it contains 28 species.",
+  "wiki": "https://en.wikipedia.org/wiki/Cyrtopholis",
+  "wild_in": [
+   "Puerto Rico",
+   "Bahamas",
+   "United States Virgin Islands"
   ]
  },
  "davus pentaloris": {
@@ -9492,6 +10665,44 @@
    "United States"
   ]
  },
+ "encyocratella olivacea": {
+  "common_en": "Tanzanian Black-and-olive Baboon Spider",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 797491,
+  "inat_name": "Encyocratella olivacea",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/110264463/large.jpeg",
+    "credit": "(c) John Lyakurwa, some rights reserved (CC BY), uploaded by John Lyakurwa",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/110264463/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/109736581/large.jpg",
+    "credit": "(c) michelemenegon, some rights reserved (CC BY-NC), uploaded by michelemenegon",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/109736581/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/329016485/large.jpeg",
+    "credit": "(c) Ardgard Essau, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 188053784,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/329016485/medium.jpeg"
+   }
+  ],
+  "subfamily": "Stromatopelminae",
+  "summary": "Encyocratella is a genus of spiders in the Theraphosidae family. It was first described in 1907 by Strand. As of 2017, it contains only one species, Encyocratella olivacea, found in Tanzania.",
+  "wiki": "http://en.wikipedia.org/wiki/Encyocratella",
+  "wild_in": [
+   "Tanzania"
+  ]
+ },
  "ephebopus cyanognathus": {
   "common_en": "Blue-fang Skeleton Tarantula",
   "family": "Theraphosidae",
@@ -10150,6 +11361,97 @@
    "Chile"
   ]
  },
+ "euathlus sp. bronce": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 421491,
+  "inat_name": "Euathlus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/37905638/large.jpg",
+    "credit": "(c) pedro vargas, some rights reserved (CC BY-NC), uploaded by pedro vargas",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/37905638/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/244522540/large.jpeg",
+    "credit": "(c) a_f_r, some rights reserved (CC BY-NC), uploaded by a_f_r",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/244522540/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/182334525/large.jpg",
+    "credit": "(c) Eduardo Muñoz Orellana, some rights reserved (CC BY-NC), uploaded by Eduardo Muñoz Orellana",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/182334525/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/114521936/large.jpeg",
+    "credit": "(c) matias palma, some rights reserved (CC BY-NC), uploaded by matias palma",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/114521936/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/134176661/large.jpeg",
+    "credit": "(c) danielaperezorellana, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/134176661/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/173315190/large.jpg",
+    "credit": "(c) Claudio Maureira, some rights reserved (CC BY-NC-ND), uploaded by Claudio Maureira",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/173315190/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/556938698/large.jpg",
+    "credit": "(c) Agus, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 308686192,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/556938698/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/598126231/large.jpg",
+    "credit": "(c) Hugo Albornoz Contreras, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 329914314,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/598126231/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/179326205/large.jpg",
+    "credit": "(c) Profesor Sel, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 106714541,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/179326205/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/598150110/large.jpg",
+    "credit": "(c) Camila, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 329924501,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/598150110/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Euathlus is a genus of tarantulas (family Theraphosidae).",
+  "wiki": "https://en.wikipedia.org/wiki/Euathlus",
+  "wild_in": [
+   "Chile",
+   "Argentina"
+  ]
+ },
  "euathlus sp. fuego": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -10605,6 +11907,188 @@
    "Argentina"
   ]
  },
+ "euathlus sp. tigre azul": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 421491,
+  "inat_name": "Euathlus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/37905638/large.jpg",
+    "credit": "(c) pedro vargas, some rights reserved (CC BY-NC), uploaded by pedro vargas",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/37905638/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/244522540/large.jpeg",
+    "credit": "(c) a_f_r, some rights reserved (CC BY-NC), uploaded by a_f_r",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/244522540/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/182334525/large.jpg",
+    "credit": "(c) Eduardo Muñoz Orellana, some rights reserved (CC BY-NC), uploaded by Eduardo Muñoz Orellana",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/182334525/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/114521936/large.jpeg",
+    "credit": "(c) matias palma, some rights reserved (CC BY-NC), uploaded by matias palma",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/114521936/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/134176661/large.jpeg",
+    "credit": "(c) danielaperezorellana, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/134176661/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/173315190/large.jpg",
+    "credit": "(c) Claudio Maureira, some rights reserved (CC BY-NC-ND), uploaded by Claudio Maureira",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/173315190/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/556938698/large.jpg",
+    "credit": "(c) Agus, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 308686192,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/556938698/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/598126231/large.jpg",
+    "credit": "(c) Hugo Albornoz Contreras, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 329914314,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/598126231/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/179326205/large.jpg",
+    "credit": "(c) Profesor Sel, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 106714541,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/179326205/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/598150110/large.jpg",
+    "credit": "(c) Camila, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 329924501,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/598150110/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Euathlus is a genus of tarantulas (family Theraphosidae).",
+  "wiki": "https://en.wikipedia.org/wiki/Euathlus",
+  "wild_in": [
+   "Chile",
+   "Argentina"
+  ]
+ },
+ "euathlus sp. tigre esmeralda": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 421491,
+  "inat_name": "Euathlus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/37905638/large.jpg",
+    "credit": "(c) pedro vargas, some rights reserved (CC BY-NC), uploaded by pedro vargas",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/37905638/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/244522540/large.jpeg",
+    "credit": "(c) a_f_r, some rights reserved (CC BY-NC), uploaded by a_f_r",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/244522540/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/182334525/large.jpg",
+    "credit": "(c) Eduardo Muñoz Orellana, some rights reserved (CC BY-NC), uploaded by Eduardo Muñoz Orellana",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/182334525/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/114521936/large.jpeg",
+    "credit": "(c) matias palma, some rights reserved (CC BY-NC), uploaded by matias palma",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/114521936/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/134176661/large.jpeg",
+    "credit": "(c) danielaperezorellana, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/134176661/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/173315190/large.jpg",
+    "credit": "(c) Claudio Maureira, some rights reserved (CC BY-NC-ND), uploaded by Claudio Maureira",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/173315190/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/556938698/large.jpg",
+    "credit": "(c) Agus, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 308686192,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/556938698/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/598126231/large.jpg",
+    "credit": "(c) Hugo Albornoz Contreras, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 329914314,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/598126231/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/179326205/large.jpg",
+    "credit": "(c) Profesor Sel, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 106714541,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/179326205/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/598150110/large.jpg",
+    "credit": "(c) Camila, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 329924501,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/598150110/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Euathlus is a genus of tarantulas (family Theraphosidae).",
+  "wiki": "https://en.wikipedia.org/wiki/Euathlus",
+  "wild_in": [
+   "Chile",
+   "Argentina"
+  ]
+ },
  "euathlus sp. truculentus": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -10686,6 +12170,279 @@
     "license": "CC-BY-NC-SA",
     "obs": 406920525,
     "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/747698437/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Euathlus is a genus of tarantulas (family Theraphosidae).",
+  "wiki": "https://en.wikipedia.org/wiki/Euathlus",
+  "wild_in": [
+   "Chile",
+   "Argentina"
+  ]
+ },
+ "euathlus sp. truculentus hermosa": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 421491,
+  "inat_name": "Euathlus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/37905638/large.jpg",
+    "credit": "(c) pedro vargas, some rights reserved (CC BY-NC), uploaded by pedro vargas",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/37905638/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/244522540/large.jpeg",
+    "credit": "(c) a_f_r, some rights reserved (CC BY-NC), uploaded by a_f_r",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/244522540/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/182334525/large.jpg",
+    "credit": "(c) Eduardo Muñoz Orellana, some rights reserved (CC BY-NC), uploaded by Eduardo Muñoz Orellana",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/182334525/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/114521936/large.jpeg",
+    "credit": "(c) matias palma, some rights reserved (CC BY-NC), uploaded by matias palma",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/114521936/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/134176661/large.jpeg",
+    "credit": "(c) danielaperezorellana, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/134176661/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/173315190/large.jpg",
+    "credit": "(c) Claudio Maureira, some rights reserved (CC BY-NC-ND), uploaded by Claudio Maureira",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/173315190/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/556938698/large.jpg",
+    "credit": "(c) Agus, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 308686192,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/556938698/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/598126231/large.jpg",
+    "credit": "(c) Hugo Albornoz Contreras, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 329914314,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/598126231/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/179326205/large.jpg",
+    "credit": "(c) Profesor Sel, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 106714541,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/179326205/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/598150110/large.jpg",
+    "credit": "(c) Camila, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 329924501,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/598150110/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Euathlus is a genus of tarantulas (family Theraphosidae).",
+  "wiki": "https://en.wikipedia.org/wiki/Euathlus",
+  "wild_in": [
+   "Chile",
+   "Argentina"
+  ]
+ },
+ "euathlus sp. turculentus": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 421491,
+  "inat_name": "Euathlus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/37905638/large.jpg",
+    "credit": "(c) pedro vargas, some rights reserved (CC BY-NC), uploaded by pedro vargas",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/37905638/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/244522540/large.jpeg",
+    "credit": "(c) a_f_r, some rights reserved (CC BY-NC), uploaded by a_f_r",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/244522540/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/182334525/large.jpg",
+    "credit": "(c) Eduardo Muñoz Orellana, some rights reserved (CC BY-NC), uploaded by Eduardo Muñoz Orellana",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/182334525/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/114521936/large.jpeg",
+    "credit": "(c) matias palma, some rights reserved (CC BY-NC), uploaded by matias palma",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/114521936/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/134176661/large.jpeg",
+    "credit": "(c) danielaperezorellana, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/134176661/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/173315190/large.jpg",
+    "credit": "(c) Claudio Maureira, some rights reserved (CC BY-NC-ND), uploaded by Claudio Maureira",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/173315190/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/556938698/large.jpg",
+    "credit": "(c) Agus, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 308686192,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/556938698/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/598126231/large.jpg",
+    "credit": "(c) Hugo Albornoz Contreras, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 329914314,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/598126231/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/179326205/large.jpg",
+    "credit": "(c) Profesor Sel, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 106714541,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/179326205/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/598150110/large.jpg",
+    "credit": "(c) Camila, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 329924501,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/598150110/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Euathlus is a genus of tarantulas (family Theraphosidae).",
+  "wiki": "https://en.wikipedia.org/wiki/Euathlus",
+  "wild_in": [
+   "Chile",
+   "Argentina"
+  ]
+ },
+ "euathlus sp. turculentus hermosa": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 421491,
+  "inat_name": "Euathlus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/37905638/large.jpg",
+    "credit": "(c) pedro vargas, some rights reserved (CC BY-NC), uploaded by pedro vargas",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/37905638/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/244522540/large.jpeg",
+    "credit": "(c) a_f_r, some rights reserved (CC BY-NC), uploaded by a_f_r",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/244522540/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/182334525/large.jpg",
+    "credit": "(c) Eduardo Muñoz Orellana, some rights reserved (CC BY-NC), uploaded by Eduardo Muñoz Orellana",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/182334525/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/114521936/large.jpeg",
+    "credit": "(c) matias palma, some rights reserved (CC BY-NC), uploaded by matias palma",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/114521936/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/134176661/large.jpeg",
+    "credit": "(c) danielaperezorellana, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/134176661/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/173315190/large.jpg",
+    "credit": "(c) Claudio Maureira, some rights reserved (CC BY-NC-ND), uploaded by Claudio Maureira",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/173315190/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/556938698/large.jpg",
+    "credit": "(c) Agus, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 308686192,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/556938698/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/598126231/large.jpg",
+    "credit": "(c) Hugo Albornoz Contreras, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 329914314,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/598126231/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/179326205/large.jpg",
+    "credit": "(c) Profesor Sel, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 106714541,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/179326205/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/598150110/large.jpg",
+    "credit": "(c) Camila, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 329924501,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/598150110/medium.jpg"
    }
   ],
   "subfamily": "Theraphosinae",
@@ -10836,6 +12593,100 @@
   "wiki": "https://en.wikipedia.org/wiki/Eucratoscelus_pachypus",
   "wild_in": [
    "Kenya"
+  ]
+ },
+ "eupalaestrus anomalus": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 1474339,
+  "inat_name": "Eupalaestrus anomalus",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/7857588/large.jpeg",
+    "credit": "(c) Nelson Wisnik, some rights reserved (CC BY-NC), uploaded by Nelson Wisnik",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7857588/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/246752888/large.jpg",
+    "credit": "(c) Sidnei Dantas, some rights reserved (CC BY-SA), uploaded by Sidnei Dantas",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/246752888/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/556095946/large.jpg",
+    "credit": "(c) IPBio - Reserva Jutuarana, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 308247046,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/556095946/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/629618948/large.jpg",
+    "credit": "(c) harryjones427, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 345358108,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/629618948/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/736701791/large.jpg",
+    "credit": "(c) jaufmann, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 401384666,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/736701791/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/459006998/large.jpeg",
+    "credit": "(c) Fábio Luis dos Santos, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 256060231,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/459006998/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/456278508/large.jpeg",
+    "credit": "(c) DmitriG, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 254701587,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/456278508/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/728295531/large.jpg",
+    "credit": "(c) Theodore, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 397102786,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/728295531/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/445057487/large.jpeg",
+    "credit": "(c) Bruno R. Möller, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 249016278,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/445057487/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/743873087/large.jpg",
+    "credit": "(c) ag_van_dijk, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 405021371,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/743873087/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": [
+   "Brazil"
   ]
  },
  "eupalaestrus campestratus": {
@@ -11289,6 +13140,60 @@
   "wiki": "https://en.wikipedia.org/wiki/Grammostola actaeon",
   "wild_in": []
  },
+ "grammostola alticeps": {
+  "common_en": "Brazilian Smoke-gray Tarantula",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 810327,
+  "inat_name": "Grammostola alticeps",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102105742/large.jpeg",
+    "credit": "(c) Marcelo Schmidt Roberti, some rights reserved (CC BY-NC), uploaded by Marcelo Schmidt Roberti",
+    "from": "inat",
+    "genus": "Grammostola",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102105742/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62953699/large.jpg",
+    "credit": "(c) Quentin Vandemoortele, some rights reserved (CC BY-NC), uploaded by Quentin Vandemoortele",
+    "from": "inat",
+    "genus": "Grammostola",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62953699/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102106182/large.jpeg",
+    "credit": "(c) Marcelo Schmidt Roberti, some rights reserved (CC BY-NC), uploaded by Marcelo Schmidt Roberti",
+    "from": "inat",
+    "genus": "Grammostola",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102106182/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/38334607/large.jpeg",
+    "credit": "(c) Pablo Pinto, some rights reserved (CC BY-NC), uploaded by Pablo Pinto",
+    "from": "inat",
+    "genus": "Grammostola",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/38334607/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456455/large.jpg",
+    "credit": "(c) Cephisus, some rights reserved (CC BY-NC-ND), uploaded by Cephisus",
+    "from": "inat",
+    "genus": "Grammostola",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456455/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Grammostola alticeps (known as Brazilian greysmoke spider in the pet industry) is a New World spider in the tarantula family (Theraphosidae). It is endemic to Uruguay, Paraguay, and Brazil....",
+  "wiki": "https://en.wikipedia.org/wiki/Grammostola_alticeps",
+  "wild_in": []
+ },
  "grammostola anthracina": {
   "common_en": "Brazilian Giant Tawny Red Tarantula",
   "family": "Theraphosidae",
@@ -11470,6 +13375,98 @@
   "wiki": "https://en.wikipedia.org/wiki/Grammostola grossa",
   "wild_in": [
    "Brazil"
+  ]
+ },
+ "grammostola iheringi": {
+  "common_en": "Entre Ríos Tarantula",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 835174,
+  "inat_name": "Grammostola iheringi",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/362874323/large.jpeg",
+    "credit": "(c) Seba Fernández, some rights reserved (CC BY), uploaded by Seba Fernández",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/362874323/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/507373858/large.jpg",
+    "credit": "(c) Giovanni Ribeiro Salvador, some rights reserved (CC BY), uploaded by Giovanni Ribeiro Salvador",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/507373858/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/362874365/large.jpeg",
+    "credit": "(c) Seba Fernández, some rights reserved (CC BY), uploaded by Seba Fernández",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/362874365/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/244815760/large.jpeg",
+    "credit": "(c) thea_k_s, some rights reserved (CC BY-NC), uploaded by thea_k_s",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/244815760/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/244815770/large.jpeg",
+    "credit": "(c) thea_k_s, some rights reserved (CC BY-NC), uploaded by thea_k_s",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/244815770/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/362874282/large.jpeg",
+    "credit": "(c) Seba Fernández, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 205240448,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/362874282/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/498669203/large.jpeg",
+    "credit": "(c) Sebastián Horta, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "obs": 277724127,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/498669203/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/453820010/large.jpg",
+    "credit": "(c) André Nogueira Thomas, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 253456689,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/453820010/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/763992829/large.jpg",
+    "credit": "(c) karineee, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 414955604,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/763992829/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/594766028/large.jpg",
+    "credit": "(c) luizascosta006, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 328247182,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/594766028/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Grammostola iheringi also known as the Entre Rios tarantula, it was first described by Keyserling in 1891. They are found in Brazil, and is considered the biggest tarantula in the Grammostola genus.",
+  "wiki": "https://en.wikipedia.org/wiki/Grammostola iheringi",
+  "wild_in": [
+   "Brazil",
+   "Uruguay"
   ]
  },
  "grammostola pulchra": {
@@ -11688,10 +13685,194 @@
    "Chile"
   ]
  },
+ "grammostola sp. concepcion": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 180533,
+  "inat_name": "Grammostola",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102105742/large.jpeg",
+    "credit": "(c) Marcelo Schmidt Roberti, some rights reserved (CC BY-NC), uploaded by Marcelo Schmidt Roberti",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102105742/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62953699/large.jpg",
+    "credit": "(c) Quentin Vandemoortele, some rights reserved (CC BY-NC), uploaded by Quentin Vandemoortele",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62953699/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102106182/large.jpeg",
+    "credit": "(c) Marcelo Schmidt Roberti, some rights reserved (CC BY-NC), uploaded by Marcelo Schmidt Roberti",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102106182/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/38334607/large.jpeg",
+    "credit": "(c) Pablo Pinto, some rights reserved (CC BY-NC), uploaded by Pablo Pinto",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/38334607/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456455/large.jpg",
+    "credit": "(c) Cephisus, some rights reserved (CC BY-NC-ND), uploaded by Cephisus",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456455/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/56522421/large.jpg",
+    "credit": "(c) tinekefr, some rights reserved (CC BY-NC), uploaded by tinekefr",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/56522421/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456446/large.jpg",
+    "credit": "(c) Cephisus, some rights reserved (CC BY-NC-ND), uploaded by Cephisus",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456446/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/264136176/large.jpeg",
+    "credit": "(c) Joseane Derengoski, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 152969261,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/264136176/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/504874296/large.jpg",
+    "credit": "(c) Mauricio Silvera, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 281073055,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/504874296/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/362568221/large.jpeg",
+    "credit": "(c) Agulian Carlos, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 205081018,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/362568221/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Grammostola is a genus of the tarantula family, Theraphosidae, being native to tropical South America.",
+  "wiki": "https://en.wikipedia.org/wiki/Grammostola",
+  "wild_in": [
+   "Argentina",
+   "Chile",
+   "Uruguay",
+   "Brazil"
+  ]
+ },
  "grammostola sp. maule": {
   "common_en": null,
   "family": "Theraphosidae",
   "fetched": "2026-11-17",
+  "inat_id": 180533,
+  "inat_name": "Grammostola",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102105742/large.jpeg",
+    "credit": "(c) Marcelo Schmidt Roberti, some rights reserved (CC BY-NC), uploaded by Marcelo Schmidt Roberti",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102105742/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62953699/large.jpg",
+    "credit": "(c) Quentin Vandemoortele, some rights reserved (CC BY-NC), uploaded by Quentin Vandemoortele",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62953699/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102106182/large.jpeg",
+    "credit": "(c) Marcelo Schmidt Roberti, some rights reserved (CC BY-NC), uploaded by Marcelo Schmidt Roberti",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102106182/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/38334607/large.jpeg",
+    "credit": "(c) Pablo Pinto, some rights reserved (CC BY-NC), uploaded by Pablo Pinto",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/38334607/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456455/large.jpg",
+    "credit": "(c) Cephisus, some rights reserved (CC BY-NC-ND), uploaded by Cephisus",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456455/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/56522421/large.jpg",
+    "credit": "(c) tinekefr, some rights reserved (CC BY-NC), uploaded by tinekefr",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/56522421/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456446/large.jpg",
+    "credit": "(c) Cephisus, some rights reserved (CC BY-NC-ND), uploaded by Cephisus",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456446/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/264136176/large.jpeg",
+    "credit": "(c) Joseane Derengoski, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 152969261,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/264136176/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/504874296/large.jpg",
+    "credit": "(c) Mauricio Silvera, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 281073055,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/504874296/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/362568221/large.jpeg",
+    "credit": "(c) Agulian Carlos, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 205081018,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/362568221/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Grammostola is a genus of the tarantula family, Theraphosidae, being native to tropical South America.",
+  "wiki": "https://en.wikipedia.org/wiki/Grammostola",
+  "wild_in": [
+   "Argentina",
+   "Chile",
+   "Uruguay",
+   "Brazil"
+  ]
+ },
+ "grammostola sp. norte": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
   "inat_id": 180533,
   "inat_name": "Grammostola",
   "level": "genus",
