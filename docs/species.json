@@ -13961,6 +13961,98 @@
    "Brazil"
   ]
  },
+ "grammostola sp. north": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 180533,
+  "inat_name": "Grammostola",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102105742/large.jpeg",
+    "credit": "(c) Marcelo Schmidt Roberti, some rights reserved (CC BY-NC), uploaded by Marcelo Schmidt Roberti",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102105742/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62953699/large.jpg",
+    "credit": "(c) Quentin Vandemoortele, some rights reserved (CC BY-NC), uploaded by Quentin Vandemoortele",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62953699/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102106182/large.jpeg",
+    "credit": "(c) Marcelo Schmidt Roberti, some rights reserved (CC BY-NC), uploaded by Marcelo Schmidt Roberti",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102106182/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/38334607/large.jpeg",
+    "credit": "(c) Pablo Pinto, some rights reserved (CC BY-NC), uploaded by Pablo Pinto",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/38334607/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456455/large.jpg",
+    "credit": "(c) Cephisus, some rights reserved (CC BY-NC-ND), uploaded by Cephisus",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456455/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/56522421/large.jpg",
+    "credit": "(c) tinekefr, some rights reserved (CC BY-NC), uploaded by tinekefr",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/56522421/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456446/large.jpg",
+    "credit": "(c) Cephisus, some rights reserved (CC BY-NC-ND), uploaded by Cephisus",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62456446/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/264136176/large.jpeg",
+    "credit": "(c) Joseane Derengoski, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 152969261,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/264136176/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/504874296/large.jpg",
+    "credit": "(c) Mauricio Silvera, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 281073055,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/504874296/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/362568221/large.jpeg",
+    "credit": "(c) Agulian Carlos, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 205081018,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/362568221/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Grammostola is a genus of the tarantula family, Theraphosidae, being native to tropical South America.",
+  "wiki": "https://en.wikipedia.org/wiki/Grammostola",
+  "wild_in": [
+   "Argentina",
+   "Chile",
+   "Uruguay",
+   "Brazil"
+  ]
+ },
  "hapalopus formosus": {
   "common_en": "Pumpkin Patch Tarantula",
   "family": "Theraphosidae",
@@ -14075,6 +14167,99 @@
   "summary": "",
   "wiki": null,
   "wild_in": [
+   "Colombia"
+  ]
+ },
+ "hapalopus planetearth": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 1656297,
+  "inat_name": "Hapalopus planetearth",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/528241633/large.jpg",
+    "credit": "(c) Michael Eisen, some rights reserved (CC BY), uploaded by Michael Eisen",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/528241633/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/216984672/large.jpeg",
+    "credit": "(c) Stephen Luk, some rights reserved (CC BY-NC), uploaded by Stephen Luk",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/216984672/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/53918417/large.jpg",
+    "credit": "(c) Felipe Campos, some rights reserved (CC BY-NC), uploaded by Felipe Campos",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/53918417/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/359373480/large.jpeg",
+    "credit": "(c) Angus J Lothian, some rights reserved (CC BY-NC), uploaded by Angus J Lothian",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/359373480/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/353667536/large.jpg",
+    "credit": "(c) laura_pereira_reyes, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 200455700,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/353667536/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/349340736/large.jpg",
+    "credit": "(c) Grace Orion, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 198231211,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/349340736/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/256048965/large.jpeg",
+    "credit": "(c) Antonio Agudelo, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 148662610,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/256048965/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/602393500/large.jpg",
+    "credit": "(c) Nick Volpe, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 331995261,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/602393500/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/234050869/large.jpeg",
+    "credit": "(c) John David Curlis, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 137081765,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/234050869/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/457800755/large.jpg",
+    "credit": "(c) jrganzell, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 255463191,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/457800755/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": [
+   "Ecuador",
    "Colombia"
   ]
  },
@@ -15153,6 +15338,100 @@
    "Indonesia"
   ]
  },
+ "haplopelma sp. bach ma": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 196676,
+  "inat_name": "Haplopelma",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/314953/large.JPG",
+    "credit": "(c) Carmelo López Abad, some rights reserved (CC BY-NC), uploaded by Carmelo López Abad",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/314953/medium.JPG"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/261849905/large.jpg",
+    "credit": "(c) Bob Zakaria, some rights reserved (CC BY-NC), uploaded by Bob Zakaria",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/261849905/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/276084869/large.jpg",
+    "credit": "(c) Isa Betancourt, some rights reserved (CC BY-NC-ND), uploaded by Isa Betancourt",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/276084869/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/291596216/large.jpg",
+    "credit": "(c) Bob Zakaria, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 168266937,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/291596216/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/246251178/large.jpg",
+    "credit": "(c) sheng860419, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 143574866,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/246251178/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/420770782/large.jpeg",
+    "credit": "(c) Simon Hazenberg, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 236511984,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/420770782/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/988115/large.JPG",
+    "credit": "(c) Carmelo López Abad, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 786289,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/988115/medium.JPG"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/543936733/large.jpg",
+    "credit": "(c) LI TZU HSUAN, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 301845247,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/543936733/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/446898479/large.jpeg",
+    "credit": "(c) aloony, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 249943000,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/446898479/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/590473114/large.jpg",
+    "credit": "(c) morkvonork, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 326065956,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/590473114/medium.jpg"
+   }
+  ],
+  "subfamily": "Ornithoctoninae",
+  "summary": "Cyriopagopus is a genus of spiders in the family Theraphosidae (tarantulas) found in Southeast Asia, from Myanmar to the Philippines. As of March 2017, the genus includes species formerly placed in Haplopelma.",
+  "wiki": "https://en.wikipedia.org/wiki/Haplopelma",
+  "wild_in": [
+   "Malaysia",
+   "Indonesia"
+  ]
+ },
  "haplopelma sp. nhen dep": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -15714,6 +15993,92 @@
   "subfamily": "Harpactirinae",
   "summary": "Harpactira pulchripes is a bright yellow bodied and metallic blue legged tarantula found in South Africa. It is a very highly desired tarantula in the European and American tarantula keeping hobby.",
   "wiki": "http://en.wikipedia.org/wiki/Harpactira_pulchripes",
+  "wild_in": [
+   "South Africa"
+  ]
+ },
+ "harpactira sp. golden": {
+  "common_en": "Common Baboon Spiders",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 334630,
+  "inat_name": "Harpactira",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/240974764/large.jpg",
+    "credit": "(c) Odette Curtis, some rights reserved (CC BY-NC), uploaded by Odette Curtis",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/240974764/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/240974775/large.jpg",
+    "credit": "(c) Odette Curtis, some rights reserved (CC BY-NC), uploaded by Odette Curtis",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/240974775/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/237103319/large.jpg",
+    "credit": "(c) Rudolph Steenkamp, some rights reserved (CC BY-SA), uploaded by Rudolph Steenkamp",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/237103319/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/11747767/large.jpeg",
+    "credit": "(c) Alex Rebelo, some rights reserved (CC BY-NC), uploaded by Alex Rebelo",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/11747767/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/290257966/large.jpg",
+    "credit": "(c) Paul Bester, some rights reserved (CC BY-NC), uploaded by Paul Bester",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/290257966/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/262005807/large.jpg",
+    "credit": "(c) Paul Bester, some rights reserved (CC BY-NC), uploaded by Paul Bester",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/262005807/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/11170534/large.jpeg",
+    "credit": "(c) Alex Rebelo, some rights reserved (CC BY-NC), uploaded by Alex Rebelo",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/11170534/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/157647973/large.jpeg",
+    "credit": "(c) Jessica Myburgh, some rights reserved (CC BY-NC), uploaded by Jessica Myburgh",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/157647973/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59553751/large.jpeg",
+    "credit": "(c) johnharoldwilson, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59553751/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/281679242/large.jpeg",
+    "credit": "(c) Sakieldien, some rights reserved (CC BY-NC), uploaded by Sakieldien",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/281679242/medium.jpeg"
+   }
+  ],
+  "subfamily": "Harpactirinae",
+  "summary": "Harpactira is a genus of spider in the family Theraphosidae (tarantulas), found in southern Africa.",
+  "wiki": "https://en.wikipedia.org/wiki/Harpactira",
   "wild_in": [
    "South Africa"
   ]
@@ -16835,6 +17200,10 @@
    "Brazil",
    "French Guiana"
   ]
+ },
+ "homeomma chilensis": {
+  "fetched": "2026-11-19",
+  "level": null
  },
  "homoeomma chilensis": {
   "common_en": "Dwarf Chilean Flame Tarantula",
@@ -18063,6 +18432,96 @@
    "Brazil"
   ]
  },
+ "lasiodora sertaneja": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 1521373,
+  "inat_name": "Lasiodora sertaneja",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/181585599/large.jpeg",
+    "credit": "(c) Pedro H. Martins, some rights reserved (CC BY-NC), uploaded by Pedro H. Martins",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/181585599/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/181585626/large.jpeg",
+    "credit": "(c) Pedro H. Martins, some rights reserved (CC BY-NC), uploaded by Pedro H. Martins",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/181585626/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/147686428/large.jpeg",
+    "credit": "(c) Ívis Lorran, some rights reserved (CC BY-NC), uploaded by Ívis Lorran",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/147686428/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/112167459/large.jpg",
+    "credit": "(c) Roberto De Oliveira Silva, some rights reserved (CC BY-NC), uploaded by Roberto De Oliveira Silva",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/112167459/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/83254965/large.jpeg",
+    "credit": "(c) Ivan L. F. Magalhaes, some rights reserved (CC BY-NC), uploaded by Ivan L. F. Magalhaes",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/83254965/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/183820212/large.jpeg",
+    "credit": "(c) Pedro H. Martins, some rights reserved (CC BY-NC), uploaded by Pedro H. Martins",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/183820212/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/600881896/large.jpg",
+    "credit": "(c) Fabricio Carvalho da Silva, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 331255018,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/600881896/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/36835094/large.jpeg",
+    "credit": "(c) grazielle, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 23806620,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/36835094/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/759240877/large.jpg",
+    "credit": "(c) Igor R., some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 412601572,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/759240877/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/343306440/large.jpg",
+    "credit": "(c) Celso Henrique Varela Rios, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 195184998,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/343306440/medium.jpg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": [
+   "Brazil"
+  ]
+ },
  "lasiodora striatipes": {
   "common_en": "Bahia Gray Birdeater",
   "family": "Theraphosidae",
@@ -18090,6 +18549,96 @@
   "summary": "",
   "wiki": null,
   "wild_in": []
+ },
+ "lasiodora subcanens": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 782144,
+  "inat_name": "Lasiodora subcanens",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/731768700/large.jpg",
+    "credit": "(c) henio, some rights reserved (CC BY-NC), uploaded by henio",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/731768700/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/62232687/large.jpeg",
+    "credit": "(c) Alexandre S. Michelotto, some rights reserved (CC BY-SA), uploaded by Alexandre S. Michelotto",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/62232687/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/206717408/large.jpeg",
+    "credit": "(c) fabricio_reis_costa, some rights reserved (CC BY-NC), uploaded by fabricio_reis_costa",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/206717408/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/107086278/large.jpeg",
+    "credit": "(c) Pedro H. Martins, some rights reserved (CC BY-NC), uploaded by Pedro H. Martins",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/107086278/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/247935078/large.jpg",
+    "credit": "(c) fabricio_reis_costa, some rights reserved (CC BY-NC), uploaded by fabricio_reis_costa",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/247935078/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/29086567/large.jpeg",
+    "credit": "(c) Alexandre S. Michelotto, some rights reserved (CC BY-SA), uploaded by Alexandre S. Michelotto",
+    "from": "inat",
+    "license": "CC-BY-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/29086567/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/112614508/large.jpg",
+    "credit": "(c) victrlirio, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 69412078,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/112614508/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/493198673/large.jpeg",
+    "credit": "(c) Isabela, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 274324549,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/493198673/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/445524008/large.jpeg",
+    "credit": "(c) Gabriel Hilario Cassimiro, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 249252716,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/445524008/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/454687608/large.jpeg",
+    "credit": "(c) biothomes, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 253902740,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/454687608/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Lasiodora subcanens is a tarantula endemic to Brazil. The name \"subcanens\" refers to the greyish hairs through the tarantula's body.",
+  "wiki": "https://en.wikipedia.org/wiki/Lasiodora subcanens",
+  "wild_in": [
+   "Brazil"
+  ]
  },
  "lasiodorides polycuspulatus": {
   "common_en": null,
@@ -18120,6 +18669,75 @@
   "summary": "",
   "wiki": null,
   "wild_in": []
+ },
+ "lasiodorides striatus": {
+  "common_en": "Peruvian Orange-stripe Tarantula",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 715012,
+  "inat_name": "Lasiodorides striatus",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/544321355/large.jpg",
+    "credit": "(c) Markus Ackermann, some rights reserved (CC BY-NC), uploaded by Markus Ackermann",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/544321355/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/202101517/large.jpeg",
+    "credit": "(c) Roger G. Barboza Castro, some rights reserved (CC BY-NC), uploaded by Roger G. Barboza Castro",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/202101517/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/19008828/large.jpeg",
+    "credit": "(c) Thorsten Usée, some rights reserved (CC BY-NC), uploaded by Thorsten Usée",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/19008828/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/544321261/large.jpg",
+    "credit": "(c) Markus Ackermann, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 302041043,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/544321261/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/126656106/large.jpeg",
+    "credit": "no rights reserved",
+    "from": "inat",
+    "license": "CC0",
+    "obs": 77444053,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/126656106/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/370623794/large.jpg",
+    "credit": "(c) Danny Lawrence, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 209431906,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/370623794/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/203229197/large.jpeg",
+    "credit": "(c) María Cristina Córdova, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 120177899,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/203229197/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": [
+   "Peru"
+  ]
  },
  "linothele fallax": {
   "common_en": null,
@@ -18665,6 +19283,129 @@
    "Spain",
    "Portugal",
    "France"
+  ]
+ },
+ "macrothele sp. thailand thai": {
+  "common_en": null,
+  "family": "Macrothelidae",
+  "fetched": "2026-11-19",
+  "inat_id": 89691,
+  "inat_name": "Macrothele",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/173605012/large.jpg",
+    "credit": "(c) Marc Domènech, some rights reserved (CC BY-NC), uploaded by Marc Domènech",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/173605012/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/110282026/large.jpeg",
+    "credit": "(c) fotis-samaritakis, some rights reserved (CC BY-NC), uploaded by fotis-samaritakis",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/110282026/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/110282019/large.jpeg",
+    "credit": "(c) fotis-samaritakis, some rights reserved (CC BY-NC), uploaded by fotis-samaritakis",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/110282019/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/110282044/large.jpeg",
+    "credit": "(c) fotis-samaritakis, some rights reserved (CC BY-NC), uploaded by fotis-samaritakis",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/110282044/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/110282033/large.jpeg",
+    "credit": "(c) fotis-samaritakis, some rights reserved (CC BY-NC), uploaded by fotis-samaritakis",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/110282033/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/110282038/large.jpeg",
+    "credit": "(c) fotis-samaritakis, some rights reserved (CC BY-NC), uploaded by fotis-samaritakis",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/110282038/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/459613800/large.jpg",
+    "credit": "(c) mjdp, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 256356171,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/459613800/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/620647230/large.jpg",
+    "credit": "(c) b3ugaz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 340991778,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/620647230/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/746576935/large.jpg",
+    "credit": "(c) Diego González Dopico, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 406363890,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/746576935/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/17829728/large.jpeg",
+    "credit": "(c) Stan van Remmerden, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 12374802,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/17829728/medium.jpeg"
+   }
+  ],
+  "subfamily": null,
+  "summary": "",
+  "wiki": null,
+  "wild_in": [
+   "Spain",
+   "Portugal",
+   "France"
+  ]
+ },
+ "magnacrus taynguyenensis": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 1646466,
+  "inat_name": "Magnacrus taynguyenensis",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/409674797/large.jpeg",
+    "credit": "(c) ntxkhanh, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/409674797/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/450568885/large.jpeg",
+    "credit": "(c) Phan Vũ Phúc Lân, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 251774808,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/450568885/medium.jpeg"
+   }
+  ],
+  "subfamily": "Ornithoctoninae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": [
+   "Vietnam"
   ]
  },
  "magnacrus tongmianensis": {
@@ -20676,6 +21417,98 @@
    "China"
   ]
  },
+ "ornithoctoninae sp. ho chi": {
+  "common_en": "Southeast Asian Tarantulas",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 808274,
+  "inat_name": "Ornithoctoninae",
+  "level": "subfamily",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/354143073/large.jpeg",
+    "credit": "(c) Haocong_Cat, some rights reserved (CC BY-NC), uploaded by Haocong_Cat",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/354143073/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/355337616/large.jpeg",
+    "credit": "(c) fachrynurmallojr, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/355337616/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/352740001/large.jpeg",
+    "credit": "(c) salawinws, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/352740001/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/259646446/large.jpeg",
+    "credit": "(c) Vojtěch Víta, some rights reserved (CC BY-NC), uploaded by Vojtěch Víta",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/259646446/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/357786291/large.jpeg",
+    "credit": "(c) arternesverden, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/357786291/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/253886069/large.jpg",
+    "credit": "(c) Vojtěch Víta, some rights reserved (CC BY-NC), uploaded by Vojtěch Víta",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/253886069/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/340430043/large.jpg",
+    "credit": "(c) Isaac Krone, some rights reserved (CC BY), uploaded by Isaac Krone",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/340430043/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/233432929/large.jpeg",
+    "credit": "(c) Ng Yu Fei, some rights reserved (CC BY-NC), uploaded by Ng Yu Fei",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/233432929/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/458254473/large.jpg",
+    "credit": "(c) Melvyn Yeo, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 255682552,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/458254473/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/389524048/large.jpg",
+    "credit": "(c) https://www.biodiversitysingapore.com/, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 220034491,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/389524048/medium.jpg"
+   }
+  ],
+  "subfamily": null,
+  "summary": "The Ornithoctoninae, also known as earth tigers, are a subfamily of Asian tarantulas, which were first erected in 1895 by Reginald Innes Pocock on basis of the genotype Ornithoctonus andersoni described in 1892 from former Burma, now Myanmar.",
+  "wiki": "http://en.wikipedia.org/wiki/Ornithoctoninae",
+  "wild_in": [
+   "Thailand",
+   "China",
+   "Singapore",
+   "Malaysia",
+   "Indonesia"
+  ]
+ },
  "ornithoctoninae sp. ho chi minh": {
   "common_en": "Southeast Asian Tarantulas",
   "family": "Theraphosidae",
@@ -20772,6 +21605,98 @@
   "common_en": "Southeast Asian Tarantulas",
   "family": "Theraphosidae",
   "fetched": "2026-11-17",
+  "inat_id": 808274,
+  "inat_name": "Ornithoctoninae",
+  "level": "subfamily",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/354143073/large.jpeg",
+    "credit": "(c) Haocong_Cat, some rights reserved (CC BY-NC), uploaded by Haocong_Cat",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/354143073/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/355337616/large.jpeg",
+    "credit": "(c) fachrynurmallojr, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/355337616/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/352740001/large.jpeg",
+    "credit": "(c) salawinws, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/352740001/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/259646446/large.jpeg",
+    "credit": "(c) Vojtěch Víta, some rights reserved (CC BY-NC), uploaded by Vojtěch Víta",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/259646446/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/357786291/large.jpeg",
+    "credit": "(c) arternesverden, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/357786291/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/253886069/large.jpg",
+    "credit": "(c) Vojtěch Víta, some rights reserved (CC BY-NC), uploaded by Vojtěch Víta",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/253886069/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/340430043/large.jpg",
+    "credit": "(c) Isaac Krone, some rights reserved (CC BY), uploaded by Isaac Krone",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/340430043/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/233432929/large.jpeg",
+    "credit": "(c) Ng Yu Fei, some rights reserved (CC BY-NC), uploaded by Ng Yu Fei",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/233432929/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/458254473/large.jpg",
+    "credit": "(c) Melvyn Yeo, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 255682552,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/458254473/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/389524048/large.jpg",
+    "credit": "(c) https://www.biodiversitysingapore.com/, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 220034491,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/389524048/medium.jpg"
+   }
+  ],
+  "subfamily": null,
+  "summary": "The Ornithoctoninae, also known as earth tigers, are a subfamily of Asian tarantulas, which were first erected in 1895 by Reginald Innes Pocock on basis of the genotype Ornithoctonus andersoni described in 1892 from former Burma, now Myanmar.",
+  "wiki": "http://en.wikipedia.org/wiki/Ornithoctoninae",
+  "wild_in": [
+   "Thailand",
+   "China",
+   "Singapore",
+   "Malaysia",
+   "Indonesia"
+  ]
+ },
+ "ornithoctoninae sp. mindanao oriental": {
+  "common_en": "Southeast Asian Tarantulas",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
   "inat_id": 808274,
   "inat_name": "Ornithoctoninae",
   "level": "subfamily",
@@ -21412,6 +22337,98 @@
    "Indonesia"
   ]
  },
+ "ornithoctoninae sp. vietnam highland": {
+  "common_en": "Southeast Asian Tarantulas",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 808274,
+  "inat_name": "Ornithoctoninae",
+  "level": "subfamily",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/354143073/large.jpeg",
+    "credit": "(c) Haocong_Cat, some rights reserved (CC BY-NC), uploaded by Haocong_Cat",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/354143073/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/355337616/large.jpeg",
+    "credit": "(c) fachrynurmallojr, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/355337616/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/352740001/large.jpeg",
+    "credit": "(c) salawinws, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/352740001/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/259646446/large.jpeg",
+    "credit": "(c) Vojtěch Víta, some rights reserved (CC BY-NC), uploaded by Vojtěch Víta",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/259646446/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/357786291/large.jpeg",
+    "credit": "(c) arternesverden, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/357786291/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/253886069/large.jpg",
+    "credit": "(c) Vojtěch Víta, some rights reserved (CC BY-NC), uploaded by Vojtěch Víta",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/253886069/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/340430043/large.jpg",
+    "credit": "(c) Isaac Krone, some rights reserved (CC BY), uploaded by Isaac Krone",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/340430043/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/233432929/large.jpeg",
+    "credit": "(c) Ng Yu Fei, some rights reserved (CC BY-NC), uploaded by Ng Yu Fei",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/233432929/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/458254473/large.jpg",
+    "credit": "(c) Melvyn Yeo, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 255682552,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/458254473/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/389524048/large.jpg",
+    "credit": "(c) https://www.biodiversitysingapore.com/, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 220034491,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/389524048/medium.jpg"
+   }
+  ],
+  "subfamily": null,
+  "summary": "The Ornithoctoninae, also known as earth tigers, are a subfamily of Asian tarantulas, which were first erected in 1895 by Reginald Innes Pocock on basis of the genotype Ornithoctonus andersoni described in 1892 from former Burma, now Myanmar.",
+  "wiki": "http://en.wikipedia.org/wiki/Ornithoctoninae",
+  "wild_in": [
+   "Thailand",
+   "China",
+   "Singapore",
+   "Malaysia",
+   "Indonesia"
+  ]
+ },
  "ornithoctoninae sp. vietnam silver": {
   "common_en": "Southeast Asian Tarantulas",
   "family": "Theraphosidae",
@@ -21503,6 +22520,10 @@
    "Malaysia",
    "Indonesia"
   ]
+ },
+ "ornithoctoninane sp. phan cay red": {
+  "fetched": "2026-11-19",
+  "level": null
  },
  "ornithoctonus aureotibialis": {
   "common_en": "Thai Golden Fringe Tarantula",
@@ -22336,6 +23357,150 @@
    "Brazil"
   ]
  },
+ "pamphobeteus affinis": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 147064,
+  "inat_name": "Pamphobeteus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/large.jpeg",
+    "credit": "(c) JDLS, some rights reserved (CC BY-NC), uploaded by JDLS",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/large.jpg",
+    "credit": "(c) John, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/large.jpeg",
+    "credit": "(c) Club de Observadores de Aves de Venecia, some rights reserved (CC BY-NC), uploaded by Club de Observadores de Aves de Venecia",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/large.jpg",
+    "credit": "(c) Jared Shorma, some rights reserved (CC BY), uploaded by Jared Shorma",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/large.jpeg",
+    "credit": "(c) lauracamacho32, some rights reserved (CC BY-NC), uploaded by lauracamacho32",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/large.jpeg",
+    "credit": "(c) andraescholz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 154563434,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Pamphobeteus is a genus of tarantulas (family Theraphosidae) native to northwestern South America: Colombia, Ecuador, Peru, Bolivia and Brazil. It includes some of the largest spiders in the world. Pamphobeteus was first believed to be a member of the genus Lasidora, but was later distinguished by the lack of scopulae on the inferior side of the first leg femur and the differences in the organ for stridulation.",
+  "wiki": "https://en.wikipedia.org/wiki/Pamphobeteus",
+  "wild_in": [
+   "Colombia",
+   "Ecuador",
+   "Peru",
+   "Brazil"
+  ]
+ },
+ "pamphobeteus insignis": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 508335,
+  "inat_name": "Pamphobeteus insignis",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/large.jpeg",
+    "credit": "(c) JDLS, some rights reserved (CC BY-NC), uploaded by JDLS",
+    "from": "inat",
+    "genus": "Pamphobeteus",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/large.jpg",
+    "credit": "(c) John, some rights reserved (CC BY)",
+    "from": "inat",
+    "genus": "Pamphobeteus",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "genus": "Pamphobeteus",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "genus": "Pamphobeteus",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/large.jpeg",
+    "credit": "(c) Club de Observadores de Aves de Venecia, some rights reserved (CC BY-NC), uploaded by Club de Observadores de Aves de Venecia",
+    "from": "inat",
+    "genus": "Pamphobeteus",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": []
+ },
  "pamphobeteus mascara": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -22513,10 +23678,460 @@
    "Ecuador"
   ]
  },
+ "pamphobeteus sp. antinous cordillera": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 147064,
+  "inat_name": "Pamphobeteus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/large.jpeg",
+    "credit": "(c) JDLS, some rights reserved (CC BY-NC), uploaded by JDLS",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/large.jpg",
+    "credit": "(c) John, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/large.jpeg",
+    "credit": "(c) Club de Observadores de Aves de Venecia, some rights reserved (CC BY-NC), uploaded by Club de Observadores de Aves de Venecia",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/large.jpg",
+    "credit": "(c) Jared Shorma, some rights reserved (CC BY), uploaded by Jared Shorma",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/large.jpeg",
+    "credit": "(c) lauracamacho32, some rights reserved (CC BY-NC), uploaded by lauracamacho32",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/large.jpeg",
+    "credit": "(c) andraescholz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 154563434,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Pamphobeteus is a genus of tarantulas (family Theraphosidae) native to northwestern South America: Colombia, Ecuador, Peru, Bolivia and Brazil. It includes some of the largest spiders in the world. Pamphobeteus was first believed to be a member of the genus Lasidora, but was later distinguished by the lack of scopulae on the inferior side of the first leg femur and the differences in the organ for stridulation.",
+  "wiki": "https://en.wikipedia.org/wiki/Pamphobeteus",
+  "wild_in": [
+   "Colombia",
+   "Ecuador",
+   "Peru",
+   "Brazil"
+  ]
+ },
  "pamphobeteus sp. arana polito": {
   "common_en": null,
   "family": "Theraphosidae",
   "fetched": "2026-11-17",
+  "inat_id": 147064,
+  "inat_name": "Pamphobeteus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/large.jpeg",
+    "credit": "(c) JDLS, some rights reserved (CC BY-NC), uploaded by JDLS",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/large.jpg",
+    "credit": "(c) John, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/large.jpeg",
+    "credit": "(c) Club de Observadores de Aves de Venecia, some rights reserved (CC BY-NC), uploaded by Club de Observadores de Aves de Venecia",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/large.jpg",
+    "credit": "(c) Jared Shorma, some rights reserved (CC BY), uploaded by Jared Shorma",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/large.jpeg",
+    "credit": "(c) lauracamacho32, some rights reserved (CC BY-NC), uploaded by lauracamacho32",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/large.jpeg",
+    "credit": "(c) andraescholz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 154563434,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Pamphobeteus is a genus of tarantulas (family Theraphosidae) native to northwestern South America: Colombia, Ecuador, Peru, Bolivia and Brazil. It includes some of the largest spiders in the world. Pamphobeteus was first believed to be a member of the genus Lasidora, but was later distinguished by the lack of scopulae on the inferior side of the first leg femur and the differences in the organ for stridulation.",
+  "wiki": "https://en.wikipedia.org/wiki/Pamphobeteus",
+  "wild_in": [
+   "Colombia",
+   "Ecuador",
+   "Peru",
+   "Brazil"
+  ]
+ },
+ "pamphobeteus sp. arana pollito": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 147064,
+  "inat_name": "Pamphobeteus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/large.jpeg",
+    "credit": "(c) JDLS, some rights reserved (CC BY-NC), uploaded by JDLS",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/large.jpg",
+    "credit": "(c) John, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/large.jpeg",
+    "credit": "(c) Club de Observadores de Aves de Venecia, some rights reserved (CC BY-NC), uploaded by Club de Observadores de Aves de Venecia",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/large.jpg",
+    "credit": "(c) Jared Shorma, some rights reserved (CC BY), uploaded by Jared Shorma",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/large.jpeg",
+    "credit": "(c) lauracamacho32, some rights reserved (CC BY-NC), uploaded by lauracamacho32",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/large.jpeg",
+    "credit": "(c) andraescholz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 154563434,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Pamphobeteus is a genus of tarantulas (family Theraphosidae) native to northwestern South America: Colombia, Ecuador, Peru, Bolivia and Brazil. It includes some of the largest spiders in the world. Pamphobeteus was first believed to be a member of the genus Lasidora, but was later distinguished by the lack of scopulae on the inferior side of the first leg femur and the differences in the organ for stridulation.",
+  "wiki": "https://en.wikipedia.org/wiki/Pamphobeteus",
+  "wild_in": [
+   "Colombia",
+   "Ecuador",
+   "Peru",
+   "Brazil"
+  ]
+ },
+ "pamphobeteus sp. coca orellana": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 147064,
+  "inat_name": "Pamphobeteus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/large.jpeg",
+    "credit": "(c) JDLS, some rights reserved (CC BY-NC), uploaded by JDLS",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/large.jpg",
+    "credit": "(c) John, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/large.jpeg",
+    "credit": "(c) Club de Observadores de Aves de Venecia, some rights reserved (CC BY-NC), uploaded by Club de Observadores de Aves de Venecia",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/large.jpg",
+    "credit": "(c) Jared Shorma, some rights reserved (CC BY), uploaded by Jared Shorma",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/large.jpeg",
+    "credit": "(c) lauracamacho32, some rights reserved (CC BY-NC), uploaded by lauracamacho32",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/large.jpeg",
+    "credit": "(c) andraescholz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 154563434,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Pamphobeteus is a genus of tarantulas (family Theraphosidae) native to northwestern South America: Colombia, Ecuador, Peru, Bolivia and Brazil. It includes some of the largest spiders in the world. Pamphobeteus was first believed to be a member of the genus Lasidora, but was later distinguished by the lack of scopulae on the inferior side of the first leg femur and the differences in the organ for stridulation.",
+  "wiki": "https://en.wikipedia.org/wiki/Pamphobeteus",
+  "wild_in": [
+   "Colombia",
+   "Ecuador",
+   "Peru",
+   "Brazil"
+  ]
+ },
+ "pamphobeteus sp. conani": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 147064,
+  "inat_name": "Pamphobeteus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/large.jpeg",
+    "credit": "(c) JDLS, some rights reserved (CC BY-NC), uploaded by JDLS",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/large.jpg",
+    "credit": "(c) John, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/large.jpeg",
+    "credit": "(c) Club de Observadores de Aves de Venecia, some rights reserved (CC BY-NC), uploaded by Club de Observadores de Aves de Venecia",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/large.jpg",
+    "credit": "(c) Jared Shorma, some rights reserved (CC BY), uploaded by Jared Shorma",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/large.jpeg",
+    "credit": "(c) lauracamacho32, some rights reserved (CC BY-NC), uploaded by lauracamacho32",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/large.jpeg",
+    "credit": "(c) andraescholz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 154563434,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Pamphobeteus is a genus of tarantulas (family Theraphosidae) native to northwestern South America: Colombia, Ecuador, Peru, Bolivia and Brazil. It includes some of the largest spiders in the world. Pamphobeteus was first believed to be a member of the genus Lasidora, but was later distinguished by the lack of scopulae on the inferior side of the first leg femur and the differences in the organ for stridulation.",
+  "wiki": "https://en.wikipedia.org/wiki/Pamphobeteus",
+  "wild_in": [
+   "Colombia",
+   "Ecuador",
+   "Peru",
+   "Brazil"
+  ]
+ },
+ "pamphobeteus sp. costa": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
   "inat_id": 147064,
   "inat_name": "Pamphobeteus",
   "level": "genus",
@@ -23413,6 +25028,96 @@
    "Brazil"
   ]
  },
+ "pamphobeteus sp. nigricolour ecuador": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 147064,
+  "inat_name": "Pamphobeteus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/large.jpeg",
+    "credit": "(c) JDLS, some rights reserved (CC BY-NC), uploaded by JDLS",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/large.jpg",
+    "credit": "(c) John, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/large.jpeg",
+    "credit": "(c) Club de Observadores de Aves de Venecia, some rights reserved (CC BY-NC), uploaded by Club de Observadores de Aves de Venecia",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/large.jpg",
+    "credit": "(c) Jared Shorma, some rights reserved (CC BY), uploaded by Jared Shorma",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/large.jpeg",
+    "credit": "(c) lauracamacho32, some rights reserved (CC BY-NC), uploaded by lauracamacho32",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/large.jpeg",
+    "credit": "(c) andraescholz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 154563434,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Pamphobeteus is a genus of tarantulas (family Theraphosidae) native to northwestern South America: Colombia, Ecuador, Peru, Bolivia and Brazil. It includes some of the largest spiders in the world. Pamphobeteus was first believed to be a member of the genus Lasidora, but was later distinguished by the lack of scopulae on the inferior side of the first leg femur and the differences in the organ for stridulation.",
+  "wiki": "https://en.wikipedia.org/wiki/Pamphobeteus",
+  "wild_in": [
+   "Colombia",
+   "Ecuador",
+   "Peru",
+   "Brazil"
+  ]
+ },
  "pamphobeteus sp. nopa": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -23507,6 +25212,96 @@
   "common_en": null,
   "family": "Theraphosidae",
   "fetched": "2026-11-17",
+  "inat_id": 147064,
+  "inat_name": "Pamphobeteus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/large.jpeg",
+    "credit": "(c) JDLS, some rights reserved (CC BY-NC), uploaded by JDLS",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/large.jpg",
+    "credit": "(c) John, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/large.jpeg",
+    "credit": "(c) Club de Observadores de Aves de Venecia, some rights reserved (CC BY-NC), uploaded by Club de Observadores de Aves de Venecia",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/large.jpg",
+    "credit": "(c) Jared Shorma, some rights reserved (CC BY), uploaded by Jared Shorma",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/large.jpeg",
+    "credit": "(c) lauracamacho32, some rights reserved (CC BY-NC), uploaded by lauracamacho32",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/large.jpeg",
+    "credit": "(c) andraescholz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 154563434,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Pamphobeteus is a genus of tarantulas (family Theraphosidae) native to northwestern South America: Colombia, Ecuador, Peru, Bolivia and Brazil. It includes some of the largest spiders in the world. Pamphobeteus was first believed to be a member of the genus Lasidora, but was later distinguished by the lack of scopulae on the inferior side of the first leg femur and the differences in the organ for stridulation.",
+  "wiki": "https://en.wikipedia.org/wiki/Pamphobeteus",
+  "wild_in": [
+   "Colombia",
+   "Ecuador",
+   "Peru",
+   "Brazil"
+  ]
+ },
+ "pamphobeteus sp. paisa": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
   "inat_id": 147064,
   "inat_name": "Pamphobeteus",
   "level": "genus",
@@ -23773,6 +25568,96 @@
    "Brazil"
   ]
  },
+ "pamphobeteus sp. platyomma brazilian": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
+  "inat_id": 147064,
+  "inat_name": "Pamphobeteus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/large.jpeg",
+    "credit": "(c) JDLS, some rights reserved (CC BY-NC), uploaded by JDLS",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/large.jpg",
+    "credit": "(c) John, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/large.jpeg",
+    "credit": "(c) Club de Observadores de Aves de Venecia, some rights reserved (CC BY-NC), uploaded by Club de Observadores de Aves de Venecia",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/large.jpg",
+    "credit": "(c) Jared Shorma, some rights reserved (CC BY), uploaded by Jared Shorma",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/large.jpeg",
+    "credit": "(c) lauracamacho32, some rights reserved (CC BY-NC), uploaded by lauracamacho32",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/large.jpeg",
+    "credit": "(c) andraescholz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 154563434,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Pamphobeteus is a genus of tarantulas (family Theraphosidae) native to northwestern South America: Colombia, Ecuador, Peru, Bolivia and Brazil. It includes some of the largest spiders in the world. Pamphobeteus was first believed to be a member of the genus Lasidora, but was later distinguished by the lack of scopulae on the inferior side of the first leg femur and the differences in the organ for stridulation.",
+  "wiki": "https://en.wikipedia.org/wiki/Pamphobeteus",
+  "wild_in": [
+   "Colombia",
+   "Ecuador",
+   "Peru",
+   "Brazil"
+  ]
+ },
  "pamphobeteus sp. red": {
   "common_en": null,
   "family": "Theraphosidae",
@@ -23867,6 +25752,96 @@
   "common_en": null,
   "family": "Theraphosidae",
   "fetched": "2026-11-17",
+  "inat_id": 147064,
+  "inat_name": "Pamphobeteus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/large.jpeg",
+    "credit": "(c) JDLS, some rights reserved (CC BY-NC), uploaded by JDLS",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/77283102/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/large.jpg",
+    "credit": "(c) John, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/170265/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743784/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196257/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/large.jpeg",
+    "credit": "(c) Club de Observadores de Aves de Venecia, some rights reserved (CC BY-NC), uploaded by Club de Observadores de Aves de Venecia",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/59712940/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/large.jpg",
+    "credit": "(c) Jared Shorma, some rights reserved (CC BY), uploaded by Jared Shorma",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/67968192/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/large.jpeg",
+    "credit": "(c) Juan David Rodriguez Hurtado, some rights reserved (CC BY-NC), uploaded by Juan David Rodriguez Hurtado",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/66196298/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/large.jpeg",
+    "credit": "(c) Daniel Felipe Martínez Suárez, some rights reserved (CC BY-NC), uploaded by Daniel Felipe Martínez Suárez",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46743754/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/large.jpeg",
+    "credit": "(c) lauracamacho32, some rights reserved (CC BY-NC), uploaded by lauracamacho32",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7709269/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/large.jpeg",
+    "credit": "(c) andraescholz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 154563434,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/267080727/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Pamphobeteus is a genus of tarantulas (family Theraphosidae) native to northwestern South America: Colombia, Ecuador, Peru, Bolivia and Brazil. It includes some of the largest spiders in the world. Pamphobeteus was first believed to be a member of the genus Lasidora, but was later distinguished by the lack of scopulae on the inferior side of the first leg femur and the differences in the organ for stridulation.",
+  "wiki": "https://en.wikipedia.org/wiki/Pamphobeteus",
+  "wild_in": [
+   "Colombia",
+   "Ecuador",
+   "Peru",
+   "Brazil"
+  ]
+ },
+ "pamphobeteus sp. solaris": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-19",
   "inat_id": 147064,
   "inat_name": "Pamphobeteus",
   "level": "genus",
