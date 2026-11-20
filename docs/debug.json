@@ -1,19 +1,4 @@
 {
- "Spider Farm": [
-  {
-   "url": "https://spiderfarm.co.uk/shop",
-   "title": "Tarantulas for Sale in the UK \u2014 Spider Farm",
-   "found": 567,
-   "frames": [
-    "https://spiderfarm.co.uk/shop",
-    "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LdDFQwjAAAAAPigEvvPgE",
-    "about:blank",
-    "about:blank"
-   ],
-   "pounds": 163,
-   "snippet": ""
-  }
- ],
  "Portsmouth Tarantulas": [
   {
    "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Slings-c27598628",
@@ -37,10 +22,10 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1",
     "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store?pageId=u3qgp&compId=TPASection_jdh04a5v&view",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store?lang=en&dateNumberFormat=en-us&isPrimaryLang",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
    ],
    "pounds": 0,
    "snippet": ""
@@ -52,10 +37,10 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Sub-Adults-c200038256",
     "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
-    "https://wix.ecwid.com/wix/app/store/Sub-Adults-c200038256?lang=en&dateNumberForm",
-    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
+    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
+    "https://wix.ecwid.com/wix/app/store/Sub-Adults-c200038256?pageId=u3qgp&compId=TP",
+    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
    ],
    "pounds": 0,
    "snippet": ""
@@ -112,10 +97,10 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Old-Worlds-c200035254",
     "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Old-Worlds-c200035254?pageId=u3qgp&compId=TP",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Old-Worlds-c200035254?lang=en&dateNumberForm",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
    ],
    "pounds": 0,
    "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
@@ -181,26 +166,43 @@
    "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
   }
  ],
- "Eight Legged Emporium": [
+ "So Many Legs": [
   {
-   "url": "https://eightleggedemporium.co.uk/emporium",
-   "title": "Tarantulas for Sale UK | Eight Legged Emporium",
-   "found": 45,
+   "url": "https://www.somanylegs.co.uk/tarantulas?page=5",
+   "title": "Tarantulas | Norfolk | So Many Legs Ltd",
+   "found": 85,
    "frames": [
-    "https://eightleggedemporium.co.uk/emporium"
+    "https://www.somanylegs.co.uk/tarantulas?page=5",
+    "https://wix-instantsearchplus-ssl.akamaized.net/wix_widget/wix_instantsearchplus"
    ],
-   "pounds": 51,
+   "pounds": 86,
    "snippet": ""
   },
   {
-   "url": "https://eightleggedemporium.co.uk/",
-   "title": "Captive-Bred Tarantulas for Sale UK | Eight Legged Emporium",
-   "found": 0,
+   "url": "https://www.somanylegs.co.uk/shop",
+   "title": "Other Spiders | So Many Legs Ltd | Essex",
+   "found": 2,
    "frames": [
-    "https://eightleggedemporium.co.uk/"
+    "https://www.somanylegs.co.uk/shop",
+    "https://wix-instantsearchplus-ssl.akamaized.net/wix_widget/wix_instantsearchplus"
    ],
-   "pounds": 12,
-   "snippet": "\n\nWe're heading into the colder months, so postage delays can happen as temperatures drop. Please keep an eye on your emails \u2014 we'll always notify you if your delivery is held back for the spiders' safety.\n\nNew In Stock\n\nThe latest captive-bred arrivals to join the emporium.\n\nNEW\nAkcaya Tree Tiger\n\n\u00a312.00\n\nNEW\nIquitos Dwarf Tarantula\n\n\u00a314.00\n\nNEW\nBrazilian Black Dwarf Beauty\n\n\u00a335.00\n\nNEW\nSander's Horned Baboon\n\n\u00a340.00\n\nNEW\nFire Red Pumpkin Patch\n\n\u00a315.00\n\nNEW\nEcuador Azul\n\n\u00a3115.00\n\nNEW\nMetallic Pinktoe Tarantula\n\n\u00a330.00\n\nNEW\nChilean Rose Hair \u2014 Red Colour Form\n\n\u00a340.00\n\nNEW\nGreater Horned Baboon"
+   "pounds": 3,
+   "snippet": ""
+  }
+ ],
+ "Spider Farm": [
+  {
+   "url": "https://spiderfarm.co.uk/shop",
+   "title": "Tarantulas for Sale in the UK \u2014 Spider Farm",
+   "found": 570,
+   "frames": [
+    "https://spiderfarm.co.uk/shop",
+    "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LdDFQwjAAAAAPigEvvPgE",
+    "about:blank",
+    "about:blank"
+   ],
+   "pounds": 166,
+   "snippet": ""
   }
  ],
  "Just One More": [
@@ -257,28 +259,26 @@
    "snippet": "Skip to Main Content\nSkip to Footer\nSkip to Navigation\n(0)\nHome\nShop\nContact us\nAbout Us\nShipping\n\nLove Invertebrates?\n\n\u00a0You\u2019re in the Right Place.\n\n\u00a0\n\nWelcome to Just One More\u2014your UK-based specialist shop for ethically captive-bred jumping spiders, tarantulas, and unique exotic invertebrates.\n\nWe perfectly bridge the gap between premium care and budget-friendly keeping. From vibrant jumping spiders and stunning tarantulas to our signature, adorable 3D-printed hideouts, we provide your next dream pet and the creative custom styling to bring their habitats to life\u2014all at a highly competitive p"
   }
  ],
- "So Many Legs": [
+ "Eight Legged Emporium": [
   {
-   "url": "https://www.somanylegs.co.uk/tarantulas?page=5",
-   "title": "Tarantulas | Norfolk | So Many Legs Ltd",
-   "found": 86,
+   "url": "https://eightleggedemporium.co.uk/emporium",
+   "title": "Tarantulas for Sale UK | Eight Legged Emporium",
+   "found": 45,
    "frames": [
-    "https://www.somanylegs.co.uk/tarantulas?page=5",
-    "https://wix-instantsearchplus-ssl.akamaized.net/wix_widget/wix_instantsearchplus"
+    "https://eightleggedemporium.co.uk/emporium"
    ],
-   "pounds": 87,
+   "pounds": 51,
    "snippet": ""
   },
   {
-   "url": "https://www.somanylegs.co.uk/shop",
-   "title": "Other Spiders | So Many Legs Ltd | Essex",
-   "found": 2,
+   "url": "https://eightleggedemporium.co.uk/",
+   "title": "Captive-Bred Tarantulas for Sale UK | Eight Legged Emporium",
+   "found": 0,
    "frames": [
-    "https://www.somanylegs.co.uk/shop",
-    "https://wix-instantsearchplus-ssl.akamaized.net/wix_widget/wix_instantsearchplus"
+    "https://eightleggedemporium.co.uk/"
    ],
-   "pounds": 3,
-   "snippet": ""
+   "pounds": 12,
+   "snippet": "\n\nWe're heading into the colder months, so postage delays can happen as temperatures drop. Please keep an eye on your emails \u2014 we'll always notify you if your delivery is held back for the spiders' safety.\n\nNew In Stock\n\nThe latest captive-bred arrivals to join the emporium.\n\nNEW\nAkcaya Tree Tiger\n\n\u00a312.00\n\nNEW\nIquitos Dwarf Tarantula\n\n\u00a314.00\n\nNEW\nBrazilian Black Dwarf Beauty\n\n\u00a335.00\n\nNEW\nSander's Horned Baboon\n\n\u00a340.00\n\nNEW\nFire Red Pumpkin Patch\n\n\u00a315.00\n\nNEW\nEcuador Azul\n\n\u00a3115.00\n\nNEW\nMetallic Pinktoe Tarantula\n\n\u00a330.00\n\nNEW\nChilean Rose Hair \u2014 Red Colour Form\n\n\u00a340.00\n\nNEW\nGreater Horned Baboon"
   }
  ],
  "Bugnut": [
@@ -453,14 +453,14 @@
   {
    "url": "https://www.exoticsatheart.com/shop/tarantulas/2?page=1&limit=180&sort_by=category_order&sort_order=asc",
    "title": "tarantulas | Exotic's @ Heart Ltd",
-   "found": 67,
+   "found": 66,
    "frames": [
     "https://www.exoticsatheart.com/shop/tarantulas/2?page=1&limit=180&sort_by=catego",
     "about:blank",
     "about:blank",
     "https://consentcdn.cookiebot.com/sdk/bc-v5.min.html"
    ],
-   "pounds": 154,
+   "pounds": 152,
    "snippet": ""
   },
   {
