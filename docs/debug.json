@@ -1,171 +1,4 @@
 {
- "Portsmouth Tarantulas": [
-  {
-   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Slings-c27598628",
-   "title": "Shop | Portsmouth Tarantulas",
-   "found": 27,
-   "frames": [
-    "https://www.portsmouthtarantulas.co.uk/shop-1/Slings-c27598628",
-    "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Slings-c27598628?pageId=u3qgp&compId=TPASect",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
-   ],
-   "pounds": 0,
-   "snippet": ""
-  },
-  {
-   "url": "https://www.portsmouthtarantulas.co.uk/shop-1",
-   "title": "Shop | Portsmouth Tarantulas",
-   "found": 3,
-   "frames": [
-    "https://www.portsmouthtarantulas.co.uk/shop-1",
-    "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store?pageId=u3qgp&compId=TPASection_jdh04a5v&view",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
-   ],
-   "pounds": 0,
-   "snippet": ""
-  },
-  {
-   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Sub-Adults-c200038256",
-   "title": "Shop | Portsmouth Tarantulas",
-   "found": 2,
-   "frames": [
-    "https://www.portsmouthtarantulas.co.uk/shop-1/Sub-Adults-c200038256",
-    "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
-    "https://wix.ecwid.com/wix/app/store/Sub-Adults-c200038256?lang=en&dateNumberForm",
-    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
-   ],
-   "pounds": 0,
-   "snippet": ""
-  },
-  {
-   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Females-c65002123",
-   "title": "Shop | Portsmouth Tarantulas",
-   "found": 1,
-   "frames": [
-    "https://www.portsmouthtarantulas.co.uk/shop-1/Females-c65002123",
-    "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Females-c65002123?pageId=u3qgp&compId=TPASec",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
-   ],
-   "pounds": 0,
-   "snippet": ""
-  },
-  {
-   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Males-c31298501",
-   "title": "Shop | Portsmouth Tarantulas",
-   "found": 1,
-   "frames": [
-    "https://www.portsmouthtarantulas.co.uk/shop-1/Males-c31298501",
-    "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
-    "https://wix.ecwid.com/wix/app/store/Males-c31298501?lang=en&dateNumberFormat=en-",
-    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
-   ],
-   "pounds": 0,
-   "snippet": ""
-  },
-  {
-   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Juveniles-c27598629",
-   "title": "Shop | Portsmouth Tarantulas",
-   "found": 23,
-   "frames": [
-    "https://www.portsmouthtarantulas.co.uk/shop-1/Juveniles-c27598629",
-    "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Juveniles-c27598629?pageId=u3qgp&compId=TPAS",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
-   ],
-   "pounds": 0,
-   "snippet": ""
-  },
-  {
-   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Old-Worlds-c200035254",
-   "title": "Shop | Portsmouth Tarantulas",
-   "found": 0,
-   "frames": [
-    "https://www.portsmouthtarantulas.co.uk/shop-1/Old-Worlds-c200035254",
-    "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Old-Worlds-c200035254?pageId=u3qgp&compId=TP",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
-   ],
-   "pounds": 0,
-   "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
-  },
-  {
-   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/New-Worlds-c200034004",
-   "title": "Shop | Portsmouth Tarantulas",
-   "found": 0,
-   "frames": [
-    "https://www.portsmouthtarantulas.co.uk/shop-1/New-Worlds-c200034004",
-    "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/New-Worlds-c200034004?pageId=u3qgp&compId=TP",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
-   ],
-   "pounds": 0,
-   "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
-  },
-  {
-   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Other-Inverts-c27598626",
-   "title": "Shop | Portsmouth Tarantulas",
-   "found": 0,
-   "frames": [
-    "https://www.portsmouthtarantulas.co.uk/shop-1/Other-Inverts-c27598626",
-    "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
-    "https://wix.ecwid.com/wix/app/store/Other-Inverts-c27598626?lang=en&dateNumberFo",
-    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
-   ],
-   "pounds": 0,
-   "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
-  },
-  {
-   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Starter-kits-&-equipment-c135169315",
-   "title": "Shop | Portsmouth Tarantulas",
-   "found": 0,
-   "frames": [
-    "https://www.portsmouthtarantulas.co.uk/shop-1/Starter-kits-&-equipment-c13516931",
-    "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
-    "https://wix.ecwid.com/wix/app/store/Starter-kits-&-equipment-c135169315?lang=en&",
-    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
-   ],
-   "pounds": 0,
-   "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
-  },
-  {
-   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Reptile-Supplies-c164576516",
-   "title": "Shop | Portsmouth Tarantulas",
-   "found": 0,
-   "frames": [
-    "https://www.portsmouthtarantulas.co.uk/shop-1/Reptile-Supplies-c164576516",
-    "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
-    "https://wix.ecwid.com/wix/app/store/Reptile-Supplies-c164576516?lang=en&dateNumb",
-    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
-   ],
-   "pounds": 0,
-   "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
-  }
- ],
  "So Many Legs": [
   {
    "url": "https://www.somanylegs.co.uk/tarantulas?page=5",
@@ -194,37 +27,15 @@
   {
    "url": "https://spiderfarm.co.uk/shop",
    "title": "Tarantulas for Sale in the UK \u2014 Spider Farm",
-   "found": 570,
+   "found": 571,
    "frames": [
     "https://spiderfarm.co.uk/shop",
     "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LdDFQwjAAAAAPigEvvPgE",
     "about:blank",
     "about:blank"
    ],
-   "pounds": 161,
+   "pounds": 163,
    "snippet": ""
-  }
- ],
- "Eight Legged Emporium": [
-  {
-   "url": "https://eightleggedemporium.co.uk/emporium",
-   "title": "Tarantulas for Sale UK | Eight Legged Emporium",
-   "found": 45,
-   "frames": [
-    "https://eightleggedemporium.co.uk/emporium"
-   ],
-   "pounds": 51,
-   "snippet": ""
-  },
-  {
-   "url": "https://eightleggedemporium.co.uk/",
-   "title": "Captive-Bred Tarantulas for Sale UK | Eight Legged Emporium",
-   "found": 0,
-   "frames": [
-    "https://eightleggedemporium.co.uk/"
-   ],
-   "pounds": 12,
-   "snippet": "\n\nWe're heading into the colder months, so postage delays can happen as temperatures drop. Please keep an eye on your emails \u2014 we'll always notify you if your delivery is held back for the spiders' safety.\n\nNew In Stock\n\nThe latest captive-bred arrivals to join the emporium.\n\nNEW\nAkcaya Tree Tiger\n\n\u00a312.00\n\nNEW\nIquitos Dwarf Tarantula\n\n\u00a314.00\n\nNEW\nBrazilian Black Dwarf Beauty\n\n\u00a335.00\n\nNEW\nSander's Horned Baboon\n\n\u00a340.00\n\nNEW\nFire Red Pumpkin Patch\n\n\u00a315.00\n\nNEW\nEcuador Azul\n\n\u00a3115.00\n\nNEW\nMetallic Pinktoe Tarantula\n\n\u00a330.00\n\nNEW\nChilean Rose Hair \u2014 Red Colour Form\n\n\u00a340.00\n\nNEW\nGreater Horned Baboon"
   }
  ],
  "Just One More": [
@@ -281,6 +92,194 @@
    "snippet": "Skip to Main Content\nSkip to Footer\nSkip to Navigation\n(0)\nHome\nShop\nContact us\nAbout Us\nShipping\n\nLove Invertebrates?\n\n\u00a0You\u2019re in the Right Place.\n\n\u00a0\n\nWelcome to Just One More\u2014your UK-based specialist shop for ethically captive-bred jumping spiders, tarantulas, and unique exotic invertebrates.\n\nWe perfectly bridge the gap between premium care and budget-friendly keeping. From vibrant jumping spiders and stunning tarantulas to our signature, adorable 3D-printed hideouts, we provide your next dream pet and the creative custom styling to bring their habitats to life\u2014all at a highly competitive p"
   }
  ],
+ "Portsmouth Tarantulas": [
+  {
+   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Slings-c27598628",
+   "title": "Shop | Portsmouth Tarantulas",
+   "found": 27,
+   "frames": [
+    "https://www.portsmouthtarantulas.co.uk/shop-1/Slings-c27598628",
+    "about:blank",
+    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
+    "https://wix.ecwid.com/wix/app/store/Slings-c27598628?pageId=u3qgp&compId=TPASect",
+    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+   ],
+   "pounds": 0,
+   "snippet": ""
+  },
+  {
+   "url": "https://www.portsmouthtarantulas.co.uk/shop-1",
+   "title": "Shop | Portsmouth Tarantulas",
+   "found": 3,
+   "frames": [
+    "https://www.portsmouthtarantulas.co.uk/shop-1",
+    "about:blank",
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store?lang=en&dateNumberFormat=en-us&isPrimaryLang",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
+   ],
+   "pounds": 0,
+   "snippet": ""
+  },
+  {
+   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Sub-Adults-c200038256",
+   "title": "Shop | Portsmouth Tarantulas",
+   "found": 2,
+   "frames": [
+    "https://www.portsmouthtarantulas.co.uk/shop-1/Sub-Adults-c200038256",
+    "about:blank",
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Sub-Adults-c200038256?lang=en&dateNumberForm",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
+   ],
+   "pounds": 0,
+   "snippet": ""
+  },
+  {
+   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Females-c65002123",
+   "title": "Shop | Portsmouth Tarantulas",
+   "found": 1,
+   "frames": [
+    "https://www.portsmouthtarantulas.co.uk/shop-1/Females-c65002123",
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Females-c65002123?lang=en&dateNumberFormat=e",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
+   ],
+   "pounds": 0,
+   "snippet": ""
+  },
+  {
+   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Males-c31298501",
+   "title": "Shop | Portsmouth Tarantulas",
+   "found": 1,
+   "frames": [
+    "https://www.portsmouthtarantulas.co.uk/shop-1/Males-c31298501",
+    "about:blank",
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Males-c31298501?lang=en&dateNumberFormat=en-",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
+   ],
+   "pounds": 0,
+   "snippet": ""
+  },
+  {
+   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Juveniles-c27598629",
+   "title": "Shop | Portsmouth Tarantulas",
+   "found": 23,
+   "frames": [
+    "https://www.portsmouthtarantulas.co.uk/shop-1/Juveniles-c27598629",
+    "about:blank",
+    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
+    "https://wix.ecwid.com/wix/app/store/Juveniles-c27598629?pageId=u3qgp&compId=TPAS",
+    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+   ],
+   "pounds": 0,
+   "snippet": ""
+  },
+  {
+   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Old-Worlds-c200035254",
+   "title": "Shop | Portsmouth Tarantulas",
+   "found": 0,
+   "frames": [
+    "https://www.portsmouthtarantulas.co.uk/shop-1/Old-Worlds-c200035254",
+    "about:blank",
+    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
+    "https://wix.ecwid.com/wix/app/store/Old-Worlds-c200035254?pageId=u3qgp&compId=TP",
+    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+   ],
+   "pounds": 0,
+   "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
+  },
+  {
+   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/New-Worlds-c200034004",
+   "title": "Shop | Portsmouth Tarantulas",
+   "found": 0,
+   "frames": [
+    "https://www.portsmouthtarantulas.co.uk/shop-1/New-Worlds-c200034004",
+    "about:blank",
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/New-Worlds-c200034004?lang=en&dateNumberForm",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
+   ],
+   "pounds": 0,
+   "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
+  },
+  {
+   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Other-Inverts-c27598626",
+   "title": "Shop | Portsmouth Tarantulas",
+   "found": 0,
+   "frames": [
+    "https://www.portsmouthtarantulas.co.uk/shop-1/Other-Inverts-c27598626",
+    "about:blank",
+    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
+    "https://wix.ecwid.com/wix/app/store/Other-Inverts-c27598626?pageId=u3qgp&compId=",
+    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+   ],
+   "pounds": 0,
+   "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
+  },
+  {
+   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Starter-kits-&-equipment-c135169315",
+   "title": "Shop | Portsmouth Tarantulas",
+   "found": 0,
+   "frames": [
+    "https://www.portsmouthtarantulas.co.uk/shop-1/Starter-kits-&-equipment-c13516931",
+    "about:blank",
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Starter-kits-&-equipment-c135169315?lang=en&",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
+   ],
+   "pounds": 0,
+   "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
+  },
+  {
+   "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Reptile-Supplies-c164576516",
+   "title": "Shop | Portsmouth Tarantulas",
+   "found": 0,
+   "frames": [
+    "https://www.portsmouthtarantulas.co.uk/shop-1/Reptile-Supplies-c164576516",
+    "about:blank",
+    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
+    "https://wix.ecwid.com/wix/app/store/Reptile-Supplies-c164576516?pageId=u3qgp&com",
+    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+   ],
+   "pounds": 0,
+   "snippet": "Skip to Main Content\n\nDo you need your order later? - Leave a note at checkout and we\u2019ll delay shipping.\n\nSORRY, WE DO NOT SHIP TO NORTHERN IRELAND. Orders will be cancelled and refunds may take 14 working days.\n\nThe next show we are attending is: Southern invert show Nov 29th 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\nTHE NEXT SHOW WE ARE ATTENDING IS:\nSOUTHERN INVERT SHOW\nNOV 29TH 2026!\n\nHome\n\nShop\n\nContact\n\nFAQ\n\nMerchandise\n\nVideos & Reviews\n\nAbout Us\n\nReview us on\nTrust piolet\nA BIT ABOUT US\n\nPortsmouth tarantulas are a trendsetting Online & instore Pet Su"
+  }
+ ],
+ "Eight Legged Emporium": [
+  {
+   "url": "https://eightleggedemporium.co.uk/emporium",
+   "title": "Tarantulas for Sale UK | Eight Legged Emporium",
+   "found": 45,
+   "frames": [
+    "https://eightleggedemporium.co.uk/emporium"
+   ],
+   "pounds": 51,
+   "snippet": ""
+  },
+  {
+   "url": "https://eightleggedemporium.co.uk/",
+   "title": "Captive-Bred Tarantulas for Sale UK | Eight Legged Emporium",
+   "found": 0,
+   "frames": [
+    "https://eightleggedemporium.co.uk/"
+   ],
+   "pounds": 12,
+   "snippet": "\n\nWe're heading into the colder months, so postage delays can happen as temperatures drop. Please keep an eye on your emails \u2014 we'll always notify you if your delivery is held back for the spiders' safety.\n\nNew In Stock\n\nThe latest captive-bred arrivals to join the emporium.\n\nNEW\nAkcaya Tree Tiger\n\n\u00a312.00\n\nNEW\nIquitos Dwarf Tarantula\n\n\u00a314.00\n\nNEW\nBrazilian Black Dwarf Beauty\n\n\u00a335.00\n\nNEW\nSander's Horned Baboon\n\n\u00a340.00\n\nNEW\nFire Red Pumpkin Patch\n\n\u00a315.00\n\nNEW\nEcuador Azul\n\n\u00a3115.00\n\nNEW\nMetallic Pinktoe Tarantula\n\n\u00a330.00\n\nNEW\nChilean Rose Hair \u2014 Red Colour Form\n\n\u00a340.00\n\nNEW\nGreater Horned Baboon"
+  }
+ ],
  "Bugnut": [
   {
    "url": "https://www.bugnut.co.uk/shop",
@@ -321,7 +320,7 @@
   {
    "url": "https://www.bugnut.co.uk/s/shop",
    "title": "Bugnut Limited",
-   "found": 25,
+   "found": 24,
    "frames": [
     "https://www.bugnut.co.uk/s/shop",
     "about:blank",
@@ -330,42 +329,6 @@
    ],
    "pounds": 31,
    "snippet": ""
-  }
- ],
- "Ely Exotics": [
-  {
-   "url": "https://shop.elyexotics.co.uk/.well-known/captcha/?y=ipc:54.211.170.155:1795277123.925&r=%2Fproduct-category%2Flivestock%2F",
-   "title": "Robot Challenge Screen",
-   "found": 0,
-   "frames": [
-    "https://shop.elyexotics.co.uk/.well-known/captcha/?y=ipc:54.211.170.155:17952771"
-   ],
-   "pounds": 0,
-   "snippet": "Our system thinks you might be a robot!\n\nWe're really sorry about this, but it's getting harder and harder to tell the difference between humans and bots these days.\n\nPlease complete the captcha below to prove you're a human and proceed to the page you're trying to reach.\n\n\u00a0\n \n\n\nThis page requires cookies to be enabled in your browser settings. Please check this setting and enable cookies (if disabled). sid:343"
-  },
-  {
-   "url": "https://shop.elyexotics.co.uk/.well-known/captcha/?y=ipc:54.211.170.155:1795277146.568&r=%2F",
-   "title": "Robot Challenge Screen",
-   "found": 0,
-   "frames": [
-    "https://shop.elyexotics.co.uk/.well-known/captcha/?y=ipc:54.211.170.155:17952771"
-   ],
-   "pounds": 0,
-   "snippet": "Our system thinks you might be a robot!\n\nWe're really sorry about this, but it's getting harder and harder to tell the difference between humans and bots these days.\n\nPlease complete the captcha below to prove you're a human and proceed to the page you're trying to reach.\n\n\u00a0\n \n\n\nThis page requires cookies to be enabled in your browser settings. Please check this setting and enable cookies (if disabled). sid:343"
-  },
-  {
-   "url": "https://shop.elyexotics.co.uk/.well-known/captcha/?y=ipc:54.211.170.155:1795277146.568&r=%2F#",
-   "title": "Robot Challenge Screen",
-   "found": 0,
-   "frames": [
-    "https://shop.elyexotics.co.uk/.well-known/captcha/?y=ipc:54.211.170.155:17952771"
-   ],
-   "pounds": 0,
-   "snippet": "Our system thinks you might be a robot!\n\nWe're really sorry about this, but it's getting harder and harder to tell the difference between humans and bots these days.\n\nPlease complete the captcha below to prove you're a human and proceed to the page you're trying to reach.\n\n\u00a0\n \n\n\nThis page requires cookies to be enabled in your browser settings. Please check this setting and enable cookies (if disabled). sid:343"
-  },
-  {
-   "url": "https://shop.elyexotics.co.uk/.well-known/captcha/343/botdetect/?y=ipc:54.211.170.155:1795277146.568&get=sound&c=bd_captcha&t=ae88bd24f2970d9809c4e9fc11a8f117&sid=343&s=c13ebf63e7e8df8031abbcdf5bea18eb",
-   "error": "Page.goto: Download is starting\nCall log:\n  - navigating to \"https://shop.elyexotics.co.uk/.well-known/captcha/343/botdetect/?y=ipc:54.211.170.155:1795277146.568&get=sound&c=bd_captcha&t=ae88bd24f2970"
   }
  ],
  "Swansea Spiders": [
