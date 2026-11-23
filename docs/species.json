@@ -4039,6 +4039,98 @@
    "Peru"
   ]
  },
+ "avicularia sp. shuariana ecuadorian": {
+  "common_en": "Pinktoe Tarantulas",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-23",
+  "inat_id": 68741,
+  "inat_name": "Avicularia",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/118217365/large.jpg",
+    "credit": "(c) Nomole, some rights reserved (CC BY-NC), uploaded by Nomole",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/118217365/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/443485967/large.jpg",
+    "credit": "(c) 昆虫学liuye, some rights reserved (CC BY-NC), uploaded by 昆虫学liuye",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/443485967/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/102909908/large.jpg",
+    "credit": "(c) Jean Martins, some rights reserved (CC BY), uploaded by Jean Martins",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102909908/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/386614155/large.jpeg",
+    "credit": "(c) Maël Dewynter, some rights reserved (CC BY-NC), uploaded by Maël Dewynter",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/386614155/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/256679969/large.jpg",
+    "credit": "(c) Kamal Mahabir, some rights reserved (CC BY-NC), uploaded by Kamal Mahabir",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/256679969/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/179484394/large.jpg",
+    "credit": "(c) James Steamer, some rights reserved (CC BY-NC), uploaded by James Steamer",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/179484394/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/177815349/large.jpg",
+    "credit": "(c) Marco Aurelio de Sena, some rights reserved (CC BY-NC), uploaded by Marco Aurelio de Sena",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/177815349/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/543109044/large.jpg",
+    "credit": "(c) https://doi.org/10.3897/zookeys.659.10717, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/543109044/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/175571669/large.jpg",
+    "credit": "(c) César Favacho, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 104740662,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/175571669/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/11465502/large.jpg",
+    "credit": "(c) Felix Fleck, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 8580867,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/11465502/medium.jpg"
+   }
+  ],
+  "subfamily": "Aviculariinae",
+  "summary": "Avicularia is a genus of the family Theraphosidae containing various species of tarantulas. The genus is native to tropical South America. Each species in the genus has very distinguishable pink foot pads.",
+  "wiki": "https://en.wikipedia.org/wiki/Avicularia",
+  "wild_in": [
+   "Brazil",
+   "Ecuador",
+   "Colombia",
+   "French Guiana",
+   "Peru"
+  ]
+ },
  "avicularia sp. urticans": {
   "common_en": "Pinktoe Tarantulas",
   "family": "Theraphosidae",
