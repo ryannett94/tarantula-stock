@@ -7,10 +7,10 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Slings-c27598628",
     "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Slings-c27598628?pageId=u3qgp&compId=TPASect",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Slings-c27598628?lang=en&dateNumberFormat=en",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
    ],
    "pounds": 0,
    "snippet": ""
@@ -22,10 +22,10 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1",
     "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store?pageId=u3qgp&compId=TPASection_jdh04a5v&view",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store?lang=en&dateNumberFormat=en-us&isPrimaryLang",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
    ],
    "pounds": 0,
    "snippet": ""
@@ -81,11 +81,10 @@
    "found": 23,
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/shop-1/Juveniles-c27598629",
-    "about:blank",
-    "https://wix.ecwid.com/wix/app/cart?pageId=u3qgp&compId=comp-molchea8&viewerCompI",
-    "https://wix.ecwid.com/wix/app/store/Juveniles-c27598629?pageId=u3qgp&compId=TPAS",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+    "https://wix.ecwid.com/wix/app/cart?lang=en&dateNumberFormat=en-us&isPrimaryLangu",
+    "https://wix.ecwid.com/wix/app/store/Juveniles-c27598629?lang=en&dateNumberFormat",
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
    ],
    "pounds": 0,
    "snippet": ""
@@ -205,28 +204,6 @@
    "snippet": ""
   }
  ],
- "Eight Legged Emporium": [
-  {
-   "url": "https://eightleggedemporium.co.uk/emporium",
-   "title": "Tarantulas for Sale UK | Eight Legged Emporium",
-   "found": 45,
-   "frames": [
-    "https://eightleggedemporium.co.uk/emporium"
-   ],
-   "pounds": 51,
-   "snippet": ""
-  },
-  {
-   "url": "https://eightleggedemporium.co.uk/",
-   "title": "Captive-Bred Tarantulas for Sale UK | Eight Legged Emporium",
-   "found": 0,
-   "frames": [
-    "https://eightleggedemporium.co.uk/"
-   ],
-   "pounds": 12,
-   "snippet": "\n\nWe're heading into the colder months, so postage delays can happen as temperatures drop. Please keep an eye on your emails \u2014 we'll always notify you if your delivery is held back for the spiders' safety.\n\nNew In Stock\n\nThe latest captive-bred arrivals to join the emporium.\n\nNEW\nAkcaya Tree Tiger\n\n\u00a312.00\n\nNEW\nIquitos Dwarf Tarantula\n\n\u00a314.00\n\nNEW\nBrazilian Black Dwarf Beauty\n\n\u00a335.00\n\nNEW\nSander's Horned Baboon\n\n\u00a340.00\n\nNEW\nFire Red Pumpkin Patch\n\n\u00a315.00\n\nNEW\nEcuador Azul\n\n\u00a3115.00\n\nNEW\nMetallic Pinktoe Tarantula\n\n\u00a330.00\n\nNEW\nChilean Rose Hair \u2014 Red Colour Form\n\n\u00a340.00\n\nNEW\nGreater Horned Baboon"
-  }
- ],
  "Just One More": [
   {
    "url": "https://www.justonemore.uk/shop/Jumping-spiders-c167146093/",
@@ -279,6 +256,28 @@
    ],
    "pounds": 0,
    "snippet": "Skip to Main Content\nSkip to Footer\nSkip to Navigation\n(0)\nHome\nShop\nContact us\nAbout Us\nShipping\n\nLove Invertebrates?\n\n\u00a0You\u2019re in the Right Place.\n\n\u00a0\n\nWelcome to Just One More\u2014your UK-based specialist shop for ethically captive-bred jumping spiders, tarantulas, and unique exotic invertebrates.\n\nWe perfectly bridge the gap between premium care and budget-friendly keeping. From vibrant jumping spiders and stunning tarantulas to our signature, adorable 3D-printed hideouts, we provide your next dream pet and the creative custom styling to bring their habitats to life\u2014all at a highly competitive p"
+  }
+ ],
+ "Eight Legged Emporium": [
+  {
+   "url": "https://eightleggedemporium.co.uk/emporium",
+   "title": "Tarantulas for Sale UK | Eight Legged Emporium",
+   "found": 44,
+   "frames": [
+    "https://eightleggedemporium.co.uk/emporium"
+   ],
+   "pounds": 50,
+   "snippet": ""
+  },
+  {
+   "url": "https://eightleggedemporium.co.uk/",
+   "title": "Captive-Bred Tarantulas for Sale UK | Eight Legged Emporium",
+   "found": 0,
+   "frames": [
+    "https://eightleggedemporium.co.uk/"
+   ],
+   "pounds": 12,
+   "snippet": "\n\nWe're heading into the colder months, so postage delays can happen as temperatures drop. Please keep an eye on your emails \u2014 we'll always notify you if your delivery is held back for the spiders' safety.\n\nNew In Stock\n\nThe latest captive-bred arrivals to join the emporium.\n\nNEW\nAkcaya Tree Tiger\n\n\u00a312.00\n\nNEW\nIquitos Dwarf Tarantula\n\n\u00a314.00\n\nNEW\nBrazilian Black Dwarf Beauty\n\n\u00a335.00\n\nNEW\nSander's Horned Baboon\n\n\u00a340.00\n\nNEW\nFire Red Pumpkin Patch\n\n\u00a315.00\n\nNEW\nEcuador Azul\n\n\u00a3115.00\n\nNEW\nChilean Rose Hair \u2014 Red Colour Form\n\n\u00a340.00\n\nNEW\nGreater Horned Baboon\n\n\u00a350.00\n\nNEW\nSanta Catalina Tarantula \u2014"
   }
  ],
  "Bugnut": [
