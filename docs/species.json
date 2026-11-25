@@ -11175,6 +11175,248 @@
    "Italy"
   ]
  },
+ "eresus illustris": {
+  "common_en": null,
+  "family": "Eresidae",
+  "fetched": "2026-11-25",
+  "inat_id": 62050,
+  "inat_name": "Eresus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546278/large.jpg",
+    "credit": "(c) Thomas Brown, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546278/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546269/large.jpg",
+    "credit": "(c) Marcello Consolo, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546269/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546272/large.jpg",
+    "credit": "(c) Marcello Consolo, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546272/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546285/large.jpg",
+    "credit": "(c) J. Gállego, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546285/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546268/large.jpg",
+    "credit": "(c) Carlos Galeano, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546268/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546277/large.jpg",
+    "credit": "(c) Thomas Brown, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546277/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546289/large.jpg",
+    "credit": "(c) Tone Killick, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546289/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546280/large.jpg",
+    "credit": "(c) Wim De Weerdt, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546280/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546273/large.jpg",
+    "credit": "(c) Alexandre Roux, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546273/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546276/large.jpg",
+    "credit": "(c) Federico Filipponi, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546276/medium.jpg"
+   }
+  ],
+  "subfamily": null,
+  "summary": "Eresus is a genus of velvet spiders comprising several species. Members of the genus formerly called Eresus cinnaberinus or Eresus niger are now placed in one of three species: Eresus kollari, Eresus sandaliatus and Eresus moravicus. All have been called \"ladybird spiders\".",
+  "wiki": "https://en.wikipedia.org/wiki/Eresus",
+  "wild_in": [
+   "Kazakhstan",
+   "Morocco",
+   "Germany",
+   "France",
+   "Italy"
+  ]
+ },
+ "eresus ruficapillus": {
+  "common_en": null,
+  "family": "Eresidae",
+  "fetched": "2026-11-25",
+  "inat_id": 513955,
+  "inat_name": "Eresus ruficapillus",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546278/large.jpg",
+    "credit": "(c) Thomas Brown, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "genus": "Eresus",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546278/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546269/large.jpg",
+    "credit": "(c) Marcello Consolo, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "genus": "Eresus",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546269/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546272/large.jpg",
+    "credit": "(c) Marcello Consolo, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "genus": "Eresus",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546272/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546285/large.jpg",
+    "credit": "(c) J. Gállego, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "genus": "Eresus",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546285/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546268/large.jpg",
+    "credit": "(c) Carlos Galeano, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "genus": "Eresus",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546268/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546277/large.jpg",
+    "credit": "(c) Thomas Brown, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "genus": "Eresus",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546277/medium.jpg"
+   }
+  ],
+  "subfamily": null,
+  "summary": "Eresus ruficapillus is a spider species found in Sicily and Croatia.",
+  "wiki": "http://en.wikipedia.org/wiki/Eresus_ruficapillus",
+  "wild_in": []
+ },
+ "eresus sp. orange ring": {
+  "common_en": null,
+  "family": "Eresidae",
+  "fetched": "2026-11-25",
+  "inat_id": 62050,
+  "inat_name": "Eresus",
+  "level": "genus",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546278/large.jpg",
+    "credit": "(c) Thomas Brown, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546278/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546269/large.jpg",
+    "credit": "(c) Marcello Consolo, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546269/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546272/large.jpg",
+    "credit": "(c) Marcello Consolo, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546272/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546285/large.jpg",
+    "credit": "(c) J. Gállego, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546285/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546268/large.jpg",
+    "credit": "(c) Carlos Galeano, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546268/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546277/large.jpg",
+    "credit": "(c) Thomas Brown, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546277/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546289/large.jpg",
+    "credit": "(c) Tone Killick, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546289/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546280/large.jpg",
+    "credit": "(c) Wim De Weerdt, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546280/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546273/large.jpg",
+    "credit": "(c) Alexandre Roux, some rights reserved (CC BY-NC-SA)",
+    "from": "inat",
+    "license": "CC-BY-NC-SA",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546273/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546276/large.jpg",
+    "credit": "(c) Federico Filipponi, some rights reserved (CC BY-NC-ND)",
+    "from": "inat",
+    "license": "CC-BY-NC-ND",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2546276/medium.jpg"
+   }
+  ],
+  "subfamily": null,
+  "summary": "Eresus is a genus of velvet spiders comprising several species. Members of the genus formerly called Eresus cinnaberinus or Eresus niger are now placed in one of three species: Eresus kollari, Eresus sandaliatus and Eresus moravicus. All have been called \"ladybird spiders\".",
+  "wiki": "https://en.wikipedia.org/wiki/Eresus",
+  "wild_in": [
+   "Kazakhstan",
+   "Morocco",
+   "Germany",
+   "France",
+   "Italy"
+  ]
+ },
  "eresus walckenaeri": {
   "common_en": null,
   "family": "Eresidae",
@@ -20185,6 +20427,29 @@
   "wiki": "https://en.wikipedia.org/wiki/Monocentropus balfouri",
   "wild_in": [
    "Yemen"
+  ]
+ },
+ "monocentropus lambertoni": {
+  "common_en": "Lamberton's Baboon Spider",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-25",
+  "inat_id": 633728,
+  "inat_name": "Monocentropus lambertoni",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/13403822/large.jpeg",
+    "credit": "(c) Landy Rita, some rights reserved (CC BY-NC), uploaded by Landy Rita",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/13403822/medium.jpeg"
+   }
+  ],
+  "subfamily": "Eumenophorinae",
+  "summary": "",
+  "wiki": null,
+  "wild_in": [
+   "Madagascar"
   ]
  },
  "neischnocolus cisnerosi": {
@@ -36134,6 +36399,193 @@
   "subfamily": "Theraphosinae",
   "summary": "Tliltocatl kahlenbergi (synonym Brachypelma kahlenbergi) is a species of spider in the family Theraphosidae (tarantulas), found in Mexico.",
   "wiki": "https://en.wikipedia.org/wiki/Tliltocatl_kahlenbergi",
+  "wild_in": [
+   "Mexico"
+  ]
+ },
+ "tliltocatl sabulosus": {
+  "common_en": "Guatemalan Red-rump Tarantula",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-25",
+  "inat_id": 1042047,
+  "inat_name": "Tliltocatl sabulosus",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/11448169/large.jpg",
+    "credit": "(c) Felix Fleck, some rights reserved (CC BY-NC), uploaded by Felix Fleck",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/11448169/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/115589959/large.jpeg",
+    "credit": "(c) Ricard Busquets Reverte, some rights reserved (CC BY), uploaded by Ricard Busquets Reverte",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/115589959/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2914154/large.jpg",
+    "credit": "(c) Corey Lange, some rights reserved (CC BY-NC), uploaded by Corey Lange",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2914154/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/208346831/large.jpeg",
+    "credit": "(c) Ricard Busquets Reverte, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 123015258,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/208346831/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/11448161/large.jpg",
+    "credit": "(c) Felix Fleck, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 8570064,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/11448161/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/210657198/large.jpeg",
+    "credit": "(c) Ricard Busquets Reverte, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 124294707,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/210657198/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/285528387/large.jpeg",
+    "credit": "(c) Ricard Busquets Reverte, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 165006302,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/285528387/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/168392300/large.jpeg",
+    "credit": "(c) Ricard Busquets Reverte, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 100866519,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/168392300/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/208156024/large.jpeg",
+    "credit": "(c) Ricard Busquets Reverte, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 122908727,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/208156024/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/171243785/large.jpeg",
+    "credit": "(c) Ricard Busquets Reverte, some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "obs": 102441851,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/171243785/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Tliltocatl sabulosus (synonym Brachypelma sabulosum) is a species of spider in the family Theraphosidae (tarantulas), found in Guatemala.",
+  "wiki": "https://en.wikipedia.org/wiki/Tliltocatl sabulosus",
+  "wild_in": [
+   "Guatemala",
+   "Mexico"
+  ]
+ },
+ "tliltocatl schroederi": {
+  "common_en": "Mexican Black Velvet Tarantula",
+  "family": "Theraphosidae",
+  "fetched": "2026-11-25",
+  "inat_id": 1042048,
+  "inat_name": "Tliltocatl schroederi",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/233305/large.jpg",
+    "credit": "(c) Iván Montes de Oca Cacheux, some rights reserved (CC BY-NC), uploaded by Iván Montes de Oca Cacheux",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/233305/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/8209945/large.jpeg",
+    "credit": "(c) Drymarchon Simón, some rights reserved (CC BY-NC), uploaded by Drymarchon Simón",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/8209945/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/26081409/large.jpeg",
+    "credit": "(c) Destino Trail, some rights reserved (CC BY), uploaded by Destino Trail",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/26081409/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/2443978/large.jpg",
+    "credit": "(c) victorchagoya, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 2007804,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/2443978/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/5517924/large.jpg",
+    "credit": "(c) León Felipe González Coronado, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 4571407,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/5517924/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/12042809/large.jpeg",
+    "credit": "(c) Diego E. Lozano-Carmona, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 8938748,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/12042809/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/460596213/large.jpeg",
+    "credit": "(c) Amanda Ruiz, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 256840357,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/460596213/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/4472832/large.jpeg",
+    "credit": "(c) Cecilia Pérez Domínguez, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 3824926,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/4472832/medium.jpeg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/44240360/large.jpg",
+    "credit": "(c) Tania Alhelí Cruz Mejía, some rights reserved (CC BY-NC)",
+    "from": "inat",
+    "license": "CC-BY-NC",
+    "obs": 28382578,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/44240360/medium.jpg"
+   },
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/464329931/large.jpeg",
+    "credit": "no rights reserved",
+    "from": "inat",
+    "license": "CC0",
+    "obs": 258754889,
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/464329931/medium.jpeg"
+   }
+  ],
+  "subfamily": "Theraphosinae",
+  "summary": "Tliltocatl schroederi (synonym Brachypelma schroederi) is a species of spiders in the family Theraphosidae (tarantulas), found in Mexico. It is found in the central valley in Oaxaca State, Mexico.",
+  "wiki": "https://en.wikipedia.org/wiki/Tliltocatl schroederi",
   "wild_in": [
    "Mexico"
   ]
