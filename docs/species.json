@@ -36863,6 +36863,27 @@
    "Mexico"
   ]
  },
+ "typhochlaena costae": {
+  "common_en": null,
+  "family": "Theraphosidae",
+  "fetched": "2026-11-26",
+  "inat_id": 836412,
+  "inat_name": "Typhochlaena costae",
+  "level": "species",
+  "photos": [
+   {
+    "big": "https://inaturalist-open-data.s3.amazonaws.com/photos/56743268/large.jpg",
+    "credit": "(c) \nRog�rio Bertani (2012), some rights reserved (CC BY)",
+    "from": "inat",
+    "license": "CC-BY",
+    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/56743268/medium.jpg"
+   }
+  ],
+  "subfamily": "Aviculariinae",
+  "summary": "Typhochlaena costae is a species of tarantula in the family Theraphosidae, subfamily Aviculariinae. It is native to Palmas, Tocantins state, Brazil. The species shows an arboreal trapdoor lifestyle.",
+  "wiki": "https://en.wikipedia.org/wiki/Typhochlaena costae",
+  "wild_in": []
+ },
  "typhochlaena seladonia": {
   "common_en": "Brazilian Jewel Tarantula",
   "family": "Theraphosidae",
