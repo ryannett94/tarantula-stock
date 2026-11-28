@@ -1,4 +1,28 @@
 {
+ "So Many Legs": [
+  {
+   "url": "https://www.somanylegs.co.uk/tarantulas?page=5",
+   "title": "Tarantulas | Norfolk | So Many Legs Ltd",
+   "found": 77,
+   "frames": [
+    "https://www.somanylegs.co.uk/tarantulas?page=5",
+    "https://wix-instantsearchplus-ssl.akamaized.net/wix_widget/wix_instantsearchplus"
+   ],
+   "pounds": 78,
+   "snippet": ""
+  },
+  {
+   "url": "https://www.somanylegs.co.uk/shop",
+   "title": "Other Spiders | So Many Legs Ltd | Essex",
+   "found": 2,
+   "frames": [
+    "https://www.somanylegs.co.uk/shop",
+    "https://wix-instantsearchplus-ssl.akamaized.net/wix_widget/wix_instantsearchplus"
+   ],
+   "pounds": 3,
+   "snippet": ""
+  }
+ ],
  "Portsmouth Tarantulas": [
   {
    "url": "https://www.portsmouthtarantulas.co.uk/shop-1/Slings-c27598628",
@@ -48,8 +72,8 @@
    "frames": [
     "https://www.portsmouthtarantulas.co.uk/",
     "https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.portsmouthtaran",
-    "https://wix.ecwid.com/wix/app/search?pageId=masterPage&compId=comp-moldl2ue&view",
-    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?pageId=mast"
+    "https://wix.ecwid.com/wix/app/search?lang=en&dateNumberFormat=en-us&isPrimaryLan",
+    "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=en&dat"
    ],
    "pounds": 0,
    "snippet": "Skip to Main Content\n\nWEBSITE TEMPORARILY CLOSED\n\nWe're busy getting everything ready for this year's Southern Invert Show on Sunday 29th November, so we're temporarily closing the website while we prepare stock, pack the van and get ourselves organised!\n\nOur physical shop is still OPEN AS USUAL, so you can still pop in and see us.\u00a0The website will be back up and running and accepting orders again after 2pm on Monday 30th November.Thanks for your patience, and if you're coming to the show, we'll see you there! It's going to be a good one!\n\nThe next show we are attending is: Southern invert sho"
@@ -304,30 +328,6 @@
    "snippet": ""
   }
  ],
- "So Many Legs": [
-  {
-   "url": "https://www.somanylegs.co.uk/tarantulas?page=5",
-   "title": "Tarantulas | Norfolk | So Many Legs Ltd",
-   "found": 77,
-   "frames": [
-    "https://www.somanylegs.co.uk/tarantulas?page=5",
-    "https://wix-instantsearchplus-ssl.akamaized.net/wix_widget/wix_instantsearchplus"
-   ],
-   "pounds": 78,
-   "snippet": ""
-  },
-  {
-   "url": "https://www.somanylegs.co.uk/shop",
-   "title": "Other Spiders | So Many Legs Ltd | Essex",
-   "found": 2,
-   "frames": [
-    "https://www.somanylegs.co.uk/shop",
-    "https://wix-instantsearchplus-ssl.akamaized.net/wix_widget/wix_instantsearchplus"
-   ],
-   "pounds": 3,
-   "snippet": ""
-  }
- ],
  "Swansea Spiders": [
   {
    "url": "https://www.swanseaspiders.co.uk/shop/True-Spiders-c198521145/",
@@ -443,6 +443,48 @@
    ],
    "pounds": 82,
    "snippet": ""
+  }
+ ],
+ "Bugpets": [
+  {
+   "url": "https://bugpets.co.uk/spiderling-tarantulas",
+   "title": "One moment, please...",
+   "found": 0,
+   "frames": [
+    "https://bugpets.co.uk/spiderling-tarantulas"
+   ],
+   "pounds": 0,
+   "snippet": "Please wait while your request is being verified..."
+  },
+  {
+   "url": "https://bugpets.co.uk/juvenile-tarantulas",
+   "title": "One moment, please...",
+   "found": 0,
+   "frames": [
+    "https://bugpets.co.uk/juvenile-tarantulas"
+   ],
+   "pounds": 0,
+   "snippet": "Please wait while your request is being verified..."
+  },
+  {
+   "url": "https://bugpets.co.uk/adult-tarantulas",
+   "title": "One moment, please...",
+   "found": 0,
+   "frames": [
+    "https://bugpets.co.uk/adult-tarantulas"
+   ],
+   "pounds": 0,
+   "snippet": "Please wait while your request is being verified..."
+  },
+  {
+   "url": "https://bugpets.co.uk/",
+   "title": "One moment, please...",
+   "found": 0,
+   "frames": [
+    "https://bugpets.co.uk/"
+   ],
+   "pounds": 0,
+   "snippet": "Please wait while your request is being verified..."
   }
  ],
  "Exotics@Heart": [
